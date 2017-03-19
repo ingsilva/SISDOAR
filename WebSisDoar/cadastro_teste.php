@@ -5,6 +5,7 @@ include './cabecalho.php';
 <!DOCTYPE HTML>
 <html land="pt-BR">
     <head>
+        <title>teste</title>
         <script type="text/javascript">
             $(document).ready(function () {
                 // FUNCAO CHAMAR MODAL ADD
