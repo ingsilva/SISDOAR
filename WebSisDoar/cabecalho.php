@@ -6,16 +6,11 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title></title>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-
-        <title>Doe + Vida - Página Incial</title>
         <link rel="icon" type="image/png"  href="assets/img/apple-touch-icon.png" />
 
         <!-- Bootstrap Core CSS -->
@@ -91,7 +86,7 @@ and open the template in the editor.
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastros Básicos<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="tabela-cidades.jsp">Cidades</a></li>
-                                <li><a href="tabela-estados.jsp">Estados</a></li>
+                                <li><a href="lista_estados.php">Estados</a></li>
                             </ul>
                         </li>
                     </ul>

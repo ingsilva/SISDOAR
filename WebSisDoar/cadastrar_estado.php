@@ -6,6 +6,7 @@ include './cabecalho.php';
 <!DOCTYPE HTML>
 <html land="pt-BR">
     <head>
+        <title>Cadastro de Estados</title>
         <script type="text/javascript">
             $(document).ready(function () {
 
@@ -21,14 +22,15 @@ include './cabecalho.php';
                         cache: false,
                         success: function (retorno) {
                             if (retorno == true) {
-                                alert("Salvo Com Sucesso!!");
+                                alert("Salvo com Sucesso!!");
+                                location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
                             }
                         }
                     });
                 });
-                
+
                 $('a#editar').livequery("click", function () {
                     var id = $(this).attr('rel');
                     var dataString = {id: id};

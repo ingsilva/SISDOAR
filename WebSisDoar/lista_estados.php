@@ -9,7 +9,7 @@ include './cabecalho.php';
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Estados Cadastrados</title>
         <script type="text/javascript">
             $(document).ready(function () {
                 $('a#excluir').livequery("click", function () {
