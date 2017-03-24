@@ -1,40 +1,49 @@
 <?php
 include './config/conexao.php';
 ?>
+<?php
+//CABEÇALHO
+include './cabecalho.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('a#excluir').livequery("click", function () {
+                    var id = $(this).attr('rel');
+                    var dataString = {id: id};
+                    $.ajax({
+                        type: "POST",
+                        url: "./funcoes/estado/excluir_estado.php",
+                        data: dataString,
+                        cache: false,
+                        success: function (retorno) {
+                            if (retorno == true) {
+                                alert("Registro Excluido com Sucesso.");
+                                location.reload();
+
+                            } else {
+                                alert(id);
+                                alert("Ocorreu um erro ao excluir o registro.");
+                            }
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
     </head>
     <body >
 
-        <?php
-        //CABEÇALHO
-        include './cabecalho.php';
-        ?>
+
         <!--==================CABEÇALHO====================---->
         <div class="container theme-showcase" role="main">
             <!-- /.container -->
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <?php
-                        //FUNÇÃO PARA EXCLUIR
-                        if (isset($_GET['acao']) && $_GET['acao'] == 'deletar'):
 
-                            $id = (int) $_GET['id'];
-                            if ($estado->delete($id)) {
-                                echo "<div class='alert alert-success' role='alert'>Excluido com sucesso!</div>";
-                            } else {
-                                echo "<div class='alert alert-danger' role='alert'>Erro ao excluir!</div>";
-                            }
-
-                        endif;
-                        ?>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
                 <div id="page-wrapper">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -50,33 +59,29 @@ include './config/conexao.php';
                                         <th>ID</th>
                                         <th>Nome</th>
                                         <th>UF</th>
-                                        <th>Pais</th>
                                         <th>Editar</th>
                                         <th>Excluir</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $sql = ("select e.id, e.nome as estado, e.uf, p.nome as pais from estado e, pais p where  e.pais = p.id");
+                                    $sql = ("select * from estado;");
                                     foreach ($con->query($sql) as $row) {
                                         ?>
                                         <tr>
-                                            <td><?php echo $row['id']; ?></td>
-                                            <td><?php echo $row['estado']; ?></td>
+                                            <td><?php echo $row['idestado']; ?></td>
+                                            <td><?php echo $row['nome']; ?></td>
                                             <td><?php echo $row['uf']; ?></td>
-                                            <td><?php echo $row['pais']; ?></td>
-
                                             <td>
-                                                <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['id'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
+                                                <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idestado'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
                                             </td>
                                             <td>
-                                                <?php echo "<a  class='btn btn-danger' href='function_user.php?acao=deletar&id=" . $row['id'] . "' onclick='return confirm(\"Deseja realmente deletar?\")'><b class='glyphicon glyphicon-remove'></b</a>"; ?>
+                                                <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['idestado'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
                                             </td>
                                         </tr>
                                         <?php
                                     }
                                     ?>
-
 
                                 </tbody>
                             </table>
@@ -107,10 +112,9 @@ include './config/conexao.php';
                 });
             });
         </script>
+        <!--==================RODAPE====================---->
         <?php
         include './rodape.php';
         ?>
-        <!--==================RODAPE====================---->
-        <script src="funcoes/estado/funcoesestado.js"></script>
     </body>
 </html>

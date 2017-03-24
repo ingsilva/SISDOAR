@@ -49,7 +49,8 @@ and open the template in the editor.
         <!-- DataTables -->
         <script src="assets/datatables/jquery.dataTables.min.js"></script>
         <script src="assets/datatables/dataTables.bootstrap.min.js"></script>
-
+        <!-- LiveQuery-->
+        <script src="assets/js/livequery.js"></script>
     </head>
     <body>
         <!-- Fixed navbar -->

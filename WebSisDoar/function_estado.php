@@ -1,6 +1,6 @@
 <?php
 
-include("./config/conexao.php");
+include("../../config/conexao.php");
 $id = $_POST["id"];
 $nome = $_POST["nome"];
 $uf = $_POST["uf"];

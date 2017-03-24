@@ -16,7 +16,8 @@ include './cabecalho.php';
                 $('#salvar').click(function () {
                     var id = $("#id").val();
                     var nome = $("#nome").val();
-                    var dataString = {id: id, nome: nome};
+                    var uf = $("#uf").val();
+                    var dataString = {id: id, nome: nome, uf: uf};
                     $.ajax({
                         type: "POST",
                         url: "cad.php",
@@ -136,6 +137,11 @@ include './cabecalho.php';
                                         <input class="form-control"  id="nome" name="nome" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
+                                    <div class="col-lg-offset-1 form-group col-lg-3">
+                                        <label for="uf">UF</label>
+                                        <input class="form-control"   type="text" id="uf" name="uf">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
                                     <input type="hidden" name="id" id="id" value="0" />
                                 </div>
 
@@ -147,7 +153,6 @@ include './cabecalho.php';
                         <div class="panel-footer">
                             <button type="button" id="salvar" class="btn btn-primary">Salvar</button>
                             <button type="reset" class=" btn btn-danger">Limpar</button>
-                            <button class="col-lg-offset-9 btn-lg btn-default"><a href="lista_estados.php">Estados</a></button>
                         </div>
                     </div>
                 </form>
