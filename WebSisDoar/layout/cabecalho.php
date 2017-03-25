@@ -11,20 +11,20 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" type="image/png"  href="assets/img/apple-touch-icon.png" />
+        <link rel="icon" type="image/png"  href="/SISDOAR/WebSisDoar/assets/img/apple-touch-icon.png" />
 
         <!-- Bootstrap Core CSS -->
-        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="/SISDOAR/WebSisDoar/assets/css/bootstrap.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="assets/css/landing-page.css" rel="stylesheet">
-        <link href="assets/css/theme.css" rel="stylesheet">
+        <link href="/SISDOAR/WebSisDoar/assets/css/landing-page.css" rel="stylesheet">
+        <link href="/SISDOAR/WebSisDoar/assets/css/theme.css" rel="stylesheet">
 
 
-        <link rel="stylesheet" href="assets/datatables/dataTables.bootstrap.css">
+        <link rel="stylesheet" href="/SISDOAR/WebSisDoar/assets/datatables/dataTables.bootstrap.css">
 
         <!-- Custom Fonts -->
-        <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/SISDOAR/WebSisDoar/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,16 +36,16 @@ and open the template in the editor.
 
 
         <!-- jQuery -->
-        <script src="assets/js/jquery.js"></script>
+        <script src="/SISDOAR/WebSisDoar/assets/js/jquery.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="/SISDOAR/WebSisDoar/assets/js/bootstrap.min.js"></script>
 
         <!-- DataTables -->
-        <script src="assets/datatables/jquery.dataTables.min.js"></script>
-        <script src="assets/datatables/dataTables.bootstrap.min.js"></script>
+        <script src="/SISDOAR/WebSisDoar/assets/datatables/jquery.dataTables.min.js"></script>
+        <script src="/SISDOAR/WebSisDoar/assets/datatables/dataTables.bootstrap.min.js"></script>
         <!-- LiveQuery-->
-        <script src="assets/js/livequery.js"></script>
+        <script src="/SISDOAR/WebSisDoar/assets/js/livequery.js"></script>
     </head>
     <body>
         <!-- Fixed navbar -->

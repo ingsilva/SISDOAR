@@ -1,6 +1,6 @@
 <?php
 //CABEÇALHO
-include './cabecalho.php';
+include '../../layout/cabecalho.php';
 ?>
 
 <!DOCTYPE HTML>
@@ -17,7 +17,7 @@ include './cabecalho.php';
                     var dataString = {id: id, nome: nome, uf: uf};
                     $.ajax({
                         type: "POST",
-                        url: "./funcoes/estado/function_estado.php",
+                        url: "../../funcoes/localizar/function_estado.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
@@ -148,8 +148,8 @@ include './cabecalho.php';
             </div>
 
         </div>
-
-        <script src="js/jQuery.js"></script>
-        <script src="js/bootstrap.js"></script>
+        <?php
+        include '../../layout/rodape.php';
+        ?>
     </body>
 </html>

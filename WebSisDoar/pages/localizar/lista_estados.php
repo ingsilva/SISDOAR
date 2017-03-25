@@ -1,9 +1,9 @@
 <?php
-include './config/conexao.php';
+include '../../config/conexao.php';
 ?>
 <?php
 //CABEÇALHO
-include './cabecalho.php';
+include '../../layout/cabecalho.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +17,7 @@ include './cabecalho.php';
                     var dataString = {id: id};
                     $.ajax({
                         type: "POST",
-                        url: "./funcoes/estado/excluir_estado.php",
+                        url: "../../funcoes/localizar/excluir_estado.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
@@ -107,14 +107,14 @@ include './cabecalho.php';
                     "info": true,
                     "autoWidth": true,
                     "language": {
-                        "url": "assets/datatables/portuguese-brasil.json"
+                        "url": "/SISDOAR/WebSisDoar/assets/datatables/portuguese-brasil.json"
                     }
                 });
             });
         </script>
         <!--==================RODAPE====================---->
         <?php
-        include './rodape.php';
+        include '../../layout/rodape.php';
         ?>
     </body>
 </html>

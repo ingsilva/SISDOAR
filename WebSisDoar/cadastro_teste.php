@@ -1,6 +1,6 @@
 <?php
 //CABEÇALHO
-include './cabecalho.php';
+include './layout/cabecalho.php';
 ?>
 <!DOCTYPE HTML>
 <html land="pt-BR">
