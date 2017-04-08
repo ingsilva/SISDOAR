@@ -1,8 +1,10 @@
--- MySQL dump 10.13  Distrib 5.7.12, for Win32 (AMD64)
+CREATE DATABASE  IF NOT EXISTS `db_sangue` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `db_sangue`;
+-- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
 --
 -- Host: localhost    Database: db_sangue
 -- ------------------------------------------------------
--- Server version	5.7.17-log
+-- Server version	5.6.16
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -159,6 +161,31 @@ LOCK TABLES `estoque_sangue` WRITE;
 INSERT INTO `estoque_sangue` VALUES (6,1.00,'AB','Positivo',4,'0000-00-00',''),(7,1.00,'A','Negativo',3,'0000-00-00',''),(8,1.00,'AB','Positivo',4,'2016-11-19','Entrada de Sangue'),(11,1.00,'AB','Positivo',3,'2016-11-26','Entrada de Sangue'),(12,1.00,'O','Negativo',3,'2016-11-26','Entrada de Sangue');
 /*!40000 ALTER TABLE `estoque_sangue` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER  tr_entrada_sangue
+AFTER INSERT ON estoque_sangue
+FOR EACH ROW BEGIN
+INSERT INTO estoque_sangue_log
+SET 
+idestoque_sangue_log = new.idest_sangue,
+quantidade = new.quantidade ,
+tipo = new.tipo,
+fator_rh = new.fator_rh,
+categoria = new.categoria,
+data_hora = new.data_hora; END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
 -- Table structure for table `estoque_sangue_log`
@@ -287,36 +314,37 @@ INSERT INTO `triagem` VALUES (3,20,75,'nao',2,'apto');
 UNLOCK TABLES;
 
 --
--- Table structure for table `usuarios`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `usuarios`;
+DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usuarios` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `nome` varchar(50) NOT NULL,
-  `usuario` varchar(25) NOT NULL,
-  `senha` varchar(40) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `nivel` int(1) unsigned NOT NULL DEFAULT '1',
-  `ativo` tinyint(1) NOT NULL DEFAULT '1',
-  `cadastro` datetime NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `usuario` (`usuario`),
-  KEY `nivel` (`nivel`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  `status` enum('1','0') COLLATE utf8_unicode_ci DEFAULT '1' COMMENT '1=Active, 0=Inactive',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuarios`
+-- Dumping data for table `users`
 --
 
-LOCK TABLES `usuarios` WRITE;
-/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Usuário Teste','demo','89e495e7941cf9e40e6980d14a16bf023ccd4c91','usuario@demo.com.br',1,1,'2017-04-07 12:16:37'),(2,'Administrador Teste','admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin@demo.com.br',2,1,'2017-04-07 12:16:37');
-/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'jailson souza bernardo','jailsonbernado@hotmail.com','9928386357','2017-02-03 21:24:36','2017-02-06 17:34:23','1'),(2,'user teste','teste','456','2017-02-06 20:15:37','2017-02-06 20:15:37','1'),(4,'jailson','jailson','698655',NULL,NULL,'1');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'db_sangue'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -327,4 +355,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-07 12:52:06
+-- Dump completed on 2017-03-24  9:13:02

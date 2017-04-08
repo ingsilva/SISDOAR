@@ -85,7 +85,7 @@ and open the template in the editor.
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastros Básicos<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="tabela-cidades.jsp">Cidades</a></li>
+                                <li><a href="lista_cidades.jsp">Cidades</a></li>
                                 <li><a href="lista_estados.php">Estados</a></li>
                             </ul>
                         </li>
