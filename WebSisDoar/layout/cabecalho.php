@@ -113,11 +113,11 @@ JAVASCRIPT
                         <!-- User Session -->
                         <div class="media">
                             <a class="pull-left" href="#fakelink">
-                                <img class="media-object img-circle" src="/SISDOAR/WebSisDoar/assets/img/Ingryd_perfil.jpg" alt="Avatar">
+                                <img class="media-object img-circle" src="/SISDOAR/WebSisDoar/assets/img/admin.png" alt="Avatar">
                             </a>
                             <div class="media-body">
-                                Welcome back,
-                                <h4 class="media-heading"><strong>Mas Bro</strong></h4>
+                                Bem Vindo(a),
+                                <h4 class="media-heading"><strong>Administrador</strong></h4>
                                 <a href="user-profile.html">Edit</a>
                                 <a class="md-trigger" data-modal="logout-modal-alt">Logout</a>
                             </div><!-- End div .media-body -->
