@@ -72,7 +72,7 @@ and open the template in the editor.
             <!-- Your logo goes here -->
             <div class="logo-brand header sidebar rows">
                 <div class="logo">
-                    <h1><a href="#fakelink"><img src="/SISDOAR/WebSisDoar/assets/img/apple-touch-icon.png" alt="Logo"> LANCENG ADMIN</a></h1>
+                    <h1><a href="#fakelink"><img src="/SISDOAR/WebSisDoar/assets/img/apple-touch-icon.png" alt="Logo"> WEB SISDOAR</a></h1>
                 </div>
             </div><!-- End div .header .sidebar .rows -->
 
