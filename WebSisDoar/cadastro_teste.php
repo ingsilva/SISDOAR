@@ -1,6 +1,6 @@
 <?php
 //CABEÇALHO
-include './cabecalho.php';
+include './layout/cabecalho.php';
 ?>
 <!DOCTYPE HTML>
 <html land="pt-BR">
@@ -109,7 +109,6 @@ include './cabecalho.php';
 
     </head>
     <body>
-        <br>
 
         <div class="container theme-showcase">
 
@@ -152,7 +151,7 @@ include './cabecalho.php';
 
                         <!--================================================-------> 
                         <div class="panel-footer">
-                            <button type="button" id="salvar" class="btn btn-success">Salvar</button>
+                            <button type="button" id="salvar" class="btn btn-primary">Salvar</button>
                             <button type="reset" class=" btn btn-danger">Limpar</button>
                         </div>
                     </div>
@@ -167,6 +166,3 @@ include './cabecalho.php';
     <script src="js/bootstrap.js"></script>
 </body>
 </html>
-<?php
-include"rodape.php";
-?>

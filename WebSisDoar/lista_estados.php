@@ -1,5 +1,5 @@
 <?php
-include '../../config/conexao.php';
+include './config/conexao.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,7 +8,7 @@ include '../../config/conexao.php';
         <title>Estados Cadastrados</title>
         <?php
 //CABEÇALHO
-        include '../../layout/cabecalho.php';
+        include './layout/cabecalho.php';
         ?>
         <!--DATATABLES-->
         <link rel="stylesheet" href="../../css/jquery.dataTables.min.css">
@@ -120,6 +120,8 @@ include '../../config/conexao.php';
                 });
             </script>
             <!--==================RODAPE====================---->
-
+            <?php
+            include './layout/rodape.php';
+            ?>
     </body>
 </html>
