@@ -6,16 +6,10 @@ include '../../config/conexao.php';
     <head>
         <meta charset="UTF-8">
         <title>Estados Cadastrados</title>
+
         <?php
-//CABEÇALHO
         include '../../layout/cabecalho.php';
         ?>
-        <!--DATATABLES-->
-        <link rel="stylesheet" href="../../css/jquery.dataTables.min.css">
-        <!-- DataTables -->
-        <script src = "../../js/dataTables.bootstrap.min.js" ></script> 
-        <!-- LiveQuery-->
-        <script src = "../../assets/js/livequery.js" ></script>
 
         <script type="text/javascript">
             $(document).ready(function () {
@@ -121,5 +115,8 @@ include '../../config/conexao.php';
             </script>
             <!--==================RODAPE====================---->
 
+            <?php
+            include '../../layout/rodape.php';
+            ?>
     </body>
 </html>
