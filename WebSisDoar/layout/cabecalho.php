@@ -30,13 +30,13 @@ and open the template in the editor.
         <link href="/SISDOAR/WebSisDoar/assets/third/weather-icon/css/weather-icons.min.css" rel="stylesheet">
         <link href="/SISDOAR/WebSisDoar/assets/third/morris/morris.css" rel="stylesheet">
         <link href="/SISDOAR/WebSisDoar/assets/third/nifty-modal/css/component.css" rel="stylesheet">
-        <link href="/SISDOAR/WebSisDoar/assets/third/sortable/sortable-theme-bootstrap.css" rel="stylesheet"> 
+
         <link href="/SISDOAR/WebSisDoar/assets/third/icheck/skins/minimal/grey.css" rel="stylesheet"> 
         <link href="/SISDOAR/WebSisDoar/assets/third/select/bootstrap-select.min.css" rel="stylesheet"> 
         <link href="/SISDOAR/WebSisDoar/assets/third/summernote/summernote.css" rel="stylesheet">
         <link href="/SISDOAR/WebSisDoar/assets/third/magnific-popup/magnific-popup.css" rel="stylesheet"> 
-        <link href="/SISDOAR/WebSisDoar/assets/third/datepicker/css/datepicker.css" rel="stylesheet">
-        
+
+
         <link rel="stylesheet" href="/SISDOAR/WebSisDoar/assets/datatables/dataTables.bootstrap.css">
 
         <!-- Custom Fonts -->
@@ -57,11 +57,36 @@ and open the template in the editor.
         <!-- Bootstrap Core JavaScript -->
         <script src="/SISDOAR/WebSisDoar/assets/js/bootstrap.min.js"></script>
 
+
+
+
+        <!--
+================================================
+JAVASCRIPT
+================================================
+        -->
+        <!-- Basic Javascripts (Jquery and bootstrap) -->
+        <script src="/SISDOAR/WebSisDoar/assets/js/jquery.js"></script>
+        <script src="/SISDOAR/WebSisDoar/assets/js/bootstrap.min.js"></script>
+
+        <!-- VENDOR -->
+
+        <!-- Slimscroll js -->
+        <script src="/SISDOAR/WebSisDoar/assets/third/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- Morris js -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="assets/third/morris/morris.js"></script>
+
+
+        <!-- LANCENG TEMPLATE JAVASCRIPT -->
+
         <!-- DataTables -->
         <script src="/SISDOAR/WebSisDoar/assets/datatables/jquery.dataTables.min.js"></script>
         <script src="/SISDOAR/WebSisDoar/assets/datatables/dataTables.bootstrap.min.js"></script>
-        <!-- LiveQuery-->
+        <script src="/SISDOAR/WebSisDoar/js/dataTables.bootstrap.min.js"></script>
         <script src="/SISDOAR/WebSisDoar/assets/js/livequery.js"></script>
+
     </head>
     <!-- BODY -->
     <body class="tooltips">
@@ -111,7 +136,7 @@ and open the template in the editor.
                         <!-- Sidebar menu -->				
                         <div id="sidebar-menu">
                             <ul>
-                                <li><a href="/SISDOAR/WebSisDoar/index2.html"><i class="fa fa-home"></i> Inicio</a></li>
+                                <li><a href="/SISDOAR/WebSisDoar/DashBoard.php"><i class="fa fa-home"></i> Inicio</a></li>
                                 <li><a href="#fakelink"><i class="fa fa-leaf"></i> Frontend <span class="label label-danger new-circle">COMING SOON</span></a></li>
                                 <li><a href="#fakelink"><i class="fa fa-bug"></i><i class="fa fa-angle-double-down i-right"></i> Elements</a>
                                     <ul>
@@ -152,19 +177,12 @@ and open the template in the editor.
                                         <li><a href="blank.html"><i class="fa fa-angle-right"></i> Blank</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#fakelink"><i class="fa fa-smile-o"></i><i class="fa fa-angle-double-down i-right"></i> Icons</a>
+
+                                
+                                <li><a href="#fakelink"><i class="fa fa-home"></i><i class="fa fa-angle-double-down i-right"></i> Localização <span class="label label-success new-circle animated double shake span-left">13</span></a>
                                     <ul>
-                                        <li><a href="font-awesome.html"><i class="fa fa-angle-right"></i> Font Awesome</a></li>
-                                        <li><a href="glyphicons.html"><i class="fa fa-angle-right"></i> Glyphicons</a></li>
-                                        <li><a href="weather-icons.html"><i class="fa fa-angle-right"></i> Weather icons <span class="label label-danger new-circle">NEW</span></a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#fakelink"><i class="fa fa-envelope"></i><i class="fa fa-angle-double-down i-right"></i> Message  <span class="label label-success new-circle span-left">UPDATED</span></a>
-                                    <ul>
-                                        <li><a href="inbox.html"><i class="fa fa-angle-right"></i> Inbox</a></li>
-                                        <li><a href="new-message.html"><i class="fa fa-angle-right"></i> New Message</a></li>
-                                        <li><a href="reply-message.html"><i class="fa fa-angle-right"></i> Reply Message <span class="label label-danger new-circle">NEW</span></a></li>
-                                        <li><a href="read-message.html"><i class="fa fa-angle-right"></i> Read Message</a></li>
+                                        <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_estados.php"><i class="fa fa-angle-right"></i> Estados</a></li>
+                                        
                                     </ul>
                                 </li>
                             </ul>

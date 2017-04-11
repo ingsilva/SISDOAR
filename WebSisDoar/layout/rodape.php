@@ -134,54 +134,8 @@ Always place this div at the end of the page content
 
 
 
-<!--
-================================================
-JAVASCRIPT
-================================================
--->
-<!-- Basic Javascripts (Jquery and bootstrap) -->
-<script src="/SISDOAR/WebSisDoar/assets/js/jquery.js"></script>
-<script src="/SISDOAR/WebSisDoar/assets/js/bootstrap.min.js"></script>
-
-<!-- VENDOR -->
-
-<!-- Slimscroll js -->
-<script src="/SISDOAR/WebSisDoar/assets/third/slimscroll/jquery.slimscroll.min.js"></script>
-
-<!-- Morris js -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="assets/third/morris/morris.js"></script>
-
-<!-- Nifty modals js -->
-<script src="/SISDOAR/WebSisDoar/assets/third/nifty-modal/js/classie.js"></script>
-<script src="/SISDOAR/WebSisDoar/assets/third/nifty-modal/js/modalEffects.js"></script>
-
-
-<!-- Bootstrao selectpicker js -->
-<script src="/SISDOAR/WebSisDoar/assets/third/select/bootstrap-select.min.js"></script>
-
-<!-- Summernote js -->
-<script src="/SISDOAR/WebSisDoar/assets/third/summernote/summernote.js"></script>
-
-<!-- Magnific popup js -->
-<script src="/SISDOAR/WebSisDoar/assets/third/magnific-popup/jquery.magnific-popup.min.js"></script> 
-
-<!-- Bootstrap file input js -->
-<script src="/SISDOAR/WebSisDoar/assets/third/input/bootstrap.file-input.js"></script>
-
-<!-- Bootstrao datepicker js -->
-<script src="/SISDOAR/WebSisDoar/assets/third/datepicker/js/bootstrap-datepicker.js"></script>
-
-<!-- Icheck js -->
-<script src="/SISDOAR/WebSisDoar/assets/third/icheck/icheck.min.js"></script>
-
-<!-- Form wizard js -->
-<script src="/SISDOAR/WebSisDoar/assets/third/wizard/jquery.snippet.min.js"></script>
-<script src="/SISDOAR/WebSisDoar/assets/third/wizard/jquery.easyWizard.js"></script>
-<script src="/SISDOAR/WebSisDoar/assets/third/wizard/scripts.js"></script>
-
-<!-- LANCENG TEMPLATE JAVASCRIPT -->
-<script src="/SISDOAR/WebSisDoar/assets/js/lanceng.js"></script>
+        <!-- LANCENG TEMPLATE JAVASCRIPT -->
+        <script src="/SISDOAR/WebSisDoar/assets/js/lanceng.js"></script>
 
 </body>
 </html>
