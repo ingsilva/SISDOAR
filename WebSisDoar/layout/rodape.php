@@ -1,6 +1,6 @@
      <!-- Footer -->
                                 <footer>
-                                    &copy; 2014 <a href="index.html">Lanceng Admin</a>. Design with love by <a href="http://isohdesign.com" target="_blank">Isoh Design Studio</a> from <a href="#fakelink">Yogyakarta, ID</a>
+                                    &copy; 2017 <a href="index.html">WebSisDoar</a>. <a href="http://isohdesign.com" target="_blank"> Ingryd, Laís, Saionara </a> - <a href="#fakelink">Rio Branco, AC</a>
                                 </footer>
                                 <!-- End Footer -->
     </div>	
