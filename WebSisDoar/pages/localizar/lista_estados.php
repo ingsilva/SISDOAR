@@ -6,6 +6,7 @@ include '../../config/conexao.php';
     <head>
         <meta charset="UTF-8">
         <title>Estados Cadastrados</title>
+        <link rel="icon" type="image/png"  href="assets/img/apple-touch-icon.png" />
 
         <?php
         include '../../layout/cabecalho.php';
@@ -39,16 +40,14 @@ include '../../config/conexao.php';
     </head>
     <body >
 
-
-
-        <div class="body content rows scroll-y">
-
-            <!-- Page header -->
-            <div class="page-heading animated fadeInDownBig">
-                <h1>Tables <small>lorem ipsum dolor</small></h1>
+        <br>
+        <div class="container theme-showcase">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header text-center">Cadastro de Estados</h3><!--titulo-->
+                </div>
+                <!-- /.col-lg-12 -->
             </div>
-            <!-- End page header -->
-
 
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -96,6 +95,7 @@ include '../../config/conexao.php';
                 <!-- /.panel-body -->
             </div>
             <!-- /.panel -->
+        </div>
 
 
             <script>

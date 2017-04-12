@@ -8,8 +8,10 @@ include '../../layout/cabecalho.php';
 <!DOCTYPE html>
 <html>
     <head>
+        
         <meta charset="UTF-8">
         <title>Cidades Cadastradas</title>
+        <link rel="icon" type="image/png"  href="assets/img/apple-touch-icon.png" />
 
         <script type="text/javascript">
             $(document).ready(function () {
@@ -39,10 +41,15 @@ include '../../layout/cabecalho.php';
     </head>
     <body>
         <!--==================CABEÇALHO====================---->
-        <div class="container theme-showcase" role="main">
-            <!-- /.container -->
-            <div class="container">
-
+        
+        <br>
+        <div class="container theme-showcase">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header text-center">Cadastro de Cidades</h3><!--titulo-->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
                 <div id="page-wrapper">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -96,7 +103,6 @@ include '../../layout/cabecalho.php';
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-        </div>
 
         <script>
             $(function () {
