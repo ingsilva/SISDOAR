@@ -1,7 +1,7 @@
 <?php
-include"./layout/cabecalho_1.php";
+include"./layout/cabecalho.php";
 ?>	
 		
 <?php
-include"./layout/rodape_1.php";
+include"./layout/rodape.php";
 ?>

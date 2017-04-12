@@ -6,7 +6,6 @@ include '../../config/conexao.php';
     <head>
         <meta charset="UTF-8">
         <title>Estados Cadastrados</title>
-
         <?php
         include '../../layout/cabecalho.php';
         ?>

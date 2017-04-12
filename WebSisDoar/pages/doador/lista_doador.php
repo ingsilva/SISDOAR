@@ -45,7 +45,7 @@ include '../../config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1>Tables <small>lorem ipsum dolor</small></h1>
+                <h1> Doadores <small> Cadastrados </small></h1>
             </div>
             <!-- End page header -->
 
@@ -63,25 +63,29 @@ include '../../config/conexao.php';
                             <tr>
                                 <th>ID</th>
                                 <th>Nome</th>
-                                <th>UF</th>
+                                <th>CPF</th>
+                                <th>Tipo Sanguineo</th>
+                                <th>Fator RH</th>
                                 <th>Editar</th>
                                 <th>Excluir</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            $sql = ("select * from estado;");
+                            $sql = ("select * from doador;");
                             foreach ($con->query($sql) as $row) {
                                 ?>
                                 <tr>
-                                    <td><?php echo $row['idestado']; ?></td>
+                                    <td><?php echo $row['iddoador']; ?></td>
                                     <td><?php echo $row['nome']; ?></td>
-                                    <td><?php echo $row['uf']; ?></td>
+                                    <td><?php echo $row['cpf']; ?></td>
+                                    <td class="text-center"><?php echo $row['tipo_sangue']; ?></td>
+                                    <td><?php echo $row['fator_rh']; ?></td>
                                     <td>
-                                        <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idestado'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
+                                        <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
                                     </td>
                                     <td>
-                                        <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['idestado'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
+                                        <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['iddoador'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
                                     </td>
                                 </tr>
                                 <?php

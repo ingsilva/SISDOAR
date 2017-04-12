@@ -7,7 +7,8 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>WebSisDoar</title>
+        <link rel="icon" type="image/png"  href="assets/img/apple-touch-icon.png" />
         <?php
         include './layout/cabecalho.php';
         ?>
@@ -38,8 +39,8 @@ and open the template in the editor.
                         </div><!-- End div .icon-box -->
                         <!-- Text box -->
                         <div class="text-box">
-                            <h3>2,354</h3>
-                            <p>VISITORS</p>
+                            <h3>4,700</h3>
+                            <p>DOADORES</p>
                         </div><!-- End div .text-box -->
                         <div class="clear"></div>
                         <!-- Progress bar -->
@@ -48,7 +49,7 @@ and open the template in the editor.
                                 <span class="sr-only">80&#37; Complete</span>
                             </div>
                         </div><!-- End div .progress .progress-xs -->
-                        <p class="text-center">15&#37; Higher than Yesterday</p>
+                        <p class="text-center">Apenas 4,7 mil fizeram doação</p>
                     </div><!-- End div .info-box -->
                 </div>
                 <!-- End Visitor Info Box -->
@@ -67,8 +68,8 @@ and open the template in the editor.
                         </div><!-- End div .icon-box -->
                         <!-- Text box -->
                         <div class="text-box">
-                            <h3>1,234</h3>
-                            <p>ORDERS</p>
+                            <h3>3,234</h3>
+                            <p>PACIENTES</p>
                         </div><!-- End div .text-box -->
                         <div class="clear"></div>
                         <!-- Progress bar -->
@@ -77,7 +78,7 @@ and open the template in the editor.
                                 <span class="sr-only">65&#37; Complete</span>
                             </div>
                         </div><!-- End div .progress .progress-xs -->
-                        <p class="text-center">5&#37; Higher than Yesterday</p>
+                        <p class="text-center">Existe 3,2 mil em espera</p>
                     </div><!-- End div .info-box -->
                 </div>
                 <!-- End Orders Info Box -->

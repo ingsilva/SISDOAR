@@ -1,23 +1,24 @@
 <?php
-//CABEÇALHO
-include '../../layout/cabecalho.php';
+include '../../config/conexao.php';
 ?>
-
 <!DOCTYPE HTML>
 <html land="pt-BR">
     <head>
-        <title>Cadastro de Estados</title>
+        <title>Cadastro de Cidades</title>
+        <?php
+        include '../../layout/cabecalho.php';
+        ?>
         <script type="text/javascript">
             $(document).ready(function () {
 
                 $('#salvar').click(function () {
                     var id = $("#id").val();
                     var nome = $("#nome").val();
-                    var uf = $("#uf").val();
-                    var dataString = {id: id, nome: nome, uf: uf};
+                    var estado = $("#estado").val();
+                    var dataString = {id: id, nome: nome, estado: estado};
                     $.ajax({
                         type: "POST",
-                        url: "../../funcoes/localizar/function_estado.php",
+                        url: "../../funcoes/localizar/function_cidade.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
@@ -60,7 +61,7 @@ include '../../layout/cabecalho.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1><small> Cadastro de </small> Estados </h1>
+                <h1><small> Cadastro de </small> Cidades </h1>
             </div>
             <!-- End page header -->
 
@@ -69,7 +70,7 @@ include '../../layout/cabecalho.php';
                 <div class="col-sm-12">
                     <!-- Basic form -->
                     <div class="box-info">
-                        <h2>Cadastro de Estados </h2>
+                        <h2>Cadastro de Cidades</h2>
                         <!-- Basic form body -->
                         <div id="basic-form" class="collapse in">
 
@@ -81,10 +82,18 @@ include '../../layout/cabecalho.php';
                                             <input class="form-control"  id="nome" name="nome" >
                                             <!--<p class="help-block">Example block-level help text here.</p>-->
                                         </div>
-                                        <div class="col-lg-offset-1 form-group col-lg-3">
-                                            <label for="uf">UF</label>
-                                            <input class="form-control"   type="text" id="uf" name="uf">
-                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+
+                                        <div class="col-sm-3 form-group">
+                                            <label for="estado">Estado</label>
+                                            <select class="form-control" id="estado" name="estado">
+                                                <option>------</option>
+                                                <?php
+                                                $sql = ("SELECT idestado, uf FROM estado");
+                                                foreach ($con->query($sql) as $row) {
+                                                    echo "<option value='" . $row['idestado'] . "'>" . $row['uf'] . "</option>";
+                                                }
+                                                ?>
+                                            </select>
                                         </div>
                                         <input type="hidden" name="id" id="id" value="0" />
                                     </div>
@@ -99,10 +108,8 @@ include '../../layout/cabecalho.php';
                     </div><!-- End div #basic-form -->
                 </div><!-- End div .box-info -->
             </div><!-- End div .col-sm-6 -->
-
-
-        <?php
-        include '../../layout/rodape.php';
-        ?>
+            <?php
+            include '../../layout/rodape.php';
+            ?>
     </body>
 </html>

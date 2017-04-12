@@ -6,6 +6,8 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <title>Doe Sangue Doe Vida</title>
+        <link rel="icon" type="image/png" href="/SISDOAR/WebSisDoar/assets/img/apple-touch-icon.png" />
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +17,6 @@ and open the template in the editor.
 
         <!-- LANCENG CSS -->
         <link href="/SISDOAR/WebSisDoar/assets/css/style.css" rel="stylesheet">
-        <link href="/SISDOAR/WebSisDoar/assets/css/style-respWebSisDoar/assets/img/apple-touch-icon.png" />
 
         <!-- Bootstrap Core CSS -->
         <link href="/SISDOAR/WebSisDoar/assets/css/bootstrap.css" rel="stylesheet">
@@ -97,7 +98,7 @@ JAVASCRIPT
             <!-- Your logo goes here -->
             <div class="logo-brand header sidebar rows">
                 <div class="logo">
-                    <h1><a href="#fakelink"><img src="/SISDOAR/WebSisDoar/assets/img/apple-touch-icon.png" alt="Logo"> WEB SISDOAR</a></h1>
+                    <h1><a href="/SISDOAR/WebSisDoar/DashBoard.php"><img src="/SISDOAR/WebSisDoar/assets/img/icon_coracao.png" alt="Logo"> WEB SISDOAR</a></h1>
                 </div>
             </div><!-- End div .header .sidebar .rows -->
 
@@ -113,13 +114,13 @@ JAVASCRIPT
                         <!-- User Session -->
                         <div class="media">
                             <a class="pull-left" href="#fakelink">
-                                <img class="media-object img-circle" src="/SISDOAR/WebSisDoar/assets/img/Ingryd_perfil.jpg" alt="Avatar">
+                                <img class="media-object img-circle" src="/SISDOAR/WebSisDoar/assets/img/admin.png" alt="Avatar">
                             </a>
                             <div class="media-body">
-                                Welcome back,
-                                <h4 class="media-heading"><strong>Mas Bro</strong></h4>
+                                Bem Vindo(a),
+                                <h4 class="media-heading"><strong>Administrador</strong></h4>
                                 <a href="user-profile.html">Edit</a>
-                                <a class="md-trigger" data-modal="logout-modal-alt">Logout</a>
+                                <a href="/SISDOAR/WebSisDoar/index.html">Logout</a>
                             </div><!-- End div .media-body -->
                         </div><!-- End div .media -->
 
@@ -137,28 +138,33 @@ JAVASCRIPT
                         <div id="sidebar-menu">
                             <ul>
                                 <li><a href="/SISDOAR/WebSisDoar/DashBoard.php"><i class="fa fa-home"></i> Inicio</a></li>
-                                <li><a href="#fakelink"><i class="fa fa-leaf"></i> Frontend <span class="label label-danger new-circle">COMING SOON</span></a></li>
-                                <li><a href="#fakelink"><i class="fa fa-bug"></i><i class="fa fa-angle-double-down i-right"></i> Elements</a>
+                                <li><a href="#fakelink"><i class="fa fa-edit"></i><i class="fa fa-angle-double-down i-right"></i> Cadastro</a>
                                     <ul>
-                                        <li><a href="element-primary.html"><i class="fa fa-angle-right"></i> Primary <span class="label label-success new-circle">UPDATED</span></a></li>
-                                        <li><a href="element-extended.html"><i class="fa fa-angle-right"></i> Extended</a></li>
+                                        <li><a href="/SISDOAR/WebSisDoar/pages/localizar/cadastrar_estado.php"><i class="fa fa-angle-right"></i>Paciente</a></li>
+                                        <li><a href="/SISDOAR/WebSisDoar/pages/localizar/cadastrar_doador.php"><i class="fa fa-angle-right"></i> Doador</a></li>
+                                        <li><a href="/SISDOAR/WebSisDoar/pages/localizar/cadastrar_estado.php"><i class="fa fa-angle-right"></i> Estado</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="/SISDOAR/WebSisDoar/pages/doador/lista_doador.php"><i class="fa fa-user"></i><i class="fa fa-plus-square-o i-right"></i>Doadores</a>
+                                   
+                                </li>
+                                <li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Localização</a>
+                                    <ul>
+                                        <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_cidades.php"><i class="fa fa-angle-right"></i> Cidades</a></li>
+                                        <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_estados.php"><i class="fa fa-angle-right"></i> Estados</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#fakelink"><i class="fa fa-leaf"></i> Frontend </a></li>
+
                                 <li><a href="#fakelink"><i class="fa fa-code"></i><i class="fa fa-angle-double-down i-right"></i> Widgets</a>
                                     <ul>
                                         <li><a href="widget-awesome.html"><i class="fa fa-angle-right"></i> Awesome <span class="label label-danger new-circle">+5 new</span></a></li>
                                         <li><a href="widget-grid.html"><i class="fa fa-angle-right"></i> Grid</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#fakelink"><i class="fa fa-edit"></i><i class="fa fa-angle-double-down i-right"></i> Forms</a>
-                                    <ul>
-                                        <li><a href="form-element.html"><i class="fa fa-angle-right"></i> Form Element</a></li>
-                                        <li><a href="form-wizard.html"><i class="fa fa-angle-right"></i> Form Wizard</a></li>
-                                        <li><a href="form-validation.html"><i class="fa fa-angle-right"></i> Form Validation</a></li>
-                                    </ul>
-                                </li>
+
                                 <li><a href="tables.html"><i class="fa fa-table"></i> Tables</a></li>
-                                <li><a href="gallery.html"><i class="fa fa-picture-o"></i><i class="fa fa-star i-right yellow"></i> Gallery</a></li>
+                                <li><a href="galeria.php"><i class="fa fa-picture-o"></i> Galeria</a></li>
                                 <li><a href="morris.html"><i class="fa fa-bar-chart-o"></i> Graph / Chart</a></li>
                                 <li><a href="#fakelink"><i class="fa fa-home"></i><i class="fa fa-angle-double-down i-right"></i> Pages <span class="label label-success new-circle animated double shake span-left">13</span></a>
                                     <ul>
@@ -178,11 +184,11 @@ JAVASCRIPT
                                     </ul>
                                 </li>
 
-                                
+
                                 <li><a href="#fakelink"><i class="fa fa-home"></i><i class="fa fa-angle-double-down i-right"></i> Localização <span class="label label-success new-circle animated double shake span-left">13</span></a>
                                     <ul>
                                         <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_estados.php"><i class="fa fa-angle-right"></i> Estados</a></li>
-                                        
+
                                     </ul>
                                 </li>
                             </ul>
@@ -231,135 +237,9 @@ JAVASCRIPT
 
                                 <!-- Left navbar -->
                                 <ul class="nav navbar-nav">
-                                    <li>
-                                        <a href="#fakelink">
-                                            <i class="fa fa-cog"></i>
-                                        </a>
-                                    </li>
 
-                                    <!-- Dropdown language -->
-                                    <li class="dropdown">
-                                        <a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown">English (US) <i class="fa fa-chevron-down i-xs"></i></a>
-                                        <ul class="dropdown-menu animated half flipInX">
-                                            <li><a href="#fakelink">English (British)</a></li>
-                                            <li><a href="#fakelink">Bahasa Indonesia</a></li>
-                                            <li><a href="#fakelink">French</a></li>
-                                        </ul>
-                                    </li>
                                 </ul>
 
-                                <!-- Right navbar -->
-                                <ul class="nav navbar-nav navbar-right top-navbar">
-
-                                    <!-- Dropdown notifications -->
-                                    <li class="dropdown">
-                                        <a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i><span class="label label-danger absolute">24</span></a>
-                                        <ul class="dropdown-menu dropdown-message animated half flipInX">
-                                            <!-- Dropdown notification header -->
-                                            <li class="dropdown-header notif-header">New Notifications</li>
-                                            <li class="divider"></li>
-
-                                            <!-- Dropdown notification body -->
-                                            <li class="unread">
-                                                <a href="#fakelink">
-                                                    <p><strong>John Doe</strong> Uploaded a photo <strong>&#34;DSC000254.jpg&#34;</strong>
-                                                        <br /><i>2 minutes ago</i></p>
-                                                </a>
-                                            </li>
-                                            <li class="unread">
-                                                <a href="#fakelink">
-                                                    <p><strong>John Doe</strong> Created an photo album  <strong>&#34;Indonesia Tourism&#34;</strong>
-                                                        <br /><i>8 minutes ago</i></p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#fakelink">
-                                                    <p><strong>Annisa</strong> Posted an article  <strong>&#34;Yogyakarta never ending Asia&#34;</strong>
-                                                        <br /><i>an hour ago</i></p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#fakelink">
-                                                    <p><strong>Ari Rusmanto</strong> Added 3 products
-                                                        <br /><i>3 hours ago</i></p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#fakelink">
-                                                    <p><strong>Hana Sartika</strong> Send you a message  <strong>&#34;Lorem ipsum dolor...&#34;</strong>
-                                                        <br /><i>12 hours ago</i></p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#fakelink">
-                                                    <p><strong>Johnny Depp</strong> Updated his avatar
-                                                        <br /><i>Yesterday</i></p>
-                                                </a>
-                                            </li>
-
-                                            <!-- Dropdown notification footer -->
-                                            <li class="dropdown-footer"><a href="#fakelink"><i class="fa fa-refresh"></i> Refresh</a></li>
-                                        </ul>
-                                    </li>
-                                    <!-- End Dropdown notifications -->
-
-
-                                    <!-- Dropdown Messages -->
-                                    <li class="dropdown">
-                                        <a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="label label-danger absolute">24</span></a>
-                                        <ul class="dropdown-menu dropdown-message animated half flipInX">
-                                            <!-- Dropdown Messages header -->
-                                            <li class="dropdown-header notif-header">New Messages</li>
-
-                                            <!-- Dropdown messages body -->
-                                            <li class="divider"></li>
-                                            <li class="unread">
-                                                <a href="#fakelink">
-                                                    <img src="assets/img/avatar/2.jpg" class="xs-avatar ava-dropdown" alt="Avatar">
-                                                    <strong>John Doe</strong><br />
-                                                    <p>Duis autem vel eum iriure dolor in hendrerit ...</p>
-                                                    <p><i>5 minutes ago</i></p>
-                                                </a>
-                                            </li>
-                                            <li class="unread">
-                                                <a href="#fakelink">
-                                                    <img src="assets/img/avatar/1.jpg" class="xs-avatar ava-dropdown" alt="Avatar">
-                                                    <strong>Annisa Rusmanovski</strong><br />
-                                                    <p>Duis autem vel eum iriure dolor in hendrerit ...</p>
-                                                    <p><i>2 hours ago</i></p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#fakelink">
-                                                    <img src="assets/img/avatar/3.jpg" class="xs-avatar ava-dropdown" alt="Avatar">
-                                                    <strong>Ari Rusmanto</strong><br />
-                                                    <p>Duis autem vel eum iriure dolor in hendrerit ...</p>
-                                                    <p><i>5 hours ago</i></p>
-                                                </a>
-                                            </li>
-
-                                            <!-- Dropdown messages footer -->
-                                            <li class="dropdown-footer"><a href="#fakelink"><i class="fa fa-share"></i> See all messages</a></li>
-                                        </ul>
-                                    </li>
-                                    <!-- End Dropdown messages -->
-
-                                    <!-- Dropdown User session -->
-                                    <li class="dropdown">
-                                        <a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown">Howdy, <strong>Mas Bro</strong> <i class="fa fa-chevron-down i-xs"></i></a>
-                                        <ul class="dropdown-menu animated half flipInX">
-                                            <li><a href="#fakelink">My Profile</a></li>
-                                            <li><a href="#fakelink">Change Password</a></li>
-                                            <li><a href="#fakelink">Account Setting</a></li>
-                                            <li class="divider"></li>
-                                            <li class="dropdown-header">Another action</li>
-                                            <li><a href="#fakelink">Help</a></li>
-                                            <li><a href="lock-screen.html">Lock me</a></li>
-                                            <li><a class="md-trigger" data-modal="logout-modal">Logout</a></li>
-                                        </ul>
-                                    </li>
-                                    <!-- End Dropdown User session -->
-                                </ul>
                             </div><!-- End div .navbar-collapse -->
                         </div><!-- End div .container -->
                     </div>
