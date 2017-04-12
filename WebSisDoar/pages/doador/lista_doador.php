@@ -45,7 +45,7 @@ include '../../config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1> Estados <small>Cadastrados</small></h1>
+                <h1>Tables <small>lorem ipsum dolor</small></h1>
             </div>
             <!-- End page header -->
 
