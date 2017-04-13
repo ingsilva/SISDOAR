@@ -1,9 +1,9 @@
 <?php
 
 include("./../../config/conexao.php");
-$idestado = $_POST["id"];
-$sql = $con->prepare("DELETE FROM estado WHERE idestado = ?");
-$sql->bindValue(1, $idestado);
+$idcidade = $_POST["id"];
+$sql = $con->prepare("DELETE FROM cidade WHERE idcidade = ?");
+$sql->bindValue(1, $idcidade);
 if ($sql->execute())
     echo true;
 else

@@ -5,7 +5,7 @@ include '../../config/conexao.php';
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Estados Cadastrados</title>
+        <title>Pacientes Cadastrados</title>
 
         <?php
         include '../../layout/cabecalho.php';
@@ -45,7 +45,7 @@ include '../../config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1> Doadores <small> Cadastrados </small></h1>
+                <h1> Pacientes <small> Cadastrados </small></h1>
             </div>
             <!-- End page header -->
 
@@ -53,7 +53,7 @@ include '../../config/conexao.php';
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="row">
-                        <a href="cadastrar_doador.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="cadastrar_paciente.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
                     </div>
                 </div>
                 <!-- /.panel-heading -->
@@ -72,20 +72,20 @@ include '../../config/conexao.php';
                         </thead>
                         <tbody>
                             <?php
-                            $sql = ("select * from doador;");
+                            $sql = ("select * from paciente;");
                             foreach ($con->query($sql) as $row) {
                                 ?>
                                 <tr>
-                                    <td><?php echo $row['iddoador']; ?></td>
+                                    <td><?php echo $row['idpaciente']; ?></td>
                                     <td><?php echo $row['nome']; ?></td>
                                     <td><?php echo $row['cpf']; ?></td>
-                                    <td class="text-center"><?php echo $row['tipo_sangue']; ?></td>
+                                    <td ><?php echo $row['tipo_sangue']; ?></td>
                                     <td><?php echo $row['fator_rh']; ?></td>
                                     <td>
-                                        <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
+                                        <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idpaciente'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
                                     </td>
                                     <td>
-                                        <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['iddoador'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
+                                        <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['idpaciente'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
                                     </td>
                                 </tr>
                                 <?php

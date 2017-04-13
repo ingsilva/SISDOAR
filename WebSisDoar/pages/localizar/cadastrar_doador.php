@@ -2,14 +2,13 @@
 //CABEÇALHO
 include '../../layout/cabecalho.php';
 ?>
-<meta charset="UTF-8">
-<title>Cadastrar Doador</title>
 
 <!DOCTYPE HTML>
 <html land="pt-BR">
     <head>
-	
-	
+        <meta charset="UTF-8">
+        <title>Cadastrar Doador</title>
+
         <script type="text/javascript">
             $(document).ready(function () {
 
@@ -19,7 +18,7 @@ include '../../layout/cabecalho.php';
                     var data_nascimento = $("#data_nascimento").val();
                     var cpf = $("#cpf").val();
                     var dataString = {id: id, nome: nome, data_nascimento: data_nascimento,
-                    cpf: cpf};
+                        cpf: cpf};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/localizar/function_doador.php",
@@ -56,56 +55,6 @@ include '../../layout/cabecalho.php';
                     return false;
                 });
 
-                $('a#detalhes').livequery("click", function () {
-                    var id = $(this).attr('rel');
-                    var dataString = {id: id};
-                    $.ajax({
-                        type: "POST",
-                        url: "buscarcontato.php",
-                        data: dataString,
-                        cache: false,
-                        success: function (retorno) {
-                            retorno = JSON.parse(retorno);
-                            $('#det').html('<label for="id">ID: </label>' + retorno.id + '<br><label for="nome">Nome: </label>' + retorno.nome + '<br><label for="email">Email: </label>' + retorno.email);
-                            $('#modalDetalhes').modal('show');
-                        }
-                    });
-                    return false;
-                });
-
-                $('a#excluir').livequery("click", function () {
-                    var id = $(this).attr('rel');
-                    var dataString = {id: id};
-                    $.ajax({
-                        type: "POST",
-                        url: "excluircontato.php",
-                        data: dataString,
-                        cache: false,
-                        success: function (retorno) {
-                            if (retorno == true) {
-                                listaContatos();
-                            } else {
-                                alert("Ocorreu um erro ao excluir o registro.");
-                            }
-                        }
-                    });
-                    return false;
-                });
-
-                function listaContatos() {
-                    $.ajax({
-                        type: "POST",
-                        url: "listacontatos.php",
-                        cache: false,
-                        success: function (retorno) {
-                            $("#lista").html(retorno);
-                        }
-                    });
-                }
-
-
-
-                listaContatos();
 
             });
         </script>
