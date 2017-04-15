@@ -18,7 +18,7 @@ include '../../config/conexao.php';
                     var dataString = {id: id};
                     $.ajax({
                         type: "POST",
-                        url: "../../funcoes/localizar/excluir_estado.php",
+                        url: "../../funcoes/doador/excluir_doador.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
@@ -53,7 +53,7 @@ include '../../config/conexao.php';
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="row">
-                        <a href="cadastrar_doador.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="../../pages/doador/cadastrar_doador.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
                     </div>
                 </div>
                 <!-- /.panel-heading -->

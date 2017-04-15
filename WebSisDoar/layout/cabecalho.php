@@ -141,7 +141,7 @@ JAVASCRIPT
                                 <li><a href="#fakelink"><i class="fa fa-edit"></i><i class="fa fa-angle-double-down i-right"></i> Cadastro</a>
                                     <ul>
                                         <li><a href="/SISDOAR/WebSisDoar/pages/paciente/cadastrar_paciente.php"><i class="fa fa-angle-right"></i>Paciente</a></li>
-                                        <li><a href="/SISDOAR/WebSisDoar/pages/localizar/cadastrar_doador.php"><i class="fa fa-angle-right"></i> Doador</a></li>
+                                        <li><a href="/SISDOAR/WebSisDoar/pages/doador/cadastrar_doador.php"><i class="fa fa-angle-right"></i> Doador</a></li>
                                         <li><a href="/SISDOAR/WebSisDoar/pages/localizar/cadastrar_estado.php"><i class="fa fa-angle-right"></i> Estado</a></li>
                                     </ul>
                                 </li>
