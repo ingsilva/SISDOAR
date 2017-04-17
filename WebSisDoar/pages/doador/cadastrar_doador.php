@@ -1,14 +1,14 @@
 <?php
 include '../../config/conexao.php';
 ?>
-<?php
-include '../../layout/cabecalho.php';
-?>
 
 <!DOCTYPE HTML>
 <html land="pt-BR">
     <head>
         <title>Cadastro de Doador</title>
+        <?php
+        include '../../layout/cabecalho.php';
+        ?>
         <script type="text/javascript">
             $(document).ready(function () {
 
@@ -26,12 +26,12 @@ include '../../layout/cabecalho.php';
                     var tipo_sangue = $("#tipo_sangue").val();
                     var fator_rh = $("#fator_rh").val();
                     var idade = $("#idade").val();
-                    
+
                     var dataString = {id: id, nome: nome,
                         data_nascimento: data_nascimento, cpf: cpf,
                         rg: rg, endereco: endereco, numero: numero,
-                        bairro: bairro, complemento: complemento, 
-                        cidade: cidade, tipo_sangue: tipo_sangue, 
+                        bairro: bairro, complemento: complemento,
+                        cidade: cidade, tipo_sangue: tipo_sangue,
                         fator_rh: fator_rh, idade: idade};
                     $.ajax({
                         type: "POST",
@@ -44,19 +44,14 @@ include '../../layout/cabecalho.php';
                                 location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-                                alert(nome);
-                                alert(data_nascimento);
-                                alert(cpf);
-                                alert(endereco);
-                                alert(numero);
-                                alert(bairro);
+
                             }
                         }
                     });
                 });
             });
         </script>
-        
+
     </head>
     <body>
         <div class="body content rows scroll-y">
@@ -100,23 +95,26 @@ include '../../layout/cabecalho.php';
                                         <input class="form-control" type="text"  id="rg" name="rg">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
+                                    <!------====================================--------->
+                                    <!--optopn tava sem value=""-->
                                     <div class="form-group col-lg-3">
                                         <label for="tipo_sangue">Tipo</label>
-                                        <select id="tiposangue" name="tipo_sangue" class="form-control">
+                                        <select id="tipo_sangue" name="tipo_sangue" class="form-control">
                                             <option>Escolha</option>
-                                            <option>A</option>
-                                            <option>AB</option>
-                                            <option>O</option>
+                                            <option value="A">A</option>
+                                            <option value="AB">AB</option>
+                                            <option value="O">O</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-lg-3">
                                         <label for="fator_rh">Fator RH</label>
                                         <select class="form-control" id="fator_rh" name="fator_rh">
                                             <option>Escolha</option>
-                                            <option>Positivo</option>
-                                            <option>Negativo</option>
+                                            <option value="positivo">Positivo</option>
+                                            <option value="negativo">Negativo</option>
                                         </select>
                                     </div>
+                                    <!------====================================--------->
                                 </div>
                                 <div class="row">
                                     <div class=" form-group col-lg-5">
