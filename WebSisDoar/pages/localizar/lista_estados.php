@@ -48,53 +48,55 @@ include '../../config/conexao.php';
             </div>
             <!-- End page header -->
 
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="row">
-                        <a href="cadastrar_estado.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+            <div class="table-responsive">
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <a href="cadastrar_estado.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+                        </div>
                     </div>
-                </div>
-                <!-- /.panel-heading -->
-                <div class="panel-body">
-                    <table width="100%" class="table table-striped table-bordered table-hover" id="example2">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nome</th>
-                                <th>UF</th>
-                                <th>Editar</th>
-                                <th>Excluir</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $sql = ("select * from estado;");
-                            foreach ($con->query($sql) as $row) {
-                                ?>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <table width="100%" class="table table-striped table-bordered table-hover" id="example2">
+                            <thead>
                                 <tr>
-                                    <td><?php echo $row['idestado']; ?></td>
-                                    <td><?php echo $row['nome']; ?></td>
-                                    <td><?php echo $row['uf']; ?></td>
-                                    <td>
-                                        <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idestado'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['idestado'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
-                                    </td>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>UF</th>
+                                    <th>Editar</th>
+                                    <th>Excluir</th>
                                 </tr>
+                            </thead>
+                            <tbody>
                                 <?php
-                            }
-                            ?>
+                                $sql = ("select * from estado;");
+                                foreach ($con->query($sql) as $row) {
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $row['idestado']; ?></td>
+                                        <td><?php echo $row['nome']; ?></td>
+                                        <td><?php echo $row['uf']; ?></td>
+                                        <td>
+                                            <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idestado'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['idestado'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }
+                                ?>
 
-                        </tbody>
-                    </table>
-                    <!-- /.table-responsive -->
+                            </tbody>
+                        </table>
+                        <!-- /.table-responsive -->
 
+                    </div>
+                    <!-- /.panel-body -->
                 </div>
-                <!-- /.panel-body -->
+                <!-- /.panel -->
             </div>
-            <!-- /.panel -->
 
 
             <script>
