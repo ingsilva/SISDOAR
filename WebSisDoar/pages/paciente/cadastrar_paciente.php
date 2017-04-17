@@ -8,7 +8,7 @@ include '../../layout/cabecalho.php';
 <!DOCTYPE HTML>
 <html land="pt-BR">
     <head>
-        <title>Cadastro de Estados</title>
+        <title>Cadastro de Paciente</title>
         <script type="text/javascript">
             $(document).ready(function () {
 

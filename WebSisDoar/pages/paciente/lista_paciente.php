@@ -18,7 +18,7 @@ include '../../config/conexao.php';
                     var dataString = {id: id};
                     $.ajax({
                         type: "POST",
-                        url: "../../funcoes/localizar/excluir_estado.php",
+                        url: "../../funcoes/paciente/excluir_paciente.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {

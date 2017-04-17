@@ -148,6 +148,9 @@ JAVASCRIPT
                                 <li><a href="/SISDOAR/WebSisDoar/pages/doador/lista_doador.php"><i class="fa fa-user"></i><i class="fa fa-plus-square-o i-right"></i>Doadores</a>
                                    
                                 </li>
+                                <li><a href="/SISDOAR/WebSisDoar/pages/paciente/lista_paciente.php"><i class="fa fa-user"></i><i class="fa fa-plus-square-o i-right"></i>Pacientes</a>
+                                   
+                                </li>
                                 <li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Localização</a>
                                     <ul>
                                         <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_cidades.php"><i class="fa fa-angle-right"></i> Cidades</a></li>

@@ -17,7 +17,7 @@ $idade = $_POST["idade"];
 if ($id == 0) {
     //salvar
     $sql = $con->prepare("INSERT INTO "
-            . "paciente (nome, data_nascimento, cpf, rg, endereco, numero, "
+            . "doador (nome, data_nascimento, cpf, rg, endereco, numero, "
             . "bairro, complemento, cidade_idcidade, tipo_sangue, fator_rh, idade)"
             . " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $sql->bindValue(1, $nome);

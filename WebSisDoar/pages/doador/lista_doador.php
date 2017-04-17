@@ -5,7 +5,7 @@ include '../../config/conexao.php';
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Estados Cadastrados</title>
+        <title>Doadores Cadastrados</title>
 
         <?php
         include '../../layout/cabecalho.php';
@@ -53,7 +53,7 @@ include '../../config/conexao.php';
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="row">
-                        <a href="../../pages/doador/cadastrar_doador.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+                        <a href="cadastrar_doador.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
                     </div>
                 </div>
                 <!-- /.panel-heading -->

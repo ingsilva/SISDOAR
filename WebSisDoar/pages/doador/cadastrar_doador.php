@@ -9,6 +9,53 @@ include '../../layout/cabecalho.php';
 <html land="pt-BR">
     <head>
         <title>Cadastro de Doador</title>
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('#salvar').click(function () {
+                    var id = $("#id").val();
+                    var nome = $("#nome").val();
+                    var data_nascimento = $("#data_nascimento").val();
+                    var cpf = $("#cpf").val();
+                    var rg = $("#rg").val();
+                    var endereco = $("#endereco").val();
+                    var numero = $("#numero").val();
+                    var bairro = $("#bairro").val();
+                    var complemento = $("#complemento").val();
+                    var cidade = $("#cidade").val();
+                    var tipo_sangue = $("#tipo_sangue").val();
+                    var fator_rh = $("#fator_rh").val();
+                    var idade = $("#idade").val();
+                    
+                    var dataString = {id: id, nome: nome,
+                        data_nascimento: data_nascimento, cpf: cpf,
+                        rg: rg, endereco: endereco, numero: numero,
+                        bairro: bairro, complemento: complemento, 
+                        cidade: cidade, tipo_sangue: tipo_sangue, 
+                        fator_rh: fator_rh, idade: idade};
+                    $.ajax({
+                        type: "POST",
+                        url: "../../funcoes/doador/function_doador.php",
+                        data: dataString,
+                        cache: false,
+                        success: function (retorno) {
+                            if (retorno == true) {
+                                alert("Salvo com Sucesso!!");
+                                location.reload();
+                            } else {
+                                alert("Ocorreu um erro ao salvar o registro.");
+                                alert(nome);
+                                alert(data_nascimento);
+                                alert(cpf);
+                                alert(endereco);
+                                alert(numero);
+                                alert(bairro);
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
         
     </head>
     <body>
@@ -54,8 +101,8 @@ include '../../layout/cabecalho.php';
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
                                     <div class="form-group col-lg-3">
-                                        <label for="tiposangue">Tipo</label>
-                                        <select id="tiposangue" name="tiposangue" class="form-control">
+                                        <label for="tipo_sangue">Tipo</label>
+                                        <select id="tiposangue" name="tipo_sangue" class="form-control">
                                             <option>Escolha</option>
                                             <option>A</option>
                                             <option>AB</option>
@@ -121,7 +168,7 @@ include '../../layout/cabecalho.php';
                                 <!--================================================-------> 
                                 <input type="hidden" name="id" id="id" value="0" />
                                 <!--================================================-------> 
-                                <button type="submit" name="doador" class="btn btn-success">Enviar</button>
+                                <button type="button" id="salvar" class="btn btn-success">Enviar</button>
                                 <button type="reset" class=" btn btn-danger">Limpar</button>
                             </form>
                         </div><!-- End div #basic-form -->

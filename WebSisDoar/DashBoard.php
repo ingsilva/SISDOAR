@@ -18,7 +18,7 @@ and open the template in the editor.
 
             <!-- Page header -->
             <div class="page-heading">
-                <h1>Dashboard <small>your first page</small></h1>
+                <h1>WebSisDoar - <small> Doe Sangue. Doe Vida</small></h1>
             </div>
             <!-- End page header -->
 
