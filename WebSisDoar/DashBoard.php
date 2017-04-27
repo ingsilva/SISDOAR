@@ -49,7 +49,7 @@ and open the template in the editor.
                                 <span class="sr-only">80&#37; Complete</span>
                             </div>
                         </div><!-- End div .progress .progress-xs -->
-                        <p class="text-center">Apenas 4,7 mil fizeram doação</p>
+                        <p class="text-center">Apenas 4,7 mil doaram</p>
                     </div><!-- End div .info-box -->
                 </div>
                 <!-- End Visitor Info Box -->
