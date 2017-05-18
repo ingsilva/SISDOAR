@@ -1,6 +1,6 @@
      <!-- Footer -->
                                 <footer>
-                                    &copy; 2017 <a href="index.html">WebSisDoar</a>. <a href="http://isohdesign.com" target="_blank"> Ingryd, Laís, Saionara </a> - <a href="#fakelink">Rio Branco, AC</a>
+                                    &copy; 2017 <a href="index.html">WebSisDoar</a>. <a href="http://isohdesign.com" target="_blank"> Direitos Reservados </a> - <a href="#fakelink">Rio Branco, AC</a>
                                 </footer>
                                 <!-- End Footer -->
     </div>	

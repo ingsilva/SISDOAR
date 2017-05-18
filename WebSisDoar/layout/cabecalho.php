@@ -119,8 +119,8 @@ JAVASCRIPT
                             <div class="media-body">
                                 Bem Vindo(a),
                                 <h4 class="media-heading"><strong>Administrador</strong></h4>
-                                <a href="user-profile.html">Edit</a>
-                                <a href="/SISDOAR/WebSisDoar/index.html">Logout</a>
+                                <a href="user-profile.html">Editar</a>
+                                <a href="/SISDOAR/WebSisDoar/index.html">Sair</a>
                             </div><!-- End div .media-body -->
                         </div><!-- End div .media -->
 
@@ -138,28 +138,20 @@ JAVASCRIPT
                         <div id="sidebar-menu">
                             <ul>
                                 <li><a href="/SISDOAR/WebSisDoar/DashBoard.php"><i class="fa fa-home"></i> Inicio</a></li>
-                                <li><a href="#fakelink"><i class="fa fa-edit"></i><i class="fa fa-angle-double-down i-right"></i> Cadastro</a>
-                                    <ul>
-                                        <li><a href="/SISDOAR/WebSisDoar/pages/paciente/cadastrar_paciente.php"><i class="fa fa-angle-right"></i>Paciente</a></li>
-                                        <li><a href="/SISDOAR/WebSisDoar/pages/doador/cadastrar_doador.php"><i class="fa fa-angle-right"></i> Doador</a></li>
-                                        <li><a href="/SISDOAR/WebSisDoar/pages/localizar/cadastrar_estado.php"><i class="fa fa-angle-right"></i> Estado</a></li>
-                                    </ul>
-                                </li>
+                           
                                 <li><a href="/SISDOAR/WebSisDoar/pages/doador/lista_doador.php"><i class="fa fa-user"></i><i class="fa fa-plus-square-o i-right"></i>Doadores</a>
                                    
                                 </li>
                                 <li><a href="/SISDOAR/WebSisDoar/pages/paciente/lista_paciente.php"><i class="fa fa-user"></i><i class="fa fa-plus-square-o i-right"></i>Pacientes</a>
                                    
                                 </li>
-                                <li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Localização</a>
+                                <li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Tabelas Auxilio</a>
                                     <ul>
                                         <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_cidades.php"><i class="fa fa-angle-right"></i> Cidades</a></li>
                                         <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_estados.php"><i class="fa fa-angle-right"></i> Estados</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="/SISDOAR/WebSisDoar/galeria.php"><i class="fa fa-picture-o"></i> Galeria</a></li>
-                                <li><a href="graficos.php"><i class="fa fa-bar-chart-o"></i> Gráficos</a></li>
-                             
+                                <li><a href="/SISDOAR/WebSisDoar/graficos.php"><i class="fa fa-bar-chart-o"></i> Gráficos</a></li>
                             </ul>
                             <div class="clear"></div>
                         </div><!-- End div #sidebar-menu -->
