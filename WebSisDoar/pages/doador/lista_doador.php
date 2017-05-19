@@ -64,7 +64,7 @@ include '../../config/conexao.php';
                                 <tr>
                                     <th>ID</th>
                                     <th>Nome</th>
-                                    <th>CPF</th>
+                                    <th>RG</th>
                                     <th>Tipo Sanguineo</th>
                                     <th>Fator RH</th>
                                     <th>Editar</th>
@@ -79,7 +79,7 @@ include '../../config/conexao.php';
                                     <tr>
                                         <td><?php echo $row['iddoador']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
-                                        <td><?php echo $row['cpf']; ?></td>
+                                        <td><?php echo $row['rg']; ?></td>
                                         <td class="text-center"><?php echo $row['tipo_sangue']; ?></td>
                                         <td><?php echo $row['fator_rh']; ?></td>
                                         <td>

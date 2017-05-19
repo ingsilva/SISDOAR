@@ -97,7 +97,8 @@ include '../../config/conexao.php';
                                     </div>
                                     <!------====================================--------->
                                     <!--optopn tava sem value=""-->
-                                    <div class="form-group col-lg-3">
+
+                                    <div class="form-group col-lg-2">
                                         <label for="tipo_sangue">Tipo</label>
                                         <select id="tipo_sangue" name="tipo_sangue" class="form-control">
                                             <option>Escolha</option>
