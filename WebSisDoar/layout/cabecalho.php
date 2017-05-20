@@ -149,6 +149,7 @@ JAVASCRIPT
                                         <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_estados.php"><i class="fa fa-angle-right"></i> Estados</a></li>
                                     </ul>
                                 </li>
+								<li><a href="/SISDOAR/WebSisDoar/pages/estoque/estoque_sangue.php"><i class="fa fa-building-o"></i> Estoque de Sangue</a></li>
                                 <li><a href="/SISDOAR/WebSisDoar/graficos.php"><i class="fa fa-bar-chart-o"></i> Gráficos</a></li>
                             </ul>
                             <div class="clear"></div>
