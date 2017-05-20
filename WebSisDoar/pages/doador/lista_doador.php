@@ -50,7 +50,7 @@ include '../../config/conexao.php';
             <!-- End page header -->
 
             <div class="table-responsive">
-                
+
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
@@ -68,13 +68,20 @@ include '../../config/conexao.php';
                                     <th>Tipo Sanguineo</th>
                                     <th>Fator RH</th>
                                     <th>Sexo</th>
+                                    <th>Cidade</th>
                                     <th>Editar</th>
                                     <th>Excluir</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select * from doador;");
+                                $sql = ("select iddoador, nome, cpf, rg, tipo_sangue,  fator_rh, descricao,
+                                                case  sexo
+                                                when 'F' then 'Feminino'
+                                                when 'M' then 'Masculino'
+                                                end sexo
+                                        from doador d, cidade c
+                                            where d.cidade_idcidade = c.idcidade;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
@@ -84,6 +91,7 @@ include '../../config/conexao.php';
                                         <td class="text-center"><?php echo $row['tipo_sangue']; ?></td>
                                         <td><?php echo $row['fator_rh']; ?></td>
                                         <td><?php echo $row['sexo']; ?></td>
+                                        <td><?php echo $row['descricao']; ?></td>
                                         <td>
                                             <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
                                         </td>
@@ -106,25 +114,25 @@ include '../../config/conexao.php';
             </div>
 
 
-                <script>
-                    $(function () {
-                        $('#example2').DataTable({
-                            "paging": true,
-                            "lengthChange": true,
-                            "searching": true,
-                            "ordering": true,
-                            "info": true,
-                            "autoWidth": true,
-                            "language": {
-                                "url": "/SISDOAR/WebSisDoar/assets/datatables/portuguese-brasil.json"
-                            }
-                        });
+            <script>
+                $(function () {
+                    $('#example2').DataTable({
+                        "paging": true,
+                        "lengthChange": true,
+                        "searching": true,
+                        "ordering": true,
+                        "info": true,
+                        "autoWidth": true,
+                        "language": {
+                            "url": "/SISDOAR/WebSisDoar/assets/datatables/portuguese-brasil.json"
+                        }
                     });
-                </script>
-                <!--==================RODAPE====================---->
+                });
+            </script>
+            <!--==================RODAPE====================---->
 
-                <?php
-                include '../../layout/rodape.php';
-                ?>
-                </body>
-                </html>
+            <?php
+            include '../../layout/rodape.php';
+            ?>
+    </body>
+</html>
