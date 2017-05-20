@@ -67,6 +67,7 @@ include '../../config/conexao.php';
                                     <th>RG</th>
                                     <th>Tipo Sanguineo</th>
                                     <th>Fator RH</th>
+                                    <th>Sexo</th>
                                     <th>Editar</th>
                                     <th>Excluir</th>
                                 </tr>
@@ -82,6 +83,7 @@ include '../../config/conexao.php';
                                         <td><?php echo $row['rg']; ?></td>
                                         <td class="text-center"><?php echo $row['tipo_sangue']; ?></td>
                                         <td><?php echo $row['fator_rh']; ?></td>
+                                        <td><?php echo $row['sexo']; ?></td>
                                         <td>
                                             <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
                                         </td>

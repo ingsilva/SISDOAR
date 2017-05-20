@@ -26,13 +26,14 @@ include '../../config/conexao.php';
                     var tipo_sangue = $("#tipo_sangue").val();
                     var fator_rh = $("#fator_rh").val();
                     var idade = $("#idade").val();
+                    var sexo = $("#sexo").val();
 
                     var dataString = {id: id, nome: nome,
                         data_nascimento: data_nascimento, cpf: cpf,
                         rg: rg, endereco: endereco, numero: numero,
                         bairro: bairro, complemento: complemento,
                         cidade: cidade, tipo_sangue: tipo_sangue,
-                        fator_rh: fator_rh, idade: idade};
+                        fator_rh: fator_rh, idade: idade, sexo: sexo};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/doador/function_doador.php",
@@ -107,12 +108,20 @@ include '../../config/conexao.php';
                                             <option value="O">O</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-2">
                                         <label for="fator_rh">Fator RH</label>
                                         <select class="form-control" id="fator_rh" name="fator_rh">
                                             <option>Escolha</option>
                                             <option value="positivo">Positivo</option>
                                             <option value="negativo">Negativo</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-2">
+                                        <label for="sexo">Sexo</label>
+                                        <select class="form-control" id="sexo" name="sexo">
+                                            <option>Escolha</option>
+                                            <option value="f">Feminino</option>
+                                            <option value="m">Masculino</option>
                                         </select>
                                     </div>
                                     <!------====================================--------->
