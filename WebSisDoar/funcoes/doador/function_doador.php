@@ -14,12 +14,14 @@ $cidade_idcidade = $_POST["cidade"];
 $tipo_sangue = $_POST["tipo_sangue"];
 $fator_rh = $_POST["fator_rh"];
 $idade = $_POST["idade"];
+$sexo = $_POST["sexo"];
+
 if ($id == 0) {
     //salvar
     $sql = $con->prepare("INSERT INTO "
             . "doador (nome, data_nascimento, cpf, rg, endereco, numero, "
-            . "bairro, complemento, cidade_idcidade, tipo_sangue, fator_rh, idade)"
-            . " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            . "bairro, complemento, cidade_idcidade, tipo_sangue, fator_rh, idade, sexo)"
+            . " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $sql->bindValue(1, $nome);
     $sql->bindValue(2, $data_nascimento);
     $sql->bindValue(3, $cpf);
@@ -32,7 +34,7 @@ if ($id == 0) {
     $sql->bindValue(10, $tipo_sangue);
     $sql->bindValue(11, $fator_rh);
     $sql->bindValue(12, $idade);
-
+    $sql->bindValue(13, $sexo);
 
 
 

@@ -87,11 +87,11 @@ include '../../config/conexao.php';
                                     <tr>
                                         <td><?php echo $row['iddoador']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
-                                        <td><?php echo $row['rg']; ?></td>
+                                        <td class="text-center"><?php echo $row['rg']; ?></td>
                                         <td class="text-center"><?php echo $row['tipo_sangue']; ?></td>
-                                        <td><?php echo $row['fator_rh']; ?></td>
-                                        <td><?php echo $row['sexo']; ?></td>
-                                        <td><?php echo $row['descricao']; ?></td>
+                                        <td class="text-center"><?php echo $row['fator_rh']; ?></td>
+                                        <td class="text-center"><?php echo $row['sexo']; ?></td>
+                                        <td class="text-center"><?php echo $row['descricao']; ?></td>
                                         <td>
                                             <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
                                         </td>
