@@ -1,0 +1,134 @@
+<?php
+include '../../config/conexao.php';
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Doadores Cadastrados</title>
+
+        <?php
+        include '../../layout/cabecalho.php';
+        ?>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('a#excluir').livequery("click", function () {
+                    var id = $(this).attr('rel');
+                    var dataString = {id: id};
+                    $.ajax({
+                        type: "POST",
+                        url: "../../funcoes/doador/excluir_doador.php",
+                        data: dataString,
+                        cache: false,
+                        success: function (retorno) {
+                            if (retorno == true) {
+                                alert("Registro Excluido com Sucesso.");
+                                location.reload();
+
+                            } else {
+                                alert(id);
+                                alert("Ocorreu um erro ao excluir o registro.");
+                            }
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body >
+
+
+
+        <div class="body content rows scroll-y">
+
+            <!-- Page header -->
+            <div class="page-heading animated fadeInDownBig">
+                <h1> Triagem <small> de Doadores </small></h1>
+            </div>
+            <!-- End page header -->
+
+            <div class="table-responsive">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <a href="cadastrar_doador.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+                        </div>
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <table width="100%" class="table table-striped table-bordered table-hover" id="example2">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>RG</th>
+                                    <th>Tipo Sanguineo</th>
+                                    <th>Fator RH</th>
+                                    <th>Sexo</th>
+                                    <th>Cidade</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $sql = ("select iddoador, nome, cpf, rg, tipo_sangue,  fator_rh, descricao,
+                                                case  sexo
+                                                when 'F' then 'Feminino'
+                                                when 'M' then 'Masculino'
+                                                end sexo
+                                        from doador d, cidade c
+                                            where d.cidade_idcidade = c.idcidade;");
+                                foreach ($con->query($sql) as $row) {
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $row['iddoador']; ?></td>
+                                        <td><?php echo $row['nome']; ?></td>
+                                        <td class="text-center"><?php echo $row['rg']; ?></td>
+                                        <td class="text-center"><?php echo $row['tipo_sangue']; ?></td>
+                                        <td class="text-center"><?php echo $row['fator_rh']; ?></td>
+                                        <td class="text-center"><?php echo $row['sexo']; ?></td>
+                                        <td class="text-center"><?php echo $row['descricao']; ?></td>
+                                        <td>
+                                            <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }
+                                ?>
+
+                            </tbody>
+                        </table>
+                        <!-- /.table-responsive -->
+
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+
+
+            <script>
+                $(function () {
+                    $('#example2').DataTable({
+                        "paging": true,
+                        "lengthChange": true,
+                        "searching": true,
+                        "ordering": true,
+                        "info": true,
+                        "autoWidth": true,
+                        "language": {
+                            "url": "/SISDOAR/WebSisDoar/assets/datatables/portuguese-brasil.json"
+                        }
+                    });
+                });
+            </script>
+            <!--==================RODAPE====================---->
+
+            <?php
+            include '../../layout/rodape.php';
+            ?>
+    </body>
+</html>

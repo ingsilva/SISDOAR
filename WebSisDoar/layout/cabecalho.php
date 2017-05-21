@@ -138,18 +138,21 @@ JAVASCRIPT
                         <div id="sidebar-menu">
                             <ul>
                                 <li><a href="/SISDOAR/WebSisDoar/DashBoard.php"><i class="fa fa-home"></i> Inicio</a></li>
-                           
+
                                 <li><a href="/SISDOAR/WebSisDoar/pages/doador/lista_doador.php"><i class="fa fa-user"></i><i class="fa fa-plus-square-o i-right"></i>Doadores</a>
-                                   
+
                                 </li>
-                                                           
+                                <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem.php"><i class="fa fa-file-text-o"></i>Triagem</a>
+
+                                </li>
+
                                 <li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Tabelas Auxilio</a>
                                     <ul>
                                         <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_cidades.php"><i class="fa fa-angle-right"></i> Cidades</a></li>
                                         <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_estados.php"><i class="fa fa-angle-right"></i> Estados</a></li>
                                     </ul>
                                 </li>
-								<li><a href="/SISDOAR/WebSisDoar/pages/estoque/estoque_sangue.php"><i class="fa fa-building-o"></i> Estoque de Sangue</a></li>
+                                <li><a href="/SISDOAR/WebSisDoar/pages/estoque/estoque_sangue.php"><i class="fa fa-tint"></i> Estoque de Sangue</a></li>
                                 <li><a href="/SISDOAR/WebSisDoar/graficos.php"><i class="fa fa-bar-chart-o"></i> Gráficos</a></li>
                             </ul>
                             <div class="clear"></div>

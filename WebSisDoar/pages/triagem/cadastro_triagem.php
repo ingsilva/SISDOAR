@@ -5,7 +5,7 @@ include '../../config/conexao.php';
 <!DOCTYPE HTML>
 <html land="pt-BR">
     <head>
-        <title>Cadastro de Doador</title>
+        <title>Cadastro Triagem</title>
         <?php
         include '../../layout/cabecalho.php';
         ?>
