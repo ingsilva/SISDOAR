@@ -70,9 +70,34 @@ include '../../config/conexao.php';
                         <div id="basic-form" class="collapse in">
                             <form role="form" action="../../funcoes/doador/function_doador.php" method="post">
                                 <div class="row">
+                                    <div class="form-group col-lg-3">
+                                        <label for="nome">Data Registro</label>
+                                        <input class="form-control"   type="date" id="data_registro" name="data_registro">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                     <div class="form-group col-lg-3">
+                                        <label for="nome">ID Doador</label>
+                                       <input class="form-control"   type="number" id="id_doador" name="id_doador">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                     <div class="form-group col-lg-3">
+                                        <label for="nome">Numero SUS</label>
+                                       <input class="form-control"   type="number" id="numero_sus" name="numero_sus">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
                                     <div class="form-group col-lg-9">
                                         <label for="nome">Nome</label>
                                         <input class="form-control"  id="nome" name="nome" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                     <div class="form-group col-lg-9">
+                                        <label for="nome_pai">Nome do Pai</label>
+                                        <input class="form-control"  id="nome_pai" name="nome_pai" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                     <div class="form-group col-lg-9">
+                                        <label for="nome">Nome da Mãe</label>
+                                        <input class="form-control"  id="nome_mae" name="nome_mae" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
                                     <div class=" form-group col-lg-2">
@@ -80,9 +105,25 @@ include '../../config/conexao.php';
                                         <input class="form-control"   type="date" id="data_nascimento" name="data_nascimento">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
+                                    
                                     <div class="form-group col-lg-1">
                                         <label for="idade">Idade</label>
                                         <input class="form-control"   type="number" id="idade" name="idade">
+                                    </div>
+                                     <div class="form-group col-lg-3">
+                                        <label for="nacionalidade">Nacionalidade</label>
+                                        <input class="form-control"  id="nacionalidade" name="nacionalidade" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                     <div class="form-group col-lg-3">
+                                        <label for="naturalidade">Naturalidade</label>
+                                        <input class="form-control"  id="naturalidade" name="naturalidade" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                     <div class="form-group col-lg-3">
+                                        <label for="UF">UF</label>
+                                        <input class="form-control"  id="uf" name="uf" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
                                 </div>
                                 <div class="row">
@@ -104,6 +145,7 @@ include '../../config/conexao.php';
                                         <select id="tipo_sangue" name="tipo_sangue" class="form-control">
                                             <option>Escolha</option>
                                             <option value="A">A</option>
+                                            <option value="B">B</option>
                                             <option value="AB">AB</option>
                                             <option value="O">O</option>
                                         </select>
