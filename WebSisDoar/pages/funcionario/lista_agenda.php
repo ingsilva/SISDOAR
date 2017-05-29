@@ -5,7 +5,7 @@ include '../../config/conexao.php';
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Pacientes Cadastrados</title>
+        <title>Agenda Telefonica</title>
 
         <?php
         include '../../layout/cabecalho.php';
@@ -18,7 +18,7 @@ include '../../config/conexao.php';
                     var dataString = {id: id};
                     $.ajax({
                         type: "POST",
-                        url: "../../funcoes/paciente/excluir_paciente.php",
+                        url: "../../funcoes/funcionario/excluir_agenda.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
@@ -45,7 +45,7 @@ include '../../config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1> Pacientes <small> Cadastrados </small></h1>
+                <h1> Agenda <small> Telefonica </small></h1>
             </div>
             <!-- End page header -->
 
@@ -54,7 +54,7 @@ include '../../config/conexao.php';
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <a href="cadastrar_paciente.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+                            <a href="../../pages/funcionario/cadastrar_agenda.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
                         </div>
                     </div>
                     <!-- /.panel-heading -->
@@ -64,29 +64,27 @@ include '../../config/conexao.php';
                                 <tr>
                                     <th>ID</th>
                                     <th>Nome</th>
-                                    <th>CPF</th>
-                                    <th>Tipo Sanguineo</th>
-                                    <th>Fator RH</th>
+                                    <th>DDD</th>
+                                    <th>Telefone/Celular</th>
                                     <th>Editar</th>
                                     <th>Excluir</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select * from paciente;");
+                                $sql = ("select * from agenda;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
-                                        <td><?php echo $row['idpaciente']; ?></td>
+                                        <td><?php echo $row['idagenda']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
-                                        <td><?php echo $row['cpf']; ?></td>
-                                        <td ><?php echo $row['tipo_sangue']; ?></td>
-                                        <td><?php echo $row['fator_rh']; ?></td>
+                                        <td><?php echo $row['ddd']; ?></td>
+                                        <td ><?php echo $row['telefone']; ?></td>
                                         <td>
-                                            <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idpaciente'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
+                                            <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idagenda'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
                                         </td>
                                         <td>
-                                            <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['idpaciente'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
+                                            <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['idagenda'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
                                         </td>
                                     </tr>
                                     <?php

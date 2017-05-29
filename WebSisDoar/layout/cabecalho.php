@@ -153,6 +153,7 @@ JAVASCRIPT
                                     </ul>
                                 </li>
                                 <li><a href="/SISDOAR/WebSisDoar/pages/estoque/estoque_sangue.php"><i class="fa fa-tint"></i> Estoque de Sangue</a></li>
+                                <li><a href="/SISDOAR/WebSisDoar/pages/funcionario/lista_agenda.php"><i class="glyphicon glyphicon-earphone"></i>Agenda</a>
                                 <li><a href="/SISDOAR/WebSisDoar/graficos.php"><i class="fa fa-bar-chart-o"></i> Gráficos</a></li>
                             </ul>
                             <div class="clear"></div>
@@ -208,6 +209,7 @@ JAVASCRIPT
                     </div>
                     <!-- END NAVBAR CONTENT-->
                 </div>
+
                 <!-- END CONTENT HEADER -->
 
                 </html>

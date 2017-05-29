@@ -211,9 +211,11 @@ and open the template in the editor.
                     <!-- End user profile -->
                 </div><!-- End div .col-sm-4 -->
             </div><!-- End div .row -->
-                   
+
+
             <?php
             include 'layout/rodape.php';
             ?>
+        </div>
     </body>
 </html>

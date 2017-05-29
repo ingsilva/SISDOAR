@@ -75,14 +75,14 @@ include '../../config/conexao.php';
                                         <input class="form-control"   type="date" id="data_registro" name="data_registro">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                     <div class="form-group col-lg-3">
-                                        <label for="nome">ID Doador</label>
-                                       <input class="form-control"   type="number" id="id_doador" name="id_doador">
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                     <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-3">
                                         <label for="nome">Numero SUS</label>
-                                       <input class="form-control"   type="number" id="numero_sus" name="numero_sus">
+                                        <input class="form-control"   type="number" id="numero_sus" name="numero_sus">
+                                         <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                    <div class="form-group col-lg-3">
+                                        <label for="nacionalidade">Nacionalidade</label>
+                                        <input class="form-control"  id="nacionalidade" name="nacionalidade" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
                                     <div class="form-group col-lg-9">
@@ -90,12 +90,12 @@ include '../../config/conexao.php';
                                         <input class="form-control"  id="nome" name="nome" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                     <div class="form-group col-lg-9">
+                                    <div class="form-group col-lg-9">
                                         <label for="nome_pai">Nome do Pai</label>
                                         <input class="form-control"  id="nome_pai" name="nome_pai" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                     <div class="form-group col-lg-9">
+                                    <div class="form-group col-lg-9">
                                         <label for="nome">Nome da Mãe</label>
                                         <input class="form-control"  id="nome_mae" name="nome_mae" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
@@ -105,22 +105,18 @@ include '../../config/conexao.php';
                                         <input class="form-control"   type="date" id="data_nascimento" name="data_nascimento">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    
+
                                     <div class="form-group col-lg-1">
                                         <label for="idade">Idade</label>
                                         <input class="form-control"   type="number" id="idade" name="idade">
                                     </div>
-                                     <div class="form-group col-lg-3">
-                                        <label for="nacionalidade">Nacionalidade</label>
-                                        <input class="form-control"  id="nacionalidade" name="nacionalidade" >
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                     <div class="form-group col-lg-3">
+
+                                    <div class="form-group col-lg-3">
                                         <label for="naturalidade">Naturalidade</label>
                                         <input class="form-control"  id="naturalidade" name="naturalidade" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                     <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-3">
                                         <label for="UF">UF</label>
                                         <input class="form-control"  id="uf" name="uf" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
@@ -179,7 +175,7 @@ include '../../config/conexao.php';
                                         <input class="form-control" type="number"  id="numero" name="numero">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class=" form-group col-lg-2">
+                                    <div class=" form-group col-lg-3">
                                         <label for="bairro">Bairro</label>
                                         <input class="form-control"   type="text" id="bairro" name="bairro">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
@@ -196,7 +192,7 @@ include '../../config/conexao.php';
                                             ?>
                                         </select>
                                     </div>
-                                    <div class="col-sm-1 form-group">
+                                    <div class="col-sm-2 form-group">
                                         <label for="estado">Estado</label>
                                         <select class="form-control" id="estado" name="estado">
                                             <option>------</option>
@@ -208,18 +204,18 @@ include '../../config/conexao.php';
                                             ?>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group col-lg-12">
-                                        <label for="complemento">Complemento</label>
-                                        <input class="form-control" type="text" id="complemento" name="complemento" >
+                                    <div class="row">
+                                        <div class="form-group col-lg-7">
+                                            <label for="complemento">Complemento</label>
+                                            <input class="form-control" type="text" id="complemento" name="complemento" >
+                                        </div>
                                     </div>
+                                    <!--================================================-------> 
+                                    <input type="hidden" name="id" id="id" value="0" />
+                                    <!--================================================-------> 
+                                    <button type="button" id="salvar" class="btn btn-success">Enviar</button>
+                                    <button type="reset" class=" btn btn-danger">Limpar</button>
                                 </div>
-                                <!--================================================-------> 
-                                <input type="hidden" name="id" id="id" value="0" />
-                                <!--================================================-------> 
-                                <button type="button" id="salvar" class="btn btn-success">Enviar</button>
-                                <button type="reset" class=" btn btn-danger">Limpar</button>
                             </form>
                         </div><!-- End div #basic-form -->
                     </div>
