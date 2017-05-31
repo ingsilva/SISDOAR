@@ -31,26 +31,26 @@ if ($id == 0) {
             . "bairro, complemento, cidade_idcidade, tipo_sangue, fator_rh, idade, sexo)"
             . " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $sql->bindValue(1, $data_registro);
-    $sql->bindValue(1, $id_doador);
-    $sql->bindValue(1, $numero_sus);
-    $sql->bindValue(1, $nome);
-    $sql->bindValue(1, $nome_pai);
-    $sql->bindValue(1, $nome_mae);
-    $sql->bindValue(2, $data_nascimento);
-    $sql->bindValue(3, $cpf);
-    $sql->bindValue(4, $rg);
-    $sql->bindValue(5, $endereco);
-    $sql->bindValue(6, $numero);
-    $sql->bindValue(7, $bairro);
-    $sql->bindValue(8, $complemento);
-    $sql->bindValue(9, $cidade_idcidade);
-    $sql->bindValue(10, $tipo_sangue);
-    $sql->bindValue(11, $fator_rh);
-    $sql->bindValue(12, $idade);
-    $sql->bindValue(1, $nacionalidade);
-    $sql->bindValue(1, $naturalidade);
-    $sql->bindValue(1, $uf);
-    $sql->bindValue(13, $sexo);
+    $sql->bindValue(2, $id_doador);
+    $sql->bindValue(3, $numero_sus);
+    $sql->bindValue(4, $nome);
+    $sql->bindValue(5, $nome_pai);
+    $sql->bindValue(6, $nome_mae);
+    $sql->bindValue(7, $data_nascimento);
+    $sql->bindValue(8, $cpf);
+    $sql->bindValue(9, $rg);
+    $sql->bindValue(10, $endereco);
+    $sql->bindValue(11, $numero);
+    $sql->bindValue(12, $bairro);
+    $sql->bindValue(13, $complemento);
+    $sql->bindValue(14, $cidade_idcidade);
+    $sql->bindValue(15, $tipo_sangue);
+    $sql->bindValue(16, $fator_rh);
+    $sql->bindValue(17, $idade);
+    $sql->bindValue(18, $nacionalidade);
+    $sql->bindValue(19, $naturalidade);
+    $sql->bindValue(20, $uf);
+    $sql->bindValue(21, $sexo);
 
 
 

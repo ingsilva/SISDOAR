@@ -5,7 +5,7 @@ include '../../config/conexao.php';
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Doadores Cadastrados</title>
+        <title>Lista de Triagem</title>
 
         <?php
         include '../../layout/cabecalho.php';
@@ -18,7 +18,7 @@ include '../../config/conexao.php';
                     var dataString = {id: id};
                     $.ajax({
                         type: "POST",
-                        url: "../../funcoes/doador/excluir_doador.php",
+                        url: "../../funcoes/triagem/excluir_triagem.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
@@ -54,7 +54,7 @@ include '../../config/conexao.php';
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <a href="cadastrar_doador.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+                            <a href="cadastro_triagem.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
                         </div>
                     </div>
                     <!-- /.panel-heading -->
@@ -64,35 +64,31 @@ include '../../config/conexao.php';
                                 <tr>
                                     <th>ID</th>
                                     <th>Nome</th>
-                                    <th>RG</th>
-                                    <th>Tipo Sanguineo</th>
-                                    <th>Fator RH</th>
-                                    <th>Sexo</th>
-                                    <th>Cidade</th>
+                                    <th>Idade</th>
+                                    <th>Peso</th>
+                                    <th>Status</th>
                                     <th>Ação</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select iddoador, nome, cpf, rg, tipo_sangue,  fator_rh, descricao,
-                                                case  sexo
-                                                when 'F' then 'Feminino'
-                                                when 'M' then 'Masculino'
-                                                end sexo
-                                        from doador d, cidade c
-                                            where d.cidade_idcidade = c.idcidade;");
+                                $sql = ("select idtriagem, nome, idade, peso, status,
+                                                case  status
+                                                when 'Apt' then 'Apto'
+                                                when 'Nao Apt' then 'Não Apto'
+                                                end status
+                                        from doador d, triagem t
+                                            where t.doador_iddoador = d.iddoador;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
-                                        <td><?php echo $row['iddoador']; ?></td>
+                                        <td><?php echo $row['idtriagem']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
-                                        <td class="text-center"><?php echo $row['rg']; ?></td>
-                                        <td class="text-center"><?php echo $row['tipo_sangue']; ?></td>
-                                        <td class="text-center"><?php echo $row['fator_rh']; ?></td>
-                                        <td class="text-center"><?php echo $row['sexo']; ?></td>
-                                        <td class="text-center"><?php echo $row['descricao']; ?></td>
+                                        <td class="text-center"><?php echo $row['idade']; ?></td>
+                                        <td class="text-center"><?php echo $row['peso']; ?></td>
+                                        <td class="text-center"><?php echo $row['status']; ?></td>
                                         <td>
-                                            <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
+                                            <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
                                         </td>
                                     </tr>
                                     <?php
