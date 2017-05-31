@@ -14,10 +14,21 @@ include '../../config/conexao.php';
 
                 $('#salvar').click(function () {
                     var id = $("#id").val();
+                    var data_registro = $("#data_registro").val();
+                    var numero_sus = $("#numero_sus").val();                    
                     var nome = $("#nome").val();
+                    var nome_pai = $("#nome_pai").val();
+                    var nome_mae = $("#nome_mae").val();
                     var data_nascimento = $("#data_nascimento").val();
-                    var cpf = $("#cpf").val();
+                    var idade = $("#idade").val();
+                    var sexo = $("#sexo").val();
+                    var etnia = $("#etnia").val();
+                    var nacionalidade = $("#nacionalidade").val();
+                    var naturalidade = $("#naturalidade").val();
                     var rg = $("#rg").val();
+                    var expeditor = $("#expeditor").val();
+                    var estado_civil = $("#estado_civil").val();
+                    var escolaridade = $("#escolaridade").val();
                     var endereco = $("#endereco").val();
                     var numero = $("#numero").val();
                     var bairro = $("#bairro").val();
@@ -25,8 +36,8 @@ include '../../config/conexao.php';
                     var cidade = $("#cidade").val();
                     var tipo_sangue = $("#tipo_sangue").val();
                     var fator_rh = $("#fator_rh").val();
-                    var idade = $("#idade").val();
-                    var sexo = $("#sexo").val();
+                    
+                    
 
                     var dataString = {id: id, nome: nome,
                         data_nascimento: data_nascimento, cpf: cpf,
