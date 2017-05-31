@@ -80,33 +80,15 @@ include '../../config/conexao.php';
                                         <input class="form-control"   type="number" id="numero_sus" name="numero_sus">
                                          <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    
-                                    <div class="form-group col-lg-9">
-                                        <label for="nome">Nome</label>
-                                        <input class="form-control"  id="nome" name="nome" >
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                    <div class="form-group col-lg-9">
-                                        <label for="nome_pai">Nome do Pai</label>
-                                        <input class="form-control"  id="nome_pai" name="nome_pai" >
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                    <div class="form-group col-lg-9">
-                                        <label for="nome">Nome da Mãe</label>
-                                        <input class="form-control"  id="nome_mae" name="nome_mae" >
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                    <div class=" form-group col-lg-2">
+                                    <div class=" form-group col-lg-3">
                                         <label for="data_nascimento">Data de Nascimento</label>
                                         <input class="form-control"   type="date" id="data_nascimento" name="data_nascimento">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-
                                     <div class="form-group col-lg-1">
                                         <label for="idade">Idade</label>
                                         <input class="form-control"   type="number" id="idade" name="idade">
                                     </div>
-                                    
                                     <div class="form-group col-lg-2">
                                         <label for="sexo">Sexo</label>
                                         <select class="form-control" id="sexo" name="sexo">
@@ -115,8 +97,27 @@ include '../../config/conexao.php';
                                             <option value="m">Masculino</option>
                                         </select>
                                     </div>
-                                    
-                                    <div class="form-group col-lg-2">
+                                    <div class="form-group col-lg-9">
+                                        <label for="nome">Nome</label>
+                                        <input class="form-control"  id="nome" name="nome" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                    <div class="form-group col-lg-3">
+                                        <label for="rg">RG</label>
+                                        <input class="form-control" type="text"  id="rg" name="rg">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label for="nome_pai">Nome do Pai</label>
+                                        <input class="form-control"  id="nome_pai" name="nome_pai" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label for="nome">Nome da Mãe</label>
+                                        <input class="form-control"  id="nome_mae" name="nome_mae" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                    <div class="form-group col-lg-3">
                                         <label for="etnia">Etnia</label>
                                         <select id="etnia" name="etnia" class="form-control">
                                             <option>Escolha</option>
@@ -127,10 +128,10 @@ include '../../config/conexao.php';
                                             <option value="Mulato">Mulato</option>
                                             <option value="Caboclo">Caboclo</option>
                                             <option value="Cafuzo">Cafuzo</option>
-                                            
+
                                         </select>
                                     </div>
-                                    
+
                                     <div class="form-group col-lg-2">
                                         <label for="nacionalidade">Nacionalidade</label>
                                         <select id="nacionalidade" name="nacionalidade" class="form-control">
@@ -145,15 +146,7 @@ include '../../config/conexao.php';
                                         <input class="form-control"  id="naturalidade" name="naturalidade" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    
-                                </div>
-                                
-                                    <div class="form-group col-lg-3">
-                                        <label for="rg">RG</label>
-                                        <input class="form-control" type="text"  id="rg" name="rg">
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                    
+
                                     <div class="form-group col-lg-2">
                                         <label for="rg">Expeditor</label>
                                         <input class="form-control" type="text"  id="expeditor" name="expeditor">
@@ -175,8 +168,8 @@ include '../../config/conexao.php';
                                             <option value="Outros">Outros</option>
                                         </select>
                                     </div>
-                                    
-                                    <div class="form-group col-lg-2">
+
+                                    <div class="form-group col-lg-3">
                                         <label for="escolaridade">Escolaridade</label>
                                         <select id="escolaridade" name="escolaridade" class="form-control">
                                             <option>Escolha</option>
@@ -189,9 +182,9 @@ include '../../config/conexao.php';
                                             <option value="Superior Completo">Superior Completo</option>
                                         </select>
                                     </div>
-                                    
+
                                     <div class="form-group col-lg-2">
-                                        <label for="tipo_sangue">Tipo</label>
+                                        <label for="tipo_sangue">Tipo Sanguineo</label>
                                         <select id="tipo_sangue" name="tipo_sangue" class="form-control">
                                             <option>Escolha</option>
                                             <option value="A">A</option>
@@ -208,37 +201,6 @@ include '../../config/conexao.php';
                                             <option value="Negativo">Negativo</option>
                                         </select>
                                     </div>
-                                    
-                                    <!------====================================--------->
-                                </div>
-                                <div class="row">
-                                    <div class=" form-group col-lg-5">
-                                        <label for="endereco">Endereço</label>
-                                        <input class="form-control"   type="text" id="endereco" name="endereco">
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                    <div class="form-group col-lg-2">
-                                        <label for="numero">N°</label>
-                                        <input class="form-control" type="number"  id="numero" name="numero">
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                    <div class=" form-group col-lg-3">
-                                        <label for="bairro">Bairro</label>
-                                        <input class="form-control"   type="text" id="bairro" name="bairro">
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                    <div class="col-lg-2 form-group">
-                                        <label for="cidade">Cidade</label>
-                                        <select class="form-control" id="cidade" name="cidade">
-                                            <option>------</option>
-                                            <?php
-                                            $sql = ("SELECT idcidade, descricao FROM cidade");
-                                            foreach ($con->query($sql) as $row) {
-                                                echo "<option value='" . $row['idcidade'] . "'>" . $row['descricao'] . "</option>";
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
                                     <div class="col-sm-2 form-group">
                                         <label for="estado">Estado</label>
                                         <select class="form-control" id="estado" name="estado">
@@ -251,25 +213,69 @@ include '../../config/conexao.php';
                                             ?>
                                         </select>
                                     </div>
-                                    <div class="row">
-                                        <div class="form-group col-lg-7">
-                                            <label for="complemento">Complemento</label>
-                                            <input class="form-control" type="text" id="complemento" name="complemento" >
-                                        </div>
+                                    <div class="col-lg-3 form-group">
+                                        <label for="cidade">Cidade</label>
+                                        <select class="form-control" id="cidade" name="cidade">
+                                            <option>------</option>
+                                            <?php
+                                            $sql = ("SELECT idcidade, descricao FROM cidade");
+                                            foreach ($con->query($sql) as $row) {
+                                                echo "<option value='" . $row['idcidade'] . "'>" . $row['descricao'] . "</option>";
+                                            }
+                                            ?>
+                                        </select>
                                     </div>
-                                    <!--================================================-------> 
-                                    <input type="hidden" name="id" id="id" value="0" />
-                                    <!--================================================-------> 
-                                    <button type="button" id="salvar" class="btn btn-success">Enviar</button>
-                                    <button type="reset" class=" btn btn-danger">Limpar</button>
+
+                                    <div class="row">
+                                        <div class=" form-group col-lg-5">
+                                            <label for="endereco">Endereço</label>
+                                            <input class="form-control"   type="text" id="endereco" name="endereco">
+                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <label for="numero">N°</label>
+                                            <input class="form-control" type="number"  id="numero" name="numero">
+                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                        </div>
+                                        <div class=" form-group col-lg-3">
+                                            <label for="bairro">Bairro</label>
+                                            <input class="form-control"   type="text" id="bairro" name="bairro">
+                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                        </div>
+                                        <div class="col-sm-2 form-group">
+                                            <label for="estado">Estado</label>
+                                            <select class="form-control" id="estado" name="estado">
+                                                <option>------</option>
+                                                <?php
+                                                $sql = ("SELECT idestado, uf FROM estado");
+                                                foreach ($con->query($sql) as $row) {
+                                                    echo "<option value='" . $row['idestado'] . "'>" . $row['uf'] . "</option>";
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-lg-7">
+                                                <label for="complemento">Complemento</label>
+                                                <input class="form-control" type="text" id="complemento" name="complemento" >
+                                            </div>
+                                        </div>
+                                        <!--================================================-------> 
+                                        <input type="hidden" name="id" id="id" value="0" />
+                                        <!--================================================-------> 
+                                        <button type="button" id="salvar" class="btn btn-success">Enviar</button>
+                                        <button type="reset" class=" btn btn-danger">Limpar</button>
+                                    </div>
                                 </div>
                             </form>
                         </div><!-- End div #basic-form -->
                     </div>
                 </div><!-- End div .box-info -->
-            </div><!-- End div .col-sm-6 -->
-            <?php
-            include '../../layout/rodape.php';
-            ?>
+            </div>
+        </div>
+        <!-- End div .col-sm-6 -->
+        <?php
+        include '../../layout/rodape.php';
+        ?>
     </body>
 </html>
