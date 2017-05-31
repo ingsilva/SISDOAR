@@ -15,7 +15,7 @@ include '../../config/conexao.php';
                 $('#salvar').click(function () {
                     var id = $("#id").val();
                     var data_registro = $("#data_registro").val();
-                    var numero_sus = $("#numero_sus").val();                    
+                    var numero_sus = $("#numero_sus").val();
                     var nome = $("#nome").val();
                     var nome_pai = $("#nome_pai").val();
                     var nome_mae = $("#nome_mae").val();
@@ -36,8 +36,8 @@ include '../../config/conexao.php';
                     var cidade = $("#cidade").val();
                     var tipo_sangue = $("#tipo_sangue").val();
                     var fator_rh = $("#fator_rh").val();
-                    
-                    
+
+
 
                     var dataString = {id: id, nome: nome,
                         data_nascimento: data_nascimento, cpf: cpf,
@@ -100,6 +100,7 @@ include '../../config/conexao.php';
                                         <label for="idade">Idade</label>
                                         <input class="form-control"   type="number" id="idade" name="idade">
                                     </div>
+                                    
                                     <div class="form-group col-lg-2">
                                         <label for="sexo">Sexo</label>
                                         <select class="form-control" id="sexo" name="sexo">
@@ -237,47 +238,45 @@ include '../../config/conexao.php';
                                         </select>
                                     </div>
 
-                                    <div class="row">
-                                        <div class=" form-group col-lg-5">
-                                            <label for="endereco">Endereço</label>
-                                            <input class="form-control"   type="text" id="endereco" name="endereco">
-                                            <!--<p class="help-block">Example block-level help text here.</p>-->
-                                        </div>
-                                        <div class="form-group col-lg-2">
-                                            <label for="numero">N°</label>
-                                            <input class="form-control" type="number"  id="numero" name="numero">
-                                            <!--<p class="help-block">Example block-level help text here.</p>-->
-                                        </div>
-                                        <div class=" form-group col-lg-3">
-                                            <label for="bairro">Bairro</label>
-                                            <input class="form-control"   type="text" id="bairro" name="bairro">
-                                            <!--<p class="help-block">Example block-level help text here.</p>-->
-                                        </div>
-                                        <div class="col-sm-2 form-group">
-                                            <label for="estado">Estado</label>
-                                            <select class="form-control" id="estado" name="estado">
-                                                <option>------</option>
-                                                <?php
-                                                $sql = ("SELECT idestado, uf FROM estado");
-                                                foreach ($con->query($sql) as $row) {
-                                                    echo "<option value='" . $row['idestado'] . "'>" . $row['uf'] . "</option>";
-                                                }
-                                                ?>
-                                            </select>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-lg-7">
-                                                <label for="complemento">Complemento</label>
-                                                <input class="form-control" type="text" id="complemento" name="complemento" >
-                                            </div>
-                                        </div>
-                                        <!--================================================-------> 
-                                        <input type="hidden" name="id" id="id" value="0" />
-                                        <!--================================================-------> 
-                                        <button type="button" id="salvar" class="btn btn-success">Enviar</button>
-                                        <button type="reset" class=" btn btn-danger">Limpar</button>
+
+                                    <div class=" form-group col-lg-5">
+                                        <label for="endereco">Endereço</label>
+                                        <input class="form-control"   type="text" id="endereco" name="endereco">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
+                                    <div class="form-group col-lg-2">
+                                        <label for="numero">N°</label>
+                                        <input class="form-control" type="number"  id="numero" name="numero">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                    <div class=" form-group col-lg-3">
+                                        <label for="bairro">Bairro</label>
+                                        <input class="form-control"   type="text" id="bairro" name="bairro">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                    <div class="col-sm-2 form-group">
+                                        <label for="estado">Estado</label>
+                                        <select class="form-control" id="estado" name="estado">
+                                            <option>------</option>
+                                            <?php
+                                            $sql = ("SELECT idestado, uf FROM estado");
+                                            foreach ($con->query($sql) as $row) {
+                                                echo "<option value='" . $row['idestado'] . "'>" . $row['uf'] . "</option>";
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-7">
+                                        <label for="complemento">Complemento</label>
+                                        <input class="form-control" type="text" id="complemento" name="complemento" >
+                                    </div>
+                                    <!--================================================-------> 
+                                    <input type="hidden" name="id" id="id" value="0" />
+                                    <!--================================================-------> 
+
                                 </div>
+                                <button type="button" id="salvar" class="btn btn-success">Enviar</button>
+                                <button type="reset" class=" btn btn-danger">Limpar</button>
                             </form>
                         </div><!-- End div #basic-form -->
                     </div>
