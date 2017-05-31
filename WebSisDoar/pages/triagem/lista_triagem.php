@@ -75,7 +75,7 @@ include '../../config/conexao.php';
                                 $sql = ("select idtriagem, nome, idade, peso, status,
                                                 case  status
                                                 when 'Apt' then 'Apto'
-                                                when 'Nao Apt' then 'Não Apto'
+                                                when 'NaoApt' then 'Não Apto'
                                                 end status
                                         from doador d, triagem t
                                             where t.doador_iddoador = d.iddoador;");

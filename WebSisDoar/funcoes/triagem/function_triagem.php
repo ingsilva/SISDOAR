@@ -1,7 +1,7 @@
 <?php
 
 include("../../config/conexao.php");
-$idtriagem = $_POST["idtriagem"];
+$id = $_POST["id"];
 $nome = $_POST["nome"];
 $idade = $_POST["idade"];
 $peso = $_POST["peso"];
