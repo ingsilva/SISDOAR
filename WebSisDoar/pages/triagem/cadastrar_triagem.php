@@ -64,75 +64,80 @@ include '../../config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1><small> Cadastro de </small> Triagem </h1>
+                <h1> Coletar <small> Informações  </small> </h1>
             </div>
             <!-- End page header -->
+            <!--==============INICIO DO CÓDIGO PHP============================-->
+            <?php
+            if (isset($_GET['iddoador'])) {
+                $sql = "SELECT nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade'
+                            FROM doador
+                            WHERE
+                            iddoador='" . $_GET['iddoador'] . "'";
+
+                foreach ($con->query($sql) as $row) {
+                    ?>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- Basic form -->
+                            <div class="box-info">
+                                <h2>Cadastro de Triagem</h2>
+                                <!-- Basic form body -->
+                                <div id="basic-form" class="collapse in">
+
+                                    <form role="form" method="post">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="form-group col-lg-4">
+                                                    <label for="nome">Nome</label>
+                                                    <input class="form-control"  type="text" id="nome" name="nome" value="<?php echo $row['nome'] ?>" >
+                                                    <!--<p class="help-block">Example block-level help text here.</p>-->
+                                                </div>
+                                                <div class="form-group col-lg-2">
+                                                    <label for="nome">Idade</label>
+                                                    <input class="form-control"  type="text" id="idade" name="idade" value="<?php echo $row['idade'] ?>"  >
+                                                </div>
+                                                <div class="form-group col-lg-2">
+                                                    <label for="peso">Peso</label>
+                                                    <input class="form-control" type="number"  id="peso" name="peso" >
+                                                    <!--<p class="help-block">Example block-level help text here.</p>-->
+                                                </div>
+                                                <div class="form-group col-lg-2">
+                                                    <label for="jejum">Jejum</label>
+                                                    <select id="jejum" name="jejum" class="form-control">
+                                                        <option>Escolha</option>
+                                                        <option value="sim">Sim</option>
+                                                        <option value="nao">Não</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-lg-2">
+                                                    <label for="status">Status</label>
+                                                    <select id="status" name="status" class="form-control">
+                                                        <option>Escolha</option>
+                                                        <option value="sim">Apto</option>
+                                                        <option value="nao">Não Apto</option>
+                                                    </select>
+                                                </div>
 
 
-            <div class="row">
-                <div class="col-sm-12">
-                    <!-- Basic form -->
-                    <div class="box-info">
-                        <h2>Cadastro de Triagem</h2>
-                        <!-- Basic form body -->
-                        <div id="basic-form" class="collapse in">
+                                                <input type="hidden" name="id" id="id" value="0" />
+                                            </div>
+                                        </div>
+                                        <!--================================================-------> 
 
-                            <form role="form" method="post">
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-sm-3 form-group">
-                                            <label for="nome">Nome</label>
-                                            <select class="form-control" id="nome" name="nome">
-                                                <option>------</option>
-                                                <?php
-                                                $sql = ("select iddoador, nome from doador");
-                                                foreach ($con->query($sql) as $row) {
-                                                    echo "<option value='" . $row['iddoador'] . "'>" . $row['nome'] . "</option>";
-                                                }
-                                                ?>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-lg-3">
-                                            <label for="nome">Idade</label>
-                                            <input class="form-control"  type="number" id="idade" name="idade" >
-                                            <!--<p class="help-block">Example block-level help text here.</p>-->
-                                        </div>
-                                        <div class="form-group col-lg-3">
-                                            <label for="peso">Peso</label>
-                                            <input class="form-control" type="number"  id="peso" name="peso" >
-                                            <!--<p class="help-block">Example block-level help text here.</p>-->
-                                        </div>
-                                        <div class="form-group col-lg-2">
-                                            <label for="jejum">Jejum</label>
-                                            <select id="jejum" name="jejum" class="form-control">
-                                                <option>Escolha</option>
-                                                <option value="sim">Sim</option>
-                                                <option value="nao">Não</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-lg-2">
-                                            <label for="status">Status</label>
-                                            <select id="status" name="status" class="form-control">
-                                                <option>Escolha</option>
-                                                <option value="sim">Apto</option>
-                                                <option value="nao">Não Apto</option>
-                                            </select>
-                                        </div>
+                                        <button type="button" id="salvar" class="btn btn-success">Enviar</button>
+                                        <button type="reset" class=" btn btn-danger">Limpar</button>
 
-
-                                        <input type="hidden" name="id" id="id" value="0" />
-                                    </div>
+                                    </form>
                                 </div>
-                                <!--================================================-------> 
-
-                                <button type="button" id="salvar" class="btn btn-success">Enviar</button>
-                                <button type="reset" class=" btn btn-danger">Limpar</button>
-
-                            </form>
-                        </div>
-                    </div><!-- End div #basic-form -->
-                </div><!-- End div .box-info -->
-            </div><!-- End div .col-sm-6 -->
+                            </div><!-- End div #basic-form -->
+                        </div><!-- End div .box-info -->
+                    </div><!-- End div .col-sm-6 -->
+                    <?php
+                }
+            }
+            ?>
             <?php
             include '../../layout/rodape.php';
             ?>

@@ -42,12 +42,12 @@ include '../../config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1> Triagem <small>de Doadores</small></h1>
+                <h1>Pré Triagem <small>de Doadores</small></h1>
             </div>
             <!-- End page header -->
 
             <div class="table-responsive">
-                
+
                 <div class="panel panel-default">
                     <div class="panel-heading">
                        
@@ -60,30 +60,35 @@ include '../../config/conexao.php';
                                     <th>ID</th>
                                     <th>Nome</th>
                                     <th>Idade</th>
-                                    <th>Peso</th>
-                                    <th>Status</th>
-                                    <th>Editar</th>
-                                    <th>Excluir</th>
+                                    <th>CPF</th>
+                                    <th>Sexo</th>
+                                    <th>Tipo</th>
+                                    <th>Fator RH</th>
+                                    <th>Ação</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select t.idtriagem, d.nome, t.idade, t.peso, t.status"
-                                        . " from doador d, triagem t"
-                                        . " where t.doador_iddoador = d.iddoador ");
+                                $sql = ("SELECT iddoador, nome,  truncate(datediff(now(), data_nascimento)/365,0) as 'idade', 
+                                                    cpf, 
+                                                    case  sexo
+                                                when 'F' then 'Feminino'
+                                                when 'M' then 'Masculino'
+                                                end sexo, 
+                                                tipo_sangue, fator_rh
+						FROM doador");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
-                                        <td><?php echo $row['idtriagem']; ?></td>
+                                        <td><?php echo $row['iddoador']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['idade']; ?></td>
-                                        <td><?php echo $row['peso']; ?></td>
-                                        <td><?php echo $row['status']; ?></td>
+                                        <td><?php echo $row['cpf']; ?></td>
+                                        <td><?php echo $row['sexo']; ?></td>
+                                        <td><?php echo $row['tipo_sangue']; ?></td>
+                                        <td><?php echo $row['fator_rh']; ?></td>
                                         <td>
-                                            <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
-                                        </td>
-                                        <td>
-                                            <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
+                                            <?php echo "<a class='btn btn-default' href='cadastrar_triagem.php?iddoador=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-list-alt'></i></a>"; ?>
                                         </td>
                                     </tr>
                                     <?php

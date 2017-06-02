@@ -142,8 +142,11 @@ JAVASCRIPT
                                 <li><a href="/SISDOAR/WebSisDoar/pages/doador/lista_doador.php"><i class="fa fa-user"></i><i class="fa fa-plus-square-o i-right"></i>Doadores</a>
 
                                 </li>
-                                <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem.php"><i class="fa fa-file-text-o"></i>Triagem</a>
-
+                                <li><a href="#fakelink"><i class="fa fa-file-text-o"></i><i class="fa fa-angle-double-down i-right"></i> Triagem</a>
+                                    <ul>
+                                        <li><a href="/SISDOAR/WebSisDoar/pages/triagem/pre_triagem.php"><i class="fa fa-angle-right"></i> Coletar Informações</a></li>
+                                        <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem.php"><i class="fa fa-angle-right"></i>Triados</a></li>
+                                    </ul>
                                 </li>
 
                                 <li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Tabelas Auxiliares</a>
