@@ -146,7 +146,7 @@ JAVASCRIPT
 
                                 </li>
 
-                                <li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Tabelas Auxilio</a>
+                                <li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Tabelas Auxiliares</a>
                                     <ul>
                                         <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_cidades.php"><i class="fa fa-angle-right"></i> Cidades</a></li>
                                         <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_estados.php"><i class="fa fa-angle-right"></i> Estados</a></li>

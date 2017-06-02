@@ -56,11 +56,11 @@ include '../../config/conexao.php';
                         <h2>Cadastro de Triagem </h2>
                         <!-- Basic form body -->
                         <div id="basic-form" class="collapse in">
-                            <form role="form" action="../../funcoes/doador/function_triagem.php" method="post">
+                            <form role="form" action="../../funcoes/triagem/function_triagem.php" method="post">
                                 <div class="row">
                                     <div class="form-group col-lg-7">
                                         <label for="nome">Nome</label>
-                                        <select class="form-control" id="estado" name="estado">
+                                        <select class="form-control" id="doador" name="doador">
                                             <option>Selecione um Doador Cadastrado ...</option>
                                             <?php
                                             $sql = ("SELECT iddoador, nome FROM doador");
