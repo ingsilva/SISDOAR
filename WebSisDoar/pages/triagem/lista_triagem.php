@@ -51,7 +51,7 @@ include '../../config/conexao.php';
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <a href="cadastro_triagem.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+                            <a href="cadastrar_triagem.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
                         </div>
                     </div>
                     <!-- /.panel-heading -->
