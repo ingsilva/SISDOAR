@@ -39,12 +39,12 @@ include '../../config/conexao.php';
 
 
 
-                    var dataString = {id: id, nome: nome,
-                        data_nascimento: data_nascimento, cpf: cpf,
-                        rg: rg, endereco: endereco, numero: numero,
-                        bairro: bairro, complemento: complemento,
-                        cidade: cidade, tipo_sangue: tipo_sangue,
-                        fator_rh: fator_rh, idade: idade, sexo: sexo};
+                    var dataString = {id: id, data_registro: data_registro, numero_sus: numero_sus, nome: nome,
+                        nome_pai: nome_pai, nome_mae: nome_mae, data_nascimento: data_nascimento, idade: idade,
+                        sexo: sexo, etnia: etnia, nacionalidade: nacionalidade, naturalidade: naturalidade,
+                        rg: rg, expeditor: expeditor, estado_civil: estado_civil, escolaridade: escolaridade,
+                        endereco: endereco, numero: numero, bairro: bairro, complemento: complemento,
+                        cidade: cidade, tipo_sangue: tipo_sangue, fator_rh: fator_rh};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/doador/function_doador.php",
@@ -100,7 +100,7 @@ include '../../config/conexao.php';
                                         <label for="idade">Idade</label>
                                         <input class="form-control"   type="number" id="idade" name="idade">
                                     </div>
-                                    
+
                                     <div class="form-group col-lg-2">
                                         <label for="sexo">Sexo</label>
                                         <select class="form-control" id="sexo" name="sexo">
@@ -239,7 +239,7 @@ include '../../config/conexao.php';
                                     </div>
 
 
-                                    <div class=" form-group col-lg-5">
+                                    <div class=" form-group col-lg-7">
                                         <label for="endereco">Endereço</label>
                                         <input class="form-control"   type="text" id="endereco" name="endereco">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
@@ -254,19 +254,7 @@ include '../../config/conexao.php';
                                         <input class="form-control"   type="text" id="bairro" name="bairro">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="col-sm-2 form-group">
-                                        <label for="estado">Estado</label>
-                                        <select class="form-control" id="estado" name="estado">
-                                            <option>------</option>
-                                            <?php
-                                            $sql = ("SELECT idestado, uf FROM estado");
-                                            foreach ($con->query($sql) as $row) {
-                                                echo "<option value='" . $row['idestado'] . "'>" . $row['uf'] . "</option>";
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-lg-7">
+                                    <div class="form-group col-lg-12">
                                         <label for="complemento">Complemento</label>
                                         <input class="form-control" type="text" id="complemento" name="complemento" >
                                     </div>

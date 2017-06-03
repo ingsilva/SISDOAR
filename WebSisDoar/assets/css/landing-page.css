@@ -35,8 +35,8 @@ h6 {
     padding-top: 10px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 20px;
     text-align: center;
-    color: #f8f8f8;
-    background: url(../img/hemoacre01.jpg) no-repeat center center;
+    color: #000000;
+    background: url(../img/logo1.png) no-repeat center center;
     background-size: cover;
     height: 400px;
 }
@@ -117,8 +117,8 @@ h6 {
 
 .banner {
     padding: 100px 0;
-    color: #f8f8f8;
-    background: url(../img/hemoacre02.jpg) no-repeat center center;
+    color: #000000;
+    background: url(../img/logo2.png) no-repeat center center;
     background-size: cover;
 }
 

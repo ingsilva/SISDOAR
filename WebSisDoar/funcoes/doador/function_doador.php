@@ -30,9 +30,10 @@ $fator_rh = $_POST["fator_rh"];
 if ($id == 0) {
     //salvar
     $sql = $con->prepare("INSERT INTO "
-            . "doador (nome, data_nascimento, rg, endereco, numero, "
-            . "bairro, complemento, cidade_idcidade, tipo_sangue, fator_rh, idade, sexo)"
-            . " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            . "doador (data_registro, numero_sus, nome, nome_pai, nome_mae, idade, sexo, etnia, nacionalidade,"
+            . "naturalidade, rg, expeditor, estado_civil, escolaridade, endereco, numero, "
+            . "bairro, complemento, cidade_idcidade, tipo_sangue, fator_rh)"
+            . " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $sql->bindValue(1, $data_registro);
     $sql->bindValue(2, $numero_sus);
     $sql->bindValue(3, $nome);
