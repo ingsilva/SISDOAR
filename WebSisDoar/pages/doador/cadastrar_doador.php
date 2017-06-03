@@ -31,10 +31,11 @@ include '../../config/conexao.php';
                     var escolaridade = $("#escolaridade").val();
                     var endereco = $("#endereco").val();
                     var numero = $("#numero").val();
-                    var bairro = $("#bairro").val();
+                    var bairro = $("#bairro").val();z
                     var complemento = $("#complemento").val();
                     var cidade = $("#cidade").val();
                     var tipo_sangue = $("#tipo_sangue").val();
+                    var fator_rh = $("#fator_rh").val();
 
 
 
@@ -43,7 +44,7 @@ include '../../config/conexao.php';
                         sexo: sexo, etnia: etnia, nacionalidade: nacionalidade, naturalidade: naturalidade,
                         rg: rg, expeditor: expeditor, estado_civil: estado_civil, escolaridade: escolaridade,
                         endereco: endereco, numero: numero, bairro: bairro, complemento: complemento,
-                        cidade: cidade, tipo_sangue: tipo_sangue};
+                        cidade: cidade, tipo_sangue: tipo_sangue, fator_rh: fator_rh};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/doador/function_doador.php",
