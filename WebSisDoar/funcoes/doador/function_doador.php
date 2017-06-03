@@ -22,8 +22,7 @@ $numero = $_POST["numero"];
 $bairro = $_POST["bairro"];
 $complemento = $_POST["complemento"];
 $cidade_idcidade = $_POST["cidade_idcidade"];
-$tipo_sangue = $_POST["tipo_sangue"];
-$fator_rh = $_POST["fator_rh"];
+$tipo_sangue_idtipo_sangue = $_POST["tipo_sangue_idtipo_sangue"];
 
 
 
@@ -32,8 +31,8 @@ if ($id == 0) {
     $sql = $con->prepare("INSERT INTO "
             . "doador (data_registro, numero_sus, nome, nome_pai, nome_mae, data_nascimento, idade, sexo, etnia, nacionalidade,"
             . "naturalidade, rg, expeditor, estado_civil, escolaridade, endereco, numero, "
-            . "bairro, complemento, cidade_idcidade, tipo_sangue, fator_rh)"
-            . " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            . "bairro, complemento, cidade_idcidade, tipo_sangue_idtipo_sangue)"
+            . " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $sql->bindValue(1, $data_registro);
     $sql->bindValue(2, $numero_sus);
     $sql->bindValue(3, $nome);
@@ -54,9 +53,7 @@ if ($id == 0) {
     $sql->bindValue(18, $bairro);
     $sql->bindValue(19, $complemento);
     $sql->bindValue(20, $cidade_idcidade);
-    $sql->bindValue(21, $tipo_sangue);
-    $sql->bindValue(22, $fator_rh);    
-
+    $sql->bindValue(21, $tipo_sangue_idtipo_sangue);
 
 
     if ($sql->execute())
