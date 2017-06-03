@@ -21,7 +21,7 @@ $endereco = $_POST["endereco"];
 $numero = $_POST["numero"];
 $bairro = $_POST["bairro"];
 $complemento = $_POST["complemento"];
-$cidade_idcidade = $_POST["cidade"];
+$cidade_idcidade = $_POST["cidade_idcidade"];
 $tipo_sangue = $_POST["tipo_sangue"];
 $fator_rh = $_POST["fator_rh"];
 
@@ -30,7 +30,7 @@ $fator_rh = $_POST["fator_rh"];
 if ($id == 0) {
     //salvar
     $sql = $con->prepare("INSERT INTO "
-            . "doador (data_registro, numero_sus, nome, nome_pai, nome_mae, idade, sexo, etnia, nacionalidade,"
+            . "doador (data_registro, numero_sus, nome, nome_pai, nome_mae, data_nascimento, idade, sexo, etnia, nacionalidade,"
             . "naturalidade, rg, expeditor, estado_civil, escolaridade, endereco, numero, "
             . "bairro, complemento, cidade_idcidade, tipo_sangue, fator_rh)"
             . " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");

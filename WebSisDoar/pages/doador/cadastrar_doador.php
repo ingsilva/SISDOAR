@@ -125,7 +125,7 @@ include '../../config/conexao.php';
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
                                     <div class="form-group col-lg-12">
-                                        <label for="nome">Nome da Mãe</label>
+                                        <label for="nome_mae">Nome da Mãe</label>
                                         <input class="form-control"  id="nome_mae" name="nome_mae" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
@@ -133,13 +133,13 @@ include '../../config/conexao.php';
                                         <label for="etnia">Etnia</label>
                                         <select id="etnia" name="etnia" class="form-control">
                                             <option>Escolha</option>
-                                            <option value="Branco">Branco</option>
-                                            <option value="Negro">Negro</option>
-                                            <option value="Indígena">Indígena</option>
-                                            <option value="Pardo">Pardo</option>
-                                            <option value="Mulato">Mulato</option>
-                                            <option value="Caboclo">Caboclo</option>
-                                            <option value="Cafuzo">Cafuzo</option>
+                                            <option value="B">Branco</option>
+                                            <option value="N">Negro</option>
+                                            <option value="I">Indígena</option>
+                                            <option value="P">Pardo</option>
+                                            <option value="M">Mulato</option>
+                                            <option value="C">Caboclo</option>
+                                            <option value="CA">Cafuzo</option>
 
                                         </select>
                                     </div>
@@ -148,8 +148,8 @@ include '../../config/conexao.php';
                                         <label for="nacionalidade">Nacionalidade</label>
                                         <select id="nacionalidade" name="nacionalidade" class="form-control">
                                             <option>Escolha</option>
-                                            <option value="Brasileiro">Brasileiro</option>
-                                            <option value="Outros">Outros</option>
+                                            <option value="B">Brasileiro</option>
+                                            <option value="O">Outros</option>
                                         </select>
                                     </div>
 
@@ -160,7 +160,7 @@ include '../../config/conexao.php';
                                     </div>
 
                                     <div class="form-group col-lg-2">
-                                        <label for="rg">Expeditor</label>
+                                        <label for="expeditor">Expeditor</label>
                                         <input class="form-control" type="text"  id="expeditor" name="expeditor">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
@@ -171,13 +171,13 @@ include '../../config/conexao.php';
                                         <label for="estado_civil">Estado Civil</label>
                                         <select id="estado_civil" name="estado_civil" class="form-control">
                                             <option>Escolha</option>
-                                            <option value="Solteiro">Solteiro</option>
-                                            <option value="Casado">Casado</option>
-                                            <option value="Viuvo">Viúvo</option>
-                                            <option value="Desquitado">Desquitado</option>
-                                            <option value="Divorciado">Divorciado</option>
-                                            <option value="Separado">Separado</option>
-                                            <option value="Outros">Outros</option>
+                                            <option value="S">Solteiro</option>
+                                            <option value="C">Casado</option>
+                                            <option value="V">Viúvo</option>
+                                            <option value="D">Desquitado</option>
+                                            <option value="D">Divorciado</option>
+                                            <option value="S">Separado</option>
+                                            <option value="O">Outros</option>
                                         </select>
                                     </div>
 
@@ -185,13 +185,13 @@ include '../../config/conexao.php';
                                         <label for="escolaridade">Escolaridade</label>
                                         <select id="escolaridade" name="escolaridade" class="form-control">
                                             <option>Escolha</option>
-                                            <option value="Não Alfabetizado">Não Alfabetizado</option>
-                                            <option value="1°Grau Incompleto">1°Grau Incompleto</option>
-                                            <option value="1°Grau Completo">1°Grau Completo</option>
-                                            <option value="2°Grau Incompleto">2°Grau Incompleto</option>
-                                            <option value="2°Grau Completo">2°Grau Completo</option>
-                                            <option value="Superior Incompleto">Superior Incompleto</option>
-                                            <option value="Superior Completo">Superior Completo</option>
+                                            <option value="NA">Não Alfabetizado</option>
+                                            <option value="PI">1°Grau Incompleto</option>
+                                            <option value="PC">1°Grau Completo</option>
+                                            <option value="SI">2°Grau Incompleto</option>
+                                            <option value="SC">2°Grau Completo</option>
+                                            <option value="I">Superior Incompleto</option>
+                                            <option value="C">Superior Completo</option>
                                         </select>
                                     </div>
 
