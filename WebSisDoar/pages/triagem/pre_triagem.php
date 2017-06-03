@@ -59,8 +59,7 @@ include '../../config/conexao.php';
                                 <tr>
                                     <th>ID</th>
                                     <th>Nome</th>
-                                    <th>Idade</th>
-                                    <th>CPF</th>
+                                    <th>Idade</th>                                    
                                     <th>Sexo</th>
                                     <th>Tipo</th>
                                     <th>Fator RH</th>
@@ -70,7 +69,6 @@ include '../../config/conexao.php';
                             <tbody>
                                 <?php
                                 $sql = ("SELECT iddoador, nome,  truncate(datediff(now(), data_nascimento)/365,0) as 'idade', 
-                                                    cpf, 
                                                     case  sexo
                                                 when 'F' then 'Feminino'
                                                 when 'M' then 'Masculino'
@@ -82,8 +80,7 @@ include '../../config/conexao.php';
                                     <tr>
                                         <td><?php echo $row['iddoador']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
-                                        <td><?php echo $row['idade']; ?></td>
-                                        <td><?php echo $row['cpf']; ?></td>
+                                        <td><?php echo $row['idade']; ?></td>                                        
                                         <td><?php echo $row['sexo']; ?></td>
                                         <td><?php echo $row['tipo_sangue']; ?></td>
                                         <td><?php echo $row['fator_rh']; ?></td>
