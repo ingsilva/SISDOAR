@@ -66,13 +66,16 @@ include '../../config/conexao.php';
                                     <th>Nome</th>
                                     <th>DDD</th>
                                     <th>Telefone/Celular</th>
+                                    <th>Departamento</th>
                                     <th>Editar</th>
                                     <th>Excluir</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select * from agenda;");
+                                $sql = ("select a.idagenda, a.nome, a.ddd, a.telefone, d.descricao"
+                                        . " from agenda a, dpto d"
+                                        . " where a.dpto_iddpto = d.iddpto ");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
@@ -80,6 +83,7 @@ include '../../config/conexao.php';
                                         <td><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['ddd']; ?></td>
                                         <td ><?php echo $row['telefone']; ?></td>
+                                        <td ><?php echo $row['descricao']; ?></td>
                                         <td>
                                             <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idagenda'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
                                         </td>

@@ -17,9 +17,10 @@ include '../../config/conexao.php';
                     var nome = $("#nome").val();
                     var ddd = $("#ddd").val();
                     var telefone = $("#telefone").val();
+                    var dpto = $("#dpto").val();
 
                     var dataString = {id: id, nome: nome,
-                        ddd: ddd, telefone: telefone};
+                        ddd: ddd, telefone: telefone, dpto: dpto};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/funcionario/function_agenda.php",
@@ -69,6 +70,18 @@ include '../../config/conexao.php';
                                         <label for="cpf">Telefone/Celular</label>
                                         <input class="form-control"   type="text" id="telefone" name="telefone">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                    <div class="col-sm-3 form-group">
+                                        <label for="dpto">Departamento</label>
+                                        <select class="form-control" id="dpto" name="dpto">
+                                            <option>------</option>
+                                            <?php
+                                            $sql = ("SELECT iddpto, descricao FROM dpto");
+                                            foreach ($con->query($sql) as $row) {
+                                                echo "<option value='" . $row['iddpto'] . "'>" . $row['descricao'] . "</option>";
+                                            }
+                                            ?>
+                                        </select>
                                     </div>
                                 </div>
                                 <input type="hidden" name="id" id="id" value="0" />
