@@ -14,36 +14,36 @@ include '../../config/conexao.php';
 
                 $('#salvar').click(function () {
                     var id = $("#id").val();
-                    var data_registro = $("#data_registro").val();
-                    var numero_sus = $("#numero_sus").val();
                     var nome = $("#nome").val();
-                    var nome_pai = $("#nome_pai").val();
-                    var nome_mae = $("#nome_mae").val();
                     var data_nascimento = $("#data_nascimento").val();
-                    var idade = $("#idade").val();
-                    var sexo = $("#sexo").val();
-                    var etnia = $("#etnia").val();
-                    var nacionalidade = $("#nacionalidade").val();
-                    var naturalidade = $("#naturalidade").val();
+                    var cpf = $("#cpf").val();
                     var rg = $("#rg").val();
-                    var expeditor = $("#expeditor").val();
-                    var estado_civil = $("#estado_civil").val();
-                    var escolaridade = $("#escolaridade").val();
                     var endereco = $("#endereco").val();
                     var numero = $("#numero").val();
                     var bairro = $("#bairro").val();
                     var complemento = $("#complemento").val();
                     var cidade = $("#cidade").val();
                     var tipo_sangue = $("#tipo_sangue").val();
+                    var fator_rh = $("#fator_rh").val();
+                    var idade = $("#idade").val();
+                    var sexo = $("#sexo").val();
+                    var data_registro = $("#data_registro").val();
+                    var numero_sus = $("#numero_sus").val();
+                    var expeditor = $("#expeditor").val();
+                    var etnia = $("#etnia").val();
+                    var nome_pai = $("#nome_pai").val();
+                    var nome_mae = $("#nome_mae").val();
+                    var estado_civil = $("#estado_civil").val();
+                    var escolaridade = $("#escolaridade").val();
+                    var naturalidade = $("#naturalidade").val();
 
-
-
-                    var dataString = {id: id, data_registro: data_registro, numero_sus: numero_sus, nome: nome,
-                        nome_pai: nome_pai, nome_mae: nome_mae, data_nascimento: data_nascimento, idade: idade,
-                        sexo: sexo, etnia: etnia, nacionalidade: nacionalidade, naturalidade: naturalidade,
-                        rg: rg, expeditor: expeditor, estado_civil: estado_civil, escolaridade: escolaridade,
-                        endereco: endereco, numero: numero, bairro: bairro, complemento: complemento,
-                        cidade: cidade, tipo_sangue: tipo_sangue};
+                    var dataString = {id: id, nome: nome, data_nascimento: data_nascimento,
+                        cpf: cpf, rg: rg, endereco: endereco, numero: numero, bairro: bairro,
+                        complemento: complemento, cidade: cidade, tipo_sangue: tipo_sangue,
+                        fator_rh: fator_rh, idade: idade, sexo: sexo, data_registro: data_registro, 
+                        numero_sus: numero_sus, expeditor: expeditor, etnia: etnia, nome_pai: nome_pai,
+                        nome_mae: nome_mae, estado_civil: estado_civil,
+                        escolaridade: escolaridade, naturalidade: naturalidade};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/doador/function_doador.php",
@@ -55,7 +55,8 @@ include '../../config/conexao.php';
                                 location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-
+                                alert(etnia);
+                                location.reload();
                             }
                         }
                     });
@@ -81,12 +82,12 @@ include '../../config/conexao.php';
                             <form role="form" action="../../funcoes/doador/function_doador.php" method="post">
                                 <div class="row">
                                     <div class="form-group col-lg-3">
-                                        <label for="nome">Data Registro</label>
+                                        <label for="data_registro">Data Registro</label>
                                         <input class="form-control"   type="date" id="data_registro" name="data_registro">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
                                     <div class="form-group col-lg-3">
-                                        <label for="nome">Numero SUS</label>
+                                        <label for="numero_sus">Numero SUS</label>
                                         <input class="form-control"   type="number" id="numero_sus" name="numero_sus">
                                          <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
@@ -108,9 +109,14 @@ include '../../config/conexao.php';
                                             <option value="m">Masculino</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-lg-9">
+                                    <div class="form-group col-lg-6">
                                         <label for="nome">Nome</label>
                                         <input class="form-control"  id="nome" name="nome" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                    <div class="form-group col-lg-3">
+                                        <label for="cpf">CPF</label>
+                                        <input class="form-control" type="text"  id="cpf" name="cpf">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
                                     <div class="form-group col-lg-3">
@@ -118,12 +124,12 @@ include '../../config/conexao.php';
                                         <input class="form-control" type="text"  id="rg" name="rg">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="form-group col-lg-12">
+                                    <div class="form-group col-lg-6">
                                         <label for="nome_pai">Nome do Pai</label>
                                         <input class="form-control"  id="nome_pai" name="nome_pai" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="form-group col-lg-12">
+                                    <div class="form-group col-lg-6">
                                         <label for="nome_mae">Nome da Mãe</label>
                                         <input class="form-control"  id="nome_mae" name="nome_mae" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
@@ -160,8 +166,10 @@ include '../../config/conexao.php';
 
                                     <div class="form-group col-lg-2">
                                         <label for="expeditor">Expeditor</label>
-                                        <input class="form-control" type="text"  id="expeditor" name="expeditor">
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                        <select id="expeditor" name="expeditor" class="form-control">
+                                            <option>Escolha</option>
+                                            <option value="SSP">SSP/AC</option>
+                                        </select>
                                     </div>
                                     <!------====================================--------->
                                     <!--optopn tava sem value=""-->
@@ -189,8 +197,8 @@ include '../../config/conexao.php';
                                             <option value="PC">1°Grau Completo</option>
                                             <option value="SI">2°Grau Incompleto</option>
                                             <option value="SC">2°Grau Completo</option>
-                                            <option value="I">Superior Incompleto</option>
-                                            <option value="C">Superior Completo</option>
+                                            <option value="TI">Superior Incompleto</option>
+                                            <option value="TC">Superior Completo</option>
                                         </select>
                                     </div>
 
