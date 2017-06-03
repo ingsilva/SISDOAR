@@ -20,7 +20,7 @@ include '../../config/conexao.php';
                     var rg = $("#rg").val();
                     var endereco = $("#endereco").val();
                     var numero = $("#numero").val();
-                    var bairro = $("#bairro").val();
+                    var bairro = $("#bairro").val();z
                     var complemento = $("#complemento").val();
                     var cidade = $("#cidade").val();
                     var tipo_sangue = $("#tipo_sangue").val();
