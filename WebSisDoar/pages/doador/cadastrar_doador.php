@@ -169,6 +169,34 @@ include '../../config/conexao.php';
                                         <select id="expeditor" name="expeditor" class="form-control">
                                             <option>Escolha</option>
                                             <option value="SSP">SSP/AC</option>
+                                            <option value="SSP">SSP/AL</option>
+                                            <option value="SSP">SSP/AP</option>
+                                            <option value="SSP">SSP/AM</option>
+                                            <option value="SSP">SSP/BA</option>
+                                            <option value="SSP">SSP/CE</option>
+                                            <option value="SSP">SSP/DF</option>
+                                            <option value="SSP">SSP/ES</option>
+                                            <option value="SSP">SSP/GO</option>
+                                            <option value="SSP">SSP/MA</option>
+                                            <option value="SSP">SSP/MT</option>
+                                            <option value="SSP">SSP/MS</option>
+                                            <option value="SSP">SSP/MG</option>
+                                            <option value="SSP">SSP/PA</option>
+                                            <option value="SSP">SSP/PB</option>
+                                            <option value="SSP">SSP/PR</option>
+                                            <option value="SSP">SSP/PE</option>
+                                            <option value="SSP">SSP/PI</option>
+                                            <option value="SSP">SSP/RJ</option>
+                                            <option value="SSP">SSP/RN</option>
+                                            <option value="SSP">SSP/RS</option>
+                                            <option value="SSP">SSP/RO</option>
+                                            <option value="SSP">SSP/RR</option>
+                                            <option value="SSP">SSP/SC</option>
+                                            <option value="SSP">SSP/SP</option>
+                                            <option value="SSP">SSP/SE</option>
+                                            <option value="SSP">SSP/TO</option>
+                                    
+                                            
                                         </select>
                                     </div>
                                     <!------====================================--------->
