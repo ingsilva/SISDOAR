@@ -56,8 +56,6 @@ include '../../config/conexao.php';
                                 location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-                                alert(etnia);
-                                location.reload();
                             }
                         }
                     });
@@ -82,17 +80,17 @@ include '../../config/conexao.php';
                         <div id="basic-form" class="collapse in">
                             <form role="form" action="../../funcoes/doador/function_doador.php" method="post">
                                 <div class="row">
-                                    <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-2">
                                         <label for="data_registro">Data Registro</label>
                                         <input class="form-control"   type="date" id="data_registro" name="data_registro">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-2">
                                         <label for="numero_sus">Numero SUS</label>
                                         <input class="form-control"   type="number" id="numero_sus" name="numero_sus">
                                          <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class=" form-group col-lg-3">
+                                    <div class=" form-group col-lg-2">
                                         <label for="data_nascimento">Data de Nascimento</label>
                                         <input class="form-control"   type="date" id="data_nascimento" name="data_nascimento">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
@@ -110,63 +108,44 @@ include '../../config/conexao.php';
                                             <option value="m">Masculino</option>
                                         </select>
                                     </div>
+                                    <div class="form-group col-lg-1">
+                                        <label for="tipo_sangue">Tipo Sanguineo</label>
+                                        <select id="tipo_sangue" name="tipo_sangue" class="form-control">
+                                            <option>Escolha</option>
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="AB">AB</option>
+                                            <option value="O">O</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-lg-2">
+                                        <label for="fator_rh">Fator RH</label>
+                                        <select class="form-control" id="fator_rh" name="fator_rh">
+                                            <option>Escolha</option>
+                                            <option value="Positivo">Positivo</option>
+                                            <option value="Negativo">Negativo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="form-group col-lg-6">
                                         <label for="nome">Nome</label>
                                         <input class="form-control"  id="nome" name="nome" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-2">
                                         <label for="cpf">CPF</label>
                                         <input class="form-control" type="text"  id="cpf" name="cpf">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-2">
                                         <label for="rg">RG</label>
                                         <input class="form-control" type="text"  id="rg" name="rg">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="form-group col-lg-6">
-                                        <label for="nome_pai">Nome do Pai</label>
-                                        <input class="form-control"  id="nome_pai" name="nome_pai" >
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                    <div class="form-group col-lg-6">
-                                        <label for="nome_mae">Nome da Mãe</label>
-                                        <input class="form-control"  id="nome_mae" name="nome_mae" >
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                    <div class="form-group col-lg-3">
-                                        <label for="etnia">Etnia</label>
-                                        <select id="etnia" name="etnia" class="form-control">
-                                            <option>Escolha</option>
-                                            <option value="B">Branco</option>
-                                            <option value="N">Negro</option>
-                                            <option value="I">Indígena</option>
-                                            <option value="P">Pardo</option>
-                                            <option value="M">Mulato</option>
-                                            <option value="C">Caboclo</option>
-                                            <option value="CA">Cafuzo</option>
-
-                                        </select>
-                                    </div>
-
                                     <div class="form-group col-lg-2">
-                                        <label for="nacionalidade">Nacionalidade</label>
-                                        <select id="nacionalidade" name="nacionalidade" class="form-control">
-                                            <option>Escolha</option>
-                                            <option value="B">Brasileiro</option>
-                                            <option value="O">Outros</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group col-lg-3">
-                                        <label for="naturalidade">Naturalidade</label>
-                                        <input class="form-control"  id="naturalidade" name="naturalidade" >
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-
-                                    <div class="form-group col-lg-2">
-                                        <label for="expeditor">Expeditor</label>
+                                        <label for="expeditor">Órgão Expedidor</label>
                                         <select id="expeditor" name="expeditor" class="form-control">
                                             <option>Escolha</option>
                                             <option value="SSP">SSP/AC</option>
@@ -200,9 +179,49 @@ include '../../config/conexao.php';
 
                                         </select>
                                     </div>
-                                    <!------====================================--------->
-                                    <!--optopn tava sem value=""-->
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-lg-6">
+                                        <label for="nome_pai">Nome do Pai</label>
+                                        <input class="form-control"  id="nome_pai" name="nome_pai" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label for="nome_mae">Nome da Mãe</label>
+                                        <input class="form-control"  id="nome_mae" name="nome_mae" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-lg-2">
+                                        <label for="nacionalidade">Nacionalidade</label>
+                                        <select id="nacionalidade" name="nacionalidade" class="form-control">
+                                            <option>Escolha</option>
+                                            <option value="B">Brasileiro</option>
+                                            <option value="O">Outros</option>
+                                        </select>
+                                    </div>
 
+                                    <div class="form-group col-lg-3">
+                                        <label for="naturalidade">Naturalidade</label>
+                                        <input class="form-control"  id="naturalidade" name="naturalidade" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+
+                                    <div class="form-group col-lg-3">
+                                        <label for="etnia">Etnia</label>
+                                        <select id="etnia" name="etnia" class="form-control">
+                                            <option>Escolha</option>
+                                            <option value="B">Branco</option>
+                                            <option value="N">Negro</option>
+                                            <option value="I">Indígena</option>
+                                            <option value="P">Pardo</option>
+                                            <option value="M">Mulato</option>
+                                            <option value="C">Caboclo</option>
+                                            <option value="CA">Cafuzo</option>
+
+                                        </select>
+                                    </div>
                                     <div class="form-group col-lg-2">
                                         <label for="estado_civil">Estado Civil</label>
                                         <select id="estado_civil" name="estado_civil" class="form-control">
@@ -216,8 +235,7 @@ include '../../config/conexao.php';
                                             <option value="O">Outros</option>
                                         </select>
                                     </div>
-
-                                    <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-2">
                                         <label for="escolaridade">Escolaridade</label>
                                         <select id="escolaridade" name="escolaridade" class="form-control">
                                             <option>Escolha</option>
@@ -230,26 +248,30 @@ include '../../config/conexao.php';
                                             <option value="TC">Superior Completo</option>
                                         </select>
                                     </div>
+                                </div>
+                                <div class="row">
 
-                                    <div class="form-group col-lg-2">
-                                        <label for="tipo_sangue">Tipo Sanguineo</label>
-                                        <select id="tipo_sangue" name="tipo_sangue" class="form-control">
-                                            <option>Escolha</option>
-                                            <option value="A">A</option>
-                                            <option value="B">B</option>
-                                            <option value="AB">AB</option>
-                                            <option value="O">O</option>
-                                        </select>
+
+                                </div>
+
+
+                                <div class="row">
+                                    <div class=" form-group col-lg-6">
+                                        <label for="endereco">Endereço</label>
+                                        <input class="form-control"   type="text" id="endereco" name="endereco">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="form-group col-lg-2">
-                                        <label for="fator_rh">Fator RH</label>
-                                        <select class="form-control" id="fator_rh" name="fator_rh">
-                                            <option>Escolha</option>
-                                            <option value="Positivo">Positivo</option>
-                                            <option value="Negativo">Negativo</option>
-                                        </select>
+                                    <div class="form-group col-lg-1">
+                                        <label for="numero">N°</label>
+                                        <input class="form-control" type="number"  id="numero" name="numero">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="col-sm-2 form-group">
+                                    <div class=" form-group col-lg-2">
+                                        <label for="bairro">Bairro</label>
+                                        <input class="form-control"   type="text" id="bairro" name="bairro">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+                                    <div class="col-sm-1 form-group">
                                         <label for="idestado">Estado</label>
                                         <select class="form-control" id="idestado" name="idestado" onchange="listar_cidades()">
                                             <option>------</option>
@@ -261,49 +283,35 @@ include '../../config/conexao.php';
                                             ?>
                                         </select>
                                     </div>
-                                    <div class="col-lg-3 form-group">
+                                    <div class="col-lg-2 form-group">
                                         <label for="cidade">Cidade</label>
                                         <select class="form-control" type="text" id="cidade" name="cidade">
                                             <option value="">escolha primeiro um estado</option>
                                         </select>
                                     </div>
-
-
-                                    <div class=" form-group col-lg-7">
-                                        <label for="endereco">Endereço</label>
-                                        <input class="form-control"   type="text" id="endereco" name="endereco">
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                    <div class="form-group col-lg-2">
-                                        <label for="numero">N°</label>
-                                        <input class="form-control" type="number"  id="numero" name="numero">
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
-                                    <div class=" form-group col-lg-3">
-                                        <label for="bairro">Bairro</label>
-                                        <input class="form-control"   type="text" id="bairro" name="bairro">
-                                        <!--<p class="help-block">Example block-level help text here.</p>-->
-                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="form-group col-lg-12">
                                         <label for="complemento">Complemento</label>
                                         <input class="form-control" type="text" id="complemento" name="complemento" >
                                     </div>
-                                    <!--================================================-------> 
-                                    <input type="hidden" name="id" id="id" value="0" />
-                                    <!--================================================-------> 
-
                                 </div>
-                                <button type="button" id="salvar" class="btn btn-success">Enviar</button>
-                                <button type="reset" class=" btn btn-danger">Limpar</button>
-                            </form>
-                        </div><!-- End div #basic-form -->
-                    </div>
-                </div><!-- End div .box-info -->
-            </div>
+                                <!--================================================-------> 
+                                <input type="hidden" name="id" id="id" value="0" />
+                                <!--================================================-------> 
+
+                        </div>
+                        <button type="button" id="salvar" class="btn btn-success">Enviar</button>
+                        <button type="reset" class=" btn btn-danger">Limpar</button>
+                        </form>
+                    </div><!-- End div #basic-form -->
+                </div>
+            </div><!-- End div .box-info -->
         </div>
-        <!-- End div .col-sm-6 -->
-        <?php
-        include '../../layout/rodape.php';
-                ?>
-    </body>
+    </div>
+    <!-- End div .col-sm-6 -->
+    <?php
+    include '../../layout/rodape.php';
+    ?>
+</body>
 </html>
