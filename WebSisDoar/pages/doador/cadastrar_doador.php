@@ -9,6 +9,7 @@ include '../../config/conexao.php';
         <?php
         include '../../layout/cabecalho.php';
         ?>
+        <script src="../../funcoes/doador/comboEstadoCidade.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function () {
 
@@ -40,7 +41,7 @@ include '../../config/conexao.php';
                     var dataString = {id: id, nome: nome, data_nascimento: data_nascimento,
                         cpf: cpf, rg: rg, endereco: endereco, numero: numero, bairro: bairro,
                         complemento: complemento, cidade: cidade, tipo_sangue: tipo_sangue,
-                        fator_rh: fator_rh, idade: idade, sexo: sexo, data_registro: data_registro, 
+                        fator_rh: fator_rh, idade: idade, sexo: sexo, data_registro: data_registro,
                         numero_sus: numero_sus, expeditor: expeditor, etnia: etnia, nome_pai: nome_pai,
                         nome_mae: nome_mae, estado_civil: estado_civil,
                         escolaridade: escolaridade, naturalidade: naturalidade};
@@ -195,8 +196,8 @@ include '../../config/conexao.php';
                                             <option value="SSP">SSP/SP</option>
                                             <option value="SSP">SSP/SE</option>
                                             <option value="SSP">SSP/TO</option>
-                                    
-                                            
+
+
                                         </select>
                                     </div>
                                     <!------====================================--------->
@@ -249,8 +250,8 @@ include '../../config/conexao.php';
                                         </select>
                                     </div>
                                     <div class="col-sm-2 form-group">
-                                        <label for="estado">Estado</label>
-                                        <select class="form-control" id="estado" name="estado">
+                                        <label for="idestado">Estado</label>
+                                        <select class="form-control" id="idestado" name="idestado" onchange="listar_cidades()">
                                             <option>------</option>
                                             <?php
                                             $sql = ("SELECT idestado, uf FROM estado");
@@ -262,14 +263,8 @@ include '../../config/conexao.php';
                                     </div>
                                     <div class="col-lg-3 form-group">
                                         <label for="cidade">Cidade</label>
-                                        <select class="form-control" id="cidade" name="cidade">
-                                            <option>------</option>
-                                            <?php
-                                            $sql = ("SELECT idcidade, descricao FROM cidade");
-                                            foreach ($con->query($sql) as $row) {
-                                                echo "<option value='" . $row['idcidade'] . "'>" . $row['descricao'] . "</option>";
-                                            }
-                                            ?>
+                                        <select class="form-control" type="text" id="cidade" name="cidade">
+                                            <option value="">escolha primeiro um estado</option>
                                         </select>
                                     </div>
 
@@ -309,6 +304,6 @@ include '../../config/conexao.php';
         <!-- End div .col-sm-6 -->
         <?php
         include '../../layout/rodape.php';
-        ?>
+                ?>
     </body>
 </html>
