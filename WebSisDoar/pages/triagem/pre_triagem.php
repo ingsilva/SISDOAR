@@ -10,31 +10,6 @@ include '../../config/conexao.php';
         <?php
         include '../../layout/cabecalho.php';
         ?>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('a#excluir').livequery("click", function () {
-                    var id = $(this).attr('rel');
-                    var dataString = {id: id};
-                    $.ajax({
-                        type: "POST",
-                        url: "../../funcoes/triagem/excluir_triagem.php",
-                        data: dataString,
-                        cache: false,
-                        success: function (retorno) {
-                            if (retorno == true) {
-                                alert("Registro Excluido com Sucesso.");
-                                location.reload();
-
-                            } else {
-                                alert(id);
-                                alert("Ocorreu um erro ao excluir o registro.");
-                            }
-                        }
-                    });
-                    return false;
-                });
-            });
-        </script>
     </head>
     <body>
 

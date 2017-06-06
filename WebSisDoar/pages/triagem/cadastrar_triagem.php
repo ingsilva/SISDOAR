@@ -12,50 +12,36 @@ include '../../config/conexao.php';
             $(document).ready(function () {
 
                 $('#salvar').click(function () {
-                    var id = $("#idtriagem").val();
-                    var nome = $("#nome").val();
+                    var id = $("#id").val();
                     var idade = $("#idade").val();
                     var peso = $("#peso").val();
+                    var jejum = $("#jejum").val();
+                    var iddoador = $("#iddoador").val();
                     var status = $("#status").val();
-                    var dataString = {idtriagem: idtriagem, nome: nome, idade: idade, peso: peso, status: status}
-                    };
-                            $.ajax({
-                                type: "POST",
-                                url: "../../funcoes/triagem/function_triagem.php",
-                                data: dataString,
-                                cache: false,
-                                success: function (retorno) {
-                                    if (retorno == true) {
-                                        alert("Salvo com Sucesso!!");
-                                        location.reload();
-                                    } else {
-                                        alert("Ocorreu um erro ao salvar o registro.");
-                                    }
-                                }
-                            });
-                });
 
-                $('a#editar').livequery("click", function () {
-                    var id = $(this).attr('rel');
-                    var dataString = {id: id};
+
+                    var dataString = {id: id, idade: idade, peso: peso, 
+                        jejum: jejum, iddoador: iddoador, status: status};
                     $.ajax({
                         type: "POST",
-                        url: "buscarcontato.php",
+                        url: "../../funcoes/triagem/function_triagem.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
-                            retorno = JSON.parse(retorno);
-                            console.log(retorno);
-                            $("#id").val(retorno.id);
-                            $("#nome").val(retorno.nome);
-                            $("#email").val(retorno.email);
-                            $('#modalContato').modal('show');
+                            if (retorno == true) {
+                                alert("Salvo com Sucesso!!");
+                                location.reload();
+                            } else {
+                                alert("Ocorreu um erro ao salvar o registro.");
+                                alert("idade: "+idade);
+                                alert("peso: "+peso);
+                                alert("jejum: "+jejum);
+                                alert("iddoador: "+iddoador);
+                                alert("status: "+status);
+                            }
                         }
                     });
-                    return false;
                 });
-
-
             });
         </script>
     </head>
@@ -70,7 +56,7 @@ include '../../config/conexao.php';
             <!--==============INICIO DO CÓDIGO PHP============================-->
             <?php
             if (isset($_GET['iddoador'])) {
-                $sql = "SELECT nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade'
+                $sql = "SELECT iddoador, nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade'
                             FROM doador
                             WHERE
                             iddoador='" . $_GET['iddoador'] . "'";
@@ -85,7 +71,8 @@ include '../../config/conexao.php';
                                 <h2>Cadastro de Triagem</h2>
                                 <!-- Basic form body -->
                                 <div id="basic-form" class="collapse in">
-
+                                    <input type="hidden" name="id" id="id" value="0" />
+                                    <input type="hidden" name="iddoador" id="iddoador" value="<?php echo $row['iddoador'] ?>" />
                                     <form role="form" method="post">
                                         <div class="col-lg-12">
                                             <div class="row">
@@ -95,13 +82,12 @@ include '../../config/conexao.php';
                                                     <!--<p class="help-block">Example block-level help text here.</p>-->
                                                 </div>
                                                 <div class="form-group col-lg-2">
-                                                    <label for="nome">Idade</label>
+                                                    <label for="idade">Idade</label>
                                                     <input class="form-control"  type="text" id="idade" name="idade" value="<?php echo $row['idade'] ?>"  >
                                                 </div>
                                                 <div class="form-group col-lg-2">
                                                     <label for="peso">Peso</label>
-                                                    <input class="form-control" type="number"  id="peso" name="peso" >
-                                                    <!--<p class="help-block">Example block-level help text here.</p>-->
+                                                    <input class="form-control" type="number"  id="peso" name="peso" required="true">
                                                 </div>
                                                 <div class="form-group col-lg-2">
                                                     <label for="jejum">Jejum</label>
@@ -121,7 +107,7 @@ include '../../config/conexao.php';
                                                 </div>
 
 
-                                                <input type="hidden" name="id" id="id" value="0" />
+
                                             </div>
                                         </div>
                                         <!--================================================-------> 

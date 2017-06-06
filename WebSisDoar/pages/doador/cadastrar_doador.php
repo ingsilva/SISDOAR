@@ -300,10 +300,10 @@ include '../../config/conexao.php';
                                 <input type="hidden" name="id" id="id" value="0" />
                                 <!--================================================-------> 
 
+                                <button type="button" id="salvar" class="btn btn-success">Enviar</button>
+                                <button type="reset" class=" btn btn-danger">Limpar</button>
+                            </form>
                         </div>
-                        <button type="button" id="salvar" class="btn btn-success">Enviar</button>
-                        <button type="reset" class=" btn btn-danger">Limpar</button>
-                        </form>
                     </div><!-- End div #basic-form -->
                 </div>
             </div><!-- End div .box-info -->
