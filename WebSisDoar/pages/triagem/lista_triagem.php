@@ -63,7 +63,6 @@ include '../../config/conexao.php';
                                     <th>Peso</th>
                                     <th>Status</th>
                                     <th>Editar</th>
-                                    <th>Excluir</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -79,11 +78,8 @@ include '../../config/conexao.php';
                                         <td><?php echo $row['idade']; ?></td>
                                         <td><?php echo $row['peso']; ?></td>
                                         <td><?php echo $row['status']; ?></td>
-                                        <td>
-                                            <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
-                                        </td>
-                                        <td>
-                                            <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
+                                        <td class="text-center">
+                                            <?php echo "<a class='btn btn-default' href='../estoque/entrada_estoque.php?idtriagem=" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
                                         </td>
                                     </tr>
                                     <?php

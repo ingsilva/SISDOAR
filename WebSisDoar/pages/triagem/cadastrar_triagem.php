@@ -33,11 +33,7 @@ include '../../config/conexao.php';
                                 location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-                                alert("idade: "+idade);
-                                alert("peso: "+peso);
-                                alert("jejum: "+jejum);
-                                alert("iddoador: "+iddoador);
-                                alert("status: "+status);
+                                
                             }
                         }
                     });
@@ -63,7 +59,7 @@ include '../../config/conexao.php';
 
                 foreach ($con->query($sql) as $row) {
                     ?>
-
+            <!--===============================================================-->
                     <div class="row">
                         <div class="col-sm-12">
                             <!-- Basic form -->
@@ -120,12 +116,14 @@ include '../../config/conexao.php';
                             </div><!-- End div #basic-form -->
                         </div><!-- End div .box-info -->
                     </div><!-- End div .col-sm-6 -->
-                    <?php
+<!---========================================================================-->  
+                  <?php
                 }
             }
             ?>
             <?php
             include '../../layout/rodape.php';
             ?>
+<!---========================================================================-->  
     </body>
 </html>

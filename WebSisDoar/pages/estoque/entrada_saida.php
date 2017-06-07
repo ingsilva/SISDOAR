@@ -64,6 +64,7 @@ include '../../config/conexao.php';
                 <h1><small> Cadastro </small> Triagem </h1>
             </div>
             <!-- End page header -->
+            
             <div class="row">
                 <div class="col-sm-12">
                     <!-- Basic form -->
