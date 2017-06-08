@@ -72,23 +72,9 @@ include '../../config/conexao.php';
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
                                     <div class="col-sm-3 form-group">
-                                       <label for="dpto">Departamento</label>
-                                        <select id="dpto" name="dpto" class="form-control">
-                                                <option>Escolha</option>
-                                            <option value="R">Recepção</option>
-                                            <option value="C">Coleta</option>
-                                            <option value="S">Sorologia</option>
-                                            <option value="I">Imuno/Hematologia</option>
-                                            <option value="C">Controle de Qualidade</option>
-                                            <option value="P">Processamento/Rotulagem de Bolsas</option>
-                                            <option value="D">Distribuição</option>
-                                            <option value="T">TI</option>
-                                            <option value="E">Estatistica</option>
-                                            <option value="C">Capacitação</option>
-                                            <option value="R">Residuos</option>
-
-                                        </select>
-                                    </div>
+                                        <label for="dpto">Departamento</label>
+                                        <select class="form-control" id="dpto" name="dpto">
+                                            <option>------</option>
                                             <?php
                                             $sql = ("SELECT iddpto, descricao FROM dpto");
                                             foreach ($con->query($sql) as $row) {
