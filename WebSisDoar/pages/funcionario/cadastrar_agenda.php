@@ -80,7 +80,7 @@ include '../../config/conexao.php';
                                             <option value="S">Sorologia</option>
                                             <option value="I">Imuno/Hematologia</option>
                                             <option value="C">Controle de Qualidade</option>
-                                            <option value="P">Processamento/Bolsa</option>
+                                            <option value="P">Processamento/Rotulagem de Bolsas</option>
                                             <option value="D">Distribuição</option>
                                             <option value="T">TI</option>
                                             <option value="E">Estatistica</option>
