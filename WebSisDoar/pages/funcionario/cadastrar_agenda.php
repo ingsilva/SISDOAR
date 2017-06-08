@@ -72,9 +72,11 @@ include '../../config/conexao.php';
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
                                     <div class="col-sm-3 form-group">
+
                                         <label for="dpto">Departamento</label>
                                         <select class="form-control" id="dpto" name="dpto">
                                             <option>------</option>
+
                                             <?php
                                             $sql = ("SELECT iddpto, descricao FROM dpto");
                                             foreach ($con->query($sql) as $row) {
