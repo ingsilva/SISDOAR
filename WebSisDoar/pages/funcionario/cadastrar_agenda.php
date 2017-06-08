@@ -84,7 +84,7 @@ include '../../config/conexao.php';
                                             <option value="D">Distribuição</option>
                                             <option value="T">TI</option>
                                             <option value="E">Estatistica</option>
-                                            <option value="C">Capacitação</option>
+                                            <option value="C">Captação</option>
                                             <option value="R">Residuos</option>
 
                                         </select>
