@@ -85,7 +85,7 @@ include '../../config/conexao.php';
                                         <td ><?php echo $row['telefone']; ?></td>
                                         <td ><?php echo $row['descricao']; ?></td>
                                         <td>
-                                            <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['idagenda'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
+                                            <?php echo "<a class='btn btn-info' href='edit_agenda.php?id=" . $row['idagenda'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
                                         </td>
                                         <td>
                                             <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['idagenda'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
