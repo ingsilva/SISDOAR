@@ -30,6 +30,39 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('#salvar').click(function () {
+                    var id = $("#id").val();
+                    var nome = $("#nome").val();
+                    var data_nascimento = $("#data_nascimento").val();
+                    var cpf = $("#cpf").val();
+                    var rg = $("#rg").val();
+                    var numero = $("#numero").val();
+                    var data_agend = $("#data_agend").val();
+                    var hora_agend = $("#hora_agend").val();
+
+                    var dataString = {id: id, nome: nome, data_nascimento: data_nascimento,
+                        cpf: cpf, rg: rg, numero: numero, data_agend: data_agend, hora_agend: hora_agend};
+                    $.ajax({
+                        type: "POST",
+                        url: "../../funcoes/doador/function_doador.php",
+                        data: dataString,
+                        cache: false,
+                        success: function (retorno) {
+                            if (retorno == true) {
+                                alert("Salvo com Sucesso!!");
+                                location.reload();
+                            } else {
+                                alert("Ocorreu um erro ao salvar o registro.");
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
+
     </head>
 
     <body>
@@ -58,10 +91,10 @@
                                     <a class="active" >Inicio</a>
                                 </li>
                                 <li>
-                                    <a class="page-scroll" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agendamento Doação</a>
+                                    <a class="page-scroll" data-toggle="modal" data-target="#agendamento" data-whatever="@mdo">Agendamento Doação</a>
                                 </li>
                                 <li>
-                                    <a class="page-scroll" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Acesso Sistema</a>
+                                    <a class="page-scroll" data-toggle="modal" data-target="#acesso" data-whatever="@mdo">Acesso Sistema</a>
                                 </li>
                                 <li>
                                     <a href="#services">Sobre</a>
@@ -179,7 +212,7 @@
                         <ul class="social">
                             <li>
                                 <a target="blank" href="https://www.facebook.com/profile.php?id=100011619526320">
-                                   <button type="button" class="btn btn-fb"><i class="fa fa-facebook"></i></button>
+                                    <button type="button" class="btn btn-fb"><i class="fa fa-facebook"></i></button>
                                 </a>
                             </li>
                         </ul>
@@ -209,35 +242,47 @@
         </footer>
 
         <!--=============================== INICIO DO MODAL ==========================-->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal fade" id="agendamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title text-center" id="exampleModalLabel">Acesso ao Sistema</h4>
+                        <h4 class="modal-title text-center" id="exampleModalLabel">FAÇA SEU AGENDAMENTO</h4>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form role="form" action="../../funcoes/doador/function_doador.php" method="post">
                             <div class="row">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <div class="form-group">
+                                    <div class="form-group col-lg-6">
                                         <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
-                                        <input type="text" class="form-control" placeholder="Usuário" id="txUsuario">
+                                        <label for="data_registro">Data: (Segunda a Sexta)</label>
+                                        <input class="form-control"   type="date" id="data_registro" name="data_agend">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="data_registro">Horario: (7:15 as 18:30)</label>
+                                        <input class="form-control"   type="time" id="data_registro" name="hora_agend">
+                                    </div>
+                                    <div class="form-group ">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="nome">Nome Completo:</label>
+                                        <input class="form-control"  id="nome" name="nome" >
+                                    </div>
+                                      <div class="form-group ">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="nome">Nome Completo:</label>
+                                        <input class="form-control"  id="nome" name="nome" >
                                     </div>
                                     <div class="form-group">
                                         <!--<label for="message-text" class="control-label">Message:</label>-->
                                         <input type="password" class="form-control" placeholder="Senha" id="txSenha">
                                     </div>
+                                    <input type="hidden" name="id" id="id" value="0" />
+                                    <button type="button" id="salvar" class=" center btn btn-success">Enviar</button>
+                                    <button type="reset" class="center btn btn-danger">Limpar</button> 
                                 </div>
                             </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <div class="row">
-                            <div class="col-md-8 col-sm-offset-2">
-                                <a href="DashBoard.php" class="btn btn-md  btn-primary btn-block">Login</a> 
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

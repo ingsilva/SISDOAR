@@ -24,6 +24,8 @@ $nome_mae = $_POST["nome_mae"];
 $estado_civil = $_POST["estado_civil"];
 $escolaridade = $_POST["escolaridade"];
 $naturalidade = $_POST["naturalidade"];
+$data_agend = $_POST["data_agend"];
+$hora_agend = $_POST["hora_agend"];
 
 		//			var estado_civil = $("#estado_civil").val();
 			//		var escolaridade = $("#escolaridade").val();
@@ -34,12 +36,12 @@ if ($id == 0) {
     $sql = $con->prepare("INSERT INTO doador(nome, data_nascimento, cpf, rg, endereco, 
 											numero, bairro, complemento, cidade_idcidade, tipo_sangue, 
 											fator_rh, idade, sexo, data_registro, num_sus, expeditor, 
-											etnia, nome_pai, nome_mae, estado_civil, escolaridade, naturalidade) 
+											etnia, nome_pai, nome_mae, estado_civil, escolaridade, naturalidade, data_agend, hora_agend) 
 						VALUES (?, ?, ?, ?, ?, 
 								?, ?, ?, ?,  ?, 
 								?, ?, ?, ?, ?, 
 								?, ?, ?, ?,
-								?, ?, ?)");
+								?, ?, ?, ?, ?)");
 	
     $sql->bindValue(1, $nome);
     $sql->bindValue(2, $data_nascimento);
@@ -63,6 +65,8 @@ if ($id == 0) {
 	$sql->bindValue(20, $estado_civil);
 	$sql->bindValue(21, $escolaridade);
 	$sql->bindValue(22, $naturalidade);
+	$sql->bindValue(23, $data_agend);
+	$sql->bindValue(24, $hora_agend);
 	
     if ($sql->execute())
         echo true;
