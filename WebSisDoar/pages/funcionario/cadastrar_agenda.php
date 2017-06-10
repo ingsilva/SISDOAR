@@ -67,7 +67,7 @@ include '../../config/conexao.php';
                                         <input class="form-control"   type="number" id="ddd" name="ddd">
                                     </div>
                                     <div class=" form-group col-lg-3">
-                                        <label for="cpf">Telefone/Celular</label>
+                                        <label for="telefone">Telefone/Celular</label>
                                         <input class="form-control"   type="text" id="telefone" name="telefone">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
