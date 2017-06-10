@@ -4,6 +4,7 @@ include("../../config/conexao.php");
 $id = $_POST["id"];
 $nome = $_POST["nome"];
 $data_nascimento = $_POST["data_nascimento"];
+$idade = $_POST["idade"];
 $cpf = $_POST["cpf"];
 $rg = $_POST["rg"];
 $numero = $_POST["numero"];
@@ -17,16 +18,17 @@ $hora_agend = $_POST["hora_agend"];
 
 if ($id == 0) {
     //salvar
-    $sql = $con->prepare("INSERT INTO doador(nome, data_nascimento, cpf, rg, numero, data_agend, hora_agend) 
+    $sql = $con->prepare("INSERT INTO doador(nome, data_nascimento, idade, cpf, rg, numero, data_agend, hora_agend) 
     VALUES (?, ?, ?, ?, ?, ?, ?)");
 
     $sql->bindValue(1, $nome);
     $sql->bindValue(2, $data_nascimento);
-    $sql->bindValue(3, $cpf);
-    $sql->bindValue(4, $rg);
-    $sql->bindValue(5, $numero);
-    $sql->bindValue(6, $data_agend);
-    $sql->bindValue(7, $hora_agend);
+    $sql->bindValue(3, $idade);
+    $sql->bindValue(4, $cpf);
+    $sql->bindValue(5, $rg);
+    $sql->bindValue(6, $numero);
+    $sql->bindValue(7, $data_agend);
+    $sql->bindValue(8, $hora_agend);
     
     
 
