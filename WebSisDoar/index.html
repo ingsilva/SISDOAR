@@ -40,12 +40,12 @@
                     var idade = $("#idade").val();
                     var cpf = $("#cpf").val();
                     var rg = $("#rg").val();
-                    var numero = $("#numero").val();
+                    var tel = $("#numero").val();
                     var data_agend = $("#data_agend").val();
                     var hora_agend = $("#hora_agend").val();
 
                     var dataString = {id: id, nome: nome, data_nascimento: data_nascimento, idade: idade,
-                        cpf: cpf, rg: rg, numero: numero, data_agend: data_agend, hora_agend: hora_agend};
+                        cpf: cpf, rg: rg, tel: tel, data_agend: data_agend, hora_agend: hora_agend};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/doador/function_doador.php",
@@ -253,68 +253,95 @@
                     <div class="modal-body">
                         <form role="form" action="../../funcoes/doador/function_doador.php" method="post">
                             <div class="row">
-                                <div class="col-md-8 col-md-offset-2">
-                                    <div class="panel panel-success">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="alert alert-success" role="alert">
                                         <div class="panel-body">
                                             CONDIÇÕES BASICAS PARA DOAR 
                                         </div>
                                         <ul class="square">
-         <li>Sentir-se bem, com saúde.</li>
-	<li>Apresentar documento com foto, emitido por um orgão oficial e válido em todo território nacional.</li>
-	<li>Ter entre 16 e 69 anos de idade e peso acima de 50kg.</li>
-</ul>
-                                    <div class="panel panel-danger">
+                                            <li>Sentir-se bem, com saúde.</li>
+                                            <li>Apresentar documento com foto, emitido por um orgão oficial e válido em todo território nacional.</li>
+                                            <li>Ter entre 16 e 69 anos de idade e peso acima de 50kg.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="alert alert-danger" role="alert">
                                         <div class="panel-body">
                                             QUEM NÃO PODE DOAR 
                                         </div>
                                         <ul class="square">
                                             <li>Quem teve diagnóstico de hepatite após os 11 anos de idade.</li>
-                                             <li>Mulheres grávidas ou que estejam amamentando.</li>
-                                         <li>Pessoas que estão expostas a doenças transmissíveis pelo sangue, como aids, hepatite, sífilis e doença de chagas.</li>
+                                            <li>Mulheres grávidas ou que estejam amamentando.</li>
+                                            <li>Pessoas que estão expostas a doenças transmissíveis pelo sangue, como aids, hepatite, sífilis e doença de chagas.</li>
+                                        </ul>
                                     </div>
-                                    <div class="form-group col-lg-6">
-                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
-                                        <label for="data_registro">Data: (Segunda a Sexta)</label>
-                                        <input class="form-control"   type="date" id="data_registro" name="data_agend">
+                                    <div class="panel panel-info">
+                                        <br>
+                                        <div class="form-group col-lg-6">
+                                            <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                            <label for="data_registro">Data: (Segunda a Sexta)</label>
+                                            <input class="form-control"   type="date" id="data_registro" name="data_agend">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                            <label for="data_registro">Horario: (7:15 as 18:30)</label>
+                                            <input class="form-control"   type="time" id="data_registro" name="hora_agend">
+                                        </div>
+                                        <div class="form-group col-lg-12">
+                                            <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                            <label for="nome">Nome Completo:</label>
+                                            <input class="form-control"  id="nome" name="nome" >
+                                        </div>
+                                        <div class="form-group col-lg-8 ">
+                                            <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                            <label for="data_nascimento">Data de Nascimento:</label>
+                                            <input class="form-control"   type="date" id="data_nascimento" name="data_nascimento">
+                                        </div>
+                                        <div class="form-group col-lg-4">
+                                            <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                            <label for="idade">Idade:</label>
+                                            <input class="form-control"   type="number" id="idade" name="idade">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                            <label for="rg">RG:</label>
+                                            <input class="form-control"   type="text" id="rg" name="rg">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                            <label for="cpf">CPF:</label>
+                                            <input class="form-control"   type="text" id="cpf" name="cpf">
+                                        </div>
+                                        <div class="form-group col-lg-4">
+                                            <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                            <label for="ddd">DDD:</label>
+                                            <input class="form-control"   type="varchar" id="ddd" name="ddd">
+                                        </div>
+                                        <div class="form-group col-lg-8">
+                                            <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                            <label for="tel">Telefone/Celular:</label>
+                                            <input class="form-control"   type="text" id="tel" name="tel">
+                                        </div>
+                                        <br>
+                                        <div align="center">
+                                        <input type="hidden" name="id" id="id" value="0" />
+                                        <button type="button" id="salvar" class=" center btn btn-success">Enviar</button>
+                                        <button type="reset" class="center btn btn-danger">Limpar</button> 
+                                        </div>
+                                        <br>
                                     </div>
-                                    <div class="form-group col-lg-6">
-                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
-                                        <label for="data_registro">Horario: (7:15 as 18:30)</label>
-                                        <input class="form-control"   type="time" id="data_registro" name="hora_agend">
-                                    </div>
-                                    <div class="form-group col-lg-12">
-                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
-                                        <label for="nome">Nome Completo:</label>
-                                        <input class="form-control"  id="nome" name="nome" >
-                                    </div>
-                                    <div class="form-group col-lg-8 ">
-                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
-                                        <label for="nome">Data de Nascimento:</label>
-                                        <input class="form-control"   type="date" id="data_nascimento" name="data_nascimento">
-                                    </div>
-                                    <div class="form-group col-lg-4">
-                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
-                                        <label for="nome">Idade:</label>
-                                        <input class="form-control"   type="number" id="idade" name="idade">
-                                    </div>
-                                    <br>
-                                    <br>
-                                    <input type="hidden" name="id" id="id" value="0" />
-                                    <button type="button" id="salvar" class=" center btn btn-success">Enviar</button>
-                                    <button type="reset" class="center btn btn-danger">Limpar</button> 
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--========================================= FIM DO MODAL======================-->
-        <!-- jQuery -->
-        <script src="assets/js/jquery.js"></script>
+            <!--========================================= FIM DO MODAL======================-->
+            <!-- jQuery -->
+            <script src="assets/js/jquery.js"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="assets/js/bootstrap.min.js"></script>
+            <!-- Bootstrap Core JavaScript -->
+            <script src="assets/js/bootstrap.min.js"></script>
 
     </body>
 
