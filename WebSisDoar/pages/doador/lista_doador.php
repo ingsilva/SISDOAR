@@ -93,7 +93,7 @@ include '../../config/conexao.php';
                                         <td class="text-center"><?php echo $row['sexo']; ?></td>
                                         <td class="text-center"><?php echo $row['descricao']; ?></td>
                                         <td>
-                                            <?php echo "<a class='btn btn-info' href='edit_user.php?id=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
+                                            <?php echo "<a class='btn btn-info' href='atualizar_doador.php?iddoador=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
                                         </td>
                                         <td>
                                             <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['iddoador'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
