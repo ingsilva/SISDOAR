@@ -30,39 +30,6 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-
-                $('#salvar').click(function () {
-                    var id = $("#id").val();
-                    var nome = $("#nome").val();
-                    var data_nascimento = $("#data_nascimento").val();
-                    var idade = $("#idade").val();
-                    var cpf = $("#cpf").val();
-                    var rg = $("#rg").val();
-                    var tel = $("#numero").val();
-                    var data_agend = $("#data_agend").val();
-                    var hora_agend = $("#hora_agend").val();
-
-                    var dataString = {id: id, nome: nome, data_nascimento: data_nascimento, idade: idade,
-                        cpf: cpf, rg: rg, tel: tel, data_agend: data_agend, hora_agend: hora_agend};
-                    $.ajax({
-                        type: "POST",
-                        url: "../../funcoes/doador/function_doador.php",
-                        data: dataString,
-                        cache: false,
-                        success: function (retorno) {
-                            if (retorno == true) {
-                                alert("Salvo com Sucesso!!");
-                                location.reload();
-                            } else {
-                                alert("Ocorreu um erro ao salvar o registro.");
-                            }
-                        }
-                    });
-                });
-            });
-        </script>
 
     </head>
 
@@ -76,7 +43,7 @@
                 <nav class="navbar navbar-btn navbar-static-top " role="navigation">
                     <div class="container topnav">
                         <!-- Brand and toggle get grouped for better mobile display -->
-                        <!--<div class="navbar-header">
+                        <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
