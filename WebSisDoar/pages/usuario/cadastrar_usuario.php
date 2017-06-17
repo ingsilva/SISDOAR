@@ -54,19 +54,19 @@ include '../../config/conexao.php';
                         <h2>Cadastrar Usuário </h2>
                         <!-- Basic form body -->
                         <div id="basic-form" class="collapse in">
-                            <form role="form" action="../../funcoes/usuario/function_login.php" method="post">
+                            <form role="form" action="../../funcoes/usuario/function_usuario.php" method="post">
                                 <div class="row">
                                     <div class="form-group col-lg-5">
                                         <label for="nome">Nome de Usuário</label>
                                         <input class="form-control" type="text"  id="nome" name="nome" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="form-group col-lg-5">
+                                    <div class="form-group col-lg-4">
                                         <label for="login">Login</label>
                                         <input class="form-control" type="text"  id="login" name="login" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="form-group col-lg-1">
+                                    <div class="form-group col-lg-3">
                                         <label for="senha">Senha</label>
                                         <input class="form-control"   type="password" id="senha" name="senha">
                                     </div>
