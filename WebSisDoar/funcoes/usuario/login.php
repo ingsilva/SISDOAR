@@ -2,9 +2,11 @@
   $login = $_POST['login'];
   $entrar = $_POST['entrar'];
   $senha = md5($_POST['senha']);
-  $connect = mysql_connect('localhost', 'root', 'root');
+  $connect = mysqli_connect('mysql:host=localhost', 'root', 'root', 'db_sangue');
+  
   $db = mysql_select_db('db_sangue');
-    if (isset($entrar)) {
+  
+  if (isset($entrar)) {
             
       $verifica = mysql_query("SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'") or die("erro ao selecionar");
         if (mysql_num_rows($verifica)<=0){
