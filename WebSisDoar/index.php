@@ -77,10 +77,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="intro-message">
-                            <h1>Landing Page</h1>
-                            <h3>A Template by Start Bootstrap</h3>
+                            <h1>WebSisDoar</h1>
+                            <!--<h3>Doe Sangue, Doe Vida.</h3>-->
                             <hr class="intro-divider">
-                            <ul class="list-inline intro-social-buttons">
+                            <!--<ul class="list-inline intro-social-buttons">
                                 <li>
                                     <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                                 </li>
@@ -90,7 +90,7 @@
                                 <li>
                                     <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
                                 </li>
-                            </ul>
+                            </ul>-->
                         </div>
                     </div>
                 </div>
@@ -173,14 +173,26 @@
         <div class="banner">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <h2>Encontre-nos</h2>
                     </div>
                     <div class="col-lg-4">
-                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHemocentro-Hemoacre-1004879989593232&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="300"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                        <div class="facebook-container">
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHemocentro-Hemoacre-1004879989593232&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                        </div>
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a class="btn btn-default btn-lg"><i class="glyphicon glyphicon-earphone"></i> <span class="network-name">Telefone <br> (68)3228-1494</span></a>
+                            </li>
+                            <li>
+                                <a class="btn btn-default btn-lg"><i class="glyphicon glyphicon-dashboard"></i> <span class="network-name">Seg à Sex das <br> 07:15–18:30</span></a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-lg-4">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4956.608634210048!2d-67.82109818459757!3d-9.953794709207939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x917f8c679a8e8a27%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497646115049" width="400" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="col-lg-5">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4956.608634210048!2d-67.82109818459757!3d-9.953794709207939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x917f8c679a8e8a27%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497646115049" width="400" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
 
