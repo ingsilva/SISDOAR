@@ -138,7 +138,7 @@ JAVASCRIPT
                         <div id="sidebar-menu">
                             <ul>
                                 <li><a href="/SISDOAR/WebSisDoar/DashBoard.php"><i class="fa fa-home"></i> Inicio</a></li>
-
+                                <li><a href="/SISDOAR/WebSisDoar/pages/usuario/lista_usuario.php"><i class="glyphicon glyphicon-log-in"></i> Usuários</a></li>
                                 <li><a href="/SISDOAR/WebSisDoar/pages/doador/lista_doador.php"><i class="fa fa-user"></i><i class="fa fa-plus-square-o i-right"></i>Doadores</a>
 
                                 </li>
@@ -158,6 +158,7 @@ JAVASCRIPT
                                 <li><a href="/SISDOAR/WebSisDoar/pages/estoque/estoque_sangue.php"><i class="fa fa-tint"></i> Estoque de Sangue</a></li>
                                 <li><a href="/SISDOAR/WebSisDoar/pages/funcionario/lista_agenda.php"><i class="glyphicon glyphicon-earphone"></i>Agenda</a>
                                 <li><a href="/SISDOAR/WebSisDoar/graficos.php"><i class="fa fa-bar-chart-o"></i> Gráficos</a></li>
+                                
                             </ul>
                             <div class="clear"></div>
                         </div><!-- End div #sidebar-menu -->

@@ -332,14 +332,14 @@
                 <h4 class="modal-title text-center" id="exampleModalLabel">ACESSO AO SISTEMA</h4>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="login.php" method="post">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Usuário" id="txUsuario">
+                                <input type="text" class="form-control" placeholder="Usuário" id="login">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Senha" id="txSenha">
+                                <input type="password" class="form-control" placeholder="Senha" id="senha">
                             </div>
                         </div>
                     </div>
@@ -348,7 +348,8 @@
             <div class="modal-footer">
                 <div class="row">
                     <div class="col-md-8 col-sm-offset-2">
-                        <a href="DashBoard.php" class="btn btn-md  btn-primary btn-block">Login</a> 
+                        <input type="hidden" name="id" id="id" value="0" />
+                        <button type="button" id="entrar" class="btn btn-md  btn-primary btn-block">Entrar</button>
                     </div>
                 </div>
             </div>
