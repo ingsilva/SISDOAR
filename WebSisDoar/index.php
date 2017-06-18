@@ -256,20 +256,21 @@
                         <hr class="primary">
                         <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
                     </div>
-                    <div class="col-lg-12 ali text-center">
-                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHemocentro-Hemoacre-1004879989593232&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="345" height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                    </div>
-                    <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <div class="col-lg-3 col-lg-offset-2 text-center">
                         <i class="fa fa-phone fa-3x sr-contact"></i>
-                        <p>(68)3228-1494</p>
+                        <p>Telefone <br>(68)3228-1494</p>
                     </div>
-                    <div class="col-lg-4 text-center">
+                    <div class="col-lg-2 text-center">
+                        <i class="fa fa-facebook-square fa-3x sr-contact"></i>
+                        <p><a href="https://www.facebook.com/Hemocentro-Hemoacre-1004879989593232/">Página <br> Facebook </a></p>
+                    </div>
+                    <div class="col-lg-3 text-center">
                         <i class="glyphicon glyphicon-dashboard fa-3x sr-contact"></i>
-                        <p>Seg à Sex das 07:15–18:30</p>
+                        <p>Seg à Sex. das <br> 07:15–18:30</p>
                     </div>
                     <div class="col-lg-12 text-center">
                         <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4956.608634210048!2d-67.82109818459757!3d-9.953794709207939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x917f8c679a8e8a27%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497646115049" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1632.2906919115828!2d-67.816222!3d-9.952402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497823835325" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>                        
                         </div>
                     </div>
                 </div>
