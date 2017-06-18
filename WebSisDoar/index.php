@@ -13,14 +13,18 @@
         <link rel="icon" type="image/png"  href="assets/img/apple-touch-icon.png" />
 
         <!-- Bootstrap Core CSS -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Custom CSS -->
-        <link href="assets/css/landing-page.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
-        <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+        <!-- Plugin CSS -->
+        <link href="assets/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+        <!-- Theme CSS -->
+        <link href="assets/css/creative.min.css" rel="stylesheet">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,205 +35,246 @@
 
     </head>
 
-    <body>
+    <body id="page-top">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-            <div class="container topnav">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand topnav" data-toggle="modal" data-target="#agendamento" data-whatever="@mdo">Agendamento Doação</a>
-
-
-                    <!--<a class="navbar-brand topnav" href="#">Start Bootstrap</a>-->
+                    <a class="navbar-brand page-scroll" href="#page-top">HemoAcre</a>
                 </div>
+
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#about">Inicio</a>
-                        </li>
-                        <li>
                             <a class="page-scroll" data-toggle="modal" data-target="#acesso" data-whatever="@mdo">Acesso Sistema</a>
                         </li>
                         <li>
-                            <a href="#contact">Contato</a>
+                            <a class="page-scroll" data-toggle="modal" data-target="#agendamento" data-whatever="@mdo">Agendamento Doação</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#services">Services</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container -->
+            <!-- /.container-fluid -->
         </nav>
 
+        <header>
+            <div class="header-content">
+                <div class="header-content-inner">
+                    <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
+                    <hr>
+                    <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+                    <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                </div>
+            </div>
+        </header>
 
-        <!-- Header -->
-        <a name="about"></a>
-        <div class="intro-header">
+        <section class="bg-primary" id="about">
             <div class="container">
-
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="intro-message">
-                            <h1>WebSisDoar</h1>
-                            <!--<h3>Doe Sangue, Doe Vida.</h3>-->
-                            <hr class="intro-divider">
-                            <!--<ul class="list-inline intro-social-buttons">
-                                <li>
-                                    <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                                </li>
-                            </ul>-->
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <h2 class="section-heading">We've got what you need!</h2>
+                        <hr class="light">
+                        <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+                        <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">At Your Service</h2>
+                        <hr class="primary">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="service-box">
+                            <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                            <h3>Sturdy Templates</h3>
+                            <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="service-box">
+                            <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                            <h3>Ready to Ship</h3>
+                            <p class="text-muted">You can use this theme as is, or you can make changes!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="service-box">
+                            <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+                            <h3>Up to Date</h3>
+                            <p class="text-muted">We update dependencies to keep things fresh.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="service-box">
+                            <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+                            <h3>Made with Love</h3>
+                            <p class="text-muted">You have to make your websites with love these days!</p>
                         </div>
                     </div>
                 </div>
-
             </div>
-            <!-- /.container -->
+        </section>
 
-        </div>
-        <!-- /.intro-header -->
-
-        <!-- Page Content -->
-
-        <a  name="services"></a>
-        <div class="content-section-a">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-sm-6">
-                        <hr class="section-heading-spacer">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">Uma Chance:</h2>
-                        <p class="lead">Mais do que palavras, as ações começam dentro de nós e são elas que fazem o ser humano ter mais uma chance, seja essa chance que o próximo necessita.</p>
+        <section class="no-padding" id="portfolio">
+            <div class="container-fluid">
+                <div class="row no-gutter popup-gallery">
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="assets/img/portfolio/fullsize/1.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Category
+                                    </div>
+                                    <div class="project-name">
+                                        Project Name
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                        <img class="img-responsive" src="assets/img/dog3.png" alt="">
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="assets/img/portfolio/fullsize/2.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Category
+                                    </div>
+                                    <div class="project-name">
+                                        Project Name
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="assets/img/portfolio/fullsize/3.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Category
+                                    </div>
+                                    <div class="project-name">
+                                        Project Name
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="assets/img/portfolio/fullsize/4.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Category
+                                    </div>
+                                    <div class="project-name">
+                                        Project Name
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="assets/img/portfolio/fullsize/5.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Category
+                                    </div>
+                                    <div class="project-name">
+                                        Project Name
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="assets/img/portfolio/fullsize/6.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Category
+                                    </div>
+                                    <div class="project-name">
+                                        Project Name
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
-
             </div>
-            <!-- /.container -->
+        </section>
 
-        </div>
-        <!-- /.content-section-a -->
-
-        <div class="content-section-b">
-
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                        <hr class="section-heading-spacer">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">Seja um doador</h2>
-                        <p class="lead">A vida é passageira e o nosso caminho indefinido. Ser doador, é prolongar a vida de alguém, que o destino decretou. Seu tempo já pré definido.</p>
-                    </div>
-                    <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                        <img class="img-responsive" src="assets/img/ipad2.png" alt="">  
-                    </div>
+        <aside class="bg-dark">
+            <div class="container text-center">
+                <div class="call-to-action">
+                    <h2>Free Download at Start Bootstrap!</h2>
+                    <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
                 </div>
-
             </div>
-            <!-- /.container -->
+        </aside>
 
-        </div>
-        <!-- /.content-section-b -->
-
-        <div class="content-section-a">
-
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-5 col-sm-6">
-                        <hr class="section-heading-spacer">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">Amor ao próximo</h2>
-                        <p class="lead">Ao dedicar parte do seu tempo para doar um pouco de seu sangue, o doador ajuda a salvar a vida de até quatro pacientes diferentes. Doe Sangue. Doe Vida.</p>
-                    </div>
-                    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                        <img class="img-responsive" src="assets/img/phones2.png" alt="">
-                    </div>
-                </div>
-
-            </div>
-            <!-- /.container -->
-
-        </div>
-        <!-- /.content-section-a -->
-
-        <a  name="contact"></a>
-        <div class="banner">
+        <section id="contact">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <h2>Encontre-nos</h2>
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <h2 class="section-heading">Let's Get In Touch!</h2>
+                        <hr class="primary">
+                        <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="facebook-container">
-                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHemocentro-Hemoacre-1004879989593232&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                        </div>
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a class="btn btn-default btn-lg"><i class="glyphicon glyphicon-earphone"></i> <span class="network-name">Telefone <br> (68)3228-1494</span></a>
-                            </li>
-                            <li>
-                                <a class="btn btn-default btn-lg"><i class="glyphicon glyphicon-dashboard"></i> <span class="network-name">Seg à Sex das <br> 07:15–18:30</span></a>
-                            </li>
-                        </ul>
+                    <div class="col-lg-12 ali text-center">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHemocentro-Hemoacre-1004879989593232&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="345" height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-4 col-lg-offset-2 text-center">
+                        <i class="fa fa-phone fa-3x sr-contact"></i>
+                        <p>(68)3228-1494</p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <i class="glyphicon glyphicon-dashboard fa-3x sr-contact"></i>
+                        <p>Seg à Sex das 07:15–18:30</p>
+                    </div>
+                    <div class="col-lg-12 text-center">
                         <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4956.608634210048!2d-67.82109818459757!3d-9.953794709207939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x917f8c679a8e8a27%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497646115049" width="400" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4956.608634210048!2d-67.82109818459757!3d-9.953794709207939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x917f8c679a8e8a27%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497646115049" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
-
             </div>
-            <!-- /.container -->
-
-        </div>
-        <!-- /.banner -->
-
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="footer-menu-divider">&sdot;</li>
-                            <li>
-                                <a href="#about">About</a>
-                            </li>
-                            <li class="footer-menu-divider">&sdot;</li>
-                            <li>
-                                <a href="#services">Services</a>
-                            </li>
-                            <li class="footer-menu-divider">&sdot;</li>
-                            <li>
-                                <a href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                        <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+        </section>
         <!--=============================== MODAL DE AGENDAMENTO ==========================-->
         <div class="modal fade" id="agendamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
             <div class="modal-dialog" role="document">
@@ -360,11 +405,20 @@
         </div>
 
         <!----=====================================================================================================-->
+
         <!-- jQuery -->
-        <script src="assets/js/jquery.js"></script>
+        <script src="assets/vendor/jquery/jquery.min.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="assets/vendor/scrollreveal/scrollreveal.min.js"></script>
+        <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+        <!-- Theme JavaScript -->
+        <script src="assets/js/creative.min.js"></script>
 
     </body>
 
