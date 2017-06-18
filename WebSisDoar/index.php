@@ -57,16 +57,16 @@
                             <a class="page-scroll" data-toggle="modal" data-target="#agendamento" data-whatever="@mdo">Agendamento Doação</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#about">About</a>
+                            <a class="page-scroll" href="#about">Sobre</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#services">Services</a>
+                            <a class="page-scroll" href="#services">Saiba Mais</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#portfolio">Portfolio</a>
+                            <a class="page-scroll" href="#portfolio">Heróis</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#contact">Contact</a>
+                            <a class="page-scroll" href="#contact">Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -242,7 +242,7 @@
         <aside class="bg-dark">
             <div class="container text-center">
                 <div class="call-to-action">
-                    <h2>Free Download at Start Bootstrap!</h2>
+                    <h2>Faça parte dessa equipe de Heróis!</h2>
                     <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
                 </div>
             </div>
@@ -252,9 +252,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <h2 class="section-heading">Let's Get In Touch!</h2>
+                        <h2 class="section-heading">Encontre-nos!</h2>
                         <hr class="primary">
-                        <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                        <p>Av. Getúlio Vargas, 2787 - Bosque, Rio Branco - AC, 69900-607. <br> Curta nossa Pagina no Facebook, e fique por dentro de
+                        mais informações.</p>
                     </div>
                     <div class="col-lg-3 col-lg-offset-2 text-center">
                         <i class="fa fa-phone fa-3x sr-contact"></i>
@@ -265,8 +266,8 @@
                         <p><a href="https://www.facebook.com/Hemocentro-Hemoacre-1004879989593232/">Página <br> Facebook </a></p>
                     </div>
                     <div class="col-lg-3 text-center">
-                        <i class="glyphicon glyphicon-dashboard fa-3x sr-contact"></i>
-                        <p>Seg à Sex. das <br> 07:15–18:30</p>
+                        <i class="fa fa-clock-o fa-3x sr-contact"></i>
+                        <p>Seg à Sex<br> 07:15–18:30</p>
                     </div>
                     <div class="col-lg-12 text-center">
                         <div class="map-container">
