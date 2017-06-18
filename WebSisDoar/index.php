@@ -270,7 +270,7 @@
                     </div>
                     <div class="col-lg-12 text-center">
                         <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1632.2906919115828!2d-67.816222!3d-9.952402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497823835325" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>                        
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1632.2906919115828!2d-67.816222!3d-9.952402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497823835325" width="800" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>                        
                         </div>
                     </div>
                 </div>
