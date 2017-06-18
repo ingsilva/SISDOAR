@@ -115,7 +115,7 @@
                         <p class="lead">Mais do que palavras, as ações começam dentro de nós e são elas que fazem o ser humano ter mais uma chance, seja essa chance que o próximo necessita.</p>
                     </div>
                     <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                        <img class="img-responsive" src="assets/img/ipad2.png" alt="">
+                        <img class="img-responsive" src="assets/img/dog3.png" alt="">
                     </div>
                 </div>
 
@@ -137,7 +137,7 @@
                         <p class="lead">A vida é passageira e o nosso caminho indefinido. Ser doador, é prolongar a vida de alguém, que o destino decretou. Seu tempo já pré definido.</p>
                     </div>
                     <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                        <img class="img-responsive" src="assets/img/dog3.png" alt="">
+                        <img class="img-responsive" src="assets/img/ipad2.png" alt="">  
                     </div>
                 </div>
 

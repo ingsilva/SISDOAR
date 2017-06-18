@@ -51,10 +51,9 @@ include '../../config/conexao.php';
                         success: function (retorno) {
                             if (retorno == true) {
                                 alert("Salvo com Sucesso!!");
-                                location.reload();
+                                location.replace("lista_doador.php");
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-                                location.reload();
                             }
                         }
                     });
