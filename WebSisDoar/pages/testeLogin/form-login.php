@@ -24,7 +24,7 @@
 
             <br><br>
 
-            <input type="submit" value="Entrar">
+            <input type="submit" name="entrar" value="Entrar">
         </form>
 
     </body>
