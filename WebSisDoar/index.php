@@ -44,6 +44,7 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                     </button>
+                    <input type="image" src="assets/img/apple-touch-icon.png" width="38" height="38">
                     <a class="navbar-brand page-scroll" href="#page-top">HemoAcre</a>
                 </div>
 
@@ -146,90 +147,90 @@
             <div class="container-fluid">
                 <div class="row no-gutter popup-gallery">
                     <div class="col-lg-4 col-sm-6">
-                        <a href="assets/img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                            <img src="assets/img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+                        <a href="assets/img/portfolio/fullsize/doa01.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/doa01.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
-                                        Category
+                                        Seja um Doador
                                     </div>
                                     <div class="project-name">
-                                        Project Name
+                                        Doe Vida
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a href="assets/img/portfolio/fullsize/2.jpg" class="portfolio-box">
-                            <img src="assets/img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+                        <a href="assets/img/portfolio/fullsize/doa02.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/doa02.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
-                                        Category
+                                        Seja um Doador
                                     </div>
                                     <div class="project-name">
-                                        Project Name
+                                        Doe Vida
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a href="assets/img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                            <img src="assets/img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                        <a href="assets/img/portfolio/fullsize/doa03.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/doa03.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
-                                        Category
+                                        Seja um Doador
                                     </div>
                                     <div class="project-name">
-                                        Project Name
+                                        Doe Vida
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a href="assets/img/portfolio/fullsize/4.jpg" class="portfolio-box">
-                            <img src="assets/img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
+                        <a href="assets/img/portfolio/fullsize/doa04.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/doa04.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
-                                        Category
+                                        Seja um Doador
                                     </div>
                                     <div class="project-name">
-                                        Project Name
+                                        Doe Vida
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a href="assets/img/portfolio/fullsize/5.jpg" class="portfolio-box">
-                            <img src="assets/img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
+                        <a href="assets/img/portfolio/fullsize/doa05.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/doa05.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
-                                        Category
+                                        Seja um Doador
                                     </div>
                                     <div class="project-name">
-                                        Project Name
+                                        Doe Vida
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a href="assets/img/portfolio/fullsize/6.jpg" class="portfolio-box">
-                            <img src="assets/img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
+                        <a href="assets/img/portfolio/fullsize/doa06.jpg" class="portfolio-box">
+                            <img src="assets/img/portfolio/thumbnails/doa06.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
-                                        Category
+                                        Seja um Doador
                                     </div>
                                     <div class="project-name">
-                                        Project Name
+                                        Doe Vida
                                     </div>
                                 </div>
                             </div>
