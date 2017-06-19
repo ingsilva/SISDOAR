@@ -93,7 +93,7 @@
                     <div class="col-lg-8 col-lg-offset-2 text-center">
                         <h2 class="section-heading">Requisitos básicos para doação de sangue</h2>
                         <hr class="light">
-                        <p class="text-faded"> Requisitos básicos
+                        <p class="text-faded"> O que é necessário para doar?
 
                         <li>Estar em boas condições de saúde.
                         <li>Ter entre 16 e 69 anos, desde que a primeira doação tenha sido feita até 60 anos.</li>
@@ -103,15 +103,28 @@
                         <li>Apresentar documento original com foto recente, que permita a identificação do candidato, emitido por órgão oficial.</li>
                         </p>
                         <hr class="light">
-                        <p class="text-faded"> Requisitos básicos
+                        <p class="text-faded"> Não pode doar quem tem ou teve as seguintes doenças:
 
-                        <li>Estar em boas condições de saúde.
-                        <li>Ter entre 16 e 69 anos, desde que a primeira doação tenha sido feita até 60 anos.</li>
-                        <li>Pesar no mínimo 50kg.</li>
-                        <li>Estar descansado (ter dormido pelo menos 6 horas nas últimas 24 horas).</li>
-                        <li>Estar alimentado (evitar alimentação gordurosa nas 4 horas que antecedem a doação).</li>
-                        <li>Apresentar documento original com foto recente, que permita a identificação do candidato, emitido por órgão oficial.</li>
+                        <li>Hepatite após os 11 anos de idade;</li>
+                        <li>Lepra (Hanseníase);</li>
+                        <li>Hipertireoidismo e tireoidite de Hashimoto;</li>
+                        <li>Doença auto-imune;</li>
+                        <li>Doença de Chagas;</li>
+                        <li>AIDS;</li>
+                        <li>Problemas cardíacos (necessita avaliação e declaração do seu cardiologista);</li>
+                        <li>Diabetes;</li>
+                        <li>Câncer;</li>
                         </p>
+                        <hr class="light">
+                        <p class="text-faded"> Outras situações:
+                        <li>Fez ou faz uso de algumas drogas ilícitas nos últimos 12 meses. </li>
+                        <li>Mantém relações sexuais de risco.</li>
+                        <li>Gestantes ou mulheres que amamentam bebês com menos de 12 meses.</li>
+                        <li>Visando a prevenção de doenças causadas pelo Aedes aegypti, serão inaptos por 30 dias os candidatos à doação oriundos dos seguintes estados:</li>
+                        <li> Febre de chikungunya: nenhum estado brasileiro.</li>
+                        <li>Febre pelo vírus Zika: Pará, Bahia, Minas Gerais, Rio de Janeiro e Goiás.</li>
+                        <li>Febre Amarela: Minas Gerais e Espírito Santo.</li>
+
                         <hr class="light">
 
                         <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
@@ -136,7 +149,7 @@
                             <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
                             <h3>Recepção e Cadastro</h3>
                             <p class="text-muted">Apresentação de documento expedido por órgão oficial com foto (RG, CNH, Carteira de Trabalho, etc).
-                            Atualização de endereço, trabalho, etc.
+                                Atualização de endereço, trabalho, etc.
                         </div>
                     </div>
                     <div class="col-lg-2 text-center">
