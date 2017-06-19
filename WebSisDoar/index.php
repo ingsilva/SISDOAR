@@ -102,6 +102,17 @@
                         <li>Estar alimentado (evitar alimentação gordurosa nas 4 horas que antecedem a doação).</li>
                         <li>Apresentar documento original com foto recente, que permita a identificação do candidato, emitido por órgão oficial.</li>
                         </p>
+                        <hr class="light">
+                        <p class="text-faded"> Requisitos básicos
+
+                        <li>Estar em boas condições de saúde.
+                        <li>Ter entre 16 e 69 anos, desde que a primeira doação tenha sido feita até 60 anos.</li>
+                        <li>Pesar no mínimo 50kg.</li>
+                        <li>Estar descansado (ter dormido pelo menos 6 horas nas últimas 24 horas).</li>
+                        <li>Estar alimentado (evitar alimentação gordurosa nas 4 horas que antecedem a doação).</li>
+                        <li>Apresentar documento original com foto recente, que permita a identificação do candidato, emitido por órgão oficial.</li>
+                        </p>
+                        <hr class="light">
 
                         <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
                     </div>
@@ -120,39 +131,50 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-2 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
                             <h3>Recepção e Cadastro</h3>
-                            <p class="text-muted"><li>Apresentação de documento expedido por órgão oficial com foto (RG, CNH, Carteira de Trabalho, etc).</li>
-                            <li>Atualização de endereço, trabalho, etc.</li>
+                            <p class="text-muted">Apresentação de documento expedido por órgão oficial com foto (RG, CNH, Carteira de Trabalho, etc).
+                            Atualização de endereço, trabalho, etc.
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-2 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
                             <h3>Pré-triagem</h3>
-                            <p class="text-muted"><li>Peso, altura, verificação de pressão arterial, pulso e temperatura.</li>
-                            <li>Uma "picadinha" no dedo para verificar seu hematócrito e/ ou hemoglobina.</li></p>
+                            <p class="text-muted">
+                                Peso, altura, verificação de pressão arterial, pulso e temperatura.
+                                Uma "picadinha" no dedo para verificar seu hematócrito e/ ou hemoglobina.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-4 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
                             <h3>Entrevista clínica</h3>
-                            <p class="text-muted"><li>É confidencial e o sigilo é absoluto – confie em seu entrevistador e seja sincero.
-                                Você assinará um Termo de Consentimento onde refere ter entendido as informações recebidas, ter respondido com sinceridade ao questionário, concorda com a coleta de sangue e afirma que está ciente de que se houver resultados sorológicos alterados, será chamado pelo serviço de apoio ao doador.</li>
-
+                            <p class="text-muted">
+                                É confidencial e o sigilo é absoluto – confie em seu entrevistador e seja sincero.
+                                Você assinará um Termo de Consentimento onde refere ter entendido as informações recebidas, ter respondido com sinceridade ao questionário, concorda com a coleta de sangue e afirma que está ciente de que se houver resultados sorológicos alterados, será chamado pelo serviço de apoio ao doador.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-2 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
                             <h3>Coleta de sangue</h3>
-                            <li>Será realizada a coleta de 450 ml ± 45ml e amostras de sangue para exames obrigatórios por lei.</li>
-
-                            <h3>E por fim terá o lanche:</h3>
-                            <li>É fornecido lanche acompanhado por líquidos, para repor o volume retirado na doação. Em casa ou no trabalho continue ingerindo bastante líquido.</li>
+                            <p class="text-muted">
+                                Será realizada a coleta de 450 ml ± 45ml e amostras de sangue para exames obrigatórios por lei.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 text-center">
+                        <div class="service-box">
+                            <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                            <h3>Lanche</h3>
+                            <p class="text-muted">
+                                É fornecido lanche acompanhado por líquidos, para repor o volume retirado na doação. Em casa ou no trabalho continue ingerindo bastante líquido.
+                            </p>
                         </div>
                     </div>
                 </div>
