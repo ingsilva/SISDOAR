@@ -60,13 +60,13 @@
                             <a class="page-scroll" href="#about">Sobre</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#services">Saiba Mais</a>
+                            <a class="page-scroll" href="#services">Como doar?</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#portfolio">Heróis</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#contact">Contato</a>
+                            <a class="page-scroll" href="#contato">Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -103,7 +103,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">At Your Service</h2>
+                        <h2 class="section-heading">Como doar?</h2>
                         <hr class="primary">
                     </div>
                 </div>
@@ -113,29 +113,75 @@
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                            <h3>Sturdy Templates</h3>
-                            <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                            <h3>Tipos de doação</h3>
+                            <p class="text-muted">O doador pode candidatar-se a doação de três formas:
+
+                            <li>Doação Espontânea: feita de modo altruísta, como uma atitude solidária com um único interesse: ajudar o próximo.</li>
+                            <li>Doação vinculada: feita vinculada á algum paciente.</li>
+                            <li>Doação autóloga: doar para si mesmo.</li></p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                            <h3>Ready to Ship</h3>
-                            <p class="text-muted">You can use this theme as is, or you can make changes!</p>
+                            <h3>O que é necessário para doar?</h3>
+                            <p class="text-muted"><li>Ter idade entre 18 e 69 anos, 11 meses e 29 dias;</li>
+                            <li> Doadores com idade de 16 e 17 anos de idade, são aceitos para doação mediante a presença e autorização formal dos pais e/ou responsável legal;</li>
+                            <li> O limite de idade para primeira doação é de 60 anos;</li>
+                            <li> O candidato à doação deve estar em boas condições de saúde, sem feridas ou machucados no corpo;</li>
+                            <li> Pesar acima de 50 kg (com desconto de vestimentas);</li>
+                            <li> Apresentar documento de identidade com foto, emitido por órgão oficial: RG., carteira profissional, carteira de motorista, etc.</li>
+                            <li> Ter repousado bem na noite antes da doação;
+                            <li> Evitar o jejum. Fazer refeições leves e não gordurosas, nas 4 horas que antecedem a doação;</li>
+                            <li> Evitar uso de bebidas alcoólicas nas últimas 12 horas;</li>
+                            <li> Evitar vir acompanhado com crianças, sem acompanhantes.</li></p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                            <h3>Up to Date</h3>
-                            <p class="text-muted">We update dependencies to keep things fresh.</p>
+                            <h3>Não pode doar</h3>
+                            <p class="text-muted"><li>Quem tem ou teve as seguintes doenças:
+
+                            <li>Hepatite após os 11 anos de idade;</li>
+                            <li>Lepra (Hanseníase);</li>
+                            <li>Hipertireoidismo e tireoidite de Hashimoto;</li>
+                            <li>Doença auto-imune;</li>
+                            <li>Doença de Chagas;</li>
+                            <li>AIDS;</li>
+                            <li>Problemas cardíacos (necessita avaliação e declaração do seu cardiologista);</li>
+                            <li>Diabetes;</li>
+                            <li>Câncer;</li>
+
+                            <p class="text-muted">Outras situações:
+
+                            <li>Fez ou faz uso de algumas drogas ilícitas nos últimos 12 meses;</li>
+                            <li>Mantém relações sexuais de risco;</li>
+                            <li>Gestantes ou mulheres que amamentam bebês com menos de 12 meses;</li></p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                            <h3>Made with Love</h3>
-                            <p class="text-muted">You have to make your websites with love these days!</p>
+                            <h3>Etapas da doação</h3>
+                            <p class="text-muted">1º Passo – Recepção e cadastro
+
+                            <li>Apresentação de documento expedido por órgão oficial com foto (RG, CNH, Carteira de Trabalho, etc)</li>
+                            <li>Atualização de endereço, trabalho, etc.</li>
+                            <p class="text-muted">2° Passo – Pré-triagem
+
+                            <li>Peso, altura, verificação de pressão arterial, pulso e temperatura;</li>
+                            <li>Uma "picadinha" no dedo para verificar seu hematócrito e/ ou hemoglobina;</li>
+                            <p class="text-muted">3° Passo – Entrevista clínica
+
+                            <li>É confidencial e o sigilo é absoluto – confie em seu entrevistador e seja sincero;</li>
+                            <li>Você assinará um Termo de Consentimento onde refere ter entendido as informações recebidas, ter respondido com sinceridade ao questionário, concorda com a coleta de sangue e afirma que está ciente de que se houver resultados sorológicos alterados, será chamado pelo serviço de apoio ao doador;</li>
+                            <p class="text-muted">4º Passo – Coleta de sangue
+
+                            <li>Será realizada a coleta de 450 ml ± 45ml e amostras de sangue para exames obrigatórios por lei;</li>
+                            <p class="text-muted">5º Passo – Lanche
+
+                            <li>É fornecido lanche acompanhado por líquidos, para repor o volume retirado na doação. Em casa ou no trabalho continue ingerindo bastante líquido.</li></p>
                         </div>
                     </div>
                 </div>
@@ -252,10 +298,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
+<<<<<<< HEAD
+                        <h2 class="section-heading">Entre em contato conosco</h2>
+=======
                         <h2 class="section-heading">Encontre-nos!</h2>
+>>>>>>> origin/master
                         <hr class="primary">
+<<<<<<< HEAD
+                        <p>Nos encontre através do nosso endereço ou pela nossa página no facebook!</p>
+=======
                         <p>Av. Getúlio Vargas, 2787 - Bosque, Rio Branco - AC, 69900-607. <br> Curta nossa Pagina no Facebook, e fique por dentro de
                         mais informações.</p>
+>>>>>>> origin/master
                     </div>
                     <div class="col-lg-3 col-lg-offset-2 text-center">
                         <i class="fa fa-phone fa-3x sr-contact"></i>
