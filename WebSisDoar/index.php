@@ -57,10 +57,10 @@
                             <a class="page-scroll" data-toggle="modal" data-target="#agendamento" data-whatever="@mdo">Agendamento Doação</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#about">Sobre</a>
+                            <a class="page-scroll" href="#about">Como doar?</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#services">Como doar?</a>
+                            <a class="page-scroll" href="#services">Etapas Doação</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#portfolio">Heróis</a>
@@ -78,10 +78,10 @@
         <header>
             <div class="header-content">
                 <div class="header-content-inner">
-                    <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
+                    <h1 id="homeHeading">TEM MAIS DO QUE SANGUE EM SUAS VEIAS, TEM VIDA!</h1>
                     <hr>
-                    <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                    <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                    <p>Salvar uma vida é salvar a si mesmo, é olhar além sem esperar nada em troca, é misturar o sangue em busca do bem.</p>
+                    <a href="#about" class="btn btn-primary btn-xl page-scroll">Vamos Doar?</a>
                 </div>
             </div>
         </header>
@@ -90,9 +90,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <h2 class="section-heading">We've got what you need!</h2>
+                        <h2 class="section-heading">Requisitos básicos para doação de sangue</h2>
                         <hr class="light">
-                        <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+                        <p class="text-faded"> Requisitos básicos
+
+                        <li>Estar em boas condições de saúde.
+                        <li>Ter entre 16 e 69 anos, desde que a primeira doação tenha sido feita até 60 anos.</li>
+                        <li>Pesar no mínimo 50kg.</li>
+                        <li>Estar descansado (ter dormido pelo menos 6 horas nas últimas 24 horas).</li>
+                        <li>Estar alimentado (evitar alimentação gordurosa nas 4 horas que antecedem a doação).</li>
+                        <li>Apresentar documento original com foto recente, que permita a identificação do candidato, emitido por órgão oficial.</li>
+                        </p>
+
                         <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
                     </div>
                 </div>
@@ -103,7 +112,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Como doar?</h2>
+                        <h2 class="section-heading">Etapas da Doação</h2>
                         <hr class="primary">
                     </div>
                 </div>
@@ -113,75 +122,36 @@
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                            <h3>Tipos de doação</h3>
-                            <p class="text-muted">O doador pode candidatar-se a doação de três formas:
-
-                            <li>Doação Espontânea: feita de modo altruísta, como uma atitude solidária com um único interesse: ajudar o próximo.</li>
-                            <li>Doação vinculada: feita vinculada á algum paciente.</li>
-                            <li>Doação autóloga: doar para si mesmo.</li></p>
+                            <h3>Recepção e Cadastro</h3>
+                            <p class="text-muted"><li>Apresentação de documento expedido por órgão oficial com foto (RG, CNH, Carteira de Trabalho, etc).</li>
+                            <li>Atualização de endereço, trabalho, etc.</li>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                            <h3>O que é necessário para doar?</h3>
-                            <p class="text-muted"><li>Ter idade entre 18 e 69 anos, 11 meses e 29 dias;</li>
-                            <li> Doadores com idade de 16 e 17 anos de idade, são aceitos para doação mediante a presença e autorização formal dos pais e/ou responsável legal;</li>
-                            <li> O limite de idade para primeira doação é de 60 anos;</li>
-                            <li> O candidato à doação deve estar em boas condições de saúde, sem feridas ou machucados no corpo;</li>
-                            <li> Pesar acima de 50 kg (com desconto de vestimentas);</li>
-                            <li> Apresentar documento de identidade com foto, emitido por órgão oficial: RG., carteira profissional, carteira de motorista, etc.</li>
-                            <li> Ter repousado bem na noite antes da doação;
-                            <li> Evitar o jejum. Fazer refeições leves e não gordurosas, nas 4 horas que antecedem a doação;</li>
-                            <li> Evitar uso de bebidas alcoólicas nas últimas 12 horas;</li>
-                            <li> Evitar vir acompanhado com crianças, sem acompanhantes.</li></p>
+                            <h3>Pré-triagem</h3>
+                            <p class="text-muted"><li>Peso, altura, verificação de pressão arterial, pulso e temperatura.</li>
+                            <li>Uma "picadinha" no dedo para verificar seu hematócrito e/ ou hemoglobina.</li></p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                            <h3>Não pode doar</h3>
-                            <p class="text-muted"><li>Quem tem ou teve as seguintes doenças:
+                            <h3>Entrevista clínica</h3>
+                            <p class="text-muted"><li>É confidencial e o sigilo é absoluto – confie em seu entrevistador e seja sincero.
+                                Você assinará um Termo de Consentimento onde refere ter entendido as informações recebidas, ter respondido com sinceridade ao questionário, concorda com a coleta de sangue e afirma que está ciente de que se houver resultados sorológicos alterados, será chamado pelo serviço de apoio ao doador.</li>
 
-                            <li>Hepatite após os 11 anos de idade;</li>
-                            <li>Lepra (Hanseníase);</li>
-                            <li>Hipertireoidismo e tireoidite de Hashimoto;</li>
-                            <li>Doença auto-imune;</li>
-                            <li>Doença de Chagas;</li>
-                            <li>AIDS;</li>
-                            <li>Problemas cardíacos (necessita avaliação e declaração do seu cardiologista);</li>
-                            <li>Diabetes;</li>
-                            <li>Câncer;</li>
-
-                            <p class="text-muted">Outras situações:
-
-                            <li>Fez ou faz uso de algumas drogas ilícitas nos últimos 12 meses;</li>
-                            <li>Mantém relações sexuais de risco;</li>
-                            <li>Gestantes ou mulheres que amamentam bebês com menos de 12 meses;</li></p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                            <h3>Etapas da doação</h3>
-                            <p class="text-muted">1º Passo – Recepção e cadastro
+                            <h3>Coleta de sangue</h3>
+                            <li>Será realizada a coleta de 450 ml ± 45ml e amostras de sangue para exames obrigatórios por lei.</li>
 
-                            <li>Apresentação de documento expedido por órgão oficial com foto (RG, CNH, Carteira de Trabalho, etc)</li>
-                            <li>Atualização de endereço, trabalho, etc.</li>
-                            <p class="text-muted">2° Passo – Pré-triagem
-
-                            <li>Peso, altura, verificação de pressão arterial, pulso e temperatura;</li>
-                            <li>Uma "picadinha" no dedo para verificar seu hematócrito e/ ou hemoglobina;</li>
-                            <p class="text-muted">3° Passo – Entrevista clínica
-
-                            <li>É confidencial e o sigilo é absoluto – confie em seu entrevistador e seja sincero;</li>
-                            <li>Você assinará um Termo de Consentimento onde refere ter entendido as informações recebidas, ter respondido com sinceridade ao questionário, concorda com a coleta de sangue e afirma que está ciente de que se houver resultados sorológicos alterados, será chamado pelo serviço de apoio ao doador;</li>
-                            <p class="text-muted">4º Passo – Coleta de sangue
-
-                            <li>Será realizada a coleta de 450 ml ± 45ml e amostras de sangue para exames obrigatórios por lei;</li>
-                            <p class="text-muted">5º Passo – Lanche
-
-                            <li>É fornecido lanche acompanhado por líquidos, para repor o volume retirado na doação. Em casa ou no trabalho continue ingerindo bastante líquido.</li></p>
+                            <h3>E por fim terá o lanche:</h3>
+                            <li>É fornecido lanche acompanhado por líquidos, para repor o volume retirado na doação. Em casa ou no trabalho continue ingerindo bastante líquido.</li>
                         </div>
                     </div>
                 </div>
@@ -197,10 +167,10 @@
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
-                                        Category
+                                        oooi
                                     </div>
                                     <div class="project-name">
-                                        Project Name
+                                        tudo bem, que bom te ver
                                     </div>
                                 </div>
                             </div>
@@ -298,18 +268,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
-<<<<<<< HEAD
+                        <<<<<<< HEAD
                         <h2 class="section-heading">Entre em contato conosco</h2>
-=======
+                        =======
                         <h2 class="section-heading">Encontre-nos!</h2>
->>>>>>> origin/master
+                        >>>>>>> origin/master
                         <hr class="primary">
-<<<<<<< HEAD
+                        <<<<<<< HEAD
                         <p>Nos encontre através do nosso endereço ou pela nossa página no facebook!</p>
-=======
+                        =======
                         <p>Av. Getúlio Vargas, 2787 - Bosque, Rio Branco - AC, 69900-607. <br> Curta nossa Pagina no Facebook, e fique por dentro de
-                        mais informações.</p>
->>>>>>> origin/master
+                            mais informações.</p>
+                        >>>>>>> origin/master
                     </div>
                     <div class="col-lg-3 col-lg-offset-2 text-center">
                         <i class="fa fa-phone fa-3x sr-contact"></i>
