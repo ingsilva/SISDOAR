@@ -31,7 +31,7 @@ include '../../config/conexao.php';
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <table width="100%" class="table table-striped table-bordered table-hover" id="triagem">
+                        <table width="100%" class="table table-striped table-bordered table-hover" id="usuario">
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -42,15 +42,15 @@ include '../../config/conexao.php';
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select * from usuarios");
+                                $sql = ("select * from users");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                 <tr>
-                                    <td><?php echo $row['idusuarios']; ?></td>
-                                    <td><?php echo $row['nome']; ?></td>
-                                    <td><?php echo $row['login']; ?></td>
+                                    <td><?php echo $row['id']; ?></td>
+                                    <td><?php echo $row['name']; ?></td>
+                                    <td><?php echo $row['email']; ?></td>
                                     <td>
-                                        <?php echo "<a class='btn btn-default' href='cadastrar_usuario.php?idusuarios=" . $row['idusuarios'] . "'><i class='glyphicon glyphicon-list-alt'></i></a>"; ?>
+                                        <?php echo "<a class='btn btn-default' href='cadastrar_usuario.php?id=" . $row['id'] . "'><i class='glyphicon glyphicon-list-alt'></i></a>"; ?>
                                     </td>
                                 </tr>
                                  <?php

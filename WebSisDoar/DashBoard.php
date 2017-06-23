@@ -17,7 +17,7 @@ and open the template in the editor.
         <div class="body content rows scroll-y">
 
             <!-- Page header -->
-            <div class="page-heading">
+            <div class="page-heading animated fadeInDownBig">
                 <h1>WebSisDoar - <small> Doe Sangue. Doe Vida</small></h1>
             </div>
             <!-- End page header -->

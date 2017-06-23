@@ -61,20 +61,20 @@ include '../../config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1><small> Cadastro </small> Triagem </h1>
+                <h1> Saida <small>de Sangue</small></h1>
             </div>
             <!-- End page header -->
-            
+
             <div class="row">
                 <div class="col-sm-12">
                     <!-- Basic form -->
                     <div class="box-info">
-                        <h2>Cadastro Triagem</h2>
+                        <h2>Saida de Sangue</h2>
                         <!-- Basic form body -->
                         <div id="basic-form" class="collapse in">
                             <form role="form" method="post">
                                 <div class="row">
-                                    <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-2">
                                         <label for="tipo_sangue">Tipo</label>
                                         <select id="tipo_sangue" name="tipo_sangue" class="form-control">
                                             <option>Escolha</option>
@@ -93,19 +93,22 @@ include '../../config/conexao.php';
                                             <option value="Negativo">Negativo</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-2">
                                         <label for="quantidade">Quantidade</label>
                                         <input class="form-control" type="number"  id="quantidade" name="quantidade">
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
-                                    <div class="form-group col-sm-3">
-                                        <label for="categoria">Categoria</label>
-                                        <select class="form-control" id="categoria" name="categoria">
-                                            <option>Escolha</option>
-                                            <option value="Entrada">Entrada</option>
-                                            <option value="Saida">Saida</option>
-                                        </select>
+                                    <div class="form-group col-lg-3">
+                                        <label for="data_retirada">Data Retirada</label>
+                                        <input class="form-control" type="date"  id="quantidade" name="data_retirada">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
+                                    <div class="form-group col-lg-2">
+                                        <label for="hora_retirada">Hora Retirada</label>
+                                        <input class="form-control" type="time"  id="quantidade" name="hora_retirada">
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+
                                     <input type="hidden" name="id" id="id" value="0" />
                                 </div>
                                 <!--================================================-------> 

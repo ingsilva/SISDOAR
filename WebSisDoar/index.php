@@ -67,7 +67,7 @@
                             <a class="page-scroll" href="#portfolio">Heróis</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#contato">Contato</a>
+                            <a class="page-scroll" href="#contact">Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -146,7 +146,7 @@
                 <div class="row">
                     <div class="col-lg-2 text-center">
                         <div class="service-box">
-                            <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                            <i class="fa fa-4x fa-users text-primary sr-icons"></i>
                             <h3>Recepção e Cadastro</h3>
                             <p class="text-muted">Apresentação de documento expedido por órgão oficial com foto (RG, CNH, Carteira de Trabalho, etc).
                                 Atualização de endereço, trabalho, etc.
@@ -154,7 +154,7 @@
                     </div>
                     <div class="col-lg-2 text-center">
                         <div class="service-box">
-                            <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                            <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
                             <h3>Pré-triagem</h3>
                             <p class="text-muted">
                                 Peso, altura, verificação de pressão arterial, pulso e temperatura.
@@ -164,7 +164,7 @@
                     </div>
                     <div class="col-lg-4 text-center">
                         <div class="service-box">
-                            <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+                            <i class="fa fa-4x fa-heartbeat text-primary sr-icons"></i>
                             <h3>Entrevista clínica</h3>
                             <p class="text-muted">
                                 É confidencial e o sigilo é absoluto – confie em seu entrevistador e seja sincero.
@@ -174,7 +174,7 @@
                     </div>
                     <div class="col-lg-2 text-center">
                         <div class="service-box">
-                            <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+                            <i class="fa fa-4x fa-tint text-primary sr-icons"></i>
                             <h3>Coleta de sangue</h3>
                             <p class="text-muted">
                                 Será realizada a coleta de 450 ml ± 45ml e amostras de sangue para exames obrigatórios por lei.
@@ -183,7 +183,7 @@
                     </div>
                     <div class="col-lg-2 text-center">
                         <div class="service-box">
-                            <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                            <i class="fa fa-4x fa-apple text-primary sr-icons"></i>
                             <h3>Lanche</h3>
                             <p class="text-muted">
                                 É fornecido lanche acompanhado por líquidos, para repor o volume retirado na doação. Em casa ou no trabalho continue ingerindo bastante líquido.

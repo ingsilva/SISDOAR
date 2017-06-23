@@ -29,7 +29,7 @@ include '../../config/conexao.php';
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <a href="cadastrar_doador.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+                            <a href="entrada_saida.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
                         </div>
                     </div>
                     <!-- /.panel-heading -->
