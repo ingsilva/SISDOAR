@@ -120,7 +120,7 @@ JAVASCRIPT
                                 Bem Vindo(a),
                                 <h4 class="media-heading"><strong>Administrador</strong></h4>
                                 <a href="user-profile.html">Editar</a>
-                                <a href="/SISDOAR/WebSisDoar/index.html">Sair</a>
+                                <a href="funcoes/usuario/logout.php">Sair</a>
                             </div><!-- End div .media-body -->
                         </div><!-- End div .media -->
 

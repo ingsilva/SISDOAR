@@ -439,10 +439,10 @@
                             <div class="row">
                                 <div class="col-md-8 col-md-offset-2">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Usuário" id="login" name="login">
+                                        <input type="text" class="form-control" placeholder="Usuário" name= "usuario" id="login">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Senha" id="senha" name="senha">
+                                        <input type="password" class="form-control" placeholder="Senha"  name="senha" id="senha">
                                     </div>
                                 </div>
                             </div>

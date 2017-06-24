@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<?php require_once 'funcoes/usuario/seguranca.php'; 
+
+ protegePagina();
+?>
+
+
+
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
