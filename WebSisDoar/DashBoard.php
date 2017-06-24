@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 
 <?php require_once 'funcoes/usuario/seguranca.php'; 
-
  protegePagina();
+// if($_SESSION['conectado']==TRUE){
+//     echo 'esta conectado';
+// }
+// if($_SESSION['conectado']==false || $_SESSION['conectado']==NULL){
+//     echo 'Não esta conectado';
+// }
+// var_dump($_SESSION['conectado']);
+// return FALSE
 ?>
 
 
@@ -18,7 +25,7 @@ and open the template in the editor.
         <title>WebSisDoar</title>
         <link rel="icon" type="image/png"  href="assets/img/apple-touch-icon.png" />
         <?php
-        include './layout/cabecalho.php';
+            include './layout/cabecalho.php';
         ?>
     </head>
     <body>

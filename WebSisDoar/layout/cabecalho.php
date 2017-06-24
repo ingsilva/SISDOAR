@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -87,7 +90,7 @@ JAVASCRIPT
         <script src="/SISDOAR/WebSisDoar/assets/datatables/dataTables.bootstrap.min.js"></script>
         <script src="/SISDOAR/WebSisDoar/js/dataTables.bootstrap.min.js"></script>
         <script src="/SISDOAR/WebSisDoar/assets/js/livequery.js"></script>
-
+        <script src="/SISDOAR/WebSisDoar/layout/cabecalho.js"></script>
     </head>
     <!-- BODY -->
     <body class="tooltips">
@@ -118,9 +121,9 @@ JAVASCRIPT
                             </a>
                             <div class="media-body">
                                 Bem Vindo(a),
-                                <h4 class="media-heading"><strong>Administrador</strong></h4>
+                                <h4 class="media-heading "><strong><?php echo $_SESSION['usuarioNome'] ?></strong></h4>
                                 <a href="user-profile.html">Editar</a>
-                                <a href="funcoes/usuario/logout.php">Sair</a>
+                                <a href="#" class="sair">Sair</a>
                             </div><!-- End div .media-body -->
                         </div><!-- End div .media -->
 
@@ -158,7 +161,7 @@ JAVASCRIPT
                                 <li><a href="/SISDOAR/WebSisDoar/pages/estoque/estoque_sangue.php"><i class="fa fa-tint"></i> Estoque de Sangue</a></li>
                                 <li><a href="/SISDOAR/WebSisDoar/pages/funcionario/lista_agenda.php"><i class="glyphicon glyphicon-earphone"></i>Agenda</a>
                                 <li><a href="/SISDOAR/WebSisDoar/graficos.php"><i class="fa fa-bar-chart-o"></i> Gráficos</a></li>
-                                
+
                             </ul>
                             <div class="clear"></div>
                         </div><!-- End div #sidebar-menu -->

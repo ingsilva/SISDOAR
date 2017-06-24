@@ -1,5 +1,7 @@
 <?php
 include '../../config/conexao.php';
+print_r($_SESSION['usuarioNome']);
+
 ?>
 
 <!DOCTYPE HTML>

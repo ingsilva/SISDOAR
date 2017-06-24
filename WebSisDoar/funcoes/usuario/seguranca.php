@@ -43,6 +43,7 @@ if ($_SG ['abreSessao'] == true)
 			// Nenhum registro foi encontrado => o usuário é inválido
 			return false;
 		} else {
+                   
 			// Definimos dois valores na sessão com os dados do usuário
 			$_SESSION['usuarioID'] = $resultado['id']; // Pega o valor da coluna 'id do registro encontrado no MySQL
 			$_SESSION['usuarioNome'] = $resultado['usuario']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
@@ -51,6 +52,7 @@ if ($_SG ['abreSessao'] == true)
 				// Definimos dois valores na sessão com os dados do login
 				$_SESSION['usuarioLogin'] = $usuario;
 				$_SESSION['usuarioSenha'] = $senha;
+                                $_SESSION['conectado']= true;
 			}
 			return true;
 		}
@@ -58,21 +60,29 @@ if ($_SG ['abreSessao'] == true)
 /**
  * Função que protege uma página
  */
+        
+        
 function protegePagina() {
-	global $_SG;
-	if (! isset ( $_SESSION ['usuarioID'] ) or ! isset ( $_SESSION ['usuarioNome'] )) {
-		// Não há usuário logado, manda pra página de login
-		expulsaVisitante ();
-	} else if (! isset ( $_SESSION ['usuarioID'] ) or ! isset ( $_SESSION ['usuarioNome'] )) {
-		// Há usuário logado, verifica se precisa validar o login novamente
-		if ($_SG ['validaSempre'] == true) {
-			// Verifica se os dados salvos na sessão batem com os dados do banco de dados
-			if (! validaUsuario ( $_SESSION ['usuarioLogin'], $_SESSION ['usuarioSenha'] )) {
-				// Os dados não batem, manda pra tela de login
-				expulsaVisitante ();
-			}
-		}
-	}
+    session_start();
+    if (!isset($_REQUEST['conectado']) == TRUE){
+        session_destroy();
+        echo"<script language='javaScript'>alert('Você precisa fazer Login')</script>";
+        echo"<script language='javaScript'>window.location.href='/SISDOAR/WebSisDoar/'</script>";
+}
+//	global $_SG;
+//	if (! isset ( $_SESSION ['usuarioID'] ) or ! isset ( $_SESSION ['usuarioNome'] )) {
+//		// Não há usuário logado, manda pra página de login
+//		expulsaVisitante ();
+//	} else if (! isset ( $_SESSION ['usuarioID'] ) or ! isset ( $_SESSION ['usuarioNome'] )) {
+//		// Há usuário logado, verifica se precisa validar o login novamente
+//		if ($_SG ['validaSempre'] == true) {
+//			// Verifica se os dados salvos na sessão batem com os dados do banco de dados
+//			if (! validaUsuario ( $_SESSION ['usuarioLogin'], $_SESSION ['usuarioSenha'] )) {
+//				// Os dados não batem, manda pra tela de login
+//				expulsaVisitante ();
+//			}
+//		}
+//	}
 }
 /**
  * Função para expulsar um visitante
