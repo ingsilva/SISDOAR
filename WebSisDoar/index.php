@@ -127,7 +127,7 @@
 
                         <hr class="light">
 
-                        <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                        <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Saiba Mais</a>
                     </div>
                 </div>
             </div>
@@ -295,7 +295,8 @@
             <div class="container text-center">
                 <div class="call-to-action">
                     <h2>Faça parte dessa equipe de Heróis!</h2>
-                    <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
+                    <input type="image" src="assets/img/liga.png" width="250" height="250"><br>
+                    <a href="#contact" class="page-scroll btn btn-default btn-xl sr-button">Venha nos Encontrar </a>
                 </div>
             </div>
         </aside>
