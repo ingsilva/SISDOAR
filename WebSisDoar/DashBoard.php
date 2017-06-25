@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 
-<?php require_once 'funcoes/usuario/seguranca.php'; 
- protegePagina();
-// if($_SESSION['conectado']==TRUE){
-//     echo 'esta conectado';
-// }
-// if($_SESSION['conectado']==false || $_SESSION['conectado']==NULL){
-//     echo 'Não esta conectado';
-// }
-// var_dump($_SESSION['conectado']);
-// return FALSE
+<?php 
+//require_once 'funcoes/usuario/seguranca.php'; 
+// protegePagina();
+//require_once 'C:\xampp\htdocs/SISDOAR/WebSisDoar/valida.php';
 ?>
 
 

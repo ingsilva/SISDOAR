@@ -1,5 +1,6 @@
-<?php
-
+<?PHP
+require_once 'C:\xampp\htdocs\SISDOAR/WebSisDoar/funcoes/usuario/seguranca.php'; 
+protegePagina();
 ?>
 <!DOCTYPE html>
 <!--
@@ -12,7 +13,8 @@ and open the template in the editor.
         <title>Doe Sangue Doe Vida</title>
         <link rel="icon" type="image/png" href="/SISDOAR/WebSisDoar/assets/img/apple-touch-icon.png" />
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -45,8 +47,8 @@ and open the template in the editor.
 
         <!-- Custom Fonts -->
         <link href="/SISDOAR/WebSisDoar/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
+<!--        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+-->
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -79,7 +81,8 @@ JAVASCRIPT
         <script src="/SISDOAR/WebSisDoar/assets/third/slimscroll/jquery.slimscroll.min.js"></script>
 
         <!-- Morris js -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+     <!--   <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script> -->
+        <script src="/js/raphael-min.js"></script>
         <script src="assets/third/morris/morris.js"></script>
 
 

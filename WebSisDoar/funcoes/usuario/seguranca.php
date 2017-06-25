@@ -15,8 +15,9 @@ if ($_SG ['conectaServidor'] == true) {
 	mysql_select_db ( $_SG ['banco'], $_SG ['link'] ) or die ( "MySQL: Não foi possível conectar-se ao banco de dados [" . $_SG ['banco'] . "]." );
 }
 // Verifica se precisa iniciar a sessão
-if ($_SG ['abreSessao'] == true)
+if ($_SG ['abreSessao'] == true){
 	session_start ();
+}
 /**
  * Função que valida um usuário e senha
  *
@@ -43,10 +44,10 @@ if ($_SG ['abreSessao'] == true)
 			// Nenhum registro foi encontrado => o usuário é inválido
 			return false;
 		} else {
-                   
 			// Definimos dois valores na sessão com os dados do usuário
 			$_SESSION['usuarioID'] = $resultado['id']; // Pega o valor da coluna 'id do registro encontrado no MySQL
 			$_SESSION['usuarioNome'] = $resultado['usuario']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
+                        $_SESSION['conectado']= true;
 			// Verifica a opção se sempre validar o login
 			if ($_SG['validaSempre'] == true) {
 				// Definimos dois valores na sessão com os dados do login
@@ -63,12 +64,12 @@ if ($_SG ['abreSessao'] == true)
         
         
 function protegePagina() {
-    session_start();
-    if (!isset($_REQUEST['conectado']) == TRUE){
-        session_destroy();
-        echo"<script language='javaScript'>alert('Você precisa fazer Login')</script>";
-        echo"<script language='javaScript'>window.location.href='/SISDOAR/WebSisDoar/'</script>";
-}
+       if (!isset($_SESSION['conectado']) == true){
+              session_destroy();
+             echo"<script language='javaScript'>alert('Você precisa fazer Login')</script>";
+          echo"<script language='javaScript'>window.location.href='/SISDOAR/WebSisDoar/'</script>";
+        }
+ 
 //	global $_SG;
 //	if (! isset ( $_SESSION ['usuarioID'] ) or ! isset ( $_SESSION ['usuarioNome'] )) {
 //		// Não há usuário logado, manda pra página de login
@@ -94,6 +95,9 @@ function expulsaVisitante() {
 	// Manda pra tela de login
 	
 	//Caso haja falha no login
-	echo "<div align='center'><h1>Usu&aacute;rio e/ou senha inv&aacute;lido(s)!</h1></div>";
+         echo"<script language='javaScript'>alert('Usuário e/ou senha inválido(s)!')</script>";
+	//echo "<div align='center'><h1>Usuário e/ou senha inválido(s)!</h1></div>";
+        echo"<script language='javaScript'>window.location.href='/SISDOAR/WebSisDoar/'</script>";
+        
 	
 }
