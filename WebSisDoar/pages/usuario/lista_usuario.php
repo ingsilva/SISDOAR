@@ -42,12 +42,12 @@ include '../../config/conexao.php';
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select * from users");
+                                $sql = ("select * from usuarios");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                 <tr>
                                     <td><?php echo $row['id']; ?></td>
-                                    <td><?php echo $row['name']; ?></td>
+                                    <td><?php echo $row['usuario']; ?></td>
                                     <td><?php echo $row['email']; ?></td>
                                     <td>
                                         <?php echo "<a class='btn btn-default' href='cadastrar_usuario.php?id=" . $row['id'] . "'><i class='glyphicon glyphicon-list-alt'></i></a>"; ?>

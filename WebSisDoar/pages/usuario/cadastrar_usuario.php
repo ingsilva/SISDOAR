@@ -5,20 +5,21 @@ include '../../config/conexao.php';
 <!DOCTYPE HTML>
 <html land="pt-BR">
     <head>
-        <title>Cadastro de Usuários</title>
+        <title>Cadastrar Usuarios</title>
+        <link rel="icon" type="image/png"  href="assets/img/apple-touch-icon.png" />
         <?php
-        include '../../layout/cabecalho.php';
+            include './layout/cabecalho.php';
         ?>
         <script type="text/javascript">
             $(document).ready(function () {
 
                 $('#salvar').click(function () {
                     var id = $("#id").val();
-                    var nome = $("#nome").val();
-                    var login = $("#login").val();
+                    var usuario = $("#usuario").val();
+                    var email = $("#email").val();
                     var senha = $("#senha").val();
 
-                    var dataString = {id: id, nome: nome, login: login,
+                    var dataString = {id: id, usuario: usuario, email: email,
                         senha: senha};
                     $.ajax({
                         type: "POST",
@@ -57,13 +58,13 @@ include '../../config/conexao.php';
                             <form role="form" action="../../funcoes/usuario/function_usuario.php" method="post">
                                 <div class="row">
                                     <div class="form-group col-lg-5">
-                                        <label for="nome">Nome de Usuário</label>
-                                        <input class="form-control" type="text"  id="nome" name="nome" >
+                                        <label for="usuario">Nome de Usuário</label>
+                                        <input class="form-control" type="text"  id="usuario" name="usuario" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
                                     <div class="form-group col-lg-4">
-                                        <label for="login">Login</label>
-                                        <input class="form-control" type="text"  id="login" name="login" >
+                                        <label for="email">Login</label>
+                                        <input class="form-control" type="text"  id="email" name="email" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
                                     <div class="form-group col-lg-3">
