@@ -17,10 +17,10 @@
 
         <!-- Custom Fonts -->
         <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <!--
+
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-        -->
+
         <!-- Plugin CSS -->
         <link href="assets/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
@@ -296,8 +296,8 @@
             <div class="container text-center">
                 <div class="call-to-action">
                     <h2>Faça parte dessa equipe de Heróis!</h2>
-                    <input type="image" src="assets/img/liga.png" width="250" height="250"><br>
-                    <a href="#contact" class="page-scroll btn btn-default btn-xl sr-button">Venha nos Encontrar </a>
+                    <input type="image" src="assets/img/liga.png" width="380" height="70">
+                    <br>
                 </div>
             </div>
         </aside>
@@ -318,8 +318,8 @@
                     </div>
                     <div class="col-lg-2 text-center">
                         <i class="fa fa-facebook-square fa-3x sr-contact"></i>
- <!--                      <p><a href="https://www.facebook.com/Hemocentro-Hemoacre-1004879989593232/">Página <br> Facebook </a></p>
- -->
+                        <p><a href="https://www.facebook.com/Hemocentro-Hemoacre-1004879989593232/">Página <br> Facebook </a></p>
+
                     </div>
                     <div class="col-lg-3 text-center">
                         <i class="fa fa-clock-o fa-3x sr-contact"></i>
@@ -327,8 +327,8 @@
                     </div>
                     <div class="col-lg-12 text-center">
                         <div class="map-container">
- <!--                           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1632.2906919115828!2d-67.816222!3d-9.952402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497823835325" width="800" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>                        
- -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1632.2906919115828!2d-67.816222!3d-9.952402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497823835325" width="800" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>                        
+
                         </div>
                     </div>
                 </div>
@@ -472,7 +472,7 @@
         <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 
         <!-- Plugin JavaScript -->
-       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> 
         <script src="js/jquery.easing.min.js"></script>
         <script src="assets/vendor/scrollreveal/scrollreveal.min.js"></script>
         <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
