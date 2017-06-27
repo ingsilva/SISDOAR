@@ -5,7 +5,7 @@ $id = $_POST["id"];
 $quantidade = $_POST['quantidade'];
 $tipo_sangue = $_POST['tipo_sangue'];
 $fator_rh = $_POST['fator_rh'];
-$triagem_idTriagem = $_POST['idtriagem'];
+$triagem_idtriagem = $_POST['idtriagem'];
 $categoria = $_POST['categoria'];
 /*date_default_timezone_set('Bogota/colombia');*/
 $data_hora = date('Y-m-d H:i');
@@ -16,7 +16,7 @@ if ($id == 0) {
     $sql->bindValue(1, $quantidade);
     $sql->bindValue(2, $tipo_sangue);
     $sql->bindValue(3, $fator_rh);
-    $sql->bindValue(4, $triagem_idTriagem);
+    $sql->bindValue(4, $triagem_idtriagem);
     $sql->bindValue(5, $data_hora);
     $sql->bindValue(6, $categoria);
 

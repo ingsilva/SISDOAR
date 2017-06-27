@@ -10,6 +10,31 @@ include '../../config/conexao.php';
         <?php
         include '../../layout/cabecalho.php';
         ?>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('a#excluir').livequery("click", function () {
+                    var id = $(this).attr('rel');
+                    var dataString = {id: id};
+                    $.ajax({
+                        type: "POST",
+                        url: "../../funcoes/usuario/excluir_usuario.php",
+                        data: dataString,
+                        cache: false,
+                        success: function (retorno) {
+                            if (retorno == true) {
+                                alert("Registro Excluido com Sucesso.");
+                                location.reload();
+
+                            } else {
+                                alert(id);
+                                alert("Ocorreu um erro ao excluir o registro.");
+                            }
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
     </head>
     <body>
 
@@ -37,7 +62,8 @@ include '../../config/conexao.php';
                                     <th>ID</th>
                                     <th>Nome</th>
                                     <th>Login</th>
-                                    <th>Ação</th>
+                                    <th>Editar</th>
+                                    <th>Excluir</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,15 +71,18 @@ include '../../config/conexao.php';
                                 $sql = ("select * from usuarios");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
-                                <tr>
-                                    <td><?php echo $row['id']; ?></td>
-                                    <td><?php echo $row['usuario']; ?></td>
-                                    <td><?php echo $row['email']; ?></td>
-                                    <td>
-                                        <?php echo "<a class='btn btn-default' href='cadastrar_usuario.php?id=" . $row['id'] . "'><i class='glyphicon glyphicon-list-alt'></i></a>"; ?>
-                                    </td>
-                                </tr>
-                                 <?php
+                                    <tr>
+                                        <td><?php echo $row['id']; ?></td>
+                                        <td><?php echo $row['usuario']; ?></td>
+                                        <td><?php echo $row['email']; ?></td>
+                                        <td>
+                                            <?php echo "<a class='btn btn-info' href='atualizar_usuario.php?id=" . $row['id'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['id'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
+                                        </td>
+                                    </tr>
+                                    <?php
                                 }
                                 ?>
                             </tbody>

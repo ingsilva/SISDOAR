@@ -14,8 +14,6 @@ include '../../config/conexao.php';
     </head>
     <body >
 
-
-
         <div class="body content rows scroll-y">
 
             <!-- Page header -->
