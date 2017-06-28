@@ -16,12 +16,11 @@ include '../../config/conexao.php';
                 $('#salvar').click(function () {
                     var id = $("#id").val();
                     var nome = $("#nome").val();
-                    var ddd = $("#ddd").val();
                     var telefone = $("#telefone").val();
+                    var ddd = $("#ddd").val();
                     var dpto = $("#dpto").val();
 
-                    var dataString = {id: id, nome: nome,
-                        ddd: ddd, telefone: telefone, dpto: dpto};
+                    var dataString = {id: id, nome: nome, telefone: telefone, ddd: ddd, dpto: dpto};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/funcionario/update_agenda.php",
@@ -30,10 +29,10 @@ include '../../config/conexao.php';
                         success: function (retorno) {
                             if (retorno == true) {
                                 alert("Salvo com Sucesso!!");
-                                location.reload();
+                                location.replace("lista_agenda.php");
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-
+                                location.reload();
                             }
                         }
                     });
@@ -52,19 +51,12 @@ include '../../config/conexao.php';
             <!--==============INICIO DO CÓDIGO PHP============================-->
             <?php
             if (isset($_GET['idagenda'])) {
-                $sql = "select idagenda, a.nome, a.ddd, a.telefone, d.descricao
+                $sql = "select idagenda, a.nome, a.ddd, a.telefone, d.descricao, d.iddpto
 		from agenda a, dpto d
 			where a.dpto_iddpto = d.iddpto
                                         and
                             idagenda='" . $_GET['idagenda'] . "'";
-                /* $sql = "select iddoador, d.nome, date_format(data_nascimento, '%d/%m/%Y') data_nasc, cpf, rg, endereco, numero, bairro, complemento, 
-                  idcidade, c.descricao, uf,  tipo_sangue, fator_rh, idade, sexo, date_format(data_registro, '%d/%m/%Y') data_registro, num_sus,
-                  expeditor, etnia, nome_pai, nome_mae, estado_civil, naturalidade, sexo, escolaridade
-                  from doador d, cidade c, estado e
-                  where d.cidade_idcidade = c.idcidade
-                  and e.idestado = c.estado_idestado
-                  and
-                  iddoador='" . $_GET['iddoador'] . "'"; */
+
 
 
                 foreach ($con->query($sql) as $row) {
@@ -77,7 +69,7 @@ include '../../config/conexao.php';
                                 <h2>Agenda Telefonica </h2>
                                 <!-- Basic form body -->
                                 <div id="basic-form" class="collapse in">
-                                    <form role="form" action="../../funcoes/funcionario/function_agenda.php" method="post">
+                                    <form role="form"  method="post">
                                         <div class="row">
                                             <div class="form-group col-lg-2">
                                                 <label for="nome">Nome do Funcionario</label>
@@ -98,12 +90,11 @@ include '../../config/conexao.php';
 
                                                 <label for="dpto">Departamento</label>
                                                 <select class="form-control" id="dpto" name="dpto">
-                                                    <option>------</option>
-
+                                                    <option value="<?php echo $row['iddpto']; ?>"><?php echo $row['descricao']; ?></option>
                                                     <?php
                                                     $sql = ("SELECT iddpto, descricao FROM dpto");
-                                                    foreach ($con->query($sql) as $row) {
-                                                        echo "<option value='" . $row['iddpto'] . "'>" . $row['descricao'] . "</option>";
+                                                    foreach ($con->query($sql) as $row2) {
+                                                        echo "<option value='" . $row2['iddpto'] . "'>" . $row2['descricao'] . "</option>";
                                                     }
                                                     ?>
                                                 </select>
@@ -112,9 +103,9 @@ include '../../config/conexao.php';
                                             <input type="hidden" name="id" id="id" value="<?php echo $row['idagenda'] ?>" />
                                             <!--================================================-------> 
 
-                                            <button type="button" id="salvar" class="btn btn-success">Enviar</button>
-                                            <button type="reset" class=" btn btn-danger">Limpar</button>
                                         </div>
+                                        <button type="button" id="salvar" class="btn btn-success">Enviar</button>
+                                        <button type="reset" class=" btn btn-danger">Limpar</button>
                                     </form>
                                 </div>
                             </div><!-- End div #basic-form -->
