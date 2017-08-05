@@ -24,7 +24,7 @@ USE `db_sangue`;
 DROP TABLE IF EXISTS `doador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `doador` (
+/CREATE TABLE `doador` (
   `iddoador` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) DEFAULT NULL,
   `data_nascimento` varchar(15) DEFAULT NULL,

@@ -1,7 +1,6 @@
 <?php
 include '../../config/conexao.php';
 print_r($_SESSION['usuarioNome']);
-
 ?>
 
 <!DOCTYPE HTML>
@@ -58,6 +57,7 @@ print_r($_SESSION['usuarioNome']);
                                 location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
+
                             }
                         }
                     });
