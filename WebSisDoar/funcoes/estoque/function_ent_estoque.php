@@ -2,23 +2,31 @@
 
 include("../../config/conexao.php");
 $id = $_POST["id"];
+
+$triagem_idtriagem = $_POST['idtriagem'];
 $quantidade = $_POST['quantidade'];
 $tipo_sangue = $_POST['tipo_sangue'];
 $fator_rh = $_POST['fator_rh'];
-$triagem_idtriagem = $_POST['idtriagem'];
 $categoria = $_POST['categoria'];
-/*date_default_timezone_set('Bogota/colombia');*/
+date_default_timezone_set('America/Resolute'); 
 $data_hora = date('Y-m-d H:i');
+
+// , categoria, data_hora,
 
 if ($id == 0) {
     //salvar
-    $sql = $con->prepare("INSERT INTO estoque_sangue (quantidade, tipo, fator_rh, triagem_idTriagem, data_hora, categoria) VALUES (?, ?, ?, ?, ?, ?)");
-    $sql->bindValue(1, $quantidade);
-    $sql->bindValue(2, $tipo_sangue);
-    $sql->bindValue(3, $fator_rh);
-    $sql->bindValue(4, $triagem_idtriagem);
-    $sql->bindValue(5, $data_hora);
-    $sql->bindValue(6, $categoria);
+    $sql = $con->prepare("INSERT INTO estoque_sangue (triagem_idTriagem, quantidade, tipo, fator_rh, categoria, data_hora ) VALUES (?, ?, ?, ?, ?, ?)");
+    $sql->bindValue(1, $triagem_idtriagem);
+    $sql->bindValue(2, $quantidade);
+    $sql->bindValue(3, $tipo_sangue);
+    $sql->bindValue(4, $fator_rh);
+    $sql->bindValue(5, $categoria);
+    $sql->bindValue(6, $data_hora);
+
+    
+    $sql_update = $con->prepare("INSERT INTO estoque_sangue (triagem_idTriagem, quantidade, tipo, fator_rh, categoria, data_hora ) VALUES (?, ?, ?, ?, ?, ?)");
+
+
 
 
     if ($sql->execute())

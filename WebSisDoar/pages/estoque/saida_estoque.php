@@ -13,12 +13,16 @@ include '../../config/conexao.php';
 
                 $('#salvar').click(function () {
                     var id = $("#id").val();
-                    var nome = $("#nome").val();
-                    var estado = $("#estado").val();
-                    var dataString = {id: id, nome: nome, estado: estado};
+                    var quantidade = $("#quantidade").val();
+                    var tipo_sangue = $("#tipo_sangue").val();
+                    var fator_rh = $("#fator_rh").val();
+                    
+
+                    var dataString = {id: id, quantidade: quantidade, tipo_sangue: tipo_sangue,
+                        fator_rh: fator_rh};
                     $.ajax({
                         type: "POST",
-                        url: "../../funcoes/localizar/function_cidade.php",
+                        url: "../../funcoes/estoque/saida_estoque.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
@@ -31,28 +35,6 @@ include '../../config/conexao.php';
                         }
                     });
                 });
-
-                $('a#editar').livequery("click", function () {
-                    var id = $(this).attr('rel');
-                    var dataString = {id: id};
-                    $.ajax({
-                        type: "POST",
-                        url: "buscarcontato.php",
-                        data: dataString,
-                        cache: false,
-                        success: function (retorno) {
-                            retorno = JSON.parse(retorno);
-                            console.log(retorno);
-                            $("#id").val(retorno.id);
-                            $("#nome").val(retorno.nome);
-                            $("#email").val(retorno.email);
-                            $('#modalContato').modal('show');
-                        }
-                    });
-                    return false;
-                });
-
-
             });
         </script>
     </head>

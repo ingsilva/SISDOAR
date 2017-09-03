@@ -47,10 +47,10 @@ include '../../config/conexao.php';
             <!-- End page header -->
 
             <div class="table-responsive">
-                
+
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                       
+
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -67,9 +67,14 @@ include '../../config/conexao.php';
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select t.idtriagem, d.nome, t.idade, t.peso, t.status"
-                                        . " from doador d, triagem t"
-                                        . " where t.doador_iddoador = d.iddoador ");
+                                $sql = ("select t.idtriagem, d.nome, t.idade, t.peso, 
+                                            case  t.status	
+                                                            when 'sim' then 'Apto a Doar'
+                                            end status
+                                            from doador d, triagem t   
+                                                    where t.doador_iddoador = d.iddoador 
+                                                    and t.status = 'sim'
+                                                    group by nome, idade;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>

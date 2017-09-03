@@ -23,7 +23,7 @@ include '../../config/conexao.php';
                         fator_rh: fator_rh, idtriagem: idtriagem, categoria: categoria};
                     $.ajax({
                         type: "POST",
-                        url: "../../funcoes/estoque/function_ent_estoque.php",
+                        url: "../../funcoes/estoque/ent_estoque.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
@@ -32,11 +32,6 @@ include '../../config/conexao.php';
                                 location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-                                alert("quantidade: "+quantidade);
-                                alert("tipo: "+tipo_sangue);
-                                alert("fator_rh: "+fator_rh);
-                                alert("idtriagem: "+idtriagem);
-                                alert("categoria: "+categoria);
                             }
                         }
                     });
@@ -57,11 +52,10 @@ include '../../config/conexao.php';
             if (isset($_GET['idtriagem'])) {
                 $sql = "SELECT iddoador, idtriagem, nome, date_format(data_nascimento,'%d/%m/%Y')data_nascimento, truncate(datediff(now(), data_nascimento)/365,0) as 'idade', 
                                     tipo_sangue, d.fator_rh, status, jejum
-                            FROM doador d, triagem t, estoque_sangue et
+                            FROM doador d, triagem t
                                 WHERE  d.iddoador = t.doador_iddoador 
-				    AND t.idtriagem = et.triagem_idTriagem
                                     AND 
-                                       idtriagem='" . $_GET['idtriagem'] . "'group by iddoador	";
+                                       idtriagem ='" . $_GET['idtriagem'] . "'group by iddoador	";
 
                 foreach ($con->query($sql) as $row) {
                     ?>
