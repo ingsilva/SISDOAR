@@ -27,7 +27,7 @@ include '../../config/conexao.php';
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <a href="entrada_saida.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+                            <a href="saida_estoque.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
                         </div>
                     </div>
                     <!-- /.panel-heading -->
@@ -42,8 +42,8 @@ include '../../config/conexao.php';
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select sum(quantidade) 'total' , tipo, fator_rh
-                                            from estoque_sangue
+                                $sql = ("select tipo, fator_rh, total
+                                            from estoque
 						group by tipo, fator_rh;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>

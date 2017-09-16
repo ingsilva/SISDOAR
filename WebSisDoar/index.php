@@ -1,7 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+    <head> 
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('#salvar').click(function () {
+                    var id = $("#id").val();
+                    var quantidade = $("#quantidade").val();
+                    var tipo_sangue = $("#tipo_sangue").val();
+                    var fator_rh = $("#fator_rh").val();
+                    var idtriagem = $("#idtriagem").val();
+                    var categoria = $("#categoria").val();
+
+                    var dataString = {id: id, quantidade: quantidade, tipo_sangue: tipo_sangue,
+                        fator_rh: fator_rh, idtriagem: idtriagem, categoria: categoria};
+                    $.ajax({
+                        type: "POST",
+                        url: "../../funcoes/estoque/ent_estoque.php",
+                        data: dataString,
+                        cache: false,
+                        success: function (retorno) {
+                            if (retorno == true) {
+                                alert("Salvo com Sucesso!!");
+                                location.reload();
+                            } else {
+                                alert("Ocorreu um erro ao salvar o registro.");
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
