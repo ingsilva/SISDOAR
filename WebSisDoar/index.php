@@ -374,7 +374,7 @@
                         <h4 class="modal-title text-center" id="exampleModalLabel">FAÇA SEU AGENDAMENTO</h4>
                     </div>
                     <div class="modal-body">
-                        <form role="form" action="../../funcoes/doador/function_doador.php" method="post">
+                        <form role="form" action="../../funcoes/doador/function_agendamento.php" method="post">
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1">
                                     <div class="alert alert-success" role="alert">

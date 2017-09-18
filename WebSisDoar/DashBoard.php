@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 
-<?php 
+<?php
 //require_once 'funcoes/usuario/seguranca.php'; 
 // protegePagina();
 //require_once 'C:\xampp\htdocs/SISDOAR/WebSisDoar/valida.php';
 ?>
-
+<?php
+include './config/conexao.php';
+?>
 
 
 <!--
@@ -19,7 +21,7 @@ and open the template in the editor.
         <title>WebSisDoar</title>
         <link rel="icon" type="image/png"  href="assets/img/apple-touch-icon.png" />
         <?php
-            include './layout/cabecalho.php';
+        include './layout/cabecalho.php';
         ?>
     </head>
     <body>
@@ -150,6 +152,62 @@ and open the template in the editor.
                 </div>
                 <!-- End Shipping Info Box -->
 
+            </div>
+            <div class="page-heading animated fadeInDownBig">
+                <h1>Agendamento <small> de Doadores</small></h1>
+            </div>
+
+            <div class="table-responsive">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <table width="100%" class="table table-striped table-bordered table-hover" id="agendamento">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>Nascimento</th>
+                                    <th>Idade</th>
+                                    <th>Hora</th>
+                                    <th>Data</th>
+                                    <th>Editar</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $sql = ("select iddoador, nome, data_nascimento, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',  agend_hora,
+                                    date_format(agend_data, '%d/%m/%Y') as 'agend_data'
+                                        from doador 
+                                            where  agend_hora is not null;");
+                                foreach ($con->query($sql) as $row) {
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $row['iddoador']; ?></td>
+                                        <td><?php echo $row['nome']; ?></td>
+                                        <td><?php echo $row['data_nascimento']; ?></td>
+                                        <td><?php echo $row['idade']; ?></td>
+                                        <td><?php echo $row['agend_hora']; ?></td>
+                                        <td><?php echo $row['agend_data']; ?></td>
+                                        <td class="text-center">
+                                            <?php echo "<a class='btn btn-default' href='../estoque/entrada_estoque.php?iddoador=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }
+                                ?>
+
+                            </tbody>
+                        </table>
+                        <!-- /.table-responsive -->
+
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
             </div>
             <!-- End of info box -->
             <?php

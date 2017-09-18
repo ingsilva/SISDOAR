@@ -96,7 +96,7 @@ include '../../config/conexao.php';
 
             <script>
                 $(function () {
-                    $('#triagem').DataTable({
+                    $('#usuario').DataTable({
                         "paging": true,
                         "lengthChange": true,
                         "searching": true,

@@ -2,14 +2,9 @@
 
 include("../../config/conexao.php");
 $id = $_POST["id"];
-$nome = $_POST["nome"];
-$data_nascimento = $_POST["data_nascimento"];
-$idade = $_POST["idade"];
-$cpf = $_POST["cpf"];
-$rg = $_POST["rg"];
-$numero = $_POST["numero"];
-$data_agend = $_POST["data_agend"];
-$hora_agend = $_POST["hora_agend"];
+$doador_iddoador = $_POST["iddoador"];
+$data = $_POST["data"];
+$hora = $_POST["hora"];
 
 
 //var estado_civil = $("#estado_civil").val();
@@ -18,17 +13,12 @@ $hora_agend = $_POST["hora_agend"];
 
 if ($id == 0) {
     //salvar
-    $sql = $con->prepare("INSERT INTO doador(nome, data_nascimento, idade, cpf, rg, numero, data_agend, hora_agend) 
+    $sql = $con->prepare("INSERT INTO agendamento (doador_iddoador, data, hora) 
     VALUES (?, ?, ?, ?, ?, ?, ?)");
 
-    $sql->bindValue(1, $nome);
-    $sql->bindValue(2, $data_nascimento);
-    $sql->bindValue(3, $idade);
-    $sql->bindValue(4, $cpf);
-    $sql->bindValue(5, $rg);
-    $sql->bindValue(6, $numero);
-    $sql->bindValue(7, $data_agend);
-    $sql->bindValue(8, $hora_agend);
+    $sql->bindValue(1, $doador_iddoador);
+    $sql->bindValue(7, $data);
+    $sql->bindValue(8, $hora);
     
     
 
