@@ -59,9 +59,9 @@ $sql->bindValue(':agend_data', $agend_data);
 $sql->bindValue(':doador_iddoador', $doador_iddoador);
 
 if ($sql_agend->execute())
-    echo true;
+    echo 'inserido com sucesso';
 else
-    echo false;
+    echo'nao deu';
 
 
 

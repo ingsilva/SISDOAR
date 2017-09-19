@@ -180,10 +180,10 @@ and open the template in the editor.
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select iddoador, nome, data_nascimento, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',  agend_hora,
-                                    date_format(agend_data, '%d/%m/%Y') as 'agend_data'
-                                        from doador 
-                                            where  agend_hora is not null;");
+                                $sql = ("select iddoador, nome, data_nascimento, idade , date_format(agend_hora, '%H:%i') as 'agend_hora', date_format(agend_data, '%d/%m/%Y') as 'agend_data'
+from doador d, agendamento a
+where d.iddoador = a.doador_iddoador and
+  agend_hora and agend_data  is not null;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
@@ -194,7 +194,7 @@ and open the template in the editor.
                                         <td><?php echo $row['agend_hora']; ?></td>
                                         <td><?php echo $row['agend_data']; ?></td>
                                         <td class="text-center">
-                                            <?php echo "<a class='btn btn-default' href='../estoque/entrada_estoque.php?iddoador=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
+                                            <?php echo "<a class='btn btn-default' href='./pages/doador/atualizar_doador.php?iddoador=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
                                         </td>
                                     </tr>
                                     <?php

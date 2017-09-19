@@ -64,34 +64,33 @@ include '../../config/conexao.php';
                                 <tr>
                                     <th>ID</th>
                                     <th>Nome</th>
+                                    <th>Idade</th>
                                     <th>RG</th>
                                     <th>Tipo Sanguineo</th>
                                     <th>Fator RH</th>
-                                    <th>Sexo</th>
-                                    <th>Cidade</th>
+                                    <th>Telefone</th>
                                     <th>Editar</th>
                                     <th>Excluir</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select iddoador, nome, cpf, rg, tipo_sangue,  fator_rh, descricao,
+                                $sql = ("select iddoador, nome, idade, cpf, rg, tipo_sangue,  fator_rh, dd, contato,
                                                 case  sexo
                                                 when 'F' then 'Feminino'
                                                 when 'M' then 'Masculino'
                                                 end sexo
-                                        from doador d, cidade c
-                                            where d.cidade_idcidade = c.idcidade;");
+                                        from doador");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
                                         <td><?php echo $row['iddoador']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
+                                        <td class="text-center"><?php echo $row['idade']; ?></td>
                                         <td class="text-center"><?php echo $row['rg']; ?></td>
                                         <td class="text-center"><?php echo $row['tipo_sangue']; ?></td>
                                         <td class="text-center"><?php echo $row['fator_rh']; ?></td>
-                                        <td class="text-center"><?php echo $row['sexo']; ?></td>
-                                        <td class="text-center"><?php echo $row['descricao']; ?></td>
+                                        <td class="text-center"><?php echo $row['contato']; ?></td>
                                         <td>
                                             <?php echo "<a class='btn btn-info' href='atualizar_doador.php?iddoador=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
                                         </td>

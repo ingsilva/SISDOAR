@@ -1,38 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
     <head> 
-        
-        <script type="text/javascript">
-            $(document).ready(function () {
 
-                $('#salvar').click(function () {
-                    var id = $("#id").val();
-                    var quantidade = $("#quantidade").val();
-                    var tipo_sangue = $("#tipo_sangue").val();
-                    var fator_rh = $("#fator_rh").val();
-                    var idtriagem = $("#idtriagem").val();
-                    var categoria = $("#categoria").val();
 
-                    var dataString = {id: id, quantidade: quantidade, tipo_sangue: tipo_sangue,
-                        fator_rh: fator_rh, idtriagem: idtriagem, categoria: categoria};
-                    $.ajax({
-                        type: "POST",
-                        url: "../../funcoes/estoque/ent_estoque.php",
-                        data: dataString,
-                        cache: false,
-                        success: function (retorno) {
-                            if (retorno == true) {
-                                alert("Salvo com Sucesso!!");
-                                location.reload();
-                            } else {
-                                alert("Ocorreu um erro ao salvar o registro.");
-                            }
-                        }
-                    });
-                });
-            });
-        </script>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,7 +35,43 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <!-- jQuery -->
+        <script src="/SISDOAR/WebSisDoar/assets/js/jquery.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
 
+                $('#salvar').click(function () {
+                    var id = $("#id").val();
+                    var nome = $("#nome").val();
+                    var data_nascimento = $("#data_nascimento").val();
+                    var cpf = $("#cpf").val();
+                    var rg = $("#rg").val();
+                    var idade = $("#idade").val();
+                    var agend_data = $("#agend_data").val();
+                    var agend_hora = $("#agend_hora").val();
+                    var dd = $("#dd").val();
+                    var contato = $("#contato").val();
+                    var dataString = {id: id, nome: nome, data_nascimento: data_nascimento, cpf: cpf, rg: rg, idade: idade, agend_data: agend_data, agend_hora: agend_hora, dd: dd, contato: contato};
+                    $.ajax({
+                        type: "POST",
+                        url: "./funcoes/doador/function_agendamento.php",
+                        data: dataString,
+                        cache: false,
+                        success: function (retorno) {
+                            if (retorno == true) {
+                                alert("Salvo com Sucesso!!");
+                                location.reload();
+                            } else {
+                                alert("Ocorreu um erro ao salvar o registro.");
+                                alert(contato);
+                            }
+                        }
+                    });
+                });
+            });
+            
+            
+        </script>
     </head>
 
     <body id="page-top">
@@ -335,33 +342,119 @@
 
         <section id="contact">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <h2 class="section-heading">Encontre-nos!</h2>
-                        <hr class="primary">
-                        <p>Nos encontre através do nosso endereço ou pela nossa página no facebook!</p>
-                        <p>Av. Getúlio Vargas, 2787 - Bosque, Rio Branco - AC, 69900-607. <br> Curta nossa Pagina no Facebook, e fique por dentro de
-                            mais informações.</p>
-                    </div>
-                    <div class="col-lg-3 col-lg-offset-2 text-center">
-                        <i class="fa fa-phone fa-3x sr-contact"></i>
-                        <p>Telefone <br>(68)3228-1494</p>
-                    </div>
-                    <div class="col-lg-2 text-center">
-                        <i class="fa fa-facebook-square fa-3x sr-contact"></i>
-                        <p><a href="https://www.facebook.com/Hemocentro-Hemoacre-1004879989593232/">Página <br> Facebook </a></p>
-
-                    </div>
-                    <div class="col-lg-3 text-center">
-                        <i class="fa fa-clock-o fa-3x sr-contact"></i>
-                        <p>Seg à Sex<br> 07:15–18:30</p>
-                    </div>
-                    <div class="col-lg-12 text-center">
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1632.2906919115828!2d-67.816222!3d-9.952402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497823835325" width="800" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>                        
+                <div class="col-lg-5">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2 text-center">
+                            <h2 class="section-heading">Encontre-nos!</h2>
+                            <hr class="primary">
+                            <p>Nos encontre através do nosso endereço ou pela nossa página no facebook!</p>
+                            <p>Av. Getúlio Vargas, 2787 - Bosque, Rio Branco - AC, 69900-607. <br> Curta nossa Pagina no Facebook, e fique por dentro de
+                                mais informações.</p>
+                        </div>
+                        <div class="col-lg-4  text-center">
+                            <i class="fa fa-phone fa-3x sr-contact"></i>
+                            <p>Telefone <br>(68)3228-1494</p>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <i class="fa fa-facebook-square fa-3x sr-contact"></i>
+                            <p><a href="https://www.facebook.com/Hemocentro-Hemoacre-1004879989593232/">Página <br> Facebook </a></p>
 
                         </div>
+                        <div class="col-lg-4 text-center">
+                            <i class="fa fa-clock-o fa-3x sr-contact"></i>
+                            <p>Seg à Sex<br> 07:15–18:30</p>
+                        </div>
+                        <div class="col-lg-12 text-center">
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1632.2906919115828!2d-67.816222!3d-9.952402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf715966c53ef6d8a!2sHemoacre!5e1!3m2!1spt-BR!2sbr!4v1497823835325" width="800" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>                        
+
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="col-lg-7">
+                    <form role="form" >
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="alert alert-success" role="alert">
+                                    <div class="panel-body">
+                                        CONDIÇÕES BASICAS PARA DOAR 
+                                    </div>
+                                    <ul class="square">
+                                        <li>Sentir-se bem, com saúde.</li>
+                                        <li>Apresentar documento com foto, emitido por um orgão oficial e válido em todo território nacional.</li>
+                                        <li>Ter entre 16 e 69 anos de idade e peso acima de 50kg.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="alert alert-danger" role="alert">
+                                    <div class="panel-body">
+                                        QUEM NÃO PODE DOAR 
+                                    </div>
+                                    <ul class="square">
+                                        <li>Quem teve diagnóstico de hepatite após os 11 anos de idade.</li>
+                                        <li>Mulheres grávidas ou que estejam amamentando.</li>
+                                        <li>Pessoas que estão expostas a doenças transmissíveis pelo sangue, como aids, hepatite, sífilis e doença de chagas.</li>
+                                    </ul>
+                                </div>
+                                <div class="panel panel-info">
+                                    <br>
+                                    <div class="form-group col-lg-6">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="data_registro">Data: (Segunda a Sexta)</label>
+                                        <input class="form-control"   type="date" id="agend_data" name="agend_data">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="data_registro">Horario: (7:15 as 18:30)</label>
+                                        <input class="form-control"   type="time" id="agend_hora" name="agend_hora">
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="nome">Nome Completo:</label>
+                                        <input class="form-control"  id="nome" name="nome" >
+                                    </div>
+                                    <div class="form-group col-lg-8 ">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="data_nascimento">Data de Nascimento:</label>
+                                        <input class="form-control"   type="date" id="data_nascimento" name="data_nascimento">
+                                    </div>
+                                    <div class="form-group col-lg-4">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="idade">Idade:</label>
+                                        <input class="form-control"   type="number" id="idade" name="idade">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="rg">RG:</label>
+                                        <input class="form-control"   type="text" id="rg" name="rg">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="cpf">CPF:</label>
+                                        <input class="form-control"   type="text" id="cpf" name="cpf">
+                                    </div>
+                                    <div class="form-group col-lg-4">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="ddd">DDD:</label>
+                                        <input class="form-control"   type="text" id="dd" name="dd">
+                                    </div>
+                                    <div class="form-group col-lg-8">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="tel">Telefone/Celular:</label>
+                                        <input class="form-control"   type="text" id="contato" name="contato">
+                                    </div>
+                                    <br>
+                                    <div align="center">
+                                        <input type="hidden" name="id" id="id" value="0" />
+                                        <button type="button" id="salvar" class=" center btn btn-success">Enviar</button>
+                                        <button type="reset" class="center btn btn-danger">Limpar</button> 
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -374,7 +467,7 @@
                         <h4 class="modal-title text-center" id="exampleModalLabel">FAÇA SEU AGENDAMENTO</h4>
                     </div>
                     <div class="modal-body">
-                        <form role="form" action="../../funcoes/doador/function_agendamento.php" method="post">
+                        <form role="form" >
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1">
                                     <div class="alert alert-success" role="alert">
@@ -438,7 +531,7 @@
                                         <div class="form-group col-lg-4">
                                             <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
                                             <label for="ddd">DDD:</label>
-                                            <input class="form-control"   type="varchar" id="ddd" name="ddd">
+                                            <input class="form-control"   type="text" id="ddd" name="ddd">
                                         </div>
                                         <div class="form-group col-lg-8">
                                             <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
@@ -502,13 +595,13 @@
         <!-- Bootstrap Core JavaScript -->
         <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-        <!-- Plugin JavaScript -->
+        <!-- Plugin JavaScript
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> 
         <script src="js/jquery.easing.min.js"></script>
         <script src="assets/vendor/scrollreveal/scrollreveal.min.js"></script>
         <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-        <!-- Theme JavaScript -->
+         Theme JavaScript -->
         <script src="assets/js/creative.min.js"></script>
 
     </body>
