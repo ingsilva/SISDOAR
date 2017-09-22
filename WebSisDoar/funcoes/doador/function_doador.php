@@ -24,6 +24,8 @@ $nome_mae = $_POST["nome_mae"];
 $estado_civil = $_POST["estado_civil"];
 $escolaridade = $_POST["escolaridade"];
 $naturalidade = $_POST["naturalidade"];
+$dd = $_POST["dd"];
+$contato = $_POST["contato"];
 
 
 if ($id == 0) {
@@ -32,12 +34,12 @@ if ($id == 0) {
                                             numero, bairro, complemento, cidade_idcidade, tipo_sangue, 
                                             fator_rh, idade, sexo, data_registro, num_sus, 
                                             expeditor, etnia, nome_pai, nome_mae, estado_civil, 
-                                            escolaridade, naturalidade) 
+                                            escolaridade, naturalidade, dd, contato) 
 						VALUES (?, ?, ?, ?, ?, 
 							?, ?, ?, ?,  ?, 
 							?, ?, ?, ?, ?, 
 							?, ?, ?, ?,?, 
-                                                        ?, ?)");
+                                                        ?, ?, ?, ?)");
 
     $sql->bindValue(1, $nome);
     $sql->bindValue(2, $data_nascimento);
@@ -61,6 +63,9 @@ if ($id == 0) {
     $sql->bindValue(20, $estado_civil);
     $sql->bindValue(21, $escolaridade);
     $sql->bindValue(22, $naturalidade);
+    $sql->bindValue(23, $dd);
+    $sql->bindValue(24, $contato);
+    
     if ($sql->execute())
         echo true;
     else

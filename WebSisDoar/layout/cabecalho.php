@@ -61,6 +61,7 @@ and open the template in the editor.
         <!-- jQuery -->
         <script src="/SISDOAR/WebSisDoar/assets/js/jquery.js"></script>
 
+        <script src="/SISDOAR/WebSisDoar/assets/js/jquery.mask.min.js"
         <!-- Bootstrap Core JavaScript -->
         <script src="/SISDOAR/WebSisDoar/assets/js/bootstrap.min.js"></script>
 

@@ -38,6 +38,8 @@ print_r($_SESSION['usuarioNome']);
                     var estado_civil = $("#estado_civil").val();
                     var escolaridade = $("#escolaridade").val();
                     var naturalidade = $("#naturalidade").val();
+                    var contato = $("#contato").val();
+                    var dd = $("#dd").val();
 
                     var dataString = {id: id, nome: nome, data_nascimento: data_nascimento,
                         cpf: cpf, rg: rg, endereco: endereco, numero: numero, bairro: bairro,
@@ -45,7 +47,7 @@ print_r($_SESSION['usuarioNome']);
                         fator_rh: fator_rh, idade: idade, sexo: sexo, data_registro: data_registro,
                         numero_sus: numero_sus, expeditor: expeditor, etnia: etnia, nome_pai: nome_pai,
                         nome_mae: nome_mae, estado_civil: estado_civil,
-                        escolaridade: escolaridade, naturalidade: naturalidade};
+                        escolaridade: escolaridade, naturalidade: naturalidade, dd: dd, contato: contato};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/doador/function_doador.php",
@@ -57,7 +59,6 @@ print_r($_SESSION['usuarioNome']);
                                 location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-
                             }
                         }
                     });
@@ -204,13 +205,13 @@ print_r($_SESSION['usuarioNome']);
                                         </select>
                                     </div>
 
-                                    <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-2">
                                         <label for="naturalidade">Naturalidade</label>
                                         <input class="form-control"  id="naturalidade" name="naturalidade" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
 
-                                    <div class="form-group col-lg-3">
+                                    <div class="form-group col-lg-1">
                                         <label for="etnia">Etnia</label>
                                         <select id="etnia" name="etnia" class="form-control">
                                             <option>Escolha</option>
@@ -224,6 +225,7 @@ print_r($_SESSION['usuarioNome']);
 
                                         </select>
                                     </div>
+
                                     <div class="form-group col-lg-2">
                                         <label for="estado_civil">Estado Civil</label>
                                         <select id="estado_civil" name="estado_civil" class="form-control">
@@ -237,6 +239,7 @@ print_r($_SESSION['usuarioNome']);
                                             <option value="O">Outros</option>
                                         </select>
                                     </div>
+
                                     <div class="form-group col-lg-2">
                                         <label for="escolaridade">Escolaridade</label>
                                         <select id="escolaridade" name="escolaridade" class="form-control">
@@ -250,6 +253,19 @@ print_r($_SESSION['usuarioNome']);
                                             <option value="TC">Superior Completo</option>
                                         </select>
                                     </div>
+
+                                    <div class="form-group col-lg-1">
+                                        <label for="dd">DD</label>
+                                        <input class="form-control"  id="dd" name="dd" >
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                    </div>
+
+                                    <div class="form-group col-lg-2">
+                                        <!--<label for="recipient-name" class="control-label">Recipient:</label>-->
+                                        <label for="tel">Telefone/Celular:</label>
+                                        <input class="form-control"   type="text" id="contato" name="contato">
+                                    </div>
+
                                 </div>
                                 <div class="row">
 

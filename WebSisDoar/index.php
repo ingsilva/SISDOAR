@@ -54,7 +54,7 @@
                     var dataString = {id: id, nome: nome, data_nascimento: data_nascimento, cpf: cpf, rg: rg, idade: idade, agend_data: agend_data, agend_hora: agend_hora, dd: dd, contato: contato};
                     $.ajax({
                         type: "POST",
-                        url: "./funcoes/doador/function_agendamento.php",
+                        url: "./funcoes/agendamento/function_agendamento.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
