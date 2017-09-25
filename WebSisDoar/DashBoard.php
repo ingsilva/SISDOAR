@@ -170,7 +170,7 @@ and open the template in the editor.
                                 <tr>
                                     <th>ID</th>
                                     <th>Nome</th>
-                                    <th>Nascimento</th>
+                                    <th>Data de Nascimento</th>
                                     <th>Idade</th>
                                     <th>Hora</th>
                                     <th>Data</th>
@@ -180,7 +180,7 @@ and open the template in the editor.
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select iddoador, nome, data_nascimento, idade , date_format(agend_hora, '%H:%i') as 'agend_hora', date_format(agend_data, '%d/%m/%Y') as 'agend_data'
+                                $sql = ("select iddoador, nome,  date_format(data_nascimento, '%d/%m/%Y') as data_nascimento, idade , date_format(agend_hora, '%H:%i') as 'agend_hora', date_format(agend_data, '%d/%m/%Y') as 'agend_data'
                                             from doador d, agendamento a
                                                 where d.iddoador = a.doador_iddoador and
                                                     agend_hora and agend_data  is not null;");

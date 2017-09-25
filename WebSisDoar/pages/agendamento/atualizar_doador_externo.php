@@ -85,12 +85,12 @@ include '../../config/conexao.php';
                                             </div>
                                             <div class="form-group col-lg-2">
                                                 <label for="numero_sus">Numero SUS</label>
-                                                <input class="form-control"   type="number" id="numero_sus" name="numero_sus" value="<?php echo $row['num_sus'] ?>">
+                                                <input class="form-control"   type="number" id="numero_sus" name="numero_sus" >
                                                  <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class=" form-group col-lg-2">
                                                 <label for="data_nascimento">Data de Nascimento</label>
-                                                <input class="form-control"   type="text" id="data_nascimento" name="data_nascimento" value="<?php echo $row['data_nascimento'] ?>">
+                                                <input class="form-control"   type="text" id="data_nascimento" name="data_nascimento" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-1">
@@ -101,7 +101,6 @@ include '../../config/conexao.php';
                                             <div class="form-group col-lg-2">
                                                 <label for="sexo">Sexo</label>
                                                 <select class="form-control" id="sexo" name="sexo">
-                                                    <option value="<?php echo $row['sexo']; ?>"><?php echo $row['sexo']; ?></option>
                                                     <option value="Feminino">Feminino</option>
                                                     <option value="Masculino">Masculino</option>
                                                 </select>
@@ -109,7 +108,7 @@ include '../../config/conexao.php';
                                             <div class="form-group col-lg-1">
                                                 <label for="tipo_sangue">Tipo Sanguineo</label>
                                                 <select id="tipo_sangue" name="tipo_sangue" class="form-control">
-                                                    <option value="<?php echo $row['tipo_sangue']; ?>"><?php echo $row['tipo_sangue']; ?></option>
+                                                    
                                                     <option value="A">A</option>
                                                     <option value="B">B</option>
                                                     <option value="AB">AB</option>
@@ -120,8 +119,7 @@ include '../../config/conexao.php';
                                             <div class="form-group col-lg-2">
                                                 <label for="fator_rh">Fator RH</label>
                                                 <select class="form-control" id="fator_rh" name="fator_rh">
-                                                    <option value="<?php echo $row['fator_rh']; ?>"><?php echo $row['fator_rh']; ?></option>
-                                                    <option value="Positivo">Positivo</option>
+                                                   
                                                     <option value="Negativo">Negativo</option>
                                                 </select>
                                             </div>
@@ -145,7 +143,7 @@ include '../../config/conexao.php';
                                             <div class="form-group col-lg-2">
                                                 <label for="expeditor">Órgão Expedidor</label>
                                                 <select id="expeditor" name="expeditor" class="form-control">
-                                                    <option><?php echo $row['expeditor']; ?></option>
+                                                    
                                                     <option value="SSP/AC">SSP/AC</option>
                                                     <option value="SSP/AL">SSP/AL</option>
                                                     <option value="SSP">SSP/AP</option>
@@ -181,12 +179,12 @@ include '../../config/conexao.php';
                                         <div class="row">
                                             <div class="form-group col-lg-6">
                                                 <label for="nome_pai">Nome do Pai</label>
-                                                <input class="form-control"  id="nome_pai" name="nome_pai" value="<?php echo $row['nome_pai'] ?>">
+                                                <input class="form-control"  id="nome_pai" name="nome_pai" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-6">
                                                 <label for="nome_mae">Nome da Mãe</label>
-                                                <input class="form-control"  id="nome_mae" name="nome_mae" value="<?php echo $row['nome_mae'] ?>">
+                                                <input class="form-control"  id="nome_mae" name="nome_mae">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                         </div>
@@ -202,14 +200,14 @@ include '../../config/conexao.php';
 
                                             <div class="form-group col-lg-3">
                                                 <label for="naturalidade">Naturalidade</label>
-                                                <input class="form-control"  id="naturalidade" name="naturalidade" value="<?php echo $row['naturalidade'] ?>">
+                                                <input class="form-control"  id="naturalidade" name="naturalidade" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
 
                                             <div class="form-group col-lg-3">
                                                 <label for="etnia">Etnia</label>
                                                 <select id="etnia" name="etnia" class="form-control">
-                                                    <option value="<?php echo $row['etnia']; ?>"><?php echo $row['etnia']; ?></option>
+                                                  
                                                     <option value="Branco">Branco</option>
                                                     <option value="Negro">Negro</option>
                                                     <option value="Indígena">Indígena</option>
@@ -222,7 +220,7 @@ include '../../config/conexao.php';
                                             <div class="form-group col-lg-2">
                                                 <label for="estado_civil">Estado Civil</label>
                                                 <select id="estado_civil" name="estado_civil" class="form-control">
-                                                    <option value="<?php echo $row['estado_civil']; ?>"><?php echo $row['estado_civil']; ?></option>
+                                                  
                                                     <option value="Solteiro">Solteiro</option>
                                                     <option value="Casado">Casado</option>
                                                     <option value="Viúvo">Viúvo</option>
@@ -235,7 +233,7 @@ include '../../config/conexao.php';
                                             <div class="form-group col-lg-2">
                                                 <label for="escolaridade">Escolaridade</label>
                                                 <select id="escolaridade" name="escolaridade" class="form-control">
-                                                    <option value="<?php echo $row['escolaridade']; ?>"><?php echo $row['escolaridade']; ?></option>
+                                                   
                                                     <option value="Não Alfabetizado">Não Alfabetizado</option>
                                                     <option value="1°Grau Incompleto">1°Grau Incompleto</option>
                                                     <option value="1°Grau Completo">1°Grau Completo</option>
@@ -251,17 +249,17 @@ include '../../config/conexao.php';
                                         <div class="row">
                                             <div class=" form-group col-lg-6">
                                                 <label for="endereco">Endereço</label>
-                                                <input class="form-control"   type="text" id="endereco" name="endereco" value="<?php echo $row['endereco'] ?>">
+                                                <input class="form-control"   type="text" id="endereco" name="endereco" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-1">
                                                 <label for="numero">N°</label>
-                                                <input class="form-control" type="number"  id="numero" name="numero" value="<?php echo $row['numero'] ?>">
+                                                <input class="form-control" type="number"  id="numero" name="numero" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class=" form-group col-lg-2">
                                                 <label for="bairro">Bairro</label>
-                                                <input class="form-control"   type="text" id="bairro" name="bairro" value="<?php echo $row['bairro'] ?>">
+                                                <input class="form-control"   type="text" id="bairro" name="bairro" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="col-sm-1 form-group">
@@ -286,18 +284,10 @@ include '../../config/conexao.php';
                                         <div class="row">
                                             <div class="form-group col-lg-12">
                                                 <label for="complemento">Complemento</label>
-                                                <input class="form-control" type="text" id="complemento" name="complemento" value="<?php echo $row['complemento'] ?>">
+                                                <input class="form-control" type="text" id="complemento" name="complemento" >
                                             </div>
                                         </div>
-                                        <input type="text" name="fone1" class="mask-fone" />
-                                        <input type="text" name="fone2" class="mask-fone" />
-                                        <input type="text" name="rg" class="mask-rg" />
-                                        <input type="text" name="cpf" class="mask-fpc" />
-
-
-
-
-
+    
                                         <!--================================================-------> 
                                         <input type="hidden" name="iddoador" id="iddoador" value="<?php echo $row['iddoador'] ?>" />
                                         <!--================================================-------> 

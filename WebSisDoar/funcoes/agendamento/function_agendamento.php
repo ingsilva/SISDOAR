@@ -14,22 +14,7 @@ $agend_data = $_POST["agend_data"];
 
 
 $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-/*
-  try {
 
-  $stmt = $con->prepare("INSERT INTO doador
-  (nome)
-  VALUES (:nome)");
-
-  $stmt->execute(array(':nome' => $nome));
-  echo "true";
-
-  $ultimo = $con->lastInsertId();
-
-  echo 'Id: '.$ultimo;
-  } catch (PDOException $e) {
-  echo $e->getMessage();
-  } */
 $sql = $con->prepare("INSERT INTO doador(nome, data_nascimento, cpf, rg, idade, dd, contato) 
                                  VALUES (:nome, :data_nascimento, :cpf, :rg, :idade, :dd, :contato)");
 

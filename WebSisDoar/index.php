@@ -93,9 +93,7 @@
                         <li>
                             <a class="page-scroll" data-toggle="modal" data-target="#acesso" data-whatever="@mdo">Acesso Sistema</a>
                         </li>
-                        <li>
-                            <a class="page-scroll" data-toggle="modal" data-target="#agendamento" data-whatever="@mdo">Agendamento Doação</a>
-                        </li>
+                        
                         <li>
                             <a class="page-scroll" href="#about">Como doar?</a>
                         </li>
@@ -106,7 +104,7 @@
                             <a class="page-scroll" href="#portfolio">Heróis</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#contact">Contato</a>
+                            <a class="page-scroll" href="#contact">Agendamento/Contato</a>
                         </li>
                     </ul>
                 </div>
