@@ -73,7 +73,7 @@ include '../../config/conexao.php';
             <?php
             if (isset($_GET['iddoador'])) {
                 $sql = "select iddoador, d.nome, data_nascimento, cpf, rg, endereco, numero, bairro, complemento, 
-		idcidade, c.descricao, uf,  tipo_sangue, fator_rh, idade, sexo, data_registro, num_sus,
+		idcidade, c.nome, uf,  tipo_sangue, fator_rh, idade, sexo, data_registro, num_sus,
 		expeditor, etnia, nome_pai, nome_mae, estado_civil, naturalidade, sexo, escolaridade 
 		from doador d, cidade c, estado e
 			where d.cidade_idcidade = c.idcidade
