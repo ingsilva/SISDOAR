@@ -32,6 +32,7 @@ include '../../config/conexao.php';
                                 location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
+                                alert(idtriagem);
                             }
                         }
                     });

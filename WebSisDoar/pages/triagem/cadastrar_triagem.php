@@ -18,10 +18,11 @@ include '../../config/conexao.php';
                     var jejum = $("#jejum").val();
                     var iddoador = $("#iddoador").val();
                     var status = $("#status").val();
+                    var iddoencas = $("#iddoencas").val();
 
 
-                    var dataString = {id: id, idade: idade, peso: peso, 
-                        jejum: jejum, iddoador: iddoador, status: status};
+                    var dataString = {id: id, idade: idade, peso: peso,
+                        jejum: jejum, iddoador: iddoador, status: status, iddoencas: iddoencas};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/triagem/function_triagem.php",
@@ -30,10 +31,10 @@ include '../../config/conexao.php';
                         success: function (retorno) {
                             if (retorno == true) {
                                 alert("Salvo com Sucesso!!");
-                                location.reload();
+                                location.replace("lista_triagem.php");
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-                                
+alert(iddoencas);
                             }
                         }
                     });
@@ -59,7 +60,7 @@ include '../../config/conexao.php';
 
                 foreach ($con->query($sql) as $row) {
                     ?>
-            <!--===============================================================-->
+                    <!--===============================================================-->
                     <div class="row">
                         <div class="col-sm-12">
                             <!-- Basic form -->
@@ -77,11 +78,11 @@ include '../../config/conexao.php';
                                                     <input class="form-control"  type="text" id="nome" name="nome" value="<?php echo $row['nome'] ?>" >
                                                     <!--<p class="help-block">Example block-level help text here.</p>-->
                                                 </div>
-                                                <div class="form-group col-lg-2">
+                                                <div class="form-group col-lg-1">
                                                     <label for="idade">Idade</label>
                                                     <input class="form-control"  type="text" id="idade" name="idade" value="<?php echo $row['idade'] ?>"  >
                                                 </div>
-                                                <div class="form-group col-lg-2">
+                                                <div class="form-group col-lg-1">
                                                     <label for="peso">Peso</label>
                                                     <input class="form-control" type="number"  id="peso" name="peso" required="true">
                                                 </div>
@@ -101,6 +102,20 @@ include '../../config/conexao.php';
                                                         <option value="nao">Não Apto</option>
                                                     </select>
                                                 </div>
+                                                <div class="col-sm-2 form-group">
+
+                                                    <label for="doencas">Motivo</label>
+                                                    <select class="form-control" id="iddoencas" name="iddoencas">
+                                                        <option>Caso: Não Apto</option>
+
+                                                        <?php
+                                                        $sql = ("SELECT * FROM doencas");
+                                                        foreach ($con->query($sql) as $row) {
+                                                            echo "<option value='" . $row['iddoencas'] . "'>" . $row['descricao'] . "</option>";
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
 
 
 
@@ -116,14 +131,14 @@ include '../../config/conexao.php';
                             </div><!-- End div #basic-form -->
                         </div><!-- End div .box-info -->
                     </div><!-- End div .col-sm-6 -->
-<!---========================================================================-->  
-                  <?php
+                    <!---========================================================================-->  
+                    <?php
                 }
             }
             ?>
             <?php
             include '../../layout/rodape.php';
             ?>
-<!---========================================================================-->  
+            <!---========================================================================-->  
     </body>
 </html>

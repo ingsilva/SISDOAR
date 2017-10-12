@@ -62,166 +62,172 @@ and open the template in the editor.
         <script src="/SISDOAR/WebSisDoar/assets/js/jquery.js"></script>
 
         <script src="/SISDOAR/WebSisDoar/assets/js/jquery.mask.min.js"
-        <!-- Bootstrap Core JavaScript -->
+                <!-- Bootstrap Core JavaScript -->
         <script src="/SISDOAR/WebSisDoar/assets/js/bootstrap.min.js"></script>
 
 
 
 
-        <!--
-================================================
-JAVASCRIPT
-================================================
-        -->
-        <!-- Basic Javascripts (Jquery and bootstrap) -->
-        <script src="/SISDOAR/WebSisDoar/assets/js/jquery.js"></script>
-        <script src="/SISDOAR/WebSisDoar/assets/js/bootstrap.min.js"></script>
+            <!--
+    ================================================
+    JAVASCRIPT
+    ================================================
+            -->
+            <!-- Basic Javascripts (Jquery and bootstrap) -->
+            <script src="/SISDOAR/WebSisDoar/assets/js/jquery.js"></script>
+            <script src="/SISDOAR/WebSisDoar/assets/js/bootstrap.min.js"></script>
 
-        <!-- VENDOR -->
+            <!-- VENDOR -->
 
-        <!-- Slimscroll js -->
-        <script src="/SISDOAR/WebSisDoar/assets/third/slimscroll/jquery.slimscroll.min.js"></script>
+            <!-- Slimscroll js -->
+            <script src="/SISDOAR/WebSisDoar/assets/third/slimscroll/jquery.slimscroll.min.js"></script>
 
-        <!-- Morris js -->
-     <!--   <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script> -->
-        <script src="/js/raphael-min.js"></script>
-        <script src="assets/third/morris/morris.js"></script>
-
-
-        <!-- LANCENG TEMPLATE JAVASCRIPT -->
-
-        <!-- DataTables -->
-        <script src="/SISDOAR/WebSisDoar/assets/datatables/jquery.dataTables.min.js"></script>
-        <script src="/SISDOAR/WebSisDoar/assets/datatables/dataTables.bootstrap.min.js"></script>
-        <script src="/SISDOAR/WebSisDoar/js/dataTables.bootstrap.min.js"></script>
-        <script src="/SISDOAR/WebSisDoar/assets/js/livequery.js"></script>
-        <script src="/SISDOAR/WebSisDoar/layout/cabecalho.js"></script>
-    </head>
-    <!-- BODY -->
-    <body class="tooltips">
-
-        <!-- BEGIN PAGE -->
-        <div class="container">
-
-            <!-- Your logo goes here -->
-            <div class="logo-brand header sidebar rows">
-                <div class="logo">
-                    <h1><a href="/SISDOAR/WebSisDoar/DashBoard.php"><img src="/SISDOAR/WebSisDoar/assets/img/icon_coracao.png" alt="Logo"> WEB SISDOAR</a></h1>
-                </div>
-            </div><!-- End div .header .sidebar .rows -->
-
-            <!-- BEGIN SIDEBAR -->
-            <div class="left side-menu">
+            <!-- Morris js -->
+         <!--   <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script> -->
+            <script src="/js/raphael-min.js"></script>
+            <script src="assets/third/morris/morris.js"></script>
 
 
-                <div class="body rows scroll-y">
+            <!-- LANCENG TEMPLATE JAVASCRIPT -->
 
-                    <!-- Scrolling sidebar -->
-                    <div class="sidebar-inner slimscroller">
+            <!-- DataTables -->
+            <script src="/SISDOAR/WebSisDoar/assets/datatables/jquery.dataTables.min.js"></script>
+            <script src="/SISDOAR/WebSisDoar/assets/datatables/dataTables.bootstrap.min.js"></script>
+            <script src="/SISDOAR/WebSisDoar/js/dataTables.bootstrap.min.js"></script>
+            <script src="/SISDOAR/WebSisDoar/assets/js/livequery.js"></script>
+            <script src="/SISDOAR/WebSisDoar/layout/cabecalho.js"></script>
+        </head>
+        <!-- BODY -->
+        <body class="tooltips">
 
-                        <!-- User Session -->
-                        <div class="media">
-                            <a class="pull-left" href="#fakelink">
-                                <img class="media-object img-circle" src="/SISDOAR/WebSisDoar/assets/img/admin.png" alt="Avatar">
-                            </a>
-                            <div class="media-body">
-                                Bem Vindo(a),
-                                <h4 class="media-heading "><strong><?php echo $_SESSION['usuarioNome'] ?></strong></h4>
-                                <a href="user-profile.html">Editar</a>
-                                <a href="#" class="sair">Sair</a>
-                            </div><!-- End div .media-body -->
-                        </div><!-- End div .media -->
+            <!-- BEGIN PAGE -->
+            <div class="container">
 
+                <!-- Your logo goes here -->
+                <div class="logo-brand header sidebar rows">
+                    <div class="logo">
+                        <h1><a href="/SISDOAR/WebSisDoar/DashBoard.php"><img src="/SISDOAR/WebSisDoar/assets/img/icon_coracao.png" alt="Logo"> WEB SISDOAR</a></h1>
+                    </div>
+                </div><!-- End div .header .sidebar .rows -->
 
-                        <!-- Search form -->
-                        <div id="search">
-                            <form role="form">
-                                <input type="text" class="form-control search" placeholder="Pesquisar...">
-                                <i class="fa fa-search"></i>
-                            </form>
-                        </div><!-- End div #search -->
+                <!-- BEGIN SIDEBAR -->
+                <div class="left side-menu">
 
 
-                        <!-- Sidebar menu -->				
-                        <div id="sidebar-menu">
-                            <ul>
-                                <li><a href="/SISDOAR/WebSisDoar/DashBoard.php"><i class="fa fa-home"></i> Inicio</a></li>
-                                <li><a href="/SISDOAR/WebSisDoar/pages/usuario/lista_usuario.php"><i class="glyphicon glyphicon-log-in"></i> Usuários</a></li>
-                                <li><a href="/SISDOAR/WebSisDoar/pages/doador/lista_doador.php"><i class="fa fa-user"></i><i class="fa fa-plus-square-o i-right"></i>Doadores</a>
+                    <div class="body rows scroll-y">
 
-                                </li>
-                                <li><a href="#fakelink"><i class="fa fa-file-text-o"></i><i class="fa fa-angle-double-down i-right"></i> Triagem</a>
-                                    <ul>
-                                        <li><a href="/SISDOAR/WebSisDoar/pages/triagem/pre_triagem.php"><i class="fa fa-angle-right"></i> Coletar Informações</a></li>
-                                        <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem.php"><i class="fa fa-angle-right"></i>Triados</a></li>
-                                    </ul>
-                                </li>
+                        <!-- Scrolling sidebar -->
+                        <div class="sidebar-inner slimscroller">
 
-                                <li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Tabelas Auxiliares</a>
-                                    <ul>
-                                        <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_cidades.php"><i class="fa fa-angle-right"></i> Cidades</a></li>
-                                        <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_estados.php"><i class="fa fa-angle-right"></i> Estados</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="/SISDOAR/WebSisDoar/pages/estoque/estoque_sangue.php"><i class="fa fa-tint"></i> Estoque de Sangue</a></li>
-                                <li><a href="/SISDOAR/WebSisDoar/pages/funcionario/lista_agenda.php"><i class="glyphicon glyphicon-earphone"></i>Agenda</a>
-                                <li><a href="/SISDOAR/WebSisDoar/graficos.php"><i class="fa fa-bar-chart-o"></i> Gráficos</a></li>
-
-                            </ul>
-                            <div class="clear"></div>
-                        </div><!-- End div #sidebar-menu -->
-                    </div><!-- End div .sidebar-inner .slimscroller -->
-                </div><!-- End div .body .rows .scroll-y -->
-
-                <!-- Sidebar footer -->
-                <div class="footer rows animated fadeInUpBig">
-                    <div class="progress progress-xs progress-striped active">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                            <span class="progress-precentage">80&#37;</span>
-                        </div><!-- End div .pogress-bar -->
-                        <a data-toggle="tooltip" title="See task progress" class="btn btn-default md-trigger" data-modal="task-progress"><i class="fa fa-inbox"></i></a>
-                    </div><!-- End div .progress .progress-xs -->
-                </div><!-- End div .footer .rows -->
-            </div>
-            <!-- END SIDEBAR -->
+                            <!-- User Session -->
+                            <div class="media">
+                                <a class="pull-left" href="#fakelink">
+                                    <img class="media-object img-circle" src="/SISDOAR/WebSisDoar/assets/img/admin.png" alt="Avatar">
+                                </a>
+                                <div class="media-body">
+                                    Bem Vindo(a),
+                                    <h4 class="media-heading "><strong><?php echo $_SESSION['usuarioNome'] ?></strong></h4>
+                                    <a href="user-profile.html">Editar</a>
+                                    <a href="#" class="sair">Sair</a>
+                                </div><!-- End div .media-body -->
+                            </div><!-- End div .media -->
 
 
+                            <!-- Search form -->
+                            <div id="search">
+                                <form role="form">
+                                    <input type="text" class="form-control search" placeholder="Pesquisar...">
+                                    <i class="fa fa-search"></i>
+                                </form>
+                            </div><!-- End div #search -->
 
-            <!-- BEGIN CONTENT -->
-            <div class="right content-page">
 
-                <!-- BEGIN CONTENT HEADER -->
-                <div class="header content rows-content-header">
+                            <!-- Sidebar menu -->				
+                            <div id="sidebar-menu">
+                                <ul>
+                                    <li><a href="/SISDOAR/WebSisDoar/DashBoard.php"><i class="fa fa-home"></i> Inicio</a></li>
+                                    <li><a href="/SISDOAR/WebSisDoar/pages/usuario/lista_usuario.php"><i class="glyphicon glyphicon-log-in"></i> Usuários</a></li>
+                                    <li><a href="/SISDOAR/WebSisDoar/pages/doador/lista_doador.php"><i class="fa fa-user"></i><i class="fa fa-plus-square-o i-right"></i>Doadores</a>
 
-                    <!-- Button mobile view to collapse sidebar menu -->
-                    <button class="button-menu-mobile show-sidebar">
-                        <i class="fa fa-bars"></i>
-                    </button>
+                                    </li>
+                                    <li><a href="#fakelink"><i class="fa fa-file-text-o"></i><i class="fa fa-angle-double-down i-right"></i> Triagem</a>
+                                        <ul>
+                                            <li><a href="/SISDOAR/WebSisDoar/pages/triagem/pre_triagem.php"><i class="fa fa-angle-right"></i> Coletar Informações</a></li>
+                                            <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem.php"><i class="fa fa-angle-right"></i>Triados</a></li>
+                                        </ul>
+                                    </li>
 
-                    <!-- BEGIN NAVBAR CONTENT-->				
-                    <div class="navbar navbar-default" role="navigation">
-                        <div class="container">
-                            <!-- Navbar header -->
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <i class="fa fa-angle-double-down"></i>
-                                </button>
-                            </div><!-- End div .navbar-header -->
-
-                            <!-- Navbar collapse -->	
-                            <div class="navbar-collapse collapse">
-
-                                <!-- Left navbar -->
-                                <ul class="nav navbar-nav">
+                                    <li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Tabelas Auxiliares</a>
+                                        <ul>
+                                            <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_cidades.php"><i class="fa fa-angle-right"></i> Cidades</a></li>
+                                            <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_estados.php"><i class="fa fa-angle-right"></i> Estados</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/SISDOAR/WebSisDoar/pages/estoque/estoque_sangue.php"><i class="fa fa-tint"></i> Estoque de Sangue</a></li>
+                                    <li><a href="#fakelink"><i class="glyphicon glyphicon-paperclip"></i><i class="fa fa-angle-double-down i-right"></i> Relatórios</a>
+                                        <ul>
+                                            <li><a href="/SISDOAR/WebSisDoar/pages/relatorios/rel_doadores_mes.php"><i class="fa fa-angle-right"></i> Relatorios Mensal</a></li>
+                                            <li><a href="/SISDOAR/WebSisDoar/pages/atestado/lista_doador.php"><i class="fa fa-angle-right"></i> Atestados</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/SISDOAR/WebSisDoar/pages/funcionario/lista_agenda.php"><i class="glyphicon glyphicon-earphone"></i>Agenda</a>
+                                    <li><a href="/SISDOAR/WebSisDoar/graficos.php"><i class="fa fa-bar-chart-o"></i> Gráficos</a></li>
 
                                 </ul>
+                                <div class="clear"></div>
+                            </div><!-- End div #sidebar-menu -->
+                        </div><!-- End div .sidebar-inner .slimscroller -->
+                    </div><!-- End div .body .rows .scroll-y -->
 
-                            </div><!-- End div .navbar-collapse -->
-                        </div><!-- End div .container -->
-                    </div>
-                    <!-- END NAVBAR CONTENT-->
+                    <!-- Sidebar footer -->
+                    <div class="footer rows animated fadeInUpBig">
+                        <div class="progress progress-xs progress-striped active">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                <span class="progress-precentage">80&#37;</span>
+                            </div><!-- End div .pogress-bar -->
+                            <a data-toggle="tooltip" title="See task progress" class="btn btn-default md-trigger" data-modal="task-progress"><i class="fa fa-inbox"></i></a>
+                        </div><!-- End div .progress .progress-xs -->
+                    </div><!-- End div .footer .rows -->
                 </div>
+                <!-- END SIDEBAR -->
 
-                <!-- END CONTENT HEADER -->
 
-                </html>
+
+                <!-- BEGIN CONTENT -->
+                <div class="right content-page">
+
+                    <!-- BEGIN CONTENT HEADER -->
+                    <div class="header content rows-content-header">
+
+                        <!-- Button mobile view to collapse sidebar menu -->
+                        <button class="button-menu-mobile show-sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- BEGIN NAVBAR CONTENT-->				
+                        <div class="navbar navbar-default" role="navigation">
+                            <div class="container">
+                                <!-- Navbar header -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <i class="fa fa-angle-double-down"></i>
+                                    </button>
+                                </div><!-- End div .navbar-header -->
+
+                                <!-- Navbar collapse -->	
+                                <div class="navbar-collapse collapse">
+
+                                    <!-- Left navbar -->
+                                    <ul class="nav navbar-nav">
+
+                                    </ul>
+
+                                </div><!-- End div .navbar-collapse -->
+                            </div><!-- End div .container -->
+                        </div>
+                        <!-- END NAVBAR CONTENT-->
+                    </div>
+
+                    <!-- END CONTENT HEADER -->
+
+                    </html>

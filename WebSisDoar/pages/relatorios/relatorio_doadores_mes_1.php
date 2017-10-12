@@ -64,34 +64,39 @@ include '../../config/conexao.php';
                                 <tr>
                                     <th>ID</th>
                                     <th>Nome</th>
-                                    <th>DDD</th>
-                                    <th>Telefone/Celular</th>
-                                    <th>Departamento</th>
-                                    <th>Editar</th>
-                                    <th>Excluir</th>
+                                    <th>Data Nascimento</th>
+                                    <th>Idade</th>
+                                    <th>Tipo Sangue</th>
+                                    <th>fator Rh</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select a.idagenda, a.nome, a.ddd, a.telefone, d.descricao"
-                                        . " from agenda a, dpto d"
-                                        . " where a.dpto_iddpto = d.iddpto ");
-                                foreach ($con->query($sql) as $row) {
-                                    ?>
-                                    <tr>
-                                        <td><?php echo $row['idagenda']; ?></td>
-                                        <td><?php echo $row['nome']; ?></td>
-                                        <td><?php echo $row['ddd']; ?></td>
-                                        <td ><?php echo $row['telefone']; ?></td>
-                                        <td ><?php echo $row['descricao']; ?></td>
-                                        <td>
-                                            <?php echo "<a class='btn btn-info' href='atualizar_agenda.php?idagenda=" . $row['idagenda'] . "'><i class='glyphicon glyphicon-edit'></i></a>"; ?>
-                                        </td>
-                                        <td>
-                                            <?php echo "<a href='#' class='btn btn-danger' id='excluir' rel='" . $row['idagenda'] . "'><i class='glyphicon glyphicon-remove'></i></a>"; ?>
-                                        </td>
-                                    </tr>
-                                    <?php
+                                if ($_POST['data_inicio'] || $_POST['data_fim']) {
+                                    $sql = "SELECT iddoador, nome, data_nascimento, d.idade, d.tipo_sangue,
+                                        d.fator_rh, data_hora
+                                        FROM doador d, triagem t, estoque_sangue es
+                                        WHERE d.iddoador = t.doador_iddoador 
+                                            AND  
+                                                t.idtriagem = es.triagem_idtriagem 
+                                            AND data_hora >='" . $_POST['data_inicio'] . "'and data_hora <='" . $_POST['data_fim'] . "'";
+
+
+
+                                    foreach ($con->query($sql) as $row) {
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $row['iddoador']; ?></td>
+                                            <td><?php echo $row['nome']; ?></td>
+                                            <td><?php echo $row['data_nascimento']; ?></td>
+                                            <td ><?php echo $row['idade']; ?></td>
+                                            <td ><?php echo $row['tipo_sangue']; ?></td>
+                                            <td ><?php echo $row['fator_rh']; ?></td>
+                                            <td ><?php echo $row['data_hora']; ?></td>
+                                        </tr>
+                                        <?php
+                                    }
                                 }
                                 ?>
 
