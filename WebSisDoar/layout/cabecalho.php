@@ -154,15 +154,16 @@ and open the template in the editor.
                                         <ul>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/triagem/pre_triagem.php"><i class="fa fa-angle-right"></i> Coletar Informações</a></li>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem.php"><i class="fa fa-angle-right"></i>Triados</a></li>
+                                            <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem_napto.php"><i class="fa fa-angle-right"></i>Não Aptos</a></li>
                                         </ul>
                                     </li>
 
-                                    <li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Tabelas Auxiliares</a>
+                                    <!--<li><a href="#fakelink"><i class="fa fa-map-marker"></i><i class="fa fa-angle-double-down i-right"></i> Tabelas Auxiliares</a>
                                         <ul>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_cidades.php"><i class="fa fa-angle-right"></i> Cidades</a></li>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/localizar/lista_estados.php"><i class="fa fa-angle-right"></i> Estados</a></li>
                                         </ul>
-                                    </li>
+                                    </li>-->
                                     <li><a href="/SISDOAR/WebSisDoar/pages/estoque/estoque_sangue.php"><i class="fa fa-tint"></i> Estoque de Sangue</a></li>
                                     <li><a href="#fakelink"><i class="glyphicon glyphicon-paperclip"></i><i class="fa fa-angle-double-down i-right"></i> Relatórios</a>
                                         <ul>
