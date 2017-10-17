@@ -3,6 +3,9 @@
 include("../../assets/mpdf60/mpdf.php");
 include("../../config/conexao.php");
 
+$dataInicio = $_POST['data_inicio'];
+$dataFim = $_POST['data_fim'];
+
 $html = "<h3><img src='../../assets/img/brasao.jpg'></h3>
 	 	
                 <p class='center sub-titulo'>
@@ -12,6 +15,8 @@ $html = "<h3><img src='../../assets/img/brasao.jpg'></h3>
                 <br>
                 HEMOCENTRO do Estado do Acre
                 </p>
+                
+                <h3>Doadores por Periodo de: $dataInicio a $dataFim</h3> 
              <table >
                 <thead>
                       <tr>
