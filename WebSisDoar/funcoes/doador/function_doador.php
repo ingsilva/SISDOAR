@@ -11,8 +11,6 @@ $numero = $_POST["numero"];
 $bairro = $_POST["bairro"];
 $complemento = $_POST["complemento"];
 $cidade_idcidade = $_POST["cidade"];
-$tipo_sangue = $_POST["tipo_sangue"];
-$fator_rh = $_POST["fator_rh"];
 $idade = $_POST["idade"];
 $sexo = $_POST["sexo"];
 $data_registro = $_POST["data_registro"];
@@ -31,14 +29,13 @@ $contato = $_POST["contato"];
 if ($id == 0) {
     //salvar
     $sql = $con->prepare("INSERT INTO doador(nome, data_nascimento, cpf, rg, endereco, 
-                                            numero, bairro, complemento, cidade_idcidade, tipo_sangue, 
-                                            fator_rh, idade, sexo, data_registro, num_sus, 
+                                            numero, bairro, complemento, cidade_idcidade, idade, sexo, data_registro, num_sus, 
                                             expeditor, etnia, nome_pai, nome_mae, estado_civil, 
                                             escolaridade, naturalidade, dd, contato) 
 						VALUES (?, ?, ?, ?, ?, 
 							?, ?, ?, ?,  ?, 
 							?, ?, ?, ?, ?, 
-							?, ?, ?, ?,?, 
+							?, ?, ?, 
                                                         ?, ?, ?, ?)");
 
     $sql->bindValue(1, $nome);
@@ -50,21 +47,19 @@ if ($id == 0) {
     $sql->bindValue(7, $bairro);
     $sql->bindValue(8, $complemento);
     $sql->bindValue(9, $cidade_idcidade);
-    $sql->bindValue(10, $tipo_sangue);
-    $sql->bindValue(11, $fator_rh);
-    $sql->bindValue(12, $idade);
-    $sql->bindValue(13, $sexo);
-    $sql->bindValue(14, $data_registro);
-    $sql->bindValue(15, $num_sus);
-    $sql->bindValue(16, $expeditor);
-    $sql->bindValue(17, $etnia);
-    $sql->bindValue(18, $nome_pai);
-    $sql->bindValue(19, $nome_mae);
-    $sql->bindValue(20, $estado_civil);
-    $sql->bindValue(21, $escolaridade);
-    $sql->bindValue(22, $naturalidade);
-    $sql->bindValue(23, $dd);
-    $sql->bindValue(24, $contato);
+    $sql->bindValue(10, $idade);
+    $sql->bindValue(11, $sexo);
+    $sql->bindValue(12, $data_registro);
+    $sql->bindValue(13, $num_sus);
+    $sql->bindValue(14, $expeditor);
+    $sql->bindValue(15, $etnia);
+    $sql->bindValue(16, $nome_pai);
+    $sql->bindValue(17, $nome_mae);
+    $sql->bindValue(18, $estado_civil);
+    $sql->bindValue(19, $escolaridade);
+    $sql->bindValue(20, $naturalidade);
+    $sql->bindValue(21, $dd);
+    $sql->bindValue(22, $contato);
     
     if ($sql->execute())
         echo true;
@@ -73,7 +68,7 @@ if ($id == 0) {
 }else {
     //alterar
     $sql = $con->prepare("UPDATE doador SET nome = ?, data_nascimento = ?, cpf = ?, rg = ?, endereco = ?,  numero = ?, "
-            . "bairro = ?, complemento = ?, cidade_idcidade = ?, tipo_sangue = ?, fator_rh = ?, idade = ?, "
+            . "bairro = ?, complemento = ?, cidade_idcidade = ?, idade = ?, "
             . "sexo = ?, data_registro = ?, num_sus = ?, expeditor = ?, etnia = ?, nome_pai = ? , nome_mae = ?,"
             . "estado_civil = ?, escolaridade = ?,  naturalidade = ? WHERE iddoador = ?");
 
@@ -86,20 +81,18 @@ if ($id == 0) {
     $sql->bindValue(7, $bairro);
     $sql->bindValue(8, $complemento);
     $sql->bindValue(9, $cidade_idcidade);
-    $sql->bindValue(10, $tipo_sangue);
-    $sql->bindValue(11, $fator_rh);
-    $sql->bindValue(12, $idade);
-    $sql->bindValue(13, $sexo);
-    $sql->bindValue(14, $data_registro);
-    $sql->bindValue(15, $num_sus);
-    $sql->bindValue(16, $expeditor);
-    $sql->bindValue(17, $etnia);
-    $sql->bindValue(18, $nome_pai);
-    $sql->bindValue(19, $nome_mae);
-    $sql->bindValue(20, $estado_civil);
-    $sql->bindValue(21, $escolaridade);
-    $sql->bindValue(22, $naturalidade);
-    $sql->bindValue(23, $id);
+    $sql->bindValue(10, $idade);
+    $sql->bindValue(11, $sexo);
+    $sql->bindValue(12, $data_registro);
+    $sql->bindValue(13, $num_sus);
+    $sql->bindValue(14, $expeditor);
+    $sql->bindValue(15, $etnia);
+    $sql->bindValue(16, $nome_pai);
+    $sql->bindValue(17, $nome_mae);
+    $sql->bindValue(18, $estado_civil);
+    $sql->bindValue(19, $escolaridade);
+    $sql->bindValue(20, $naturalidade);
+    $sql->bindValue(21, $id);
 
     if ($sql->execute())
         echo true;
