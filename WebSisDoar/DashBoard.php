@@ -183,7 +183,8 @@ and open the template in the editor.
                                 $sql = ("select iddoador, nome,  date_format(data_nascimento, '%d/%m/%Y') as data_nascimento, idade , date_format(agend_hora, '%H:%i') as 'agend_hora', date_format(agend_data, '%d/%m/%Y') as 'agend_data'
                                             from doador d, agendamento a
                                                 where d.iddoador = a.doador_iddoador and
-                                                    agend_hora and agend_data  is not null;");
+                                                    agend_hora and agend_data  is not null
+                                                    group by agend_hora and agend_data;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
