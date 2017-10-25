@@ -25,6 +25,8 @@ print_r($_SESSION['usuarioNome']);
                     var bairro = $("#bairro").val();
                     var complemento = $("#complemento").val();
                     var cidade = $("#cidade").val();
+                    var tipo_sangue = $("#tipo_sangue").val();
+                    var fator_rh = $("#fator_rh").val();
                     var idade = $("#idade").val();
                     var sexo = $("#sexo").val();
                     var data_registro = $("#data_registro").val();
@@ -41,7 +43,8 @@ print_r($_SESSION['usuarioNome']);
 
                     var dataString = {id: id, nome: nome, data_nascimento: data_nascimento,
                         cpf: cpf, rg: rg, endereco: endereco, numero: numero, bairro: bairro,
-                        complemento: complemento, cidade: cidade, idade: idade, sexo: sexo, data_registro: data_registro,
+                        complemento: complemento, cidade: cidade, tipo_sangue: tipo_sangue,
+                        fator_rh: fator_rh, idade: idade, sexo: sexo, data_registro: data_registro,
                         numero_sus: numero_sus, expeditor: expeditor, etnia: etnia, nome_pai: nome_pai,
                         nome_mae: nome_mae, estado_civil: estado_civil,
                         escolaridade: escolaridade, naturalidade: naturalidade, dd: dd, contato: contato};
@@ -103,9 +106,28 @@ print_r($_SESSION['usuarioNome']);
                                     <div class="form-group col-lg-2">
                                         <label for="sexo">Sexo</label>
                                         <select class="form-control" id="sexo" name="sexo">
-                                            <option>-----</option>
+                                            <option>Escolha</option>
                                             <option value="f">Feminino</option>
                                             <option value="m">Masculino</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-1">
+                                        <label for="tipo_sangue">Tipo Sanguineo</label>
+                                        <select id="tipo_sangue" name="tipo_sangue" class="form-control">
+                                            <option>Escolha</option>
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="AB">AB</option>
+                                            <option value="O">O</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-lg-2">
+                                        <label for="fator_rh">Fator RH</label>
+                                        <select class="form-control" id="fator_rh" name="fator_rh">
+                                            <option>Escolha</option>
+                                            <option value="Positivo">Positivo</option>
+                                            <option value="Negativo">Negativo</option>
                                         </select>
                                     </div>
                                 </div>
@@ -128,7 +150,7 @@ print_r($_SESSION['usuarioNome']);
                                     <div class="form-group col-lg-2">
                                         <label for="expeditor">Órgão Expedidor</label>
                                         <select id="expeditor" name="expeditor" class="form-control">
-                                            <option>-----</option>
+                                            <option>Escolha</option>
                                             <option value="SSP">SSP/AC</option>
                                             <option value="SSP">SSP/AL</option>
                                             <option value="SSP">SSP/AP</option>
@@ -177,7 +199,7 @@ print_r($_SESSION['usuarioNome']);
                                     <div class="form-group col-lg-2">
                                         <label for="nacionalidade">Nacionalidade</label>
                                         <select id="nacionalidade" name="nacionalidade" class="form-control">
-                                            <option>-----</option>
+                                            <option>Escolha</option>
                                             <option value="B">Brasileiro</option>
                                             <option value="O">Outros</option>
                                         </select>
@@ -192,7 +214,7 @@ print_r($_SESSION['usuarioNome']);
                                     <div class="form-group col-lg-1">
                                         <label for="etnia">Etnia</label>
                                         <select id="etnia" name="etnia" class="form-control">
-                                            <option>-----</option>
+                                            <option>Escolha</option>
                                             <option value="B">Branco</option>
                                             <option value="N">Negro</option>
                                             <option value="I">Indígena</option>
@@ -207,7 +229,7 @@ print_r($_SESSION['usuarioNome']);
                                     <div class="form-group col-lg-2">
                                         <label for="estado_civil">Estado Civil</label>
                                         <select id="estado_civil" name="estado_civil" class="form-control">
-                                            <option>-----</option>
+                                            <option>Escolha</option>
                                             <option value="S">Solteiro</option>
                                             <option value="C">Casado</option>
                                             <option value="V">Viúvo</option>
@@ -221,7 +243,7 @@ print_r($_SESSION['usuarioNome']);
                                     <div class="form-group col-lg-2">
                                         <label for="escolaridade">Escolaridade</label>
                                         <select id="escolaridade" name="escolaridade" class="form-control">
-                                            <option>-----</option>
+                                            <option>Escolha</option>
                                             <option value="NA">Não Alfabetizado</option>
                                             <option value="PI">1°Grau Incompleto</option>
                                             <option value="PC">1°Grau Completo</option>
@@ -233,7 +255,7 @@ print_r($_SESSION['usuarioNome']);
                                     </div>
 
                                     <div class="form-group col-lg-1">
-                                        <label for="dd">DDD</label>
+                                        <label for="dd">DD</label>
                                         <input class="form-control"  id="dd" name="dd" >
                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                     </div>
