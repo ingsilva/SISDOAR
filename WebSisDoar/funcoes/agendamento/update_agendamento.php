@@ -1,8 +1,12 @@
 <?php
 
 include("../../config/conexao.php");
-$iddoador = $_POST["iddoador"];
-$data_nascimento = $_POST["data_nascimento"];
+
+$iddoador = $_POST["id"];
+//$data_nasc = $_POST["data_nascimento"];
+$numero_sus = $_POST["numero_sus"];
+
+
 /* $cpf = $_POST["cpf"];
   $rg = $_POST["rg"];
   $idade = $_POST["idade"];
@@ -12,10 +16,11 @@ $data_nascimento = $_POST["data_nascimento"];
   $agend_hora = $_POST["agend_hora"];
   $agend_data = $_POST["agend_data"]; */
 
-//alterar
-$sql = $con->prepare("UPDATE doador SET  data_nascimento = :data_nascimento WHERE iddoador = :iddoador");
 
-$sql->bindValue(':data_nascimento', $data_nascimento);
+//alterar
+$sql = $con->prepare("UPDATE doador SET  numero_sus = :numero_sus WHERE iddoador = :iddoador");
+
+$sql->bindValue(':numero_sus', $numero_sus);
 $sql->bindValue(':iddoador', $iddoador);
 
 
