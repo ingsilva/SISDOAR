@@ -8,6 +8,11 @@ include '../../config/conexao.php';
         <?php
         include '../../layout/cabecalho.php';
         ?>
+        <style type="text/css">
+            .adic {
+                color: #33cc00;
+            }
+        </style>
         <script type="text/javascript">
             $(document).ready(function () {
 
@@ -275,6 +280,9 @@ include '../../config/conexao.php';
                                                             <input class="form-control"   type="text" id="onde_doou_sang" name="onde_doou_sang">
                                                             <!--<p class="help-block">Example block-level help text here.</p>-->
                                                         </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row">
                                                         <label class="col-sm-offset-1 col-sm-12 control-label"> 11 - Foi recusado como Doador?</label>
                                                         <div class="form-group col-lg-8">    
                                                             <label for="quando_doou_sang">Motivo</label>
@@ -287,6 +295,33 @@ include '../../config/conexao.php';
                                                             <!--<p class="help-block">Example block-level help text here.</p>-->
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-info">
+                                                <h2>Resultado</h2>
+                                                <div id="basic-form" class="collapse in">
+
+                                                    <div class="row">
+                                                        <label class="adic col-sm-offset-1 col-sm-12 control-label"> *INFORMAÇÕES ADICONAIS* </label>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="form-group col-lg-4">  
+                                                            <label for="sexo">Situação de Doador</label>
+                                                            <select class="form-control" id="sexo" name="sexo">
+                                                                <option>Escolha</option>
+                                                                <option value="sim">Apto</option>
+                                                                <option value="nao">Não Apto</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-lg-8">    
+                                                            <label for="quantas_vzs_doou">Obersações</label>
+                                                            <textarea class="form-control"   type="text" id="quantas_vzs_doou" name="quantas_vzs_doou"></textarea>
+                                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    
                                                 </div>
                                             </div> 
                                             <div class="box-info">
