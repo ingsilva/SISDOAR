@@ -172,8 +172,8 @@ and open the template in the editor.
                                     <th>Nome</th>
                                     <th>Data de Nascimento</th>
                                     <th>Idade</th>
+                                    <th>Data de Registro</th>
                                     <th>Hora</th>
-                                    <th>Data</th>
                                     <th>+ Informações</th>
 
                                 </tr>
@@ -193,8 +193,8 @@ and open the template in the editor.
                                         <td><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['data_nascimento']; ?></td>
                                         <td><?php echo $row['idade']; ?></td>
-                                        <td><?php echo $row['agend_hora']; ?></td>
                                         <td><?php echo $row['agend_data']; ?></td>
+                                        <td><?php echo $row['agend_hora']; ?></td>
                                         <td class="text-center">
                                             <?php echo "<a class='btn btn-default' href='./pages/agendamento/atualizar_doador_externo.php?iddoador=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
                                         </td>

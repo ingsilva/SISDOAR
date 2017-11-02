@@ -1,5 +1,6 @@
 <?php
 include '../../config/conexao.php';
+include '../../DashBoard.php';
 ?>
 
 <!DOCTYPE HTML>
@@ -45,13 +46,13 @@ include '../../config/conexao.php';
                         estado_civil: estado_civil, escolaridade: escolaridade, naturalidade: naturalidade};
                     $.ajax({
                         type: "POST",
-                        url: "../../funcoes/doador/update.php",
+                        url: "../../funcoes/agendamento/update_agendamento.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
                             if (retorno == true) {
                                 alert("Salvo com Sucesso!!");
-                                location.replace("lista_doador.php");
+                                location.replace("../../DashBoard.php");
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
                             }
@@ -72,14 +73,12 @@ include '../../config/conexao.php';
             <!--==============INICIO DO CÓDIGO PHP============================-->
             <?php
             if (isset($_GET['iddoador'])) {
-                $sql = "select iddoador, d.nome, date_format(data_nascimento, '%d/%m/%Y') as data_nascimento, cpf, rg, endereco, numero, bairro, complemento, 
-		idcidade, descricao, uf,  tipo_sangue, fator_rh, idade, sexo, date_format(data_registro, '%d/%m/%Y') as data_registro, num_sus,
-		expeditor, etnia, nome_pai, nome_mae, estado_civil, naturalidade, sexo, escolaridade 
-		from doador d, cidade c, estado e
-			where d.cidade_idcidade = c.idcidade
-					and e.idestado = c.estado_idestado
-                                        and
-                            iddoador='" . $_GET['iddoador'] . "'";
+                $sql = "select iddoador, data_registro, nome,  date_format(data_nascimento, '%d/%m/%Y') as data_nascimento, idade , date_format(agend_hora, '%H:%i') as 'agend_hora', date_format(agend_data, '%d/%m/%Y') as 'agend_data'
+                                            from doador d, agendamento a
+                                                where d.iddoador = a.doador_iddoador and
+                                                    agend_hora and agend_data  is not null and
+                                                    data_registro is null
+                                                    and iddoador='" . $_GET['iddoador'] . "'";
 
 
                 foreach ($con->query($sql) as $row) {
@@ -117,15 +116,16 @@ include '../../config/conexao.php';
                                             <div class="form-group col-lg-2">
                                                 <label for="sexo">Sexo</label>
                                                 <select class="form-control" id="sexo" name="sexo">
-                                                    <option value="<?php echo $row['sexo']; ?>"><?php echo $row['sexo']; ?></option>
-                                                    <option value="Feminino">Feminino</option>
-                                                    <option value="Masculino">Masculino</option>
+                                                    <option>Escolha</option>
+                                                    <option value="f">Feminino</option>
+                                                    <option value="m">Masculino</option>
                                                 </select>
                                             </div>
+
                                             <div class="form-group col-lg-1">
                                                 <label for="tipo_sangue">Tipo Sanguineo</label>
                                                 <select id="tipo_sangue" name="tipo_sangue" class="form-control">
-                                                    <option value="<?php echo $row['tipo_sangue']; ?>"><?php echo $row['tipo_sangue']; ?></option>
+                                                    <option>Escolha</option>
                                                     <option value="A">A</option>
                                                     <option value="B">B</option>
                                                     <option value="AB">AB</option>
@@ -136,7 +136,7 @@ include '../../config/conexao.php';
                                             <div class="form-group col-lg-2">
                                                 <label for="fator_rh">Fator RH</label>
                                                 <select class="form-control" id="fator_rh" name="fator_rh">
-                                                    <option value="<?php echo $row['fator_rh']; ?>"><?php echo $row['fator_rh']; ?></option>
+                                                    <option>Escolha</option>
                                                     <option value="Positivo">Positivo</option>
                                                     <option value="Negativo">Negativo</option>
                                                 </select>
@@ -150,18 +150,18 @@ include '../../config/conexao.php';
                                             </div>
                                             <div class="form-group col-lg-2">
                                                 <label for="cpf">CPF</label>
-                                                <input class="form-control" type="text"  id="cpf" name="cpf" value="<?php echo $row['cpf'] ?>">
+                                                <input class="form-control" type="text"  id="cpf" name="cpf">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-2">
                                                 <label for="rg">RG</label>
-                                                <input class="form-control" type="text"  id="rg" name="rg" value="<?php echo $row['rg'] ?>">
+                                                <input class="form-control" type="text"  id="rg" name="rg" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-2">
                                                 <label for="expeditor">Órgão Expedidor</label>
                                                 <select id="expeditor" name="expeditor" class="form-control">
-                                                    <option><?php echo $row['expeditor']; ?></option>
+                                                    <option>Escolha</option>
                                                     <option value="SSP/AC">SSP/AC</option>
                                                     <option value="SSP/AL">SSP/AL</option>
                                                     <option value="SSP">SSP/AP</option>
@@ -197,12 +197,12 @@ include '../../config/conexao.php';
                                         <div class="row">
                                             <div class="form-group col-lg-6">
                                                 <label for="nome_pai">Nome do Pai</label>
-                                                <input class="form-control"  id="nome_pai" name="nome_pai" value="<?php echo $row['nome_pai'] ?>">
+                                                <input class="form-control"  id="nome_pai" name="nome_pai" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-6">
                                                 <label for="nome_mae">Nome da Mãe</label>
-                                                <input class="form-control"  id="nome_mae" name="nome_mae" value="<?php echo $row['nome_mae'] ?>">
+                                                <input class="form-control"  id="nome_mae" name="nome_mae" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                         </div>
@@ -218,14 +218,14 @@ include '../../config/conexao.php';
 
                                             <div class="form-group col-lg-3">
                                                 <label for="naturalidade">Naturalidade</label>
-                                                <input class="form-control"  id="naturalidade" name="naturalidade" value="<?php echo $row['naturalidade'] ?>">
+                                                <input class="form-control"  id="naturalidade" name="naturalidade" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
 
                                             <div class="form-group col-lg-3">
                                                 <label for="etnia">Etnia</label>
                                                 <select id="etnia" name="etnia" class="form-control">
-                                                    <option value="<?php echo $row['etnia']; ?>"><?php echo $row['etnia']; ?></option>
+                                                    <option>Escolha</option>
                                                     <option value="Branco">Branco</option>
                                                     <option value="Negro">Negro</option>
                                                     <option value="Indígena">Indígena</option>
@@ -238,7 +238,7 @@ include '../../config/conexao.php';
                                             <div class="form-group col-lg-2">
                                                 <label for="estado_civil">Estado Civil</label>
                                                 <select id="estado_civil" name="estado_civil" class="form-control">
-                                                    <option value="<?php echo $row['estado_civil']; ?>"><?php echo $row['estado_civil']; ?></option>
+                                                    <option>Escolha</option>
                                                     <option value="Solteiro">Solteiro</option>
                                                     <option value="Casado">Casado</option>
                                                     <option value="Viúvo">Viúvo</option>
@@ -251,7 +251,7 @@ include '../../config/conexao.php';
                                             <div class="form-group col-lg-2">
                                                 <label for="escolaridade">Escolaridade</label>
                                                 <select id="escolaridade" name="escolaridade" class="form-control">
-                                                    <option value="<?php echo $row['escolaridade']; ?>"><?php echo $row['escolaridade']; ?></option>
+                                                    <option>Escolha</option>
                                                     <option value="Não Alfabetizado">Não Alfabetizado</option>
                                                     <option value="1°Grau Incompleto">1°Grau Incompleto</option>
                                                     <option value="1°Grau Completo">1°Grau Completo</option>
@@ -267,23 +267,22 @@ include '../../config/conexao.php';
                                         <div class="row">
                                             <div class=" form-group col-lg-6">
                                                 <label for="endereco">Endereço</label>
-                                                <input class="form-control"   type="text" id="endereco" name="endereco" value="<?php echo $row['endereco'] ?>">
+                                                <input class="form-control"   type="text" id="endereco" name="endereco" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-1">
                                                 <label for="numero">N°</label>
-                                                <input class="form-control" type="number"  id="numero" name="numero" value="<?php echo $row['numero'] ?>">
+                                                <input class="form-control" type="number"  id="numero" name="numero" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class=" form-group col-lg-2">
                                                 <label for="bairro">Bairro</label>
-                                                <input class="form-control"   type="text" id="bairro" name="bairro" value="<?php echo $row['bairro'] ?>">
+                                                <input class="form-control"   type="text" id="bairro" name="bairro" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="col-sm-1 form-group">
                                                 <label for="idestado">Estado</label>
                                                 <select class="form-control" id="idestado" name="idestado" onchange="listar_cidades()">
-                                                    <option><?php echo $row['uf']; ?></option>
                                                     <?php
                                                     $sql = ("SELECT idestado, uf FROM estado");
                                                     foreach ($con->query($sql) as $row_e) {
@@ -294,15 +293,15 @@ include '../../config/conexao.php';
                                             </div>
                                             <div class="col-lg-2 form-group">
                                                 <label for="cidade">Cidade</label>
-                                                <select class="form-control" type="text" id="cidade" name="cidade" >
-                                                    <option value="<?php echo $row['idcidade'] ?>"><?php echo $row['descricao']; ?></option>
+                                                <select class="form-control" type="text" id="cidade" name="cidade">
+                                                    <option value="">escolha primeiro um estado</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-lg-12">
                                                 <label for="complemento">Complemento</label>
-                                                <input class="form-control" type="text" id="complemento" name="complemento" value="<?php echo $row['complemento'] ?>">
+                                                <input class="form-control" type="text" id="complemento" name="complemento" >
                                             </div>
                                         </div>
                                         <!--================================================-------> 
