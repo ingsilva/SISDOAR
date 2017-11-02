@@ -70,7 +70,7 @@ include '../../config/conexao.php';
                             <!-- Basic form -->
                             <form role="form" method="post">
                                 <div class="box-info">
-                                    <h2>Cadastro Triagem</h2>
+                                    <h2>Informações Doador</h2>
                                     <!-- Basic form body -->
                                     <div id="basic-form" class="collapse in">
 
@@ -104,7 +104,7 @@ include '../../config/conexao.php';
                                 </div>
 
                                 <div class="box-info">
-                                    <h2>Cadastro Triagem</h2>
+                                    <h2>Questinário Objetivo</h2>
                                     <!-- Basic form body -->
                                     <div id="basic-form" class="collapse in">
                                         <form role="form" method="post">
@@ -122,15 +122,151 @@ include '../../config/conexao.php';
                                                         </label>
                                                     </div>
                                                 </div>
-
-
-
                                             </div>
+                                            <hr>
+                                            <div class="row">
+                                                <label class="col-sm-offset-1 col-sm-4 control-label"> 2 - Ingeriu bebida alcoólica há 24 horas?</label>
+                                                <div class="col-sm-offset-5  col-sm-2">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            Sim
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            Não
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <label class="col-sm-offset-1 col-sm-3 control-label"> 3 - Fumou há 02 horas?</label>
+                                                <div class="col-sm-offset-6  col-sm-2">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            Sim
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            Não
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <label class="col-sm-offset-1 col-sm-3 control-label"> 4 - Alimentou-se hoje?</label>
+                                                <div class="col-sm-offset-6  col-sm-2">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            Sim
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            Não
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <label class="col-sm-offset-1 col-sm-3 control-label"> 5 - Dormiu?</label>
+                                                <div class="col-sm-offset-6  col-sm-2">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            Sim
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            Não
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <label class="col-sm-offset-1 col-sm-6 control-label"> 6 - Deu ou recebeu dinheiro ou drogas para manter relação sexual?</label>
+                                                <div class="col-sm-offset-3  col-sm-2">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            Sim
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            Não
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <label class="col-sm-offset-1 col-sm-5 control-label"> 7 - Teve contato sexual com parceiro que recebeu transfusão?</label>
+                                                <div class="col-sm-offset-4  col-sm-2">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            Sim
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            Não
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <label class="col-sm-offset-1 col-sm-5 control-label"> 8 - Teve contato sexual com parceiro que fez hemodiálise?</label>
+                                                <div class="col-sm-offset-4  col-sm-2">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            Sim
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            Não
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <label class="col-sm-offset-1 col-sm-4 control-label"> 9 - Veio doar sangue para fazer o teste de AIDS?</label>
+                                                <div class="col-sm-offset-5  col-sm-2">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            Sim
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            Não
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                    </div>
+                                </div>
+                                <div class="box-info">
+                                    <h2>Questionário Subjetivo</h2>
+                                    <!-- Basic form body -->
+                                    <div id="basic-form" class="collapse in">
+
+                                        <div class="row">
+                                            <div class="form-group col-lg-1">
+                                                    <label for="peso">Peso</label>
+                                                    <input class="form-control" type="number"  id="peso" name="peso" required="true">
+                                            </div>
+                                        </div>
 
                                     </div>
-
-
-                                </div>
 
                                 <div class="box-info">
 
