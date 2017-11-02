@@ -252,44 +252,33 @@ include '../../config/conexao.php';
                                                 </div>
                                             </div>
                                             <hr>
-                                    </div>
-                                </div>
-                                <div class="box-info">
-                                    <h2>Questionário Subjetivo</h2>
-                                    <!-- Basic form body -->
-                                    <div id="basic-form" class="collapse in">
-
-                                        <div class="row">
-                                            <div class="form-group col-lg-1">
-                                                    <label for="peso">Peso</label>
-                                                    <input class="form-control" type="number"  id="peso" name="peso" required="true">
                                             </div>
-                                        </div>
+                                            </div>
+                                            <div class="box-info">
+                                                <h2>Questinário Subjetivo</h2>
+                                            </div> 
+                                            <div class="box-info">
 
-                                    </div>
 
-                                <div class="box-info">
+                                                <!--================================================-------> 
+                                                <button type="button" id="salvar" class="btn btn-success">Enviar</button>
+                                                <button type="reset" class=" btn btn-danger">Limpar</button>
+                                            </div>
+                                        </form>
 
-
-                                    <!--================================================-------> 
-                                    <button type="button" id="salvar" class="btn btn-success">Enviar</button>
-                                    <button type="reset" class=" btn btn-danger">Limpar</button>
-                                </div>
+                                    </div><!-- End div #basic-form -->
+                                </div><!-- End div .box-info -->
                             </form>
-
-                        </div><!-- End div #basic-form -->
-                    </div><!-- End div .box-info -->
-                </form>
-            </div><!-- End div .col-sm-6 -->
-            <!---========================================================================-->  
-            <?php
-        }
-    }
-    ?>
-    <?php
-    include '../../layout/rodape.php';
-    ?>
-    <!---========================================================================-->  
-</body>
-</html>
+                        </div><!-- End div .col-sm-6 -->
+                        <!---========================================================================-->  
+                        <?php
+                    }
+                }
+                ?>
+                <?php
+                include '../../layout/rodape.php';
+                ?>
+                <!---========================================================================-->  
+                </body>
+                </html>
 

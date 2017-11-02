@@ -50,8 +50,15 @@ and open the template in the editor.
                         </div><!-- End div .icon-box -->
                         <!-- Text box -->
                         <div class="text-box">
-                            <h3>4,700</h3>
-                            <p>DOADORES</p>
+                            <?php
+                            $sql_doadores = (" select count(*) as doadores  from doador  where data_registro is not null;");
+                            foreach ($con->query($sql_doadores) as $row) {
+                                ?>
+                                <h3><?php echo $row['doadores']; ?></h3>
+                                <p>DOADORES</p>
+                                <?php
+                            }
+                            ?>
                         </div><!-- End div .text-box -->
                         <div class="clear"></div>
                         <!-- Progress bar -->
@@ -60,7 +67,7 @@ and open the template in the editor.
                                 <span class="sr-only">80&#37; Complete</span>
                             </div>
                         </div><!-- End div .progress .progress-xs -->
-                        <p class="text-center">Apenas 4,7 mil doaram</p>
+                        <!--<p class="text-center">Apenas 4,7 mil doaram</p>-->
                     </div><!-- End div .info-box -->
                 </div>
                 <!-- End Visitor Info Box -->
@@ -79,8 +86,15 @@ and open the template in the editor.
                         </div><!-- End div .icon-box -->
                         <!-- Text box -->
                         <div class="text-box">
-                            <h3>3,234</h3>
-                            <p>PACIENTES</p>
+                            <?php
+                            $sql_nao_aptos = (" select count(*) as nao_aptos  from doador d, triagem t   where t.doador_iddoador = d.iddoador       and t.anemia = 'nao';");
+                            foreach ($con->query($sql_nao_aptos) as $row) {
+                                ?>
+                                <h3><?php echo $row['nao_aptos']; ?></h3>
+                                <p>DOADORES <small> NÃO APTOS</small></p>
+                                <?php
+                            }
+                            ?>
                         </div><!-- End div .text-box -->
                         <div class="clear"></div>
                         <!-- Progress bar -->
@@ -89,7 +103,7 @@ and open the template in the editor.
                                 <span class="sr-only">65&#37; Complete</span>
                             </div>
                         </div><!-- End div .progress .progress-xs -->
-                        <p class="text-center">Existe 3,2 mil em espera</p>
+                        <!--<p class="text-center">Existe 3,2 mil em espera</p>-->
                     </div><!-- End div .info-box -->
                 </div>
                 <!-- End Orders Info Box -->
@@ -108,8 +122,15 @@ and open the template in the editor.
                         </div><!-- End div .icon-box -->
                         <!-- Text box -->
                         <div class="text-box">
-                            <h3>1,500</h3>
-                            <p>BANCO DE SANGUE</p>
+                            <?php
+                            $sql_nao_aptos = (" select count(*) as nao_aptos  from doador d, triagem t   where t.doador_iddoador = d.iddoador       and t.anemia = 'sim';");
+                            foreach ($con->query($sql_nao_aptos) as $row) {
+                                ?>
+                                <h3><?php echo $row['nao_aptos']; ?></h3>
+                                <p>DOADORES <small>  APTOS</small></p>
+                                <?php
+                            }
+                            ?>
                         </div><!-- End div .text-box -->
                         <div class="clear"></div>
                         <!-- Progress bar -->
@@ -118,7 +139,7 @@ and open the template in the editor.
                                 <span class="sr-only">95&#37; Complete</span>
                             </div>
                         </div><!-- End div .progress .progress-xs -->
-                        <p class="text-center">1,5 mil litros em estoque</p>
+                        <!--<p class="text-center">1,5 mil litros em estoque</p>-->
                     </div><!-- End div .info-box -->
                 </div>
                 <!-- End Downloads Info Box -->
