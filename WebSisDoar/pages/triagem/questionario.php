@@ -45,7 +45,7 @@ include '../../config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1> Questionário: <small> Triagem Clinica</small> </h1>
+                <h1> Questionário: <small> Triagem Clínica</small> </h1>
             </div>
             <!-- End page header -->
             <!--==============INICIO DO CÓDIGO PHP============================-->
@@ -256,6 +256,38 @@ include '../../config/conexao.php';
                                             </div>
                                             <div class="box-info">
                                                 <h2>Questinário Subjetivo</h2>
+                                                <div id="basic-form" class="collapse in">
+
+                                                    <div class="row">
+                                                        <label class="col-sm-offset-1 col-sm-12 control-label"> 10 - Já doou sangue?</label>
+                                                        <div class="form-group col-lg-4">    
+                                                            <label for="quando_doou_sang">Quando?</label>
+                                                            <input class="form-control"   type="text" id="quando_doou_sang" name="quando_doou_sang">
+                                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                                        </div>
+                                                        <div class="form-group col-lg-4">    
+                                                            <label for="quantas_vzs_doou">Quantas vezes?</label>
+                                                            <input class="form-control"   type="text" id="quantas_vzs_doou" name="quantas_vzs_doou">
+                                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                                        </div>
+                                                        <div class="form-group col-lg-4">    
+                                                            <label for="onde_doou_sang">Onde?</label>
+                                                            <input class="form-control"   type="text" id="onde_doou_sang" name="onde_doou_sang">
+                                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                                        </div>
+                                                        <label class="col-sm-offset-1 col-sm-12 control-label"> 11 - Foi recusado como Doador?</label>
+                                                        <div class="form-group col-lg-8">    
+                                                            <label for="quando_doou_sang">Motivo</label>
+                                                            <input class="form-control"   type="text" id="quando_doou_sang" name="quando_doou_sang">
+                                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                                        </div>
+                                                        <div class="form-group col-lg-4">    
+                                                            <label for="quantas_vzs_doou">Quando?</label>
+                                                            <input class="form-control"   type="text" id="quantas_vzs_doou" name="quantas_vzs_doou">
+                                                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div> 
                                             <div class="box-info">
 
