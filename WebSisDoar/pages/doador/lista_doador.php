@@ -75,12 +75,13 @@ include '../../config/conexao.php';
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select iddoador, nome, idade, cpf, rg, tipo_sangue,  fator_rh, dd, contato,
+                                $sql = ("select iddoador, nome, data_registro, idade, cpf, rg, tipo_sangue,  fator_rh, dd, contato,
                                                 case  sexo
                                                 when 'F' then 'Feminino'
                                                 when 'M' then 'Masculino'
                                                 end sexo
-                                        from doador");
+                                        from doador
+                                        where data_registro is not null;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>

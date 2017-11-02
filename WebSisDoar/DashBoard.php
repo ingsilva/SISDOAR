@@ -180,11 +180,12 @@ and open the template in the editor.
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select iddoador, nome,  date_format(data_nascimento, '%d/%m/%Y') as data_nascimento, idade , date_format(agend_hora, '%H:%i') as 'agend_hora', date_format(agend_data, '%d/%m/%Y') as 'agend_data'
+                                $sql = ("select iddoador, data_registro, nome,  date_format(data_nascimento, '%d/%m/%Y') as data_nascimento, idade , date_format(agend_hora, '%H:%i') as 'agend_hora', date_format(agend_data, '%d/%m/%Y') as 'agend_data'
                                             from doador d, agendamento a
                                                 where d.iddoador = a.doador_iddoador and
-                                                    agend_hora and agend_data  is not null
-                                                    group by agend_hora and agend_data;");
+                                                    agend_hora and agend_data  is not null and
+                                                    data_registro is null
+                                                    group by data_registro, agend_hora, agend_data;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>

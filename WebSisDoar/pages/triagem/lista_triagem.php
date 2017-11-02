@@ -42,7 +42,7 @@ include '../../config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1> Triagem <small>de Doadores</small></h1>
+                <h1> Clínica: <small>Triagem Clínica</small></h1>
             </div>
             <!-- End page header -->
 
@@ -59,21 +59,27 @@ include '../../config/conexao.php';
                                 <tr>
                                     <th>ID</th>
                                     <th>Nome</th>
-                                    <th>Idade</th>
-                                    <th>Peso</th>
-                                    <th>Status</th>
-                                    <th>Editar</th>
+                                    <th>Idade</th>                                    
+                                    <th>Sexo</th>
+                                    <th>Data Registro</th>
+                                    <th>Status HTC</th>
+                                    <th>Ação</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select t.idtriagem, d.nome, t.idade, t.peso, 
-                                            case  t.status	
+                                $sql = ("select t.idtriagem, d.nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
+                                            date_format(data_registro, '%d/%m/%Y') as data_registro,
+                                            case  anemia	
                                                             when 'sim' then 'Apto a Doar'
-                                            end status
+                                            end anemia, 
+                                            case sexo
+                                                when 'F' then 'Feminino'
+                                                when 'M' then 'Masculino'
+                                            end sexo
                                             from doador d, triagem t   
                                                     where t.doador_iddoador = d.iddoador 
-                                                    and t.status = 'sim'
+                                                    and t.anemia = 'sim'
                                                     group by nome, idade;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
@@ -81,8 +87,10 @@ include '../../config/conexao.php';
                                         <td><?php echo $row['idtriagem']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['idade']; ?></td>
-                                        <td><?php echo $row['peso']; ?></td>
-                                        <td><?php echo $row['status']; ?></td>
+                                        <td><?php echo $row['sexo']; ?></td>
+                                        <td><?php echo $row['data_registro']; ?></td>
+                                        <td><?php echo $row['anemia']; ?></td>
+                                        
                                         <td class="text-center">
                                             <?php echo "<a class='btn btn-default' href='../estoque/entrada_estoque.php?idtriagem=" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
                                         </td>

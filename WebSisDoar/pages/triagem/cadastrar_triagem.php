@@ -13,16 +13,16 @@ include '../../config/conexao.php';
 
                 $('#salvar').click(function () {
                     var id = $("#id").val();
-                    var idade = $("#idade").val();
                     var peso = $("#peso").val();
-                    var jejum = $("#jejum").val();
                     var iddoador = $("#iddoador").val();
-                    var status = $("#status").val();
-                    var iddoencas = $("#iddoencas").val();
+                    var pulso = $("#pulso").val();
+                    var pressao = $("#pressao").val();
+                    var altura = $("#altura").val();
+                    var anemia = $("#anemia").val();
 
 
-                    var dataString = {id: id, idade: idade, peso: peso,
-                        jejum: jejum, iddoador: iddoador, status: status, iddoencas: iddoencas};
+                    var dataString = {id: id, peso: peso, iddoador: iddoador, pulso: pulso, pressao: pressao,
+                        altura: altura, anemia: anemia};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/triagem/function_triagem.php",
@@ -47,7 +47,7 @@ alert(iddoencas);
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1> Coletar <small> Informações  </small> </h1>
+                <h1>Hematologia: <small> Coletar Informações</small> </h1>
             </div>
             <!-- End page header -->
             <!--==============INICIO DO CÓDIGO PHP============================-->
@@ -86,39 +86,26 @@ alert(iddoencas);
                                                     <label for="peso">Peso</label>
                                                     <input class="form-control" type="number"  id="peso" name="peso" required="true">
                                                 </div>
-                                                <div class="form-group col-lg-2">
-                                                    <label for="jejum">Jejum</label>
-                                                    <select id="jejum" name="jejum" class="form-control">
-                                                        <option>Escolha</option>
-                                                        <option value="sim">Sim</option>
-                                                        <option value="nao">Não</option>
-                                                    </select>
+                                                <div class="form-group col-lg-1">
+                                                    <label for="pulso">Pulso</label>
+                                                    <input class="form-control" type="number"  id="pulso" name="pulso" required="true">
+                                                </div>
+                                                <div class="form-group col-lg-1">
+                                                    <label for="pressao">Pressão</label>
+                                                    <input class="form-control" type="number"  id="pressao" name="pressao" required="true">
+                                                </div>
+                                                <div class="form-group col-lg-1">
+                                                    <label for="altura">Altura</label>
+                                                    <input class="form-control" type="number"  id="altura" name="altura" required="true">
                                                 </div>
                                                 <div class="form-group col-lg-2">
-                                                    <label for="status">Status</label>
-                                                    <select id="status" name="status" class="form-control">
+                                                    <label for="anemia">HTC</label>
+                                                    <select id="anemia" name="anemia" class="form-control">
                                                         <option>Escolha</option>
                                                         <option value="sim">Apto</option>
                                                         <option value="nao">Não Apto</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-sm-2 form-group">
-
-                                                    <label for="doencas">Motivo</label>
-                                                    <select class="form-control" id="iddoencas" name="iddoencas">
-                                                        <option>Caso: Não Apto</option>
-
-                                                        <?php
-                                                        $sql = ("SELECT * FROM doencas");
-                                                        foreach ($con->query($sql) as $row) {
-                                                            echo "<option value='" . $row['iddoencas'] . "'>" . $row['descricao'] . "</option>";
-                                                        }
-                                                        ?>
-                                                    </select>
-                                                </div>
-
-
-
                                             </div>
                                         </div>
                                         <!--================================================-------> 

@@ -17,7 +17,7 @@ include '../../config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1>Pré Triagem <small>de Doadores</small></h1>
+                <h1>Hematologia: <small>Triagem Hematologica</small></h1>
             </div>
             <!-- End page header -->
 
@@ -36,20 +36,19 @@ include '../../config/conexao.php';
                                     <th>Nome</th>
                                     <th>Idade</th>                                    
                                     <th>Sexo</th>
-                                    <th>Tipo</th>
-                                    <th>Fator RH</th>
+                                    <th>Data Registro</th>
                                     <th>Ação</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("SELECT iddoador, nome,  truncate(datediff(now(), data_nascimento)/365,0) as 'idade', 
+                                $sql = ("SELECT iddoador, date_format(data_registro,'%d/%m/%Y') as data_registro, nome,  truncate(datediff(now(), data_nascimento)/365,0) as 'idade', 
                                                     case  sexo
                                                 when 'F' then 'Feminino'
                                                 when 'M' then 'Masculino'
-                                                end sexo, 
-                                                tipo_sangue, fator_rh
-						FROM doador");
+                                                end sexo
+						FROM doador
+                                                where data_registro is not null;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
@@ -57,8 +56,7 @@ include '../../config/conexao.php';
                                         <td><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['idade']; ?></td>                                        
                                         <td><?php echo $row['sexo']; ?></td>
-                                        <td><?php echo $row['tipo_sangue']; ?></td>
-                                        <td><?php echo $row['fator_rh']; ?></td>
+                                        <td><?php echo $row['data_registro']; ?></td>
                                         <td>
                                             <?php echo "<a class='btn btn-default' href='cadastrar_triagem.php?iddoador=" . $row['iddoador'] . "'><i class='glyphicon glyphicon-list-alt'></i></a>"; ?>
                                         </td>

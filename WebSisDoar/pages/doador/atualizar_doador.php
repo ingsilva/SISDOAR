@@ -72,22 +72,14 @@ include '../../config/conexao.php';
             <!--==============INICIO DO CÓDIGO PHP============================-->
             <?php
             if (isset($_GET['iddoador'])) {
-                $sql = "select iddoador, d.nome, data_nascimento, cpf, rg, endereco, numero, bairro, complemento, 
-		idcidade, descricao, uf,  tipo_sangue, fator_rh, idade, sexo, data_registro, num_sus,
+                $sql = "select iddoador, d.nome, date_format(data_nascimento, '%d/%m/%Y') as data_nascimento, cpf, rg, endereco, numero, bairro, complemento, 
+		idcidade, descricao, uf,  tipo_sangue, fator_rh, idade, sexo, date_format(data_registro, '%d/%m/%Y') as data_registro, num_sus,
 		expeditor, etnia, nome_pai, nome_mae, estado_civil, naturalidade, sexo, escolaridade 
 		from doador d, cidade c, estado e
 			where d.cidade_idcidade = c.idcidade
 					and e.idestado = c.estado_idestado
                                         and
                             iddoador='" . $_GET['iddoador'] . "'";
-                /* $sql = "select iddoador, d.nome, date_format(data_nascimento, '%d/%m/%Y') data_nasc, cpf, rg, endereco, numero, bairro, complemento, 
-                  idcidade, c.descricao, uf,  tipo_sangue, fator_rh, idade, sexo, date_format(data_registro, '%d/%m/%Y') data_registro, num_sus,
-                  expeditor, etnia, nome_pai, nome_mae, estado_civil, naturalidade, sexo, escolaridade
-                  from doador d, cidade c, estado e
-                  where d.cidade_idcidade = c.idcidade
-                  and e.idestado = c.estado_idestado
-                  and
-                  iddoador='" . $_GET['iddoador'] . "'"; */
 
 
                 foreach ($con->query($sql) as $row) {
@@ -126,8 +118,8 @@ include '../../config/conexao.php';
                                                 <label for="sexo">Sexo</label>
                                                 <select class="form-control" id="sexo" name="sexo">
                                                     <option value="<?php echo $row['sexo']; ?>"><?php echo $row['sexo']; ?></option>
-                                                    <option value="Feminino">Feminino</option>
-                                                    <option value="Masculino">Masculino</option>
+                                                    <option value="F">Feminino</option>
+                                                    <option value="M">Masculino</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-lg-1">

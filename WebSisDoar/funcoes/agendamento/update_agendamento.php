@@ -3,10 +3,11 @@
 include("../../config/conexao.php");
 
 $iddoador = $_POST["id"];
-//$data_nasc = $_POST["data_nascimento"];
-$numero_sus = $_POST["numero_sus"];
+$data_nasc = $_POST["data_nascimento"];
+$data_nascimento = '1970-08-05';
 
 
+echo $data_nascimento."<br>";
 /* $cpf = $_POST["cpf"];
   $rg = $_POST["rg"];
   $idade = $_POST["idade"];
@@ -18,9 +19,9 @@ $numero_sus = $_POST["numero_sus"];
 
 
 //alterar
-$sql = $con->prepare("UPDATE doador SET  numero_sus = :numero_sus WHERE iddoador = :iddoador");
+$sql = $con->prepare("UPDATE doador SET  data_nascimento = :data_nascimento WHERE iddoador = :iddoador");
 
-$sql->bindValue(':numero_sus', $numero_sus);
+$sql->bindValue(':data_nascimento', $data_nascimento);
 $sql->bindValue(':iddoador', $iddoador);
 
 
