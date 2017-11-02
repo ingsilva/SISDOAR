@@ -92,7 +92,7 @@ include '../../config/conexao.php';
                                         <td><?php echo $row['anemia']; ?></td>
                                         
                                         <td class="text-center">
-                                            <?php echo "<a class='btn btn-default' href='../estoque/entrada_estoque.php?idtriagem=" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
+                                            <?php echo "<a class='btn btn-default' href='./questionario.php?idtriagem=" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
                                         </td>
                                     </tr>
                                     <?php
