@@ -82,19 +82,19 @@ alert(iddoencas);
                                                     <label for="idade">Idade</label>
                                                     <input class="form-control"  type="text" id="idade" name="idade" value="<?php echo $row['idade'] ?>"  >
                                                 </div>
-                                                <div class="form-group col-lg-1">
+                                                <div class="form-group col-lg-2">
                                                     <label for="peso">Peso</label>
                                                     <input class="form-control" type="number"  id="peso" name="peso" required="true">
                                                 </div>
-                                                <div class="form-group col-lg-1">
+                                                <div class="form-group col-lg-2">
                                                     <label for="pulso">Pulso</label>
                                                     <input class="form-control" type="number"  id="pulso" name="pulso" required="true">
                                                 </div>
-                                                <div class="form-group col-lg-1">
+                                                <div class="form-group col-lg-2">
                                                     <label for="pressao">Pressão</label>
                                                     <input class="form-control" type="number"  id="pressao" name="pressao" required="true">
                                                 </div>
-                                                <div class="form-group col-lg-1">
+                                                <div class="form-group col-lg-2">
                                                     <label for="altura">Altura</label>
                                                     <input class="form-control" type="number"  id="altura" name="altura" required="true">
                                                 </div>

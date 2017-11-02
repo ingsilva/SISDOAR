@@ -38,14 +38,14 @@ and open the template in the editor.
             <div class="row">
 
                 <!-- Visitor Info Box -->
-                <div class="col-sm-3 col-xs-6">
+                <div class=" col-sm-4 col-xs-6">
                     <!-- Box info -->
                     <div class="box-info">
                         <!-- Icon box -->
                         <div class="icon-box">
                             <span class="fa-stack">
-                                <i class="fa fa-circle fa-stack-2x success"></i>
-                                <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+                                <i class="fa fa-circle fa-stack-2x info"></i>
+                                <i class="fa fa-users fa-stack-1x fa-inverse"></i>
                             </span>
                         </div><!-- End div .icon-box -->
                         <!-- Text box -->
@@ -63,7 +63,7 @@ and open the template in the editor.
                         <div class="clear"></div>
                         <!-- Progress bar -->
                         <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
                                 <span class="sr-only">80&#37; Complete</span>
                             </div>
                         </div><!-- End div .progress .progress-xs -->
@@ -74,14 +74,14 @@ and open the template in the editor.
 
 
                 <!-- Orders Info Box -->
-                <div class="col-sm-3 col-xs-6">
+                <div class="col-sm-4 col-xs-6">
                     <!-- Box info -->
                     <div class="box-info">
                         <!-- Icon box -->
                         <div class="icon-box">
                             <span class="fa-stack">
                                 <i class="fa fa-circle fa-stack-2x danger"></i>
-                                <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
+                                <i class="fa fa-frown-o fa-stack-1x fa-inverse"></i>
                             </span>
                         </div><!-- End div .icon-box -->
                         <!-- Text box -->
@@ -110,14 +110,14 @@ and open the template in the editor.
 
 
                 <!-- Downloads Info Box -->
-                <div class="col-sm-3 col-xs-6">
+                <div class="col-sm-4 col-xs-6">
                     <!-- Box info -->
                     <div class="box-info">
                         <!-- Icon box -->
                         <div class="icon-box">
                             <span class="fa-stack">
-                                <i class="fa fa-circle fa-stack-2x info"></i>
-                                <i class="fa fa-cloud-download fa-stack-1x fa-inverse"></i>
+                                <i class="fa fa-circle fa-stack-2x success"></i>
+                                <i class="fa fa-smile-o fa-stack-1x fa-inverse"></i>
                             </span>
                         </div><!-- End div .icon-box -->
                         <!-- Text box -->
@@ -135,7 +135,7 @@ and open the template in the editor.
                         <div class="clear"></div>
                         <!-- Progress bar -->
                         <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
                                 <span class="sr-only">95&#37; Complete</span>
                             </div>
                         </div><!-- End div .progress .progress-xs -->
@@ -145,33 +145,6 @@ and open the template in the editor.
                 <!-- End Downloads Info Box -->
 
 
-                <!-- Shipping Info Box -->
-                <div class="col-sm-3 col-xs-6">
-                    <!-- Box info -->
-                    <div class="box-info">
-                        <!-- Icon box -->
-                        <div class="icon-box">
-                            <span class="fa-stack">
-                                <i class="fa fa-circle fa-stack-2x warning"></i>
-                                <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </div><!-- End div .icon-box -->
-                        <!-- Text box -->
-                        <div class="text-box">
-                            <h3>2,000</h3>
-                            <p>SAÍDA SANGUÍNEA</p>
-                        </div><!-- End div .text-box -->
-                        <div class="clear"></div>
-                        <!-- Progress bar -->
-                        <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%">
-                                <span class="sr-only">55&#37; Complete</span>
-                            </div>
-                        </div><!-- End div .progress .progress-xs -->
-                        <p class="text-center">2 mil litros recebidos</p>
-                    </div><!-- End div .info-box -->
-                </div>
-                <!-- End Shipping Info Box -->
 
             </div>
             <div class="page-heading animated fadeInDownBig">
