@@ -16,7 +16,7 @@ include '../../config/conexao.php';
         <div class="body content rows scroll-y">
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1><small> Relatórios por </small> Periódo </h1>
+                <h1> Relatórios <small> por Periódo </small></h1>
             </div>
             <!-- End page header -->
             <div class="row">

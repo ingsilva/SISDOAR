@@ -332,7 +332,7 @@
             <div class="container text-center">
                 <div class="call-to-action">
                     <h2>Faça parte dessa equipe de Heróis!</h2>
-                    <input type="image" src="assets/img/liga.png" width="380" height="70">
+                    <input class="img-responsive "type="image" src="assets/img/liga.png">
                     <br>
                 </div>
             </div>
@@ -343,6 +343,7 @@
                 <div class="col-lg-5">
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2 text-center">
+                            <hr>
                             <h2 class="section-heading">Encontre-nos!</h2>
                             <hr class="primary">
                             <p>Nos encontre através do nosso endereço ou pela nossa página no facebook!</p>
@@ -370,6 +371,9 @@
                         </div>
                     </div>
                 </div>
+                <hr>
+                <h2 class="section-heading text-center">Faça seu Agendamento</h2>
+                <hr>
                 <div class="col-lg-7">
                     <form role="form" >
                         <div class="row">
