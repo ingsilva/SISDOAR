@@ -18,14 +18,10 @@ include '../../config/conexao.php';
 
                 $('#salvar').click(function () {
                     var id = $("#id").val();
-                    var quantidade = $("#quantidade").val();
-                    var tipo_sangue = $("#tipo_sangue").val();
-                    var fator_rh = $("#fator_rh").val();
-                    var idtriagem = $("#idtriagem").val();
-                    var categoria = $("#categoria").val();
+                    var dou_hoje = $("#dou_hoje").val();
 
-                    var dataString = {id: id, quantidade: quantidade, tipo_sangue: tipo_sangue,
-                        fator_rh: fator_rh, idtriagem: idtriagem, categoria: categoria};
+
+                    var dataString = {id: id, dou_hoje: dou_hoje};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/estoque/ent_estoque.php",
@@ -37,7 +33,7 @@ include '../../config/conexao.php';
                                 location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-                                alert(idtriagem);
+                                alert(dou_hoje);
                             }
                         }
                     });
@@ -117,14 +113,12 @@ include '../../config/conexao.php';
                                                 <label class="col-sm-offset-1 col-sm-3 control-label"> 1 - Você está bem de saúde hoje ?</label>
                                                 <div class="col-sm-offset-6  col-sm-2">
                                                     <div class="radio">
-                                                        <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                                            Sim
-                                                        </label>
-                                                        <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                                            Não
-                                                        </label>
+                                                        <!----------------------------------->                          
+                                                        <input type="radio" name="dou_hoje" id="dou_hoje" value="s" checked>
+                                                        Sim
+                                                        <input type="radio" name="dou_hoje" id="dou_hoje" value="n">
+                                                        Não
+                                                        <!-----------------------------------> 
                                                     </div>
                                                 </div>
                                             </div>
@@ -321,7 +315,7 @@ include '../../config/conexao.php';
                                                         </div>
                                                     </div>
                                                     <hr>
-                                                    
+
                                                 </div>
                                             </div> 
                                             <div class="box-info">
