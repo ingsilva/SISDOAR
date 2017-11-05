@@ -16,7 +16,7 @@ if ($_SG ['conectaServidor'] == true) {
 }
 // Verifica se precisa iniciar a sessão
 if ($_SG ['abreSessao'] == true){
-	session_start ();
+	@session_start ();
 }
 /**
  * Função que valida um usuário e senha

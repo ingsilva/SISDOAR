@@ -18,13 +18,13 @@ include '../../config/conexao.php';
 
                 $('#salvar').click(function () {
                     var id = $("#id").val();
-                    var dou_hoje = $("#dou_hoje").val();
+                    var saude_hoje = $("#saude_hoje").val();
 
 
-                    var dataString = {id: id, dou_hoje: dou_hoje};
+                    var dataString = {id: id, saude_hoje: saude_hoje};
                     $.ajax({
                         type: "POST",
-                        url: "../../funcoes/estoque/ent_estoque.php",
+                        url: "../../funcoes/triagem/questionario.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
@@ -33,7 +33,8 @@ include '../../config/conexao.php';
                                 location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-                                alert(dou_hoje);
+                                alert(saude_hoje);
+                                alert(id);
                             }
                         }
                     });
@@ -67,7 +68,7 @@ include '../../config/conexao.php';
                     <!--===============================================================-->            
                     <div class="row">
                         <div class="col-sm-12">
-                            <input type="hidden" name="idtriagem" id="idtriagem" value="<?php echo $row['iddoador'] ?>" />
+                            <input type="hidden" name="id" id="id" value="<?php echo $row['idtriagem'] ?>" />
                             <!-- Basic form -->
                             <form role="form" method="post">
                                 <div class="box-info">
@@ -113,12 +114,17 @@ include '../../config/conexao.php';
                                                 <label class="col-sm-offset-1 col-sm-3 control-label"> 1 - Você está bem de saúde hoje ?</label>
                                                 <div class="col-sm-offset-6  col-sm-2">
                                                     <div class="radio">
-                                                        <!----------------------------------->                          
-                                                        <input type="radio" name="dou_hoje" id="dou_hoje" value="s" checked>
+                                                        <!------------------------------------>
+                                                        <label>                          
+                                                        <input type="radio" name="saude_hoje" id="saude_hoje" value="s" >
                                                         Sim
-                                                        <input type="radio" name="dou_hoje" id="dou_hoje" value="n">
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="saude_hoje" id="saude_hoje" value="n">
                                                         Não
-                                                        <!-----------------------------------> 
+                                                    </label>
+                                                        
+                                                        <!------------------------------------> 
                                                     </div>
                                                 </div>
                                             </div>
@@ -128,11 +134,11 @@ include '../../config/conexao.php';
                                                 <div class="col-sm-offset-5  col-sm-2">
                                                     <div class="radio">
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            <input type="radio" name="alcool_hoje" id="alcool_hoje" value="s">
                                                             Sim
                                                         </label>
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            <input type="radio" name="alcool_hoje" id="alcool_hoje" value="n">
                                                             Não
                                                         </label>
                                                     </div>
@@ -144,11 +150,11 @@ include '../../config/conexao.php';
                                                 <div class="col-sm-offset-6  col-sm-2">
                                                     <div class="radio">
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            <input type="radio" name="fumou_horas" id="fumou_horas" value="s">
                                                             Sim
                                                         </label>
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            <input type="radio" name="fumou_horas" id="fumou_horas" value="n">
                                                             Não
                                                         </label>
                                                     </div>
@@ -160,11 +166,11 @@ include '../../config/conexao.php';
                                                 <div class="col-sm-offset-6  col-sm-2">
                                                     <div class="radio">
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            <input type="radio" name="alimentou" id="alimentou" value="s">
                                                             Sim
                                                         </label>
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            <input type="radio" name="alimentou" id="alimentou" value="n">
                                                             Não
                                                         </label>
                                                     </div>
@@ -176,11 +182,11 @@ include '../../config/conexao.php';
                                                 <div class="col-sm-offset-6  col-sm-2">
                                                     <div class="radio">
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            <input type="radio" name="dormiu" id="dormiu" value="s">
                                                             Sim
                                                         </label>
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            <input type="radio" name="dormiu" id="dormiu" value="n">
                                                             Não
                                                         </label>
                                                     </div>
@@ -192,11 +198,11 @@ include '../../config/conexao.php';
                                                 <div class="col-sm-offset-3  col-sm-2">
                                                     <div class="radio">
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            <input type="radio" name="drogas_rel_sexual" id="drogas_rel_sexual" value="s">
                                                             Sim
                                                         </label>
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            <input type="radio" name="drogas_rel_sexual" id="drogas_rel_sexual" value="n">
                                                             Não
                                                         </label>
                                                     </div>
@@ -208,11 +214,11 @@ include '../../config/conexao.php';
                                                 <div class="col-sm-offset-4  col-sm-2">
                                                     <div class="radio">
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            <input type="radio" name="contato_sexual_transfusao" id="contato_sexual_transfusao" value="s">
                                                             Sim
                                                         </label>
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            <input type="radio" name="contato_sexual_transfusao" id="contato_sexual_transfusao" value="n">
                                                             Não
                                                         </label>
                                                     </div>
@@ -224,11 +230,11 @@ include '../../config/conexao.php';
                                                 <div class="col-sm-offset-4  col-sm-2">
                                                     <div class="radio">
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            <input type="radio" name="contato_sexual_hemod" id="contato_sexual_hemod" value="s">
                                                             Sim
                                                         </label>
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            <input type="radio" name="contato_sexual_hemod" id="contato_sexual_hemod" value="n">
                                                             Não
                                                         </label>
                                                     </div>
@@ -240,11 +246,11 @@ include '../../config/conexao.php';
                                                 <div class="col-sm-offset-5  col-sm-2">
                                                     <div class="radio">
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                            <input type="radio" name="teste_aids" id="teste_aids" value="s">
                                                             Sim
                                                         </label>
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                            <input type="radio" name="teste_aids" id="teste_aids" value="n">
                                                             Não
                                                         </label>
                                                     </div>
@@ -260,18 +266,18 @@ include '../../config/conexao.php';
                                                     <div class="row">
                                                         <label class="col-sm-offset-1 col-sm-12 control-label"> 10 - Já doou sangue?</label>
                                                         <div class="form-group col-lg-4">    
-                                                            <label for="quando_doou_sang">Quando?</label>
-                                                            <input class="form-control"   type="text" id="quando_doou_sang" name="quando_doou_sang">
+                                                            <label for="quando_doou">Quando?</label>
+                                                            <input class="form-control"   type="date" id="quando_doou" name="quando_doou">
                                                             <!--<p class="help-block">Example block-level help text here.</p>-->
                                                         </div>
                                                         <div class="form-group col-lg-4">    
                                                             <label for="quantas_vzs_doou">Quantas vezes?</label>
-                                                            <input class="form-control"   type="text" id="quantas_vzs_doou" name="quantas_vzs_doou">
+                                                            <input class="form-control"   type="number" id="quantas_vzs_doou" name="quantas_vzs_doou">
                                                             <!--<p class="help-block">Example block-level help text here.</p>-->
                                                         </div>
                                                         <div class="form-group col-lg-4">    
-                                                            <label for="onde_doou_sang">Onde?</label>
-                                                            <input class="form-control"   type="text" id="onde_doou_sang" name="onde_doou_sang">
+                                                            <label for="onde_doou">Onde?</label>
+                                                            <input class="form-control"   type="text" id="onde_doou" name="onde_doou">
                                                             <!--<p class="help-block">Example block-level help text here.</p>-->
                                                         </div>
                                                     </div>
@@ -279,13 +285,13 @@ include '../../config/conexao.php';
                                                     <div class="row">
                                                         <label class="col-sm-offset-1 col-sm-12 control-label"> 11 - Foi recusado como Doador?</label>
                                                         <div class="form-group col-lg-8">    
-                                                            <label for="quando_doou_sang">Motivo</label>
-                                                            <input class="form-control"   type="text" id="quando_doou_sang" name="quando_doou_sang">
+                                                            <label for="recusado_motivo">Motivo</label>
+                                                            <input class="form-control"   type="text" id="recusado_motivo" name="recusado_motivo">
                                                             <!--<p class="help-block">Example block-level help text here.</p>-->
                                                         </div>
                                                         <div class="form-group col-lg-4">    
-                                                            <label for="quantas_vzs_doou">Quando?</label>
-                                                            <input class="form-control"   type="text" id="quantas_vzs_doou" name="quantas_vzs_doou">
+                                                            <label for="recusado_data">Quando?</label>
+                                                            <input class="form-control"   type="date" id="recusado_data" name="recusado_data">
                                                             <!--<p class="help-block">Example block-level help text here.</p>-->
                                                         </div>
                                                     </div>
@@ -301,16 +307,16 @@ include '../../config/conexao.php';
                                                     <hr>
                                                     <div class="row">
                                                         <div class="form-group col-lg-4">  
-                                                            <label for="sexo">Situação de Doador</label>
-                                                            <select class="form-control" id="sexo" name="sexo">
+                                                            <label for="situacao_doador">Situação de Doador</label>
+                                                            <select class="form-control" id="situacao_doador" name="situacao_doador">
                                                                 <option>Escolha</option>
                                                                 <option value="sim">Apto</option>
                                                                 <option value="nao">Não Apto</option>
                                                             </select>
                                                         </div>
                                                         <div class="form-group col-lg-8">    
-                                                            <label for="quantas_vzs_doou">Obersações</label>
-                                                            <textarea class="form-control"   type="text" id="quantas_vzs_doou" name="quantas_vzs_doou"></textarea>
+                                                            <label for="obs_doador">Obersações</label>
+                                                            <textarea class="form-control"   type="text" id="obs_doador" name="obs_doador"></textarea>
                                                             <!--<p class="help-block">Example block-level help text here.</p>-->
                                                         </div>
                                                     </div>
@@ -321,7 +327,7 @@ include '../../config/conexao.php';
                                             <div class="box-info">
 
 
-                                                <!--================================================-------> 
+                                                <!--================================================--------> 
                                                 <button type="button" id="salvar" class="btn btn-success">Enviar</button>
                                                 <button type="reset" class=" btn btn-danger">Limpar</button>
                                             </div>
