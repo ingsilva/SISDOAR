@@ -1,0 +1,10 @@
+arquivo questionario.php(codigo html) fica na pasta pages/triagem
+
+arquivo questionario.php(funçao insert) fica na pasta \funcoes\triagem
+
+arqivo .sql só executar no mysql
+
+TA PRONTO SORVETINHO !!!!!!!!!
+
+
+ARROCA MAMAIN !!!!
