@@ -22,6 +22,7 @@ include '../../config/conexao.php';
                 $('#salvar').click(function () {
                     var id = $("#id").val();
                     var saude_hoje = $("#saude_hoje").val();
+                    var saude_hoje1 = $("#saude_hoje1").val();
                     var alcool_hoje = $("#alcool_hoje").val();
                     var fumou_horas = $("#fumou_horas").val();
                     var alimentou = $("#alimentou").val();
@@ -56,8 +57,7 @@ include '../../config/conexao.php';
                                 location.reload();
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-                                alert(saude_hoje);
-                                alert(id);
+                               
                             }
                         }
                     });
@@ -133,36 +133,25 @@ include '../../config/conexao.php';
                                     <!-- Basic form body -->
                                     <div id="basic-form" class="collapse in">
                                         <div class="row">
-                                            <label class="col-sm-offset-1 col-sm-3 control-label"> 1 - Você está bem de saúde hoje ?</label>
+                                            <label class="col-sm-offset-1 col-sm-3 control-label" for="saude_hoje"> 1 - Você está bem de saúde hoje ?</label>
                                             <div class="col-sm-offset-6  col-sm-2">
-                                                <div class="radio">
-                                                    <!------------------------------------>
-                                                    <label>                          
-                                                        <input type="radio" name="saude_hoje" id="saude_hoje" value="s" >
-                                                        Sim
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="saude_hoje" id="saude_hoje" value="n">
-                                                        Não
-                                                    </label>
-
-                                                    <!------------------------------------> 
-                                                </div>
+                                                <select id="saude_hoje" name="saude_hoje" class="form-control">
+                                                        <option>Escolha</option>
+                                                        <option value="sim">SIM</option>
+                                                        <option value="nao">NÃO</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="row">
-                                            <label class="col-sm-offset-1 col-sm-4 control-label"> 2 - Ingeriu bebida alcoólica há 24 horas?</label>
+                                            <label class="col-sm-offset-1 col-sm-4 control-label" > 2 - Ingeriu bebida alcoólica há 24 horas?</label>
                                             <div class="col-sm-offset-5  col-sm-2">
                                                 <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="alcool_hoje" id="alcool_hoje" value="s">
-                                                        Sim
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="alcool_hoje" id="alcool_hoje" value="n">
-                                                        Não
-                                                    </label>
+                                                  <select id="alcool_hoje" name="alcool_hoje" class="form-control">
+                                                        <option>Escolha</option>
+                                                        <option value="sim">SIM</option>
+                                                        <option value="nao">NÃO</option>
+                                                </select>  
                                                 </div>
                                             </div>
                                         </div>
@@ -170,112 +159,84 @@ include '../../config/conexao.php';
                                         <div class="row">
                                             <label class="col-sm-offset-1 col-sm-3 control-label"> 3 - Fumou há 02 horas?</label>
                                             <div class="col-sm-offset-6  col-sm-2">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="fumou_horas" id="fumou_horas" value="s">
-                                                        Sim
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="fumou_horas" id="fumou_horas" value="n">
-                                                        Não
-                                                    </label>
-                                                </div>
+                                                <select id="fumou_horas" name="fumou_horas" class="form-control">
+                                                        <option>Escolha</option>
+                                                        <option value="sim">SIM</option>
+                                                        <option value="nao">NÃO</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="row">
                                             <label class="col-sm-offset-1 col-sm-3 control-label"> 4 - Alimentou-se hoje?</label>
                                             <div class="col-sm-offset-6  col-sm-2">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="alimentou" id="alimentou" value="s">
-                                                        Sim
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="alimentou" id="alimentou" value="n">
-                                                        Não
-                                                    </label>
-                                                </div>
+                                                
+                                                  <select id="alimentou" name="alimentou" class="form-control">
+                                                        <option>Escolha</option>
+                                                        <option value="sim">SIM</option>
+                                                        <option value="nao">NÃO</option>
+                                                </select>
+                                                
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="row">
                                             <label class="col-sm-offset-1 col-sm-3 control-label"> 5 - Dormiu?</label>
                                             <div class="col-sm-offset-6  col-sm-2">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="dormiu" id="dormiu" value="s">
-                                                        Sim
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="dormiu" id="dormiu" value="n">
-                                                        Não
-                                                    </label>
-                                                </div>
+                                                  <select id="dormiu" name="dormiu" class="form-control">
+                                                        <option>Escolha</option>
+                                                        <option value="sim">SIM</option>
+                                                        <option value="nao">NÃO</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="row">
                                             <label class="col-sm-offset-1 col-sm-6 control-label"> 6 - Deu ou recebeu dinheiro ou drogas para manter relação sexual?</label>
                                             <div class="col-sm-offset-3  col-sm-2">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="drogas_rel_sexual" id="drogas_rel_sexual" value="s">
-                                                        Sim
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="drogas_rel_sexual" id="drogas_rel_sexual" value="n">
-                                                        Não
-                                                    </label>
-                                                </div>
+                                                <select id="drogas_rel_sexual" name="drogas_rel_sexual" class="form-control">
+                                                        <option>Escolha</option>
+                                                        <option value="sim">SIM</option>
+                                                        <option value="nao">NÃO</option>
+                                                </select>
+
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="row">
                                             <label class="col-sm-offset-1 col-sm-5 control-label"> 7 - Teve contato sexual com parceiro que recebeu transfusão?</label>
                                             <div class="col-sm-offset-4  col-sm-2">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="contato_sexual_transfusao" id="contato_sexual_transfusao" value="s">
-                                                        Sim
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="contato_sexual_transfusao" id="contato_sexual_transfusao" value="n">
-                                                        Não
-                                                    </label>
-                                                </div>
+                                                <select id="contato_sexual_transfusao" name="contato_sexual_transfusao" class="form-control">
+                                                        <option>Escolha</option>
+                                                        <option value="sim">SIM</option>
+                                                        <option value="nao">NÃO</option>
+                                                </select>
+
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="row">
                                             <label class="col-sm-offset-1 col-sm-5 control-label"> 8 - Teve contato sexual com parceiro que fez hemodiálise?</label>
                                             <div class="col-sm-offset-4  col-sm-2">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="contato_sexual_hemod" id="contato_sexual_hemod" value="s">
-                                                        Sim
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="contato_sexual_hemod" id="contato_sexual_hemod" value="n">
-                                                        Não
-                                                    </label>
-                                                </div>
+                                                <select id="contato_sexual_hemod" name="contato_sexual_hemod" class="form-control">
+                                                        <option>Escolha</option>
+                                                        <option value="sim">SIM</option>
+                                                        <option value="nao">NÃO</option>
+                                                </select>
+
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="row">
                                             <label class="col-sm-offset-1 col-sm-4 control-label"> 9 - Veio doar sangue para fazer o teste de AIDS?</label>
                                             <div class="col-sm-offset-5  col-sm-2">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="teste_aids" id="teste_aids" value="s">
-                                                        Sim
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="teste_aids" id="teste_aids" value="n">
-                                                        Não
-                                                    </label>
-                                                </div>
+                                                <select id="teste_aids" name="teste_aids" class="form-control">
+                                                        <option>Escolha</option>
+                                                        <option value="sim">SIM</option>
+                                                        <option value="nao">NÃO</option>
+                                                </select>
+                                                
+                                            
                                             </div>
                                         </div>
                                         <hr>
