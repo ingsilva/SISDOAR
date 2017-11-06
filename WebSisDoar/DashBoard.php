@@ -166,7 +166,7 @@ and open the template in the editor.
                                     <th>Nome</th>
                                     <th>Data de Nascimento</th>
                                     <th>Idade</th>
-                                    <th>Data de Registro</th>
+                                    <th>Data Solicitada</th>
                                     <th>Hora</th>
                                     <th>+ Informações</th>
 
