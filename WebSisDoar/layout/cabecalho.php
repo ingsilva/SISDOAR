@@ -153,6 +153,7 @@ and open the template in the editor.
                                         <ul>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/triagem/pre_triagem.php"><i class="fa fa-angle-right"></i> Triagem Hematologica</a></li>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem.php"><i class="fa fa-angle-right"></i>Triagem Clínica</a></li>
+                                            <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_coleta.php"><i class="fa fa-angle-right"></i>Coleta</a></li>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem_napto.php"><i class="fa fa-angle-right"></i>Inaptos</a></li>
                                         </ul>
                                     </li>

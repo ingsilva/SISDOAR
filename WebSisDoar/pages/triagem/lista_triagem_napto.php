@@ -42,7 +42,7 @@ include '../../config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1> Clínica: <small>Triagem Clínica</small></h1>
+                <h1> Inaptos <small>a Doar</small></h1>
             </div>
             <!-- End page header -->
 
@@ -60,39 +60,39 @@ include '../../config/conexao.php';
                                     <th>ID</th>
                                     <th>Nome</th>
                                     <th>Idade</th>                                    
-                                    <th>Sexo</th>
-                                    <th>Data Registro</th>
-                                    <th>Status HTC</th>
-                                    <th>Ação</th>
+                                    <th>T. Hematologica</th>
+                                    <th>T. Clínica</th>
+                                    <th>+ Informações</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select t.idtriagem, d.nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
+                                $sql = ("select idq_triagem, t.doador_iddoador, d.nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
                                             date_format(data_registro, '%d/%m/%Y') as data_registro,
-                                            case  anemia	
-                                                            when 'nao' then 'Inapto a Doar'
+                                            case anemia	
+                                                   when 'nao' then 'Inapto a Doar'
+                                                   when 'sim' then 'Apto a Doar'
                                             end anemia, 
-                                            case sexo
-                                                when 'F' then 'Feminino'
-                                                when 'M' then 'Masculino'
-                                            end sexo
-                                            from doador d, triagem t   
+                                            case qt.situacao_doador
+                                                when null then 'Inapto a Doar'
+                                                when 'nao' then 'Inapto a Doar'
+                                            end as situacao_doador
+                                            from doador d, triagem t, questionario_triagem qt   
                                                     where t.doador_iddoador = d.iddoador 
-                                                    and t.anemia = 'nao'
+                                                    and qt.triagem_idtriagem = t.idtriagem
+                                                    and t.anemia = 'sim' and qt.situacao_doador = 'nao'
                                                     group by nome, idade;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
-                                        <td><?php echo $row['idtriagem']; ?></td>
+                                        <td><?php echo $row['doador_iddoador']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['idade']; ?></td>
-                                        <td><?php echo $row['sexo']; ?></td>
-                                        <td><?php echo $row['data_registro']; ?></td>
                                         <td><?php echo $row['anemia']; ?></td>
+                                        <td><?php echo $row['situacao_doador']; ?></td>
                                         
                                         <td class="text-center">
-                                            <?php echo "<a class='btn btn-default' href='../estoque/entrada_estoque.php?idtriagem=" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
+                                            <?php echo "<a class='btn btn-success' href='../relatorios/rel_doador_inapto.php?idq_triagem=" . $row['idq_triagem'] . "'>Gerar</a>"; ?>
                                         </td>
                                     </tr>
                                     <?php
