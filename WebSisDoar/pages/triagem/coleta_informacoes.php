@@ -8,6 +8,12 @@ include '../../config/conexao.php';
         <?php
         include '../../layout/cabecalho.php';
         ?>
+        <style type="text/css">
+            #coleta div{
+                display: none;
+            }
+        </style>
+        <script src="../../assets/js/jquery.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function () {
 
@@ -38,6 +44,16 @@ include '../../config/conexao.php';
                             }
                         }
                     });
+                });
+
+                /*informaçoes para escolha do status*/
+                $('#status_coleta').on('change', function () {
+
+                    var selectValor = '#' + $(this).val();
+                    $('#coleta').children('div').hide();
+                    $('#coleta').children(selectValor).show();
+
+
                 });
             });
         </script>
@@ -110,6 +126,8 @@ include '../../config/conexao.php';
                                                     <option value="O">O</option>
                                                 </select>
                                             </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="form-group col-lg-2">
                                                 <label for="fator_rh">Fator RH</label>
                                                 <select class="form-control" id="fator_rh" name="fator_rh">
@@ -118,7 +136,7 @@ include '../../config/conexao.php';
                                                     <option value="Negativo">Negativo</option>
                                                 </select>
                                             </div>
-                                            <div class="form-group col-sm-2">
+                                            <div class="form-group col-sm-3">
                                                 <label for="categoria">Categoria</label>
                                                 <input class="form-control"  type="text" id="categoria" name="categoria" value="Entrada" disabled="true" >
                                             </div>
@@ -131,23 +149,28 @@ include '../../config/conexao.php';
                                                 <label for="status_coleta">Status</label>
                                                 <select class="form-control" id="status_coleta" name="status_coleta">
                                                     <option>Escolha</option>
-                                                    <option value="sim">Apto</option>
+                                                    <option value="sim">Apto a Doar</option>
                                                     <option value="nao">Não Apto</option>
                                                 </select>
                                             </div>
-                                            <div class="col-sm-2 form-group">
-                                                <label for="iddoencas">Motivos de Inaptidão</label>
-                                                <select class="form-control" id="iddoencas" name="iddoencas">
-                                                    <option>------</option>
-                                                    <?php
-                                                    $sql = ("SELECT iddoencas, descricao FROM doencas");
-                                                    foreach ($con->query($sql) as $row) {
-                                                        echo "<option value='" . $row['iddoencas'] . "'>" . $row['descricao'] . "</option>";
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
 
+                                            <div id='coleta'>
+                                                <div id="sim" class="form-group col-sm-3 ">
+                                                    
+                                                </div>
+                                                <div class="col-sm-3 form-group" id="nao">
+                                                    <label for="iddoencas">Motivos de Inaptidão</label>
+                                                    <select class="form-control" id="iddoencas" name="iddoencas">
+                                                        <option>------</option>
+                                                        <?php
+                                                        $sql = ("SELECT iddoencas, descricao FROM doencas");
+                                                        foreach ($con->query($sql) as $row) {
+                                                            echo "<option value='" . $row['iddoencas'] . "'>" . $row['descricao'] . "</option>";
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!--================================================-------> 
