@@ -6,7 +6,7 @@ include '../../config/conexao.php';
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Triagem de Doadores</title>
+        <title>Relatórios</title>
         <?php
         include '../../layout/cabecalho.php';
         ?>
@@ -92,7 +92,7 @@ include '../../config/conexao.php';
                                         <td><?php echo $row['situacao_doador']; ?></td>
                                         
                                         <td class="text-center">
-                                            <?php echo "<a class='btn btn-success' href='../relatorios/rel_doador_inapto.php?idq_triagem=" . $row['idq_triagem'] . "'>Gerar</a>"; ?>
+                                            <?php echo "<a class='btn btn-success' href='../relatorios/relatorio_doadores_inaptos.php?idq_triagem=" . $row['idq_triagem'] . "'>Gerar</a>"; ?>
                                         </td>
                                     </tr>
                                     <?php

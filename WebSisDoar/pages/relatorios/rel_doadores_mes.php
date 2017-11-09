@@ -5,7 +5,7 @@ include '../../config/conexao.php';
 <!DOCTYPE HTML>
 <html land="pt-BR">
     <head>
-        <title>Cadastro de Telefones</title>
+        <title>Relatórios</title>
         <?php
         include '../../layout/cabecalho.php';
         ?>
@@ -23,7 +23,7 @@ include '../../config/conexao.php';
                 <div class="col-sm-12">
                     <!-- Basic form -->
                     <div class="box-info">
-                        <h2>Relatórios por Periódo </h2>
+                        <h2>RELATÓRIO DE DOADORES CADASTRADOS POR PERIÓDO </h2>
                         <!-- Basic form body -->
                         <div id="basic-form" class="collapse in">
                             <form role="form" action="relatorio_doadores_mes.php" method="post">

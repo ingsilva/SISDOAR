@@ -154,7 +154,7 @@ and open the template in the editor.
                                             <li><a href="/SISDOAR/WebSisDoar/pages/triagem/pre_triagem.php"><i class="fa fa-angle-right"></i> Triagem Hematologica</a></li>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem.php"><i class="fa fa-angle-right"></i>Triagem Clínica</a></li>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_coleta.php"><i class="fa fa-angle-right"></i>Coleta</a></li>
-                                            <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem_napto.php"><i class="fa fa-angle-right"></i>Inaptos</a></li>
+                                            
                                         </ul>
                                     </li>
 
@@ -169,6 +169,7 @@ and open the template in the editor.
                                         <ul>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/relatorios/rel_doadores_mes.php"><i class="fa fa-angle-right"></i> Relatorios Mensal</a></li>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/atestado/lista_doador.php"><i class="fa fa-angle-right"></i> Atestados</a></li>
+                                            <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem_napto.php"><i class="fa fa-angle-right"></i>Inaptos</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="/SISDOAR/WebSisDoar/pages/funcionario/lista_agenda.php"><i class="glyphicon glyphicon-earphone"></i>Agenda</a>

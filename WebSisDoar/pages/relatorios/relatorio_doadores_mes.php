@@ -21,32 +21,30 @@ $html = "<h3><img src='../../assets/img/brasao.jpg'></h3>
                 <thead>
                       <tr>
                             <th>ID</th>
+                            <th>Data Registro</th>
                             <th>Nome</th>
-                            <th>Data Nascimento</th>
+                            <th>Nascimento</th>
                             <th>Idade</th>
                             <th>Tipo Sangue</th>
-                            <th>fator RH</th>
+                            <th>Fator RH</th>
                       </tr>
                </thead>
 ";
 
 
 if ($_POST['data_inicio'] || $_POST['data_fim']) {
-    $sql = "SELECT iddoador, nome, date_format(data_nascimento,'%d/%m/%Y')  as 'data', d.idade, d.tipo_sangue,
-                                        d.fator_rh, data_hora
-                                        FROM doador d, triagem t, estoque_sangue es
-                                        WHERE d.iddoador = t.doador_iddoador 
-                                            AND  
-                                                t.idtriagem = es.triagem_idtriagem 
-                                            AND data_hora >='" . $_POST['data_inicio'] . "'and data_hora <='" . $_POST['data_fim'] . "'";
+    $sql = "SELECT iddoador, nome, date_format(data_nascimento,'%d/%m/%Y')  as 'data', idade, tipo_sangue,
+                                        d.fator_rh, date_format(data_registro, '%d/%m/%Y') as data_registro 
+                                        FROM doador d
+                                        WHERE data_registro >='" . $_POST['data_inicio'] . "'and data_registro <='" . $_POST['data_fim'] . "'";
 
 
 
     foreach ($con->query($sql) as $row) {
 
         $html .= '<tr>';
-        $html .= '<td>' . $row['iddoador'];
-        ' </td>';
+        $html .= '<td>' . $row['iddoador'];' </td>';
+        $html .= '<td>' . $row['data_registro'];' </td>';
         $html .= '<td>' . $row['nome'] . '</td>';
         $html .= '<td>' . $row['data'] . '</td>';
         $html .= '<td >' . $row['idade'] . '</td>';

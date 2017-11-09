@@ -67,7 +67,7 @@ include '../../config/conexao.php';
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select d.iddoador, t.idtriagem, d.nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
+                                $sql = ("select idq_triagem, d.iddoador, t.idtriagem, d.nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
                                             case  anemia	
                                                 when 'sim' then 'Apto'
                                             end anemia, 
@@ -90,7 +90,7 @@ include '../../config/conexao.php';
                                         <td><?php echo $row['situacao_doador']; ?></td>
                                         
                                         <td class="text-center">
-                                            <?php echo "<a class='btn btn-default' href='./coleta.php?idtriagem=" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
+                                            <?php echo "<a class='btn btn-default' href='../triagem/coleta_informacoes.php?idq_triagem=" . $row['idq_triagem'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
                                         </td>
                                     </tr>
                                     <?php
