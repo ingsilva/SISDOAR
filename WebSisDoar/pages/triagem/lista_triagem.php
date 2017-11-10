@@ -70,16 +70,16 @@ include '../../config/conexao.php';
                                 <?php
                                 $sql = ("select d.iddoador, t.idtriagem, d.nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
                                             date_format(data_registro, '%d/%m/%Y') as data_registro,
-                                            case  anemia	
-                                                            when 'sim' then 'Apto a Doar'
-                                            end anemia, 
+                                            case  teste_anemia	
+                                                            when 'apto' then 'Apto a Doar'
+                                            end teste_anemia, 
                                             case sexo
                                                 when 'F' then 'Feminino'
                                                 when 'M' then 'Masculino'
                                             end sexo
                                             from doador d, triagem t   
                                                     where t.doador_iddoador = d.iddoador 
-                                                    and t.anemia = 'sim'
+                                                    and teste_anemia = 'apto'
                                                     group by nome, idade;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
@@ -89,7 +89,7 @@ include '../../config/conexao.php';
                                         <td><?php echo $row['idade']; ?></td>
                                         <td><?php echo $row['sexo']; ?></td>
                                         <td><?php echo $row['data_registro']; ?></td>
-                                        <td><?php echo $row['anemia']; ?></td>
+                                        <td><?php echo $row['teste_anemia']; ?></td>
                                         
                                         <td class="text-center">
                                             <?php echo "<a class='btn btn-default' href='./questionario.php?idtriagem=" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>

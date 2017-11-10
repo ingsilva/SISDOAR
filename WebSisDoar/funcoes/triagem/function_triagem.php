@@ -12,14 +12,14 @@ $anemia = $_POST['anemia'];
 
 if ($id == 0) {
     //salvar
-    $sql = $con->prepare("INSERT INTO triagem (peso, doador_iddoador, pulso, pressao, altura, anemia) "
-            . "VALUES (:peso, :doador_iddoador, :pulso, :pressao, :altura, :anemia)");
+    $sql = $con->prepare("INSERT INTO triagem (peso, doador_iddoador, pulso, pressao, altura, teste_anemia) "
+            . "VALUES (:peso, :doador_iddoador, :pulso, :pressao, :altura, :teste_anemia)");
     $sql->bindValue(':peso', $peso);
     $sql->bindValue(':doador_iddoador', $doador_iddoador);
     $sql->bindValue(':pulso', $pulso);
     $sql->bindValue(':pressao', $pressao);
     $sql->bindValue(':altura', $altura);
-    $sql->bindValue(':anemia', $anemia);
+    $sql->bindValue(':teste_anemia', $anemia);
 
 
 

@@ -69,19 +69,19 @@ include '../../config/conexao.php';
             <!--==============INICIO DO CÓDIGO PHP============================-->
             <?php
             if (isset($_GET['idq_triagem'])) {
-                $sql = "select d.iddoador, t.idtriagem, d.nome, date_format(data_nascimento, '%d/%m/%Y') as 'data_nascimento', truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
+                $sql = "select d.iddoador, idq_triagem, t.idtriagem, d.nome, date_format(data_nascimento, '%d/%m/%Y') as 'data_nascimento', truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
                         tipo_sangue, fator_rh,
-                                            case  anemia	
-                                                when 'sim' then 'Apto'
-                                            end anemia, 
-                                            case situacao_doador
-                                                when 'sim' then 'Apto'
-                                            end situacao_doador
+                                           case teste_anemia	
+                                                   when 'nao_apto' then 'Inapto a Doar'
+                                                   when 'apto' then 'Apto a Doar'
+                                            end teste_anemia,
+											case situacao_doador	
+                                                   when 'nao_apto' then 'Inapto a Doar'
+                                                   when 'apto' then 'Apto a Doar'
+                                            end situacao_doador  
                                             from doador d, triagem t, questionario_triagem qt   
                                                     where t.doador_iddoador = d.iddoador 
-                                                    and qt.triagem_idtriagem = t.idtriagem
-                                                    and t.anemia = 'sim'
-                                                    and qt.situacao_doador = 'sim' 
+                                                    and qt.triagem_idtriagem = t.idtriagem	 
                                                     and idq_triagem='" . $_GET['idq_triagem'] . "'";
 
                 foreach ($con->query($sql) as $row) {

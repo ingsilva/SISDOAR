@@ -67,28 +67,33 @@ include '../../config/conexao.php';
                             </thead>
                             <tbody>
                                 <?php
-                                $sql = ("select idq_triagem, t.doador_iddoador, d.nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
-                                            date_format(data_registro, '%d/%m/%Y') as data_registro,
-                                            case anemia	
-                                                   when 'nao' then 'Inapto a Doar'
-                                                   when 'sim' then 'Apto a Doar'
-                                            end anemia, 
-                                            case qt.situacao_doador
-                                                when null then 'Inapto a Doar'
-                                                when 'nao' then 'Inapto a Doar'
-                                            end as situacao_doador
-                                            from doador d, triagem t, questionario_triagem qt   
-                                                    where t.doador_iddoador = d.iddoador 
-                                                    and qt.triagem_idtriagem = t.idtriagem
-                                                    and t.anemia = 'sim' and qt.situacao_doador = 'nao'
-                                                    group by nome, idade;");
+                                $sql = ("select iddoador, idq_triagem, t.doador_iddoador, d.nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
+                                            date_format(data_registro, '%d/%m/%Y') as data_registro, 
+                                            case teste_anemia	
+                                                   when 'nao_apto' then 'Inapto a Doar'
+                                                   when 'apto' then 'Apto a Doar'
+                                            end teste_anemia,
+                                            case situacao_doador	
+                                                   when 'nao_apto' then 'Inapto a Doar'
+                                                   when 'apto' then 'Apto a Doar'
+                                            end situacao_doador  
+                                            
+                                            from doador d
+						inner join triagem t 
+                                                    on d.iddoador = t.doador_iddoador
+						inner join questionario_triagem qt
+                                                    on t.idtriagem = qt.triagem_idtriagem
+							and teste_anemia = 'apto' and situacao_doador = 'nao_apto'
+                           or
+							teste_anemia = 'nao_apto' and situacao_doador = 'nao_aptoapto'                        
+                                            group by nome, idade;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
                                         <td><?php echo $row['doador_iddoador']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['idade']; ?></td>
-                                        <td><?php echo $row['anemia']; ?></td>
+                                        <td><?php echo $row['teste_anemia']; ?></td>
                                         <td><?php echo $row['situacao_doador']; ?></td>
                                         
                                         <td class="text-center">

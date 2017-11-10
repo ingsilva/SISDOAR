@@ -23,10 +23,10 @@ $obs_doador = $_POST['obs_doador'];
 
     //salvar
     $sql = $con->prepare("INSERT INTO questionario_triagem (triagem_idtriagem, saude_hoje, alcool_hoje, fumou_horas, alimentou, dormiu,"
-            . "drogas_rel_sexual, contato_sexual_transfusao, contato_sexual_hemod, teste_aids, quando_doou, quantas_vzs_doou, onde_doou,"
+            . "drogas_rel_sexual, contato_sexual_transfusao, contato_sexual_hemod, teste_aids,quando_doou,quantas_vzs_doou, onde_doou, "
             . "recusado_motivo, recusado_data, situacao_doador, obs_doador) "
             . "VALUES (:triagem_idtriagem, :saude_hoje, :alcool_hoje, :fumou_horas, :alimentou, :dormiu, :drogas_rel_sexual, "
-            . ":contato_sexual_transfusao, :contato_sexual_hemod, :teste_aids, :quando_doou, :quantas_vzs_doou, :onde_doou,"
+            . ":contato_sexual_transfusao, :contato_sexual_hemod, :teste_aids, :quando_doou,:quantas_vzs_doou, :onde_doou, "
             . ":recusado_motivo, :recusado_data, :situacao_doador, :obs_doador)");
     //$sql->bindValue(':saude_hoje', $saude_hoje);
     $sql->bindValue(':triagem_idtriagem', $triagem_idtriagem);

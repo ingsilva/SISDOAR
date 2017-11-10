@@ -87,7 +87,7 @@ and open the template in the editor.
                         <!-- Text box -->
                         <div class="text-box">
                             <?php
-                            $sql_nao_aptos = (" select count(*) as nao_aptos  from doador d, triagem t   where t.doador_iddoador = d.iddoador       and t.anemia = 'nao';");
+                            $sql_nao_aptos = (" select count(*) as nao_aptos  from doador d, triagem t   where t.doador_iddoador = d.iddoador       and teste_anemia = 'nao_apto';");
                             foreach ($con->query($sql_nao_aptos) as $row) {
                                 ?>
                                 <h3><?php echo $row['nao_aptos']; ?></h3>
@@ -123,7 +123,7 @@ and open the template in the editor.
                         <!-- Text box -->
                         <div class="text-box">
                             <?php
-                            $sql_nao_aptos = (" select count(*) as nao_aptos  from doador d, triagem t   where t.doador_iddoador = d.iddoador       and t.anemia = 'sim';");
+                            $sql_nao_aptos = (" select count(*) as nao_aptos  from doador d, triagem t   where t.doador_iddoador = d.iddoador       and teste_anemia = 'apto';");
                             foreach ($con->query($sql_nao_aptos) as $row) {
                                 ?>
                                 <h3><?php echo $row['nao_aptos']; ?></h3>

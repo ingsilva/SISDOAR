@@ -102,8 +102,8 @@ alert(iddoencas);
                                                     <label for="anemia">HTC</label>
                                                     <select id="anemia" name="anemia" class="form-control">
                                                         <option>Escolha</option>
-                                                        <option value="sim">Apto</option>
-                                                        <option value="nao">Não Apto</option>
+                                                        <option value="apto">Apto</option>
+                                                        <option value="nao_apto">Não Apto</option>
                                                     </select>
                                                 </div>
                                             </div>
