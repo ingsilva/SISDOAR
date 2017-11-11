@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `db_sangue` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `db_sangue`;
 -- MySQL dump 10.13  Distrib 5.7.12, for Win32 (AMD64)
 --
 -- Host: localhost    Database: db_sangue
@@ -31,7 +29,7 @@ CREATE TABLE `agenda` (
   `ddd` int(3) NOT NULL,
   `dpto_iddpto` int(11) DEFAULT NULL,
   PRIMARY KEY (`idagenda`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='Tabela Agenda para adição de numeros dos funcionarios ou departamentos';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='Tabela Agenda para adição de numeros dos funcionarios ou departamentos';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +38,7 @@ CREATE TABLE `agenda` (
 
 LOCK TABLES `agenda` WRITE;
 /*!40000 ALTER TABLE `agenda` DISABLE KEYS */;
-INSERT INTO `agenda` VALUES (1,'Jão Souza de Oliveira',996026654,68,1),(3,'Juliana Sales de Melo',981778900,97,4),(5,'Lais Vasconcelos',999151285,69,1),(11,'Saionara Cardoso',984184786,68,2),(12,'jailson bernarrdo',992838635,68,6);
+INSERT INTO `agenda` VALUES (1,'Jão Souza de Oliveira',996026654,68,1),(3,'Juliana Sales de Melo',981778900,97,4),(5,'Lais Vasconcelos',999151285,69,1),(11,'Saionara Cardoso',984184786,68,2);
 /*!40000 ALTER TABLE `agenda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,7 +57,7 @@ CREATE TABLE `agendamento` (
   PRIMARY KEY (`idagendamento`),
   KEY `fk_agendamento_doador1_idx` (`doador_iddoador`),
   CONSTRAINT `fk_agendamento_doador1` FOREIGN KEY (`doador_iddoador`) REFERENCES `doador` (`iddoador`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +66,7 @@ CREATE TABLE `agendamento` (
 
 LOCK TABLES `agendamento` WRITE;
 /*!40000 ALTER TABLE `agendamento` DISABLE KEYS */;
-INSERT INTO `agendamento` VALUES (7,'13:00:00','2017-09-28',76),(8,'08:30:00','2017-10-31',77),(9,'09:33:00','2017-10-31',78),(10,'09:30:00','2017-11-03',79),(11,'00:03:00','2017-11-01',80);
+INSERT INTO `agendamento` VALUES (7,'13:00:00','2017-09-28',76);
 /*!40000 ALTER TABLE `agendamento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -159,8 +157,8 @@ CREATE TABLE `doador` (
   `contato` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`iddoador`),
   KEY `fk_paciente_cidade1_idx` (`cidade_idcidade`),
-  CONSTRAINT `fk_paciente_cidade10` FOREIGN KEY (`cidade_idcidade`) REFERENCES `cidade` (`idcidade`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8;
+  CONSTRAINT `fk_paciente_cidade10` FOREIGN KEY (`cidade_idcidade`) REFERENCES `cidade` (`idcidade`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -169,7 +167,7 @@ CREATE TABLE `doador` (
 
 LOCK TABLES `doador` WRITE;
 /*!40000 ALTER TABLE `doador` DISABLE KEYS */;
-INSERT INTO `doador` VALUES (7,'Laís Vasconcelos','1996-07-08','018.663.372-62','601018','Rua America',142,'teste','teste',99,'A','positivo',24,'F','2000-02-02',1234,'SSP','Branco','teste','teste','Viúvo','2°Grau Incompleto','Taraucano',NULL,'99285-6354'),(76,'Maria Fernandes','1993-02-28','111.111.111-22','12345','Estrada da Floresta',123,'Floresta','Apt 03',94,'B','Positivo',24,'f','2017-10-30',2222,'SSP','P','Eduardo Souza da Silva','Maria Luzia Souza','S','TC','Acreana','68','999777788'),(77,'Luiz Hian Lopes','1970-01-01','09393443','23232','etereete',23,'teste','teste',81,'A','Positivo',22,'m','1970-01-01',12323,'SSP/AC','Negro','teste','teste','Casado','1°Grau Incompleto','etet','68','9999833'),(78,'teste','1970-01-01','02223323','1223213','teste',12,'teste','teste',79,'A','Positivo',27,'m','1970-01-01',33434,'SSP/AC','Negro','teste','teste','Viúvo','2°Grau Incompleto','teste','68','996778400'),(79,'Lucas De Souza','1970-01-01','022323','1212','teste',12,'teste','teste',83,'A','Positivo',25,'m','1970-01-01',123,'SSP/AC','Branco','teste','1231','Solteiro','Não Alfabetizado','teste','68','988765433'),(80,'Junior teste','1997-03-02','022332','12212','teste',23,'teste','teste',79,'A','Positivo',20,'f','1970-01-01',12443,'SSP/AC','Branco','teste','teste','Casado','2°Grau Incompleto','teste','68','92838635'),(81,'Francisca Ingryd','1970-01-01','027.328.132-10','11111','Est. Calafate',186,'Esperança','Apt 02',231,'O','Negativo',21,'f','2015-02-11',12123,'SSP','P','Isaias Brito','Regiane Maia','S','TI','Amazonense','68','999777012');
+INSERT INTO `doador` VALUES (7,'Laís Vasconcelos','1991-07-08','018.663.372-62','601018','Rua America',142,'teste','teste',99,'A','positivo',25,'F','2000-02-02',1234,'SSP','Branco','teste','teste','Viúvo','2°Grau Incompleto','Taraucano',NULL,'99285-6354'),(76,'Maria Fernandes','1996-02-02','111.111.111-22','12345','Estrada da Floresta',123,'Floresta','Apt 03',94,'B','Positivo',21,'f','2017-11-05',2222,'SSP','P','Eduardo Souza da Silva','Maria Luzia Souza','S','TC','Acreana','68','999777788'),(83,'Jailson Souza Bernado','1993-08-07','02288219246','11659599','rua girassol',34,'jardim primvavera','rua sem saida',94,'A','Positivo',24,'m','2017-11-17',3454,'SSP','N','denilio bernado','raimunda souza','S','TC','epitaciolandia','68','992838635'),(84,'Junior Teste','1993-08-07','02288219246','11659599','rua girassol',34,'jar','teste',94,'A','Positivo',24,'m','2017-11-10',321,'SSP','B','denilio bernado','raimunda souza','S','NA','epitaciolandia','68','992838635');
 /*!40000 ALTER TABLE `doador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -222,6 +220,32 @@ INSERT INTO `dpto` VALUES (1,'SOROLOGIA'),(2,'TI'),(3,'COLETA'),(4,'IMUNO/HEMATO
 UNLOCK TABLES;
 
 --
+-- Table structure for table `entrada_sangue`
+--
+
+DROP TABLE IF EXISTS `entrada_sangue`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `entrada_sangue` (
+  `identrada_sangue` int(11) NOT NULL,
+  `doador_iddoador` varchar(45) NOT NULL,
+  `data` date NOT NULL,
+  `hora` time NOT NULL,
+  `quantidade` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`identrada_sangue`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `entrada_sangue`
+--
+
+LOCK TABLES `entrada_sangue` WRITE;
+/*!40000 ALTER TABLE `entrada_sangue` DISABLE KEYS */;
+/*!40000 ALTER TABLE `entrada_sangue` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `estado`
 --
 
@@ -271,7 +295,7 @@ CREATE TABLE `estoque` (
 
 LOCK TABLES `estoque` WRITE;
 /*!40000 ALTER TABLE `estoque` DISABLE KEYS */;
-INSERT INTO `estoque` VALUES (1,5,'A','Negativo'),(2,21,'A','Positivo'),(3,0,'B','Negativo'),(4,0,'B','Positivo'),(5,0,'O','Negativo'),(6,0,'O','Positivo');
+INSERT INTO `estoque` VALUES (1,5,'A','Negativo'),(2,21,'A','Positivo'),(3,1,'B','Negativo'),(4,1,'B','Positivo'),(5,0,'O','Negativo'),(6,0,'O','Positivo');
 /*!40000 ALTER TABLE `estoque` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,15 +308,18 @@ DROP TABLE IF EXISTS `estoque_sangue`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `estoque_sangue` (
   `idest_sangue` int(11) NOT NULL AUTO_INCREMENT,
-  `triagem_idtriagem` int(11) NOT NULL,
+  `questionario_triagem_idq_triagem` int(11) NOT NULL,
   `quantidade` int(11) DEFAULT NULL,
   `tipo` varchar(2) DEFAULT NULL,
   `fator_rh` varchar(10) DEFAULT NULL,
   `categoria` varchar(45) DEFAULT NULL,
   `data_hora` datetime DEFAULT NULL,
+  `doencas_iddoencas` int(11) DEFAULT NULL,
+  `obs_coleta` varchar(100) DEFAULT NULL,
+  `status_coleta` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`idest_sangue`),
-  KEY `fk_estoque_sangue_Triagem1_idx` (`triagem_idtriagem`)
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
+  KEY `fk_estoque_sangue_Triagem1_idx` (`questionario_triagem_idq_triagem`)
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -301,7 +328,7 @@ CREATE TABLE `estoque_sangue` (
 
 LOCK TABLES `estoque_sangue` WRITE;
 /*!40000 ALTER TABLE `estoque_sangue` DISABLE KEYS */;
-INSERT INTO `estoque_sangue` VALUES (18,3,1,'O','Negativo','Entrada','2017-09-02 21:49:00'),(19,3,1,'O','Negativo','Entrada','2017-09-02 21:53:00'),(20,5,1,'A','positivo','Entrada','2017-09-02 22:30:00'),(21,6,2,'A','positivo','Entrada','2017-09-02 22:30:00'),(22,6,1,'A','positivo','Entrada','2017-09-02 22:44:00'),(23,3,2,'O','Negativo','Entrada','2017-09-02 23:47:00'),(24,3,2,'O','Negativo','Entrada','2017-09-02 17:49:00'),(25,3,1,'O','Negativo','Entrada','2017-09-02 16:50:00'),(26,5,1,'A','positivo','Entrada','2017-09-02 16:54:00'),(27,7,NULL,NULL,NULL,NULL,NULL),(28,7,NULL,NULL,NULL,NULL,NULL),(29,7,NULL,'A','Positivo','Entrada',NULL),(30,7,NULL,'A','Positivo','Entrada',NULL),(31,7,NULL,NULL,NULL,NULL,NULL),(32,7,NULL,NULL,NULL,NULL,NULL),(33,7,NULL,NULL,NULL,NULL,NULL),(34,7,NULL,NULL,NULL,NULL,NULL),(35,7,1,NULL,NULL,NULL,NULL),(36,7,1,NULL,NULL,NULL,NULL),(37,7,1,'A','Positivo','Entrada','2017-10-12 01:42:00'),(38,7,1,'A','Positivo','Entrada','2017-10-12 01:42:00'),(39,7,1,'A','Positivo','Entrada','2017-10-12 01:43:00'),(40,7,1,'A','Positivo','Entrada','2017-10-12 01:43:00'),(41,7,1,'A','Positivo','Entrada','2017-10-12 01:44:00'),(42,7,1,'A','Positivo','Entrada','2017-10-12 01:45:00'),(43,7,1,'A','Positivo','Entrada','2017-10-12 01:45:00'),(44,7,1,'A','Positivo','Entrada','2017-10-12 02:05:00'),(45,7,1,'A','Positivo','Entrada','2017-10-12 02:05:00'),(46,7,1,'A','Positivo','Entrada','2017-10-12 02:06:00');
+INSERT INTO `estoque_sangue` VALUES (18,3,1,'O','Negativo','Entrada','2017-09-02 21:49:00',0,NULL,NULL),(19,17,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(20,17,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(21,17,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(22,17,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(23,17,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(24,17,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(25,17,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(26,17,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(27,17,2,'B','Positivo',NULL,NULL,NULL,NULL,NULL),(28,17,2,'B','Positivo',NULL,NULL,NULL,NULL,NULL),(29,17,2,'B','Positivo','Entrada',NULL,NULL,NULL,NULL),(30,17,2,'B','Positivo','Entrada',NULL,NULL,NULL,NULL),(31,17,2,'B','Positivo','Entrada','2017-11-10 22:18:00',NULL,NULL,NULL),(32,17,2,'B','Positivo','Entrada','2017-11-10 22:18:00',NULL,NULL,NULL),(33,17,1,'B','Positivo','Entrada','2017-11-10 22:21:00',NULL,NULL,'nao'),(34,17,1,'B','Positivo','Entrada','2017-11-10 22:21:00',NULL,NULL,'nao'),(35,17,1,'B','Positivo','Entrada','2017-11-10 22:25:00',1,NULL,'nao'),(36,17,1,'B','Positivo','Entrada','2017-11-10 22:25:00',1,NULL,'nao'),(37,17,1,'B','Positivo','Entrada','2017-11-10 22:25:00',4,NULL,'nao'),(38,17,1,'B','Positivo','Entrada','2017-11-10 22:25:00',4,NULL,'nao'),(39,17,1,'B','Positivo','Entrada','2017-11-10 22:27:00',2,NULL,'nao'),(40,17,1,'B','Positivo','Entrada','2017-11-10 22:27:00',2,NULL,'nao'),(41,17,1,'B','Positivo','Entrada','2017-11-10 22:31:00',NULL,NULL,'sim'),(42,17,1,'B','Positivo','Entrada','2017-11-10 22:31:00',NULL,NULL,'sim'),(43,17,1,'B','Positivo','Entrada','2017-11-10 22:32:00',NULL,NULL,'sim'),(44,17,1,'B','Positivo','Entrada','2017-11-10 22:32:00',NULL,NULL,'sim'),(45,16,1,'A','positivo','Entrada','2017-11-10 22:42:00',3,NULL,'nao'),(46,17,1,'B','Positivo','Entrada','2017-11-10 22:55:00',3,NULL,'nao'),(47,17,1,'B','Positivo','Entrada','2017-11-10 22:58:00',2,'teste','nao');
 /*!40000 ALTER TABLE `estoque_sangue` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -331,6 +358,44 @@ LOCK TABLES `estoque_sangue_log` WRITE;
 /*!40000 ALTER TABLE `estoque_sangue_log` DISABLE KEYS */;
 INSERT INTO `estoque_sangue_log` VALUES (5,'2016-11-24','entrada de sangue',1.00,NULL,NULL),(6,'2016-11-23',NULL,1.00,'AB','Positivo'),(7,'2016-11-23',NULL,1.00,'A','Negativo'),(8,'2016-11-19','Entrada de Sangue',1.00,'AB','Positivo'),(9,'2016-11-24','saida de sangue',1.00,NULL,NULL),(10,'2016-11-24','saida de sangue',1.00,'O','Negativo'),(11,'2016-11-26','Entrada de Sangue',1.00,'AB','Positivo'),(12,'2016-11-26','Entrada de Sangue',1.00,'O','Negativo');
 /*!40000 ALTER TABLE `estoque_sangue_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `paciente`
+--
+
+DROP TABLE IF EXISTS `paciente`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `paciente` (
+  `idpaciente` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(60) NOT NULL,
+  `data_nascimento` varchar(45) NOT NULL,
+  `cpf` varchar(15) NOT NULL,
+  `rg` varchar(11) DEFAULT NULL,
+  `endereco` varchar(60) NOT NULL,
+  `numero` int(11) NOT NULL,
+  `bairro` varchar(45) NOT NULL,
+  `complemento` varchar(60) DEFAULT NULL,
+  `cidade_idcidade` int(11) NOT NULL,
+  `tipo_sangue` varchar(2) NOT NULL,
+  `fator_rh` varchar(20) NOT NULL COMMENT 'N: Negativo, P: Positivo',
+  `idade` int(11) NOT NULL,
+  `sexo` enum('m','f') DEFAULT NULL,
+  PRIMARY KEY (`idpaciente`),
+  KEY `fk_paciente_cidade1_idx` (`cidade_idcidade`),
+  CONSTRAINT `fk_paciente_cidade1` FOREIGN KEY (`cidade_idcidade`) REFERENCES `cidade` (`idcidade`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `paciente`
+--
+
+LOCK TABLES `paciente` WRITE;
+/*!40000 ALTER TABLE `paciente` DISABLE KEYS */;
+INSERT INTO `paciente` VALUES (10,'Ingryd Silva','2013-04-04','07333443','11659599','estrada do calafate',2,'nova esperanÃ§a','Distribuidora',2,'A','Negativo',21,NULL);
+/*!40000 ALTER TABLE `paciente` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -368,15 +433,15 @@ DROP TABLE IF EXISTS `questionario_triagem`;
 CREATE TABLE `questionario_triagem` (
   `idq_triagem` int(11) NOT NULL AUTO_INCREMENT,
   `triagem_idtriagem` int(11) DEFAULT NULL,
-  `saude_hoje` enum('s','n') DEFAULT NULL,
-  `alcool_hoje` enum('s','n') DEFAULT NULL,
-  `fumou_horas` enum('s','n') DEFAULT NULL,
-  `alimentou` enum('s','n') DEFAULT NULL,
-  `dormiu` enum('s','n') DEFAULT NULL,
-  `drogas_rel_sexual` enum('s','n') DEFAULT NULL,
-  `contato_sexual_transfusao` enum('s','n') DEFAULT NULL,
-  `contato_sexual_hemod` enum('s','n') DEFAULT NULL,
-  `teste_aids` enum('s','n') DEFAULT NULL,
+  `saude_hoje` varchar(5) DEFAULT NULL,
+  `alcool_hoje` varchar(5) DEFAULT NULL,
+  `fumou_horas` varchar(5) DEFAULT NULL,
+  `alimentou` varchar(5) DEFAULT NULL,
+  `dormiu` varchar(5) DEFAULT NULL,
+  `drogas_rel_sexual` varchar(5) DEFAULT NULL,
+  `contato_sexual_transfusao` varchar(5) DEFAULT NULL,
+  `contato_sexual_hemod` varchar(5) DEFAULT NULL,
+  `teste_aids` varchar(5) DEFAULT NULL,
   `quando_doou` year(4) DEFAULT NULL,
   `quantas_vzs_doou` int(11) DEFAULT NULL,
   `onde_doou` varchar(45) DEFAULT NULL,
@@ -387,7 +452,7 @@ CREATE TABLE `questionario_triagem` (
   PRIMARY KEY (`idq_triagem`),
   KEY `triagem_idtriagem_idx` (`triagem_idtriagem`),
   CONSTRAINT `triagem_idtriagem` FOREIGN KEY (`triagem_idtriagem`) REFERENCES `triagem` (`idtriagem`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -396,7 +461,7 @@ CREATE TABLE `questionario_triagem` (
 
 LOCK TABLES `questionario_triagem` WRITE;
 /*!40000 ALTER TABLE `questionario_triagem` DISABLE KEYS */;
-INSERT INTO `questionario_triagem` VALUES (10,7,'s','s','s','s','s','s','s','s','s',2012,2,'Hemoacre','Não','Não','sim','Está apto a Doar');
+INSERT INTO `questionario_triagem` VALUES (16,7,'nao','nao','nao','nao','nao','nao','nao','nao','sim',2015,1,'HEMOCENTRO','NÃO','NÃO','nao_apto','O Doador não está apto a Doar, devido ter ingerido bebida alcoolica dentro de 24h.'),(17,8,'sim','nao','nao','sim','sim','nao','nao','nao','nao',2015,2,'HEMOACRE','Não','Não','apto','O Doador está apto para efetuar a coleta'),(26,12,'sim','sim','sim','sim','sim','sim','sim','sim','sim',2015,2,'hemoacre','não','não','nao_apto','mentiroso');
 /*!40000 ALTER TABLE `questionario_triagem` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -471,11 +536,11 @@ CREATE TABLE `triagem` (
   `pulso` float NOT NULL,
   `pressao` float NOT NULL,
   `altura` float NOT NULL,
-  `anemia` varchar(11) DEFAULT NULL COMMENT 'S - Apto, N - Não Apto.',
+  `teste_anemia` varchar(11) DEFAULT NULL COMMENT 'S - Apto, N - Não Apto.',
   PRIMARY KEY (`idtriagem`),
   KEY `fk_Triagem_doador1_idx` (`doador_iddoador`),
-  CONSTRAINT `fk_Triagem_doador1` FOREIGN KEY (`doador_iddoador`) REFERENCES `doador` (`iddoador`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+  CONSTRAINT `fk_Triagem_doador1` FOREIGN KEY (`doador_iddoador`) REFERENCES `doador` (`iddoador`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -484,7 +549,7 @@ CREATE TABLE `triagem` (
 
 LOCK TABLES `triagem` WRITE;
 /*!40000 ALTER TABLE `triagem` DISABLE KEYS */;
-INSERT INTO `triagem` VALUES (7,56,7,9,15.14,1.8,'sim'),(8,50,76,4.6,14.12,1.6,'nao');
+INSERT INTO `triagem` VALUES (7,56,7,9,15.14,1.8,'apto'),(8,50,76,4.6,14.12,1.6,'apto'),(10,75,83,13,21,173,'nao_apto'),(11,75,84,25,12,1.75,'apto'),(12,12,83,23,12,1.75,'apto');
 /*!40000 ALTER TABLE `triagem` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -532,4 +597,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-05 19:12:05
+-- Dump completed on 2017-11-11  0:20:08
