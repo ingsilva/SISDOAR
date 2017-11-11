@@ -157,7 +157,7 @@ include '../../config/conexao.php';
                                             <div id='coleta'>
                                                 <div id="sim" class="form-group col-sm-3 ">
                                                     <label  for="categoria">Situação</label>
-                                                    <input class="form-control alert-success"  type="button" value="Doador propico a doação!!!" >
+                                                    <input class="form-control alert-success"  type="button" value="DOAÇÃO BEM SUCEDIDA!!!" >
                                                 </div>
                                                 <div class="col-sm-3 form-group" id="nao">
                                                     <label for="iddoencas">Motivos de Inaptidão</label>
