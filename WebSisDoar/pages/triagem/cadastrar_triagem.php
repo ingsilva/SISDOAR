@@ -5,9 +5,16 @@ include '../../config/conexao.php';
 <html land="pt-BR">
     <head>
         <title>Cadastro de triagem</title>
+        <script src="../../assets/js/jquery.js" type="text/javascript"></script>
         <?php
         include '../../layout/cabecalho.php';
         ?>
+        <style type="text/css">
+          
+            #obs div{
+                display: none;
+            }
+        </style>
         <script type="text/javascript">
             $(document).ready(function () {
 
@@ -19,10 +26,11 @@ include '../../config/conexao.php';
                     var pressao = $("#pressao").val();
                     var altura = $("#altura").val();
                     var anemia = $("#anemia").val();
+                    var obs_htc = $("#obs_htc").val();
 
 
                     var dataString = {id: id, peso: peso, iddoador: iddoador, pulso: pulso, pressao: pressao,
-                        altura: altura, anemia: anemia};
+                        altura: altura, anemia: anemia, obs_htc: obs_htc};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/triagem/function_triagem.php",
@@ -34,10 +42,18 @@ include '../../config/conexao.php';
                                 location.replace("lista_triagem.php");
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-alert(iddoencas);
+                                alert(iddoencas);
                             }
                         }
                     });
+                });
+                $('#anemia').on('change', function () {
+
+                    var selectValor2 = '#' + $(this).val();
+                    $('#obs').children('div').hide();
+                    $('#obs').children(selectValor2).show();
+
+
                 });
             });
         </script>
@@ -105,6 +121,13 @@ alert(iddoencas);
                                                         <option value="apto">Apto</option>
                                                         <option value="nao_apto">Não Apto</option>
                                                     </select>
+                                                </div>
+                                                <div id="obs">
+                                                    <div class="form-group col-lg-8" id="nao_apto">    
+                                                        <label for="obs_htc">Obersações</label>
+                                                        <textarea class="form-control alert alert-danger"   type="text" id="obs_htc" name="obs_htc"></textarea>
+                                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

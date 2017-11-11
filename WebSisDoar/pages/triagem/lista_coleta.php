@@ -49,7 +49,7 @@ include '../../config/conexao.php';
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-
+                    
                 </div>
                 <!-- /.panel-heading -->
                 <div class="table-responsive">
@@ -58,6 +58,7 @@ include '../../config/conexao.php';
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>ID qtria</th>
                                     <th>Nome</th>
                                     <th>Idade</th>                                    
                                     <th>T. Hematologica</th>
@@ -73,24 +74,22 @@ include '../../config/conexao.php';
                                                    when 'nao_apto' then 'Inapto a Doar'
                                                    when 'apto' then 'Apto a Doar'
                                             end teste_anemia,
-											case situacao_doador	
+                                            case situacao_doador	
                                                    when 'nao_apto' then 'Inapto a Doar'
                                                    when 'apto' then 'Apto a Doar'
-                                            end situacao_doador  
-                                            
+                                            end situacao_doador 
                                             from doador d
-						inner join triagem t 
-                                                    on d.iddoador = t.doador_iddoador
-						left join questionario_triagem qt
-                                                    on t.idtriagem = qt.triagem_idtriagem
-							and teste_anemia = 'apto' and situacao_doador = 'nao_apto'
-                                                    or 
-							teste_anemia = 'apto' and situacao_doador = 'apto'
-                                            group by nome, idade;");
+                                             left join triagem t
+													on d.iddoador = t.doador_iddoador
+                                              inner join questionario_triagem qt 
+													on t.idtriagem = qt.triagem_idtriagem
+                                               
+									group by nome, idade;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>
                                     <tr>
                                         <td><?php echo $row['iddoador']; ?></td>
+                                        <td><?php echo $row['idq_triagem']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['idade']; ?></td>
                                         <td><?php echo $row['teste_anemia']; ?></td>
@@ -113,7 +112,7 @@ include '../../config/conexao.php';
                 <!-- /.panel-body -->
             </div>
 
-            
+
             <script>
                 $(function () {
                     $('#triagem').DataTable({
