@@ -80,9 +80,9 @@ include '../../config/conexao.php';
                                             end situacao_doador 
                                             from doador d
                                              left join triagem t
-													on d.iddoador = t.doador_iddoador
+						on d.iddoador = t.doador_iddoador
                                               inner join questionario_triagem qt 
-													on t.idtriagem = qt.triagem_idtriagem
+						on t.idtriagem = qt.triagem_idtriagem
                                                
 									group by nome, idade;");
                                 foreach ($con->query($sql) as $row) {
