@@ -21,11 +21,11 @@ include '../../config/conexao.php';
             </div>
             <!-- End page header -->
 
-            <div class="table-responsive">
 
-                <div class="panel panel-default">
+            <div class="panel panel-default">
+                <div class="table-responsive">
                     <div class="panel-heading">
-                       
+
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">

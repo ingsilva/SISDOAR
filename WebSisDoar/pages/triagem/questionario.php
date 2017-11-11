@@ -5,10 +5,10 @@ include '../../config/conexao.php';
 <html land="pt-BR">
     <head>
         <title>Estoque de Sangue</title>
+        <script src="../../assets/js/jquery.js" type="text/javascript"></script>
         <?php
         include '../../layout/cabecalho.php';
         ?>
-        <script src="../../assets/js/jquery.js" type="text/javascript"></script>
         <style type="text/css">
             #select_opcao_doou div{
                 display: none;

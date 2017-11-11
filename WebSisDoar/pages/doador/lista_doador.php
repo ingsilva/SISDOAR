@@ -49,16 +49,16 @@ include '../../config/conexao.php';
             </div>
             <!-- End page header -->
 
-            <div class="table-responsive">
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <a href="cadastrar_doador.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
-                        </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <a href="cadastrar_doador.php" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i></a>
                     </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="table-responsive">
                         <table width="100%" class="table table-striped table-bordered table-hover" id="example2">
                             <thead>
                                 <tr>

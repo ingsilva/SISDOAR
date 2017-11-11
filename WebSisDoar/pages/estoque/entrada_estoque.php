@@ -52,7 +52,7 @@ include '../../config/conexao.php';
             <?php
             if (isset($_GET['idtriagem'])) {
                 $sql = "SELECT iddoador, idtriagem, nome, date_format(data_nascimento,'%d/%m/%Y')data_nascimento, truncate(datediff(now(), data_nascimento)/365,0) as 'idade', 
-                                    tipo_sangue, d.fator_rh, status, jejum
+                                    tipo_sangue, d.fator_rh
                             FROM doador d, triagem t
                                 WHERE  d.iddoador = t.doador_iddoador 
                                     AND 

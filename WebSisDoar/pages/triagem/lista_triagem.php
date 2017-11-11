@@ -46,9 +46,9 @@ include '../../config/conexao.php';
             </div>
             <!-- End page header -->
 
-            <div class="table-responsive">
 
-                <div class="panel panel-default">
+            <div class="panel panel-default">
+                <div class="table-responsive">
                     <div class="panel-heading">
 
                     </div>
@@ -90,7 +90,7 @@ include '../../config/conexao.php';
                                         <td><?php echo $row['sexo']; ?></td>
                                         <td><?php echo $row['data_registro']; ?></td>
                                         <td><?php echo $row['teste_anemia']; ?></td>
-                                        
+
                                         <td class="text-center">
                                             <?php echo "<a class='btn btn-default' href='./questionario.php?idtriagem=" . $row['idtriagem'] . "'><i class='glyphicon glyphicon-plus'></i></a>"; ?>
                                         </td>

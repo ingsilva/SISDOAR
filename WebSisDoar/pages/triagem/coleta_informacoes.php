@@ -5,6 +5,7 @@ include '../../config/conexao.php';
 <html land="pt-BR">
     <head>
         <title>Cadastro de triagem</title>
+        <script src="../../assets/js/jquery.js" type="text/javascript"></script>
         <?php
         include '../../layout/cabecalho.php';
         ?>
@@ -13,34 +14,34 @@ include '../../config/conexao.php';
                 display: none;
             }
         </style>
-        <script src="../../assets/js/jquery.js" type="text/javascript"></script>
+
         <script type="text/javascript">
             $(document).ready(function () {
 
                 $('#salvar').click(function () {
-                    var id = $("#id").val();
-                    var peso = $("#peso").val();
-                    var iddoador = $("#iddoador").val();
-                    var pulso = $("#pulso").val();
-                    var pressao = $("#pressao").val();
-                    var altura = $("#altura").val();
-                    var anemia = $("#anemia").val();
+                    var idq_triagem = $("#idq_triagem").val();
+                    var quantidade = $("#quantidade").val();
+                    var tipo_sangue = $("#tipo_sangue").val();
+                    var fator_rh = $("#fator_rh").val();
+                    var status_coleta = $("#status_coleta").val();
+                    var obs_coleta = $("#obs_coleta").val();
+                    var iddoencas = $("#iddoencas").val();
 
-
-                    var dataString = {id: id, peso: peso, iddoador: iddoador, pulso: pulso, pressao: pressao,
-                        altura: altura, anemia: anemia};
+                    var dataString = {idq_triagem: idq_triagem, tipo_sangue: tipo_sangue,
+                        fator_rh: fator_rh, quantidade: quantidade,
+                        status_coleta: status_coleta, obs_coleta :obs_coleta, iddoencas :iddoencas};
                     $.ajax({
                         type: "POST",
-                        url: "../../funcoes/triagem/function_triagem.php",
+                        url: "../../funcoes/estoque/ent_estoque.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
                             if (retorno == true) {
                                 alert("Salvo com Sucesso!!");
-                                location.replace("lista_triagem.php");
+                                location.replace("lista_coleta.php");
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
-                                alert(iddoencas);
+                                alert(obs_coleta);
                             }
                         }
                     });
@@ -99,8 +100,8 @@ include '../../config/conexao.php';
 
                                         <div class="row">
                                             <div class="form-group col-lg-1">
-                                                <label for="iddoador">ID</label>
-                                                <input class="form-control"  type="text" id="iddoador"  value="<?php echo $row['idtriagem'] ?>" disabled="true" >
+                                                <label for="idq_triagem">ID</label>
+                                                <input class="form-control"  type="text" id="idq_triagem"  value="<?php echo $row['idq_triagem'] ?>" disabled="true" >
                                             </div>
                                             <div class="form-group col-lg-6">
                                                 <label for="nome">Nome</label>
@@ -170,6 +171,11 @@ include '../../config/conexao.php';
                                                         }
                                                         ?>
                                                     </select>
+                                                </div>
+                                                <div class="form-group col-lg-12" id="nao">    
+                                                    <label for="obs_coleta">Obersações</label>
+                                                    <textarea class="form-control alert"   type="text" id="obs_coleta" name="obs_coleta"></textarea>
+                                                    <!--<p class="help-block">Example block-level help text here.</p>-->
                                                 </div>
                                             </div>
                                         </div>

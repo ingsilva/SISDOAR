@@ -149,7 +149,7 @@ and open the template in the editor.
                                     <li><a href="/SISDOAR/WebSisDoar/pages/doador/lista_doador.php"><i class="fa fa-user"></i><i class="fa fa-plus-square-o i-right"></i>Doadores</a>
 
                                     </li>
-                                    <li><a href="#fakelink"><i class="fa fa-file-text-o"></i><i class="fa fa-angle-double-down i-right"></i> Triagem</a>
+                                    <li><a><i class="fa fa-file-text-o"></i><i class="fa fa-angle-double-down i-right"></i> Triagem</a>
                                         <ul>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/triagem/pre_triagem.php"><i class="fa fa-angle-right"></i> Triagem Hematologica</a></li>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem.php"><i class="fa fa-angle-right"></i>Triagem Clínica</a></li>

@@ -46,9 +46,9 @@ include '../../config/conexao.php';
             </div>
             <!-- End page header -->
 
-            <div class="table-responsive">
 
-                <div class="panel panel-default">
+            <div class="panel panel-default">
+                <div class="table-responsive">
                     <div class="panel-heading">
 
                     </div>
@@ -95,7 +95,7 @@ include '../../config/conexao.php';
                                         <td><?php echo $row['idade']; ?></td>
                                         <td><?php echo $row['teste_anemia']; ?></td>
                                         <td><?php echo $row['situacao_doador']; ?></td>
-                                        
+
                                         <td class="text-center">
                                             <?php echo "<a class='btn btn-success' href='../relatorios/relatorio_doadores_inaptos.php?idq_triagem=" . $row['idq_triagem'] . "'>Gerar</a>"; ?>
                                         </td>
