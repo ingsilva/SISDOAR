@@ -13,38 +13,35 @@ $html = "<h3><img src='../../assets/img/brasao.jpg'></h3>
                 <br>
                 HEMOCENTRO do Estado do Acre
                 </p>
-                <h3>DOADOR INAPTO POR QUESTIONÁRIO E COLETA</h3>
+                
+                <h3>DOADOR APTO POR COLETA</h3>
 
 ";
 
 
 if ($_GET['idest_sangue']) {
-    $sql = "select iddoador, idq_triagem, d.nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
-                                            date_format(data_registro, '%d/%m/%Y') as data_registro, d.tipo_sangue, d.fator_rh,
-                                            obs_coleta, obs_doador,
+    $sql = "select iddoador, idest_sangue, idq_triagem, d.nome, truncate(datediff(now(), data_nascimento)/365,0) as 'idade',
+                                            date_format(data_registro, '%d/%m/%Y') as data_registro, d.tipo_sangue, d.fator_rh, obs_coleta,
                                             case teste_anemia
                                                     when 'nao_apto' then 'Inapto a Doar'
                                                     when 'apto' then 'Apto a Doar'
                                             end teste_anemia,
                                             case situacao_doador
-						when 'nao_apto' then 'Inapto a Doar'
-                                                when 'apto' then 'Apto a Doar'
+                                                    when 'nao_apto' then 'Inapto a Doar'
+                                                    when 'apto' then 'Apto a Doar'
                                             end situacao_doador,
                                             case status_coleta
                                                     when 'nao' then 'Inapto a Doar'
                                                     when 'sim' then 'Apto a Doar'
-                                            end status_coleta,
-                                            de.descricao
+                                            end status_coleta
                                             from doador d
                                              left join triagem t
-						on d.iddoador = t.doador_iddoador
+							on d.iddoador = t.doador_iddoador
                                                 inner join questionario_triagem qt
-						on t.idtriagem = qt.triagem_idtriagem
+							on t.idtriagem = qt.triagem_idtriagem
                                                     inner join estoque_sangue es
-                                                    on qt.idq_triagem = es.questionario_triagem_idq_triagem
-                                                        inner join doencas de 
-                                                        on de.iddoencas = es.doencas_iddoencas
-                                                        and status_coleta = 'nao'	
+							on qt.idq_triagem = es.questionario_triagem_idq_triagem
+								and status_coleta = 'sim'	
                                                         and idest_sangue ='" . $_GET['idest_sangue'] . "' group by nome, idade";
 
 
@@ -59,11 +56,9 @@ if ($_GET['idest_sangue']) {
         $html .= '<tr><th>NOME: <td>' . $row['nome'] . '</td></th></tr>';
         $html .= '<tr><th>IDADE: <td>' . $row['idade'] . '</td></th></tr>';
         $html .= '<tr><th>STATUS T. HEMATOLOGICA: <td>' . $row['teste_anemia'] . '</td></th></tr>';
-        $html .= '<tr><th>STATUS T. CLÍNICA: <td>' . $row['situacao_doador'] . '</td></t></tr>';
-        $html .= '<tr><th>STATUS T. COLETA: <td>' . $row['status_coleta'] . '</td></t></tr>';
-        $html .= '<tr><th>OBSERVAÇÕES CLINICAS: <td>' . $row['obs_doador'] . '</td></td></tr>';
-        $html .= '<tr><th>MOTIVO DE INAPTIDAO(COLETA): <td>' . $row['descricao'] . '</td></td></tr>';
-        $html .= '<tr><th>OBSERVAÇÕES DA COLETA: <td>' . $row['obs_coleta'] . '</td></td></tr>';
+        $html .= '<tr><th>STATUS T. CLÍNICA: <td>' . $row['situacao_doador'] . '</td></th></tr>';
+        $html .= '<tr><th>STATUS T. COLETA: <td>' . $row['status_coleta'] . '</td></th></tr>';
+        $html .= '<tr><th>OBSERVAÇÕES: <td>' . $row['obs_coleta'] . '</td></th></tr>';
         $html .= '</thead>';
         $html .= '</table>';
     }

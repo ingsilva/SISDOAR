@@ -158,6 +158,11 @@ include '../../config/conexao.php';
                                                     <label  for="categoria">Situação</label>
                                                     <input class="form-control alert-success"  type="button" value="DOAÇÃO BEM SUCEDIDA!!!" >
                                                 </div>
+                                                <div class="form-group col-lg-12" id="sim">    
+                                                    <label for="obs_coleta">Obersações</label>
+                                                    <textarea class="form-control alert"   type="text" id="obs_coleta" name="obs_coleta"></textarea>
+                                                    <!--<p class="help-block">Example block-level help text here.</p>-->
+                                                </div>
                                                 <div class="col-sm-3 form-group" id="nao">
                                                     <label for="iddoencas">Motivos de Inaptidão</label>
                                                     <select class="form-control" id="iddoencas" name="iddoencas">

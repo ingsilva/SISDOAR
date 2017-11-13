@@ -21,8 +21,8 @@ if (isset($_GET['iddoador'])) {
     foreach ($con->query($sql) as $row) {
 
         $html .= '<fieldset>';
-        $html .= "<p class='center sub-titulo'>DECLARAÇÃO DE DOAÇÃO</p>";
-        $html .= "<p>Declaramos, com agradecimentos que o Sr.(a) <strong>" . $row['nome'] . "</strong> <br> CPF: <strong>" . $row['cpf'] . "</strong> doou sangue, voluntariamente ao (a)<strong> HEMOCENTRO DO ACRE</strong> <br> na data de: <strong>" . $row['data'] . ";</strong></p>";
+        $html .= "<p class='center sub-titulo'>DECLARAÇÃO DE COMPARECIMENTO</p>";
+        $html .= "<p>Declaramos, com agradecimentos que o Sr.(a) <strong>" . $row['nome'] . "</strong> <br> CPF: <strong>" . $row['cpf'] . "</strong> compareceu para doação, voluntariamente ao (a)<strong> HEMOCENTRO DO ACRE</strong> <br> na data de: <strong>" . $row['data'] . ";</strong></p>";
 
         $html .= "<p>Assinatura ......................................................................................................................................</p>
 	 	<p class='center'><strong>Funcionário da coleta</strong></p>";

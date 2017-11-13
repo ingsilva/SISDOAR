@@ -13,6 +13,7 @@ $html = "<h3><img src='../../assets/img/brasao.jpg'></h3>
                 <br>
                 HEMOCENTRO do Estado do Acre
                 </p>
+                <h3>DOADOR INAPTO POR HEMATOLOGIA</h3>
 
 ";
 

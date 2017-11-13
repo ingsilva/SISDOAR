@@ -169,6 +169,7 @@ and open the template in the editor.
                                         <ul>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/relatorios/rel_doadores_mes.php"><i class="fa fa-angle-right"></i> Relatorios Mensal</a></li>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/atestado/lista_doador.php"><i class="fa fa-angle-right"></i> Atestados</a></li>
+                                            <li><a href="/SISDOAR/WebSisDoar/pages/relatorios/lista_triagem_aptos.php"><i class="fa fa-angle-right"></i>Aptos</a></li>
                                             <li><a href="/SISDOAR/WebSisDoar/pages/triagem/lista_triagem_napto.php"><i class="fa fa-angle-right"></i>Inaptos</a></li>
                                         </ul>
                                     </li>
