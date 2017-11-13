@@ -1,6 +1,5 @@
 <?php
 include '../../config/conexao.php';
-
 ?>
 
 <!DOCTYPE HTML>
@@ -74,7 +73,7 @@ include '../../config/conexao.php';
             <!--==============INICIO DO CÓDIGO PHP============================-->
             <?php
             if (isset($_GET['iddoador'])) {
-                $sql = "select iddoador, data_registro, nome,  date_format(data_nascimento, '%d/%m/%Y') as data_nascimento, idade , 
+                $sql = "select iddoador, data_registro, nome, data_nascimento, idade , 
                         date_format(agend_hora, '%H:%i') as 'agend_hora', date_format(agend_data, '%d/%m/%Y') as 'agend_data', rg, cpf
                                             from doador d, agendamento a
                                                 where d.iddoador = a.doador_iddoador and
@@ -97,7 +96,7 @@ include '../../config/conexao.php';
                                         <div class="row">
                                             <div class="form-group col-lg-2">
                                                 <label for="data_registro">Data Registro</label>
-                                                <input class="form-control"   type="date" id="data_registro" name="data_registro">
+                                                <input class="form-control"   type="date" id="data_registro" name="data_registro" value="<?php echo $row['data_registro'] ?>">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-2">
@@ -107,7 +106,7 @@ include '../../config/conexao.php';
                                             </div>
                                             <div class=" form-group col-lg-2">
                                                 <label for="data_nascimento">Data de Nascimento</label>
-                                                <input class="form-control"   type="text" id="data_nascimento" name="data_nascimento" value="<?php echo $row['data_nascimento'] ?>">
+                                                <input class="form-control"   type="date" id="data_nascimento" name="data_nascimento" value="<?php echo $row['data_nascimento'] ?>">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-1">

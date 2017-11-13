@@ -118,8 +118,8 @@ include '../../config/conexao.php';
                                                 <label for="sexo">Sexo</label>
                                                 <select class="form-control" id="sexo" name="sexo">
                                                     <option value="<?php echo $row['sexo']; ?>"><?php echo $row['sexo']; ?></option>
-                                                    <option value="F">Feminino</option>
-                                                    <option value="M">Masculino</option>
+                                                    <option value="Feminino">Feminino</option>
+                                                    <option value="Masculino">Masculino</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-lg-1">
@@ -243,8 +243,8 @@ include '../../config/conexao.php';
                                                     <option value="Casado">Casado</option>
                                                     <option value="Viúvo">Viúvo</option>
                                                     <option value="Desquitado">Desquitado</option>
-                                                    <option value="D">Divorciado</option>
-                                                    <option value="Divorciado">Separado</option>
+                                                    <option value="Divorciado">Divorciado</option>
+                                                    <option value="Separado">Separado</option>
                                                     <option value="Outros">Outros</option>
                                                 </select>
                                             </div>
