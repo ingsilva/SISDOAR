@@ -1,6 +1,6 @@
 <?php
 include '../../config/conexao.php';
-include '../../DashBoard.php';
+
 ?>
 
 <!DOCTYPE HTML>
@@ -9,6 +9,7 @@ include '../../DashBoard.php';
         <title>Cadastro de Doador</title>
         <?php
         include '../../layout/cabecalho.php';
+        
         ?>
         <script src="../../funcoes/doador/comboEstadoCidade.js" type="text/javascript"></script>
         <script type="text/javascript">
@@ -73,7 +74,8 @@ include '../../DashBoard.php';
             <!--==============INICIO DO CÓDIGO PHP============================-->
             <?php
             if (isset($_GET['iddoador'])) {
-                $sql = "select iddoador, data_registro, nome,  date_format(data_nascimento, '%d/%m/%Y') as data_nascimento, idade , date_format(agend_hora, '%H:%i') as 'agend_hora', date_format(agend_data, '%d/%m/%Y') as 'agend_data'
+                $sql = "select iddoador, data_registro, nome,  date_format(data_nascimento, '%d/%m/%Y') as data_nascimento, idade , 
+                        date_format(agend_hora, '%H:%i') as 'agend_hora', date_format(agend_data, '%d/%m/%Y') as 'agend_data', rg, cpf
                                             from doador d, agendamento a
                                                 where d.iddoador = a.doador_iddoador and
                                                     agend_hora and agend_data  is not null and
@@ -95,12 +97,12 @@ include '../../DashBoard.php';
                                         <div class="row">
                                             <div class="form-group col-lg-2">
                                                 <label for="data_registro">Data Registro</label>
-                                                <input class="form-control"   type="text" id="data_registro" name="data_registro" value="<?php echo $row['data_registro'] ?>" >
+                                                <input class="form-control"   type="date" id="data_registro" name="data_registro">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-2">
                                                 <label for="numero_sus">Numero SUS</label>
-                                                <input class="form-control"   type="number" id="numero_sus" name="numero_sus" value="<?php echo $row['num_sus'] ?>">
+                                                <input class="form-control"   type="number" id="numero_sus" name="numero_sus">
                                                  <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class=" form-group col-lg-2">
@@ -117,8 +119,8 @@ include '../../DashBoard.php';
                                                 <label for="sexo">Sexo</label>
                                                 <select class="form-control" id="sexo" name="sexo">
                                                     <option>Escolha</option>
-                                                    <option value="f">Feminino</option>
-                                                    <option value="m">Masculino</option>
+                                                    <option value="Feminino">Feminino</option>
+                                                    <option value="Masculino">Masculino</option>
                                                 </select>
                                             </div>
 
@@ -150,12 +152,12 @@ include '../../DashBoard.php';
                                             </div>
                                             <div class="form-group col-lg-2">
                                                 <label for="cpf">CPF</label>
-                                                <input class="form-control" type="text"  id="cpf" name="cpf">
+                                                <input class="form-control" type="text"  id="cpf" name="cpf" value="<?php echo $row['cpf'] ?>">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-2">
                                                 <label for="rg">RG</label>
-                                                <input class="form-control" type="text"  id="rg" name="rg" >
+                                                <input class="form-control" type="text"  id="rg" name="rg" value="<?php echo $row['rg'] ?>" >
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-2">
@@ -283,6 +285,7 @@ include '../../DashBoard.php';
                                             <div class="col-sm-1 form-group">
                                                 <label for="idestado">Estado</label>
                                                 <select class="form-control" id="idestado" name="idestado" onchange="listar_cidades()">
+                                                    <option>Escolha</option>
                                                     <?php
                                                     $sql = ("SELECT idestado, uf FROM estado");
                                                     foreach ($con->query($sql) as $row_e) {

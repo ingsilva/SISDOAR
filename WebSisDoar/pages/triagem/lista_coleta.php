@@ -58,7 +58,6 @@ include '../../config/conexao.php';
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>ID qtria</th>
                                     <th>Nome</th>
                                     <th>Idade</th>                                    
                                     <th>T. Hematologica</th>
@@ -89,7 +88,6 @@ include '../../config/conexao.php';
                                     ?>
                                     <tr>
                                         <td><?php echo $row['iddoador']; ?></td>
-                                        <td><?php echo $row['idq_triagem']; ?></td>
                                         <td><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['idade']; ?></td>
                                         <td><?php echo $row['teste_anemia']; ?></td>

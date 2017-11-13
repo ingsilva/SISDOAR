@@ -1,6 +1,5 @@
 <?php
 include '../../config/conexao.php';
-print_r($_SESSION['usuarioNome']);
 ?>
 
 <!DOCTYPE HTML>
@@ -9,6 +8,7 @@ print_r($_SESSION['usuarioNome']);
         <title>Cadastro de Doador</title>
         <?php
         include '../../layout/cabecalho.php';
+        print_r($_SESSION['usuarioNome']);
         ?>
         <script src="../../funcoes/doador/comboEstadoCidade.js" type="text/javascript"></script>
         <script type="text/javascript">
@@ -56,7 +56,7 @@ print_r($_SESSION['usuarioNome']);
                         success: function (retorno) {
                             if (retorno == true) {
                                 alert("Salvo com Sucesso!!");
-                                 location.replace("lista_doador.php");
+                                location.replace("lista_doador.php");
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
                             }
@@ -215,13 +215,13 @@ print_r($_SESSION['usuarioNome']);
                                         <label for="etnia">Etnia</label>
                                         <select id="etnia" name="etnia" class="form-control">
                                             <option>Escolha</option>
-                                            <option value="B">Branco</option>
-                                            <option value="N">Negro</option>
-                                            <option value="I">Indígena</option>
-                                            <option value="P">Pardo</option>
-                                            <option value="M">Mulato</option>
-                                            <option value="C">Caboclo</option>
-                                            <option value="CA">Cafuzo</option>
+                                            <option value="Branco">Branco</option>
+                                            <option value="Negro">Negro</option>
+                                            <option value="Indigena">Indígena</option>
+                                            <option value="Pardo">Pardo</option>
+                                            <option value="Mulato">Mulato</option>
+                                            <option value="Caboclo">Caboclo</option>
+                                            <option value="Cafuzo">Cafuzo</option>
 
                                         </select>
                                     </div>
@@ -230,13 +230,13 @@ print_r($_SESSION['usuarioNome']);
                                         <label for="estado_civil">Estado Civil</label>
                                         <select id="estado_civil" name="estado_civil" class="form-control">
                                             <option>Escolha</option>
-                                            <option value="S">Solteiro</option>
-                                            <option value="C">Casado</option>
-                                            <option value="V">Viúvo</option>
-                                            <option value="D">Desquitado</option>
+                                            <option value="Solteiro">Solteiro</option>
+                                            <option value="Casado">Casado</option>
+                                            <option value="Viúvo">Viúvo</option>
+                                            <option value="Desquitado">Desquitado</option>
                                             <option value="D">Divorciado</option>
-                                            <option value="S">Separado</option>
-                                            <option value="O">Outros</option>
+                                            <option value="Divorciado">Separado</option>
+                                            <option value="Outros">Outros</option>
                                         </select>
                                     </div>
 
@@ -244,13 +244,13 @@ print_r($_SESSION['usuarioNome']);
                                         <label for="escolaridade">Escolaridade</label>
                                         <select id="escolaridade" name="escolaridade" class="form-control">
                                             <option>Escolha</option>
-                                            <option value="NA">Não Alfabetizado</option>
-                                            <option value="PI">1°Grau Incompleto</option>
-                                            <option value="PC">1°Grau Completo</option>
-                                            <option value="SI">2°Grau Incompleto</option>
-                                            <option value="SC">2°Grau Completo</option>
-                                            <option value="TI">Superior Incompleto</option>
-                                            <option value="TC">Superior Completo</option>
+                                            <option value="Não Alfabetizado">Não Alfabetizado</option>
+                                            <option value="1°Grau Incompleto">1°Grau Incompleto</option>
+                                            <option value="1°Grau Completo">1°Grau Completo</option>
+                                            <option value="2°Grau Incompleto">2°Grau Incompleto</option>
+                                            <option value="2°Grau Completo">2°Grau Completo</option>
+                                            <option value="Superior Incompleto">Superior Incompleto</option>
+                                            <option value="Superior Completo">Superior Completo</option>
                                         </select>
                                     </div>
 

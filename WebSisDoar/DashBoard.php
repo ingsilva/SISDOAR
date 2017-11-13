@@ -87,7 +87,26 @@ and open the template in the editor.
                         <!-- Text box -->
                         <div class="text-box">
                             <?php
-                            $sql_nao_aptos = (" select count(*) as nao_aptos  from doador d, triagem t   where t.doador_iddoador = d.iddoador       and teste_anemia = 'nao_apto';");
+                            $sql_nao_aptos = (" SELECT(SELECT 
+                                                    COUNT(*) AS nao_aptos
+                                                FROM
+                                                    doador d,
+                                                    triagem t,
+                                                    questionario_triagem qt,
+                                                    estoque_sangue es    
+                                                WHERE
+                                                    t.doador_iddoador = d.iddoador
+                                                                AND qt.triagem_idtriagem = t.idtriagem
+                                                                        AND es.questionario_triagem_idq_triagem = qt.idq_triagem
+                                                                                        AND status_coleta = 'nao') +                   
+                                                (SELECT 
+                                                    COUNT(*) AS nao_aptos
+                                                FROM
+                                                    doador d,
+                                                    triagem t
+                                                WHERE
+                                                    t.doador_iddoador = d.iddoador
+                                                        AND teste_anemia = 'nao_apto') as nao_aptos;");
                             foreach ($con->query($sql_nao_aptos) as $row) {
                                 ?>
                                 <h3><?php echo $row['nao_aptos']; ?></h3>
@@ -123,10 +142,21 @@ and open the template in the editor.
                         <!-- Text box -->
                         <div class="text-box">
                             <?php
-                            $sql_nao_aptos = (" select count(*) as nao_aptos  from doador d, triagem t   where t.doador_iddoador = d.iddoador       and teste_anemia = 'apto';");
-                            foreach ($con->query($sql_nao_aptos) as $row) {
+                            $sql_aptos = (" SELECT 
+                                                    COUNT(*) AS aptos
+                                                FROM
+                                                    doador d,
+                                                    triagem t,
+                                                    questionario_triagem qt,
+                                                    estoque_sangue es    
+                                                WHERE
+                                                    t.doador_iddoador = d.iddoador
+                                                                AND qt.triagem_idtriagem = t.idtriagem
+                                                                        AND es.questionario_triagem_idq_triagem = qt.idq_triagem
+                                                                                        AND status_coleta = 'sim';");
+                            foreach ($con->query($sql_aptos) as $row) {
                                 ?>
-                                <h3><?php echo $row['nao_aptos']; ?></h3>
+                                <h3><?php echo $row['aptos']; ?></h3>
                                 <p>DOADORES <small>  APTOS</small></p>
                                 <?php
                             }

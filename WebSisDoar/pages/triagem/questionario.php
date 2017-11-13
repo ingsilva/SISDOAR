@@ -26,7 +26,6 @@ include '../../config/conexao.php';
                 $('#salvar').click(function () {
                     var id = $("#id").val();
                     var saude_hoje = $("#saude_hoje").val();
-                    var saude_hoje1 = $("#saude_hoje1").val();
                     var alcool_hoje = $("#alcool_hoje").val();
                     var fumou_horas = $("#fumou_horas").val();
                     var alimentou = $("#alimentou").val();
@@ -58,7 +57,7 @@ include '../../config/conexao.php';
                         success: function (retorno) {
                             if (retorno == true) {
                                 alert("Salvo com Sucesso!!");
-                                location.reload();
+                                location.replace("lista_triagem.php");
                             } else {
                                 alert("Ocorreu um erro ao salvar o registro.");
 
@@ -295,7 +294,7 @@ include '../../config/conexao.php';
                                                 </div>
                                                 <div class="form-group col-lg-3" id="sim">    
                                                     <label for="quantas_vzs_doou">Quantas vezes?</label>
-                                                    <input class="form-control"   type="number" id="quantas_vzs_doou" name="quantas_vzs_doou">
+                                                    <input class="form-control"   type="text" id="quantas_vzs_doou" name="quantas_vzs_doou">
                                                     <!--<p class="help-block">Example block-level help text here.</p>-->
                                                 </div>
                                                 <div class="form-group col-lg-3" id="sim">    
@@ -318,13 +317,13 @@ include '../../config/conexao.php';
                                             <div id="select_opcao_recusado">
                                                 <div id="nao" class="form-group col-sm-8  ">
                                                     <label  for="">Status</label>
-                                                    <input class="form-control alert-success"  type="button" value="Doador não rejeitado em nenhuma doação!!!" >
+                                                    <input class="form-control alert-success"  type="button" value="DOADOR NÃO REJEITADO." >
                                                 </div>
                                                 <div class="form-group col-lg-2" id="sim">    
                                                     <label for="recusado_motivo">Motivo</label>
                                                     <input class="form-control"   type="text" id="recusado_motivo" name="recusado_motivo">
                                                     <!--<p class="help-block">Example block-level help text here.</p>-->
-                                                </div id=>
+                                                </div>
                                                 <div class="form-group col-lg-4" id="sim">    
                                                     <label for="recusado_data">Quando(Ano)?</label>
                                                     <input class="form-control"   type="text" id="recusado_data" name="recusado_data">
@@ -356,7 +355,7 @@ include '../../config/conexao.php';
                                             <div id="coleta">
                                                 <div id="apto" class="form-group col-sm-8 ">
                                                     <label  for="categoria">Situação</label>
-                                                    <input class="form-control alert-success"  type="button" value="Doador propico a doação!!!" >
+                                                    <input class="form-control alert-success"  type="button" value="DOADOR PROPICIO A DOAÇÃO!!!" >
                                                 </div>
                                                 <div class="form-group col-lg-8" id="nao_apto">    
                                                     <label for="obs_doador">Obersações</label>
