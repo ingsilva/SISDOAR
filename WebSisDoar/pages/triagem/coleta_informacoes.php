@@ -29,7 +29,7 @@ include '../../config/conexao.php';
 
                     var dataString = {idq_triagem: idq_triagem, tipo_sangue: tipo_sangue,
                         fator_rh: fator_rh, quantidade: quantidade,
-                        status_coleta: status_coleta, obs_coleta :obs_coleta, iddoencas :iddoencas};
+                        status_coleta: status_coleta, obs_coleta: obs_coleta, iddoencas: iddoencas};
                     $.ajax({
                         type: "POST",
                         url: "../../funcoes/estoque/ent_estoque.php",
@@ -53,8 +53,6 @@ include '../../config/conexao.php';
                     var selectValor = '#' + $(this).val();
                     $('#coleta').children('div').hide();
                     $('#coleta').children(selectValor).show();
-
-
                 });
             });
         </script>
@@ -92,16 +90,16 @@ include '../../config/conexao.php';
                         <div class="col-sm-12">
                             <input type="hidden" name="id" id="id" value="<?php echo $row['idtriagem'] ?>" />
                             <!-- Basic form -->
-                            <form role="form" method="post">
+                            <form role="form" method="post" >
                                 <div class="box-info">
                                     <h2>Informações para Doação</h2>
                                     <!-- Basic form body -->
                                     <div id="basic-form" class="collapse in">
-
+                                        <input type="hidden" id="idq_triagem" name="idq_triagem"  value="<?php echo $row['idq_triagem'] ?>"/>
                                         <div class="row">
                                             <div class="form-group col-lg-1">
                                                 <label for="idq_triagem">ID</label>
-                                                <input class="form-control"  type="text" id="idq_triagem"  value="<?php echo $row['idq_triagem'] ?>" disabled="true" >
+                                                <input class="form-control"  type="text" id="idq_triagem" name="idq_triagem"  value="<?php echo $row['idq_triagem'] ?>" disabled="true" >
                                             </div>
                                             <div class="form-group col-lg-6">
                                                 <label for="nome">Nome</label>
@@ -143,7 +141,7 @@ include '../../config/conexao.php';
                                             </div>
                                             <div class="form-group col-lg-2">
                                                 <label for="quantidade">Quantidade</label>
-                                                <input class="form-control" type="number"  id="quantidade" name="quantidade">
+                                                <input class="form-control" type="text"  id="quantidade" name="quantidade">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
                                             <div class="form-group col-lg-2">
@@ -182,7 +180,7 @@ include '../../config/conexao.php';
                                     </div>
                                     <!--================================================-------> 
 
-                                    <button type="button" id="salvar" class="btn btn-success">Enviar</button>
+                                    <button type="button" id="salvar"  class="btn btn-success">Enviar</button>
                                     <button type="reset" class=" btn btn-danger">Limpar</button>
 
                             </form>
