@@ -124,7 +124,7 @@ include '../../config/conexao.php';
                                                 </div>
                                                 <div id="obs">
                                                     <div class="form-group col-lg-8" id="nao_apto">    
-                                                        <label for="obs_htc">Obersações</label>
+                                                        <label for="obs_htc">Observações</label>
                                                         <textarea class="form-control alert alert-danger"   type="text" id="obs_htc" name="obs_htc"></textarea>
                                                         <!--<p class="help-block">Example block-level help text here.</p>-->
                                                     </div>

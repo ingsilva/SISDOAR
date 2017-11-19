@@ -358,7 +358,7 @@ include '../../config/conexao.php';
                                                     <input class="form-control alert-success"  type="button" value="DOADOR PROPICIO A DOAÇÃO!!!" >
                                                 </div>
                                                 <div class="form-group col-lg-8" id="nao_apto">    
-                                                    <label for="obs_doador">Obersações</label>
+                                                    <label for="obs_doador">Observações</label>
                                                     <textarea class="form-control alert alert-danger"   type="text" id="obs_doador" name="obs_doador"></textarea>
                                                     <!--<p class="help-block">Example block-level help text here.</p>-->
                                                 </div>
