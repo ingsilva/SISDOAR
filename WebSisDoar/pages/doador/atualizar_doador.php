@@ -45,7 +45,7 @@ include '../../config/conexao.php';
                         estado_civil: estado_civil, escolaridade: escolaridade, naturalidade: naturalidade};
                     $.ajax({
                         type: "POST",
-                        url: "../../funcoes/doador/update.php",
+                        url: "../../funcoes/doador/update_doador.php",
                         data: dataString,
                         cache: false,
                         success: function (retorno) {
