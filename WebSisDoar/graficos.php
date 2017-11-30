@@ -16,7 +16,7 @@ include './config/conexao.php';
 
             <!-- Page header -->
             <div class="page-heading animated fadeInDownBig">
-                <h1>Graficos <small> de doação</small></h1>
+                <h1>Gráficos <small> WEBSISDOAR</small></h1>
             </div>
             <!-- End page header -->
 
@@ -92,13 +92,13 @@ include './config/conexao.php';
                                     data: [{
                                             name: '<?php echo $rows[0][0] ?>',
                                             y:<?php echo $rows[0][1] ?>,
-                                            color: 'DodgerBlue'/* COR DA FATIA DE DOADORES APTOS; */
+                                            color: '#c92030'/* COR DA FATIA DE DOADORES APTOS; */
                                         }, {
                                             name: '<?php echo $rows[1][0] ?>',
                                             y:<?php echo $rows[1][1] ?>,
                                             sliced: true,
                                             selected: true,
-                                            color: 'Coral'/* COR DA FATIA DE DOADORES NÃO APTOS; */
+                                            color: '#777'/* COR DA FATIA DE DOADORES NÃO APTOS; */
                                         }]
                                 }]
                         });
@@ -106,7 +106,79 @@ include './config/conexao.php';
                 </div>
             </div>
 
-            <!--Gráfico de linhas-->
+            <!--Gráfico de colunas-->
+            <div class="box-info animated fadeInDown">
+                <h2><strong>Agendamentos</strong></h2>
+<?php
+//título do gráfico
+$msg = "Agendamentos por mês em " . date("Y");
+?>
+
+                <div id="container3">
+                    <script type="text/javascript">
+
+                        Highcharts.chart('container3', {
+                            chart: {
+                                type: 'column'
+                            },
+                            title: {
+<?php echo "text: " . "'" . $msg . "'"; //titulo  ?>
+                            },
+                            subtitle: {
+                                text: 'Fonte: HEMOACRE'
+                            },
+                            xAxis: {
+                                categories: [
+                                    'Jan',
+                                    'Fev',
+                                    'Mar',
+                                    'Abr',
+                                    'Mai',
+                                    'Jun',
+                                    'Jul',
+                                    'Ago',
+                                    'Set',
+                                    'Out',
+                                    'Nov',
+                                    'Dez'
+                                ],
+                                crosshair: true
+                            },
+                            yAxis: {
+                                min: 0,
+                                title: {
+                                    text: 'Quantidade de Agendamentos'
+                                }
+                            },
+                            tooltip: {
+                                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                        '<td style="padding:0"><b>{point.y}</b></td></tr>',
+                                footerFormat: '</table>',
+                                shared: true,
+                                useHTML: true
+                            },
+                            plotOptions: {
+                                column: {
+                                    pointPadding: 0.2,
+                                    borderWidth: 0,
+                                    color: '#c92030'/* COR DO GRAFICO EM COLUNAS; */
+                                }
+                            },
+                            series: [
+                                // {name: 'Total',
+                                // data: [10,0,0,0,0,12,90,1,0,9,89,90]}
+<?php
+//essa informação é formada na linha 52
+echo "{ name: 'Agendamentos' ,data: " . json_encode($rowsQuantidadeAgendamento) . "},";
+?>
+                            ]
+                        });
+                    </script>
+                </div>
+            </div>
+            
+                        <!--Gráfico de linhas-->
             <div class="box-info animated fadeInDown">
                 <h2><strong>Tipo</strong> Sanguíneo</h2>
                 <?php $msg = "Entrada de bolsas de sangue por tipo sanguíneo em " . date("Y"); ?>
@@ -172,77 +244,6 @@ for ($i = 0; $i < count($rowsTipo); $i++) {
             </div>
 
 
-            <!--Gráfico de colunas-->
-            <div class="box-info animated fadeInDown">
-                <h2><strong>Agendamentos</strong></h2>
-<?php
-//título do gráfico
-$msg = "Agendamentos por mês em " . date("Y");
-?>
-
-                <div id="container3">
-                    <script type="text/javascript">
-
-                        Highcharts.chart('container3', {
-                            chart: {
-                                type: 'column'
-                            },
-                            title: {
-<?php echo "text: " . "'" . $msg . "'"; //titulo  ?>
-                            },
-                            subtitle: {
-                                text: 'Fonte: HEMOACRE'
-                            },
-                            xAxis: {
-                                categories: [
-                                    'Jan',
-                                    'Fev',
-                                    'Mar',
-                                    'Abr',
-                                    'Mai',
-                                    'Jun',
-                                    'Jul',
-                                    'Ago',
-                                    'Set',
-                                    'Out',
-                                    'Nov',
-                                    'Dez'
-                                ],
-                                crosshair: true
-                            },
-                            yAxis: {
-                                min: 0,
-                                title: {
-                                    text: 'Quantidade de Agendamentos'
-                                }
-                            },
-                            tooltip: {
-                                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                                        '<td style="padding:0"><b>{point.y}</b></td></tr>',
-                                footerFormat: '</table>',
-                                shared: true,
-                                useHTML: true
-                            },
-                            plotOptions: {
-                                column: {
-                                    pointPadding: 0.2,
-                                    borderWidth: 0,
-                                    color: 'Coral'/* COR DO GRAFICO EM COLUNAS; */
-                                }
-                            },
-                            series: [
-                                // {name: 'Total',
-                                // data: [10,0,0,0,0,12,90,1,0,9,89,90]}
-<?php
-//essa informação é formada na linha 52
-echo "{ name: 'Agendamentos' ,data: " . json_encode($rowsQuantidadeAgendamento) . "},";
-?>
-                            ]
-                        });
-                    </script>
-                </div>
-            </div>
 
         </div>
         <script src="assets/js/jquery.js"></script>
