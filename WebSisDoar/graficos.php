@@ -227,7 +227,8 @@ $msg = "Agendamentos por mês em " . date("Y");
                             plotOptions: {
                                 column: {
                                     pointPadding: 0.2,
-                                    borderWidth: 0
+                                    borderWidth: 0,
+                                    color: 'Coral'/* COR DO GRAFICO EM COLUNAS; */
                                 }
                             },
                             series: [
