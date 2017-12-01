@@ -175,7 +175,7 @@ include '../../config/conexao.php';
                                                         ?>
                                                     </select>
                                                 </div>
-                                                <div class="form-group col-lg-12" id="Inaptos">    
+                                                 <div class="form-group col-lg-12" id="Inaptos">    
                                                     <label for="obs_coleta">Observações</label>
                                                     <textarea class="form-control alert"   type="text" id="obs_coleta" name="obs_coleta"></textarea>
                                                     <!--<p class="help-block">Example block-level help text here.</p>-->
