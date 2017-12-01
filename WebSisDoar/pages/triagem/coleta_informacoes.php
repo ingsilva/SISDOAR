@@ -148,22 +148,22 @@ include '../../config/conexao.php';
                                                 <label for="status_coleta">Status</label>
                                                 <select class="form-control" id="status_coleta" name="status_coleta">
                                                     <option>Escolha</option>
-                                                    <option value="sim">Apto a Doar</option>
-                                                    <option value="nao">Não Apto</option>
+                                                    <option value="Aptos">Apto a Doar</option>
+                                                    <option value="Inaptos">Não Apto</option>
                                                 </select>
                                             </div>
 
                                             <div id='coleta'>
-                                                <div id="sim" class="form-group col-sm-3 ">
+                                                <div id="Aptos" class="form-group col-sm-3 ">
                                                     <label  for="categoria">Situação</label>
                                                     <input class="form-control alert-success"  type="button" value="DOAÇÃO BEM SUCEDIDA!!!" >
                                                 </div>
-                                                <div class="form-group col-lg-12" id="sim">    
+                                                <div class="form-group col-lg-12" id="Aptos">    
                                                     <label for="obs_coleta">Observações</label>
                                                     <textarea class="form-control alert"   type="text" id="obs_coleta" name="obs_coleta"></textarea>
                                                     <!--<p class="help-block">Example block-level help text here.</p>-->
                                                 </div>
-                                                <div class="col-sm-3 form-group" id="nao">
+                                                <div class="col-sm-3 form-group" id="Inaptos">
                                                     <label for="iddoencas">Motivos de Inaptidão</label>
                                                     <select class="form-control" id="iddoencas" name="iddoencas">
                                                         <option>------</option>
@@ -175,7 +175,7 @@ include '../../config/conexao.php';
                                                         ?>
                                                     </select>
                                                 </div>
-                                                <div class="form-group col-lg-12" id="nao">    
+                                                <div class="form-group col-lg-12" id="Inaptos">    
                                                     <label for="obs_coleta">Observações</label>
                                                     <textarea class="form-control alert"   type="text" id="obs_coleta" name="obs_coleta"></textarea>
                                                     <!--<p class="help-block">Example block-level help text here.</p>-->

@@ -43,10 +43,7 @@ include '../../config/conexao.php';
                             <tbody>
                                 <?php
                                 $sql = ("SELECT iddoador, date_format(data_registro,'%d/%m/%Y') as data_registro, nome,  truncate(datediff(now(), data_nascimento)/365,0) as 'idade', 
-                                                    case  sexo
-                                                when 'F' then 'Feminino'
-                                                when 'M' then 'Masculino'
-                                                end sexo
+                                                sexo
 						FROM doador
                                                 where data_registro is not null;");
                                 foreach ($con->query($sql) as $row) {

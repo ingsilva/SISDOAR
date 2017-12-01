@@ -31,8 +31,8 @@ if ($_GET['idest_sangue']) {
                                                     when 'apto' then 'Apto a Doar'
                                             end situacao_doador,
                                             case status_coleta
-                                                    when 'nao' then 'Inapto a Doar'
-                                                    when 'sim' then 'Apto a Doar'
+                                                    when 'Inaptos' then 'Inapto a Doar'
+                                                    when 'Aptos' then 'Apto a Doar'
                                             end status_coleta
                                             from doador d
                                              left join triagem t
@@ -41,7 +41,7 @@ if ($_GET['idest_sangue']) {
 							on t.idtriagem = qt.triagem_idtriagem
                                                     inner join estoque_sangue es
 							on qt.idq_triagem = es.questionario_triagem_idq_triagem
-								and status_coleta = 'sim'	
+								and status_coleta = 'Aptos'	
                                                         and idest_sangue ='" . $_GET['idest_sangue'] . "' group by nome, idade";
 
 

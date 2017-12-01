@@ -72,11 +72,7 @@ include '../../config/conexao.php';
                                             date_format(data_registro, '%d/%m/%Y') as data_registro,
                                             case  teste_anemia	
                                                             when 'apto' then 'Apto a Doar'
-                                            end teste_anemia, 
-                                            case sexo
-                                                when 'F' then 'Feminino'
-                                                when 'M' then 'Masculino'
-                                            end sexo
+                                            end teste_anemia, sexo
                                             from doador d, triagem t   
                                                     where t.doador_iddoador = d.iddoador 
                                                     and teste_anemia = 'apto'

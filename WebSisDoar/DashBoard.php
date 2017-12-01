@@ -98,7 +98,7 @@ and open the template in the editor.
                                                     t.doador_iddoador = d.iddoador
                                                                 AND qt.triagem_idtriagem = t.idtriagem
                                                                         AND es.questionario_triagem_idq_triagem = qt.idq_triagem
-                                                                                        AND status_coleta = 'nao') +                   
+                                                                                        AND status_coleta = 'Inaptos') +                   
                                                 (SELECT 
                                                     COUNT(*) AS nao_aptos
                                                 FROM
@@ -153,7 +153,7 @@ and open the template in the editor.
                                                     t.doador_iddoador = d.iddoador
                                                                 AND qt.triagem_idtriagem = t.idtriagem
                                                                         AND es.questionario_triagem_idq_triagem = qt.idq_triagem
-                                                                                        AND status_coleta = 'sim';");
+                                                                                        AND status_coleta = 'Aptos';");
                             foreach ($con->query($sql_aptos) as $row) {
                                 ?>
                                 <h3><?php echo $row['aptos']; ?></h3>

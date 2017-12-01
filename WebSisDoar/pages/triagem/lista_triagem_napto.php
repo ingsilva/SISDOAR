@@ -133,8 +133,8 @@ include '../../config/conexao.php';
                                                     when 'apto' then 'Apto a Doar'
                                             end situacao_doador,
                                             case status_coleta
-                                                    when 'nao' then 'Inapto a Doar'
-                                                    when 'sim' then 'Apto a Doar'
+                                                    when 'Inaptos' then 'Inapto a Doar'
+                                                    when 'Aptos' then 'Apto a Doar'
                                             end status_coleta
                                             from doador d
                                              left join triagem t
@@ -143,7 +143,7 @@ include '../../config/conexao.php';
 							on t.idtriagem = qt.triagem_idtriagem
                                                     inner join estoque_sangue es
 							on qt.idq_triagem = es.questionario_triagem_idq_triagem
-															and status_coleta = 'nao'
+								and status_coleta = 'Inaptos'
                                                     group by nome, idade;");
                                 foreach ($con->query($sql) as $row) {
                                     ?>

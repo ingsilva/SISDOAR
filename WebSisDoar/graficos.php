@@ -24,9 +24,9 @@ include './config/conexao.php';
                 <h2><strong>Estimativa</strong> de Doadores</h2>
                 <?php
                 //Formação do Grafico de pizza
-                $sql_situacao_doador = "SELECT situacao_doador, count(idq_triagem) as quantidade FROM `questionario_triagem` group by situacao_doador";
+                $sql_status_coleta = "SELECT status_coleta, count(idest_sangue) as quantidade FROM `estoque_sangue` group by status_coleta";
                 $rows = array();
-                foreach ($con->query($sql_situacao_doador) as $row) {
+                foreach ($con->query($sql_status_coleta) as $row) {
                     $rows[] = $row;
                 }
                 //Fim da formação do gráfico de pizza
@@ -92,13 +92,13 @@ include './config/conexao.php';
                                     data: [{
                                             name: '<?php echo $rows[0][0] ?>',
                                             y:<?php echo $rows[0][1] ?>,
-                                            color: '#c92030'/* COR DA FATIA DE DOADORES APTOS; */
+                                            color: '#777'/* COR DA FATIA DE DOADORES APTOS; */
                                         }, {
                                             name: '<?php echo $rows[1][0] ?>',
                                             y:<?php echo $rows[1][1] ?>,
                                             sliced: true,
                                             selected: true,
-                                            color: '#777'/* COR DA FATIA DE DOADORES NÃO APTOS; */
+                                            color: '#c92030'/* COR DA FATIA DE DOADORES NÃO APTOS; */
                                         }]
                                 }]
                         });

@@ -123,7 +123,7 @@ include '../../config/conexao.php';
                                                 </select>
                                             </div>
                                             <div class="form-group col-lg-1">
-                                                <label for="tipo_sangue">Tipo Sanguineo</label>
+                                                <label for="tipo_sangue">Tipo</label>
                                                 <select id="tipo_sangue" name="tipo_sangue" class="form-control">
                                                     <option value="<?php echo $row['tipo_sangue']; ?>"><?php echo $row['tipo_sangue']; ?></option>
                                                     <option value="A">A</option>
@@ -265,12 +265,12 @@ include '../../config/conexao.php';
                                         <div class="row">
                                         </div>
                                         <div class="row">
-                                            <div class=" form-group col-lg-6">
+                                            <div class=" form-group col-lg-4">
                                                 <label for="endereco">Endereço</label>
                                                 <input class="form-control"   type="text" id="endereco" name="endereco" value="<?php echo $row['endereco'] ?>">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
-                                            <div class="form-group col-lg-1">
+                                            <div class="form-group col-lg-2">
                                                 <label for="numero">N°</label>
                                                 <input class="form-control" type="number"  id="numero" name="numero" value="<?php echo $row['numero'] ?>">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
@@ -280,7 +280,7 @@ include '../../config/conexao.php';
                                                 <input class="form-control"   type="text" id="bairro" name="bairro" value="<?php echo $row['bairro'] ?>">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
-                                            <div class="col-sm-1 form-group">
+                                            <div class="col-sm-2 form-group">
                                                 <label for="idestado">Estado</label>
                                                 <select class="form-control" id="idestado" name="idestado" onchange="listar_cidades()">
                                                     <option><?php echo $row['uf']; ?></option>
