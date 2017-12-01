@@ -97,7 +97,7 @@ include '../../config/conexao.php';
                                     <div id="basic-form" class="collapse in">
                                         <input type="hidden" id="idq_triagem" name="idq_triagem"  value="<?php echo $row['idq_triagem'] ?>"/>
                                         <div class="row">
-                                            <div class="form-group col-lg-1">
+                                            <div class="form-group col-lg-2">
                                                 <label for="idq_triagem">ID</label>
                                                 <input class="form-control"  type="text" id="idq_triagem" name="idq_triagem"  value="<?php echo $row['idq_triagem'] ?>" disabled="true" >
                                             </div>
@@ -111,22 +111,22 @@ include '../../config/conexao.php';
                                                 <input class="form-control"   type="text"  value="<?php echo $row['data_nascimento'] ?>"  disabled="true">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
-                                            <div class="form-group col-lg-1">
+                                            <div class="form-group col-lg-2">
                                                 <label for="idade">Idade</label>
                                                 <input class="form-control"  type="text" id="idade" name="idade" value="<?php echo $row['idade'] ?>" disabled="" >
                                             </div>
-                                            <div class="form-group col-lg-2">
-                                                <label for="tipo_sangue">Tipo Sanguineo</label>
-                                                <select id="tipo_sangue" name="tipo_sangue" class="form-control">
-                                                    <option value="<?php echo $row['tipo_sangue']; ?>"><?php echo $row['tipo_sangue']; ?></option>
-                                                    <option value="A">A</option>
-                                                    <option value="B">B</option>
-                                                    <option value="AB">AB</option>
-                                                    <option value="O">O</option>
-                                                </select>
-                                            </div>
                                         </div>
                                         <div class="row">
+                                            <div class="form-group col-lg-2">
+                                                        <label for="tipo_sangue">Tipo Sanguineo</label>
+                                                        <select id="tipo_sangue" name="tipo_sangue" class="form-control">
+                                                            <option value="<?php echo $row['tipo_sangue']; ?>"><?php echo $row['tipo_sangue']; ?></option>
+                                                            <option value="A">A</option>
+                                                            <option value="B">B</option>
+                                                            <option value="AB">AB</option>
+                                                            <option value="O">O</option>
+                                                        </select>
+                                                    </div>
                                             <div class="form-group col-lg-2">
                                                 <label for="fator_rh">Fator RH</label>
                                                 <select class="form-control" id="fator_rh" name="fator_rh">
@@ -144,7 +144,7 @@ include '../../config/conexao.php';
                                                 <input class="form-control" type="text"  id="quantidade" name="quantidade">
                                                 <!--<p class="help-block">Example block-level help text here.</p>-->
                                             </div>
-                                            <div class="form-group col-lg-2">
+                                            <div class="form-group col-lg-3">
                                                 <label for="status_coleta">Status</label>
                                                 <select class="form-control" id="status_coleta" name="status_coleta">
                                                     <option>Escolha</option>
@@ -154,16 +154,11 @@ include '../../config/conexao.php';
                                             </div>
 
                                             <div id='coleta'>
-                                                <div id="Aptos" class="form-group col-sm-3 ">
-                                                    <label  for="categoria">Situação</label>
+                                                <div id="Aptos" class="form-group col-lg-offset-2 col-sm-8 ">
                                                     <input class="form-control alert-success"  type="button" value="DOAÇÃO BEM SUCEDIDA!!!" >
                                                 </div>
-                                                <div class="form-group col-lg-12" id="Aptos">    
-                                                    <label for="obs_coleta">Observações</label>
-                                                    <textarea class="form-control alert"   type="text" id="obs_coleta" name="obs_coleta"></textarea>
-                                                    <!--<p class="help-block">Example block-level help text here.</p>-->
-                                                </div>
-                                                <div class="col-sm-3 form-group" id="Inaptos">
+
+                                                <div class="col-sm-12 form-group" id="Inaptos">
                                                     <label for="iddoencas">Motivos de Inaptidão</label>
                                                     <select class="form-control" id="iddoencas" name="iddoencas">
                                                         <option>------</option>
@@ -174,11 +169,11 @@ include '../../config/conexao.php';
                                                         }
                                                         ?>
                                                     </select>
-                                                </div>
-                                                 <div class="form-group col-lg-12" id="Inaptos">    
+
                                                     <label for="obs_coleta">Observações</label>
-                                                    <textarea class="form-control alert"   type="text" id="obs_coleta" name="obs_coleta"></textarea>
+                                                    <textarea class="form-control alert-danger"   type="text" id="obs_coleta" name="obs_coleta"></textarea>
                                                     <!--<p class="help-block">Example block-level help text here.</p>-->
+
                                                 </div>
                                             </div>
                                         </div>
